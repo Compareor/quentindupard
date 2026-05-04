@@ -121,10 +121,11 @@ img { max-width: 100%; display: block; }
 /* ── HERO ── */
 .hero {
   min-height: 88vh;
-  max-height: 900px;
   display: grid; grid-template-columns: 1.05fr 1fr;
   padding-top: 72px;
+  padding-bottom: 0;
   position: relative;
+  margin-bottom: 3.5rem;
 }
 
 .hero-left {
@@ -276,7 +277,7 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--ink);
-  padding: 1.1rem 0;
+  padding: 1.4rem 0;
   margin: 0;
 }
 .marquee-item { color: rgba(250,252,255,.55) !important; }
@@ -862,6 +863,7 @@ section { padding: 6.5rem 4rem; }
     min-height: auto;
     max-height: none;
     padding-top: 60px;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
   }

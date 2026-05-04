@@ -787,6 +787,17 @@ section { padding: 6.5rem 4rem; }
   .about-grid { gap: 4rem; }
 }
 
+/* Tablet portrait + everything narrower than 1024px gets the mobile stack */
+@media (max-width:1024px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+}
+
 /* Tablet portrait / large phone (≤ 900px) */
 @media (max-width:900px) {
   .site-nav {
@@ -795,26 +806,84 @@ section { padding: 6.5rem 4rem; }
   }
   .nav-brand { gap: .7rem; }
   .nav-available { display: none; }
-  .nav-links { display: none; }   /* replaced by hamburger drawer */
-  .nav-burger { display: flex; }
+  .nav-links { display: none !important; }   /* replaced by hamburger drawer */
+  .nav-burger { display: flex !important; }
 
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+    max-height: none;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
   }
-  .hero-left {
-    padding: 3.5rem 1.25rem 2.5rem;
-    order: 2;
-  }
+  /* MOBILE STACK ORDER: photo → stats → content */
   .hero-right {
     order: 1;
-    min-height: 50vh;
-    max-height: 60vh;
-    padding: 2rem 1.25rem;
+    min-height: auto;
+    max-height: none;
+    padding: 0;
+    display: block;
+    background: linear-gradient(180deg, var(--sky), var(--blue-soft));
   }
-  .hero-portrait-wrap img { object-position: center 20%; }
-  .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
-  .hero-eyebrow { margin-bottom: 1.5rem; }
+  /* Photo as a clean block, no overlay */
+  .hero-portrait-wrap {
+    position: relative;
+    inset: auto;
+    height: 56vh;
+    max-height: 460px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero-portrait-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transform: none !important;        /* kill parallax on mobile */
+    filter: none !important;
+  }
+  .hero-location {
+    top: 1rem; right: 1rem;
+    font-size: .54rem; padding: .35rem .65rem;
+    letter-spacing: .14em;
+  }
+  /* Stats now sit BELOW the photo as their own clean grid */
+  .hero-right .stat-grid {
+    position: relative;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    background: var(--border);
+  }
+  .stat {
+    background: var(--warm-white);
+    backdrop-filter: none;
+    padding: 1.4rem 1.1rem;
+    border: none;
+  }
+  .stat-num { font-size: 1.9rem; }
+  .stat-num sup { font-size: 1rem; }
+
+  /* Content block */
+  .hero-left {
+    order: 2;
+    padding: 3rem 1.25rem 3rem;
+  }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .hero-eyebrow { margin-bottom: 1.3rem; }
+  .hero-sub { margin-bottom: 2rem; }
+  .hero-btns {
+    flex-direction: column;
+    gap: .6rem;
+    width: 100%;
+  }
+  .hero-btns a {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.4rem;
+    text-align: center;
+  }
+  /* Kill desktop hero blob on mobile so it can't bleed */
+  .hero::after { display: none; }
   .hero-sub { max-width: 100%; font-size: .76rem; }
   .hero-btns { flex-direction: column; gap: .6rem; }
   .hero-btns a {

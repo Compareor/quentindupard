@@ -8,10 +8,10 @@ Three focused service lines, scoped hourly, daily, or project-based. No referral
 
 ## Pages
 
-- [Home](https://quentindupard.com/index.html): Practice overview, three service lines summary, background, process, and contact.
-- [About](https://quentindupard.com/about.html): Full background, values, principles, and FAQ.
-- [Services](https://quentindupard.com/services.html): Full service descriptions for GTM Strategy, Global Hiring, and EOR Due Diligence with engagement details.
-- [Contact](https://quentindupard.com/contact.html): Contact form, email, and LinkedIn channels.
+- [Home](https://quentindupard.com/): Practice overview, three service lines summary, background, process, and contact.
+- [About](https://quentindupard.com/about): Full background, values, principles, and FAQ.
+- [Services](https://quentindupard.com/services): Full service descriptions for GTM Strategy, Global Hiring, and EOR Due Diligence with engagement details.
+- [Contact](https://quentindupard.com/contact): Contact form, email, and LinkedIn channels.
 
 ## Services
 

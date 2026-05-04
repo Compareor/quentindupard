@@ -120,13 +120,12 @@ img { max-width: 100%; display: block; }
 
 /* ── HERO ── */
 .hero {
-  min-height: 78vh;
-  max-height: 820px;
+  height: 720px;
   display: grid; grid-template-columns: 1.05fr 1fr;
   padding-top: 72px;
   padding-bottom: 0;
   position: relative;
-  margin-bottom: 5rem;
+  overflow: hidden;            /* hard-clip — nothing escapes */
   align-items: stretch;
 }
 
@@ -212,13 +211,12 @@ img { max-width: 100%; display: block; }
   padding: 0;
   position: relative; overflow: hidden;
   opacity: 0; animation: fadein 1s .5s forwards;
-  max-height: 820px;
+  height: 100%;
 }
 
 .hero-portrait-wrap {
   position: relative;
   width: 100%; height: 100%;
-  max-height: 580px;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
   min-height: 0;
@@ -275,14 +273,17 @@ img { max-width: 100%; display: block; }
   width: 100%;
   display: block;
   position: relative;
-  z-index: 50;
+  z-index: 1;
   clear: both;
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--ink);
   padding: 1.4rem 0;
-  margin: 0;
+  margin: 4rem 0 0;
+}
+@media (max-width:1024px) {
+  .marquee-wrap { margin-top: 0; }
 }
 .marquee-item { color: rgba(250,252,255,.55) !important; }
 .marquee-item .sep { color: var(--blue-light) !important; }
@@ -840,8 +841,10 @@ section { padding: 6.5rem 4rem; }
     grid-template-columns: 1fr !important;
     display: flex !important;
     flex-direction: column !important;
+    height: auto !important;
     min-height: auto !important;
     max-height: none !important;
+    overflow: visible !important;
   }
 }
 
@@ -864,12 +867,14 @@ section { padding: 6.5rem 4rem; }
 
   .hero {
     grid-template-columns: 1fr;
+    height: auto !important;
     min-height: auto;
     max-height: none;
     padding-top: 60px;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    overflow: visible !important;
   }
   /* MOBILE STACK ORDER: content → photo (square, framed) → stats */
   .hero-right {

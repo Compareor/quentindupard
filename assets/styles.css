@@ -102,8 +102,9 @@ img { max-width: 100%; display: block; }
 
 /* ── HERO ── */
 .hero {
-  min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 88vh;
+  max-height: 900px;
+  display: grid; grid-template-columns: 1.05fr 1fr;
   padding-top: 72px;
   position: relative;
 }
@@ -794,9 +795,8 @@ section { padding: 6.5rem 4rem; }
   }
   .nav-brand { gap: .7rem; }
   .nav-available { display: none; }
-  .nav-links { gap: 1.1rem; }
-  .nav-links a:not(.nav-cta) { display:none; }
-  .nav-cta { padding: .55rem 1rem; }
+  .nav-links { display: none; }   /* replaced by hamburger drawer */
+  .nav-burger { display: flex; }
 
   .hero {
     grid-template-columns: 1fr;
@@ -1010,18 +1010,100 @@ html, body { max-width: 100%; overflow-x: hidden; }
   pointer-events: none;
 }
 
-/* Hero title — character stagger */
-.hero-title .char,
-.page-hero h1 .char,
-.cta-title .char {
+/* Hero title — WORD stagger (preserves wrapping) */
+.hero-title .word,
+.page-hero h1 .word,
+.cta-title .word {
   display: inline-block;
   opacity: 0;
-  transform: translateY(0.6em) rotate(2deg);
-  animation: charIn .7s cubic-bezier(.2,.7,.2,1) forwards;
+  transform: translateY(0.5em);
+  animation: wordIn .7s cubic-bezier(.2,.7,.2,1) forwards;
+  will-change: transform, opacity;
 }
-@keyframes charIn {
-  to { opacity: 1; transform: translateY(0) rotate(0); }
+@keyframes wordIn {
+  to { opacity: 1; transform: translateY(0); }
 }
+
+/* Stat reveal — clean opacity/translate (no count-up flicker) */
+.stat-fade {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.stat-fade.show { opacity: 1; transform: none; }
+
+/* Hamburger button */
+.nav-burger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 36px; height: 36px;
+  padding: 0; margin: 0;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 5px; z-index: 220;
+  position: relative;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--ink);
+  transition: transform .3s, opacity .3s;
+  transform-origin: center;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed; inset: 0; z-index: 210;
+  background: var(--warm-white);
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+  display: flex; align-items: center; justify-content: center;
+  padding: 5rem 2rem 2rem;
+}
+.mobile-drawer.open { opacity: 1; pointer-events: all; }
+.mobile-drawer-inner {
+  width: 100%; max-width: 420px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 2rem;
+}
+.mobile-drawer-links {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 1.5rem;
+  width: 100%;
+}
+.mobile-drawer-links a {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color .25s, transform .25s;
+  display: block;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity .35s ease, transform .35s ease, color .25s;
+}
+.mobile-drawer.open .mobile-drawer-links a {
+  opacity: 1; transform: none;
+}
+.mobile-drawer.open .mobile-drawer-links a:nth-child(1) { transition-delay: .12s; }
+.mobile-drawer.open .mobile-drawer-links a:nth-child(2) { transition-delay: .18s; }
+.mobile-drawer.open .mobile-drawer-links a:nth-child(3) { transition-delay: .24s; }
+.mobile-drawer.open .mobile-drawer-links a:nth-child(4) { transition-delay: .30s; }
+.mobile-drawer-links a:hover { color: var(--blue); }
+.mobile-drawer-foot {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem; width: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; gap: .8rem;
+}
+.mobile-drawer-foot a {
+  font-size: .68rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted);
+  text-decoration: none;
+}
+.mobile-drawer-foot a:hover { color: var(--blue); }
 
 /* Magnetic buttons — smooth spring back */
 .magnetic { transition: transform .22s cubic-bezier(.2,.8,.2,1), background .2s, color .2s, border-color .2s, opacity .2s; }

@@ -1,32 +1,32 @@
 /* ==========================================================
-   Quentin Dupard — Animation Layer
-   - Scroll progress bar
-   - Stat counter (count-up)
-   - Magnetic buttons
-   - Card 3D tilt
-   - Hero text stagger reveal
-   - Hero portrait parallax (mouse-follow)
+   Quentin Dupard — Animation Layer  (v2 — fixed)
+   - Section reveal observer (always)
+   - Word-stagger reveal on hero / page-hero / CTA titles
+   - Stat reveal (clean opacity rise — no count-up bug)
+   - Magnetic buttons (desktop only)
+   - Card 3D tilt (desktop only)
+   - Hero portrait parallax (desktop only)
    - Marquee pause-on-hover
-   - Cursor follower (desktop only)
-   - Section reveal observer
-   All animations respect prefers-reduced-motion.
+   - Mobile hamburger menu (always)
+   - Scroll progress bar
+   - Scroll-down hint on hero
+   Respects prefers-reduced-motion.
    ========================================================== */
 
 (function () {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-  /* ───────── 1. Scroll progress bar ───────── */
+  /* 1. Scroll progress bar */
   function initScrollProgress() {
     const bar = document.createElement('div');
     bar.className = 'scroll-progress';
     bar.setAttribute('aria-hidden', 'true');
     document.body.appendChild(bar);
-
     let ticking = false;
     function update() {
       const h = document.documentElement;
-      const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      const pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
       bar.style.transform = `scaleX(${pct / 100})`;
       ticking = false;
     }
@@ -36,7 +36,7 @@
     update();
   }
 
-  /* ───────── 2. Section reveal (IntersectionObserver) ───────── */
+  /* 2. Section reveal */
   function initRevealObserver() {
     const obs = new IntersectionObserver(entries => {
       entries.forEach((e, i) => {
@@ -50,121 +50,95 @@
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   }
 
-  /* ───────── 3. Hero title — character stagger reveal ───────── */
+  /* 3. Hero title — WORD stagger (preserves word wrap) */
   function initHeroTitle() {
     const titles = document.querySelectorAll('.hero-title, .page-hero h1, .cta-title');
     titles.forEach(title => {
-      // Process top-level text nodes and spans, preserve <br>
-      title.querySelectorAll('span, br').forEach((n) => { /* keep */ });
-      const lines = Array.from(title.childNodes);
-      title.innerHTML = '';
-      lines.forEach(node => {
-        if (node.nodeType === Node.TEXT_NODE) {
-          const text = node.textContent;
-          [...text].forEach((ch, i) => {
+      let i = 0;
+      function processTextNode(text, parent, baseDelay) {
+        const parts = text.split(/(\s+)/);
+        parts.forEach(p => {
+          if (/^\s+$/.test(p)) {
+            parent.appendChild(document.createTextNode(p));
+          } else if (p.length) {
             const span = document.createElement('span');
-            span.className = 'char';
-            span.textContent = ch === ' ' ? ' ' : ch;
-            span.style.animationDelay = `${0.04 * i}s`;
-            title.appendChild(span);
-          });
+            span.className = 'word';
+            span.textContent = p;
+            span.style.animationDelay = `${baseDelay + 0.06 * i}s`;
+            parent.appendChild(span);
+            i++;
+          }
+        });
+      }
+      const original = Array.from(title.childNodes);
+      title.innerHTML = '';
+      original.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          processTextNode(node.textContent, title, 0);
         } else if (node.nodeName === 'BR') {
           title.appendChild(document.createElement('br'));
         } else if (node.nodeType === Node.ELEMENT_NODE) {
-          // wrap inner text of inline span (like .stroke / .accent / .ghost)
-          const inner = node.textContent;
           const wrapper = document.createElement(node.nodeName.toLowerCase());
           wrapper.className = node.className;
-          [...inner].forEach((ch, i) => {
-            const span = document.createElement('span');
-            span.className = 'char';
-            span.textContent = ch === ' ' ? ' ' : ch;
-            span.style.animationDelay = `${0.04 * i + 0.15}s`;
-            wrapper.appendChild(span);
-          });
+          processTextNode(node.textContent, wrapper, 0.1);
           title.appendChild(wrapper);
         }
       });
     });
   }
 
-  /* ───────── 4. Stat counter ───────── */
-  function initStatCounter() {
-    const stats = document.querySelectorAll('.stat-num');
-    if (!stats.length) return;
-
-    function animate(el, target) {
-      const duration = 1400;
-      const start = performance.now();
-      const sup = el.querySelector('sup');
-      const supText = sup ? sup.outerHTML : '';
-      function frame(now) {
-        const t = Math.min(1, (now - start) / duration);
-        // ease out cubic
-        const eased = 1 - Math.pow(1 - t, 3);
-        const value = Math.round(target * eased);
-        el.firstChild.nodeValue = value;
-        if (t < 1) requestAnimationFrame(frame);
-      }
-      // capture original sup, replace text node
-      el.innerHTML = '0' + supText;
-      requestAnimationFrame(frame);
-    }
-
+  /* 4. Stat reveal — simple opacity rise (no flaky counter) */
+  function initStatReveal() {
+    const stats = document.querySelectorAll('.stat-num, .stat-label');
+    stats.forEach((el, i) => {
+      el.classList.add('stat-fade');
+      el.style.transitionDelay = `${0.08 * i}s`;
+    });
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const el = e.target;
-        const raw = el.textContent.trim();
-        const m = raw.match(/(\d+)/);
-        if (m) animate(el, parseInt(m[1], 10));
-        obs.unobserve(el);
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          obs.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.5 });
-
+    }, { threshold: 0.4 });
     stats.forEach(s => obs.observe(s));
   }
 
-  /* ───────── 5. Magnetic buttons (desktop only) ───────── */
+  /* 5. Magnetic buttons */
   function initMagnetic() {
     if (isTouch) return;
-    const els = document.querySelectorAll(
+    document.querySelectorAll(
       '.btn-dark, .btn-blue, .btn-outline, .btn-ghost-light, .nav-cta, .form-submit'
-    );
-    els.forEach(el => {
+    ).forEach(el => {
       el.classList.add('magnetic');
       el.addEventListener('mousemove', (e) => {
         const r = el.getBoundingClientRect();
         const x = e.clientX - r.left - r.width / 2;
         const y = e.clientY - r.top - r.height / 2;
-        el.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`;
+        el.style.transform = `translate(${x * 0.15}px, ${y * 0.18}px)`;
       });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = '';
-      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
   }
 
-  /* ───────── 6. Card 3D tilt + sheen (desktop only) ───────── */
+  /* 6. Card tilt + sheen */
   function initTilt() {
     if (isTouch) return;
-    const cards = document.querySelectorAll('.card, .who-card, .step, .cred, .contact-channel, .faq-item');
-    cards.forEach(card => {
+    document.querySelectorAll('.card, .who-card, .step, .contact-channel, .faq-item').forEach(card => {
       card.classList.add('tilt');
-      // sheen overlay
       const sheen = document.createElement('span');
       sheen.className = 'tilt-sheen';
       sheen.setAttribute('aria-hidden', 'true');
       card.appendChild(sheen);
-
       card.addEventListener('mousemove', (e) => {
         const r = card.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width;
         const y = (e.clientY - r.top) / r.height;
-        const rx = (y - 0.5) * -4;
-        const ry = (x - 0.5) * 4;
-        card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
-        sheen.style.background = `radial-gradient(420px circle at ${x * 100}% ${y * 100}%, rgba(91,139,196,0.12), transparent 45%)`;
+        const rx = (y - 0.5) * -3;
+        const ry = (x - 0.5) * 3;
+        card.style.transform = `perspective(1100px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        sheen.style.background = `radial-gradient(420px circle at ${x * 100}% ${y * 100}%, rgba(91,139,196,0.10), transparent 45%)`;
       });
       card.addEventListener('mouseleave', () => {
         card.style.transform = '';
@@ -173,25 +147,22 @@
     });
   }
 
-  /* ───────── 7. Hero portrait parallax ───────── */
+  /* 7. Hero portrait parallax */
   function initPortraitParallax() {
     if (isTouch) return;
     const wraps = document.querySelectorAll('.hero-portrait-wrap, .about-portrait');
     if (!wraps.length) return;
-
     document.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth - 0.5);
       const y = (e.clientY / window.innerHeight - 0.5);
       wraps.forEach(w => {
         const img = w.querySelector('img');
-        if (img) {
-          img.style.transform = `scale(1.06) translate(${x * -10}px, ${y * -10}px)`;
-        }
+        if (img) img.style.transform = `scale(1.05) translate(${x * -8}px, ${y * -8}px)`;
       });
     });
   }
 
-  /* ───────── 8. Marquee pause-on-hover ───────── */
+  /* 8. Marquee pause-on-hover */
   function initMarquee() {
     document.querySelectorAll('.marquee-wrap').forEach(wrap => {
       wrap.addEventListener('mouseenter', () => {
@@ -203,40 +174,68 @@
     });
   }
 
-  /* ───────── 9. Cursor follower (desktop only) ───────── */
-  function initCursor() {
-    if (isTouch) return;
-    const dot = document.createElement('div');
-    dot.className = 'cursor-dot';
-    dot.setAttribute('aria-hidden', 'true');
-    const ring = document.createElement('div');
-    ring.className = 'cursor-ring';
-    ring.setAttribute('aria-hidden', 'true');
-    document.body.appendChild(dot);
-    document.body.appendChild(ring);
+  /* 9. Mobile hamburger menu */
+  function initMobileMenu() {
+    const nav = document.querySelector('.site-nav');
+    const links = document.querySelector('.site-nav .nav-links');
+    if (!nav || !links) return;
 
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', (e) => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.transform = `translate(${mx}px, ${my}px)`;
-    });
+    // Build hamburger button
+    const burger = document.createElement('button');
+    burger.className = 'nav-burger';
+    burger.setAttribute('aria-label', 'Toggle menu');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.innerHTML = '<span></span><span></span><span></span>';
+    nav.appendChild(burger);
 
-    function loop() {
-      rx += (mx - rx) * 0.14;
-      ry += (my - ry) * 0.14;
-      ring.style.transform = `translate(${rx}px, ${ry}px)`;
-      requestAnimationFrame(loop);
+    // Build mobile drawer
+    const drawer = document.createElement('div');
+    drawer.className = 'mobile-drawer';
+    drawer.setAttribute('aria-hidden', 'true');
+    // Clone link content
+    const cloneLinks = Array.from(links.querySelectorAll('a')).map(a => {
+      const cloned = a.cloneNode(true);
+      cloned.classList.remove('nav-cta');
+      return cloned.outerHTML;
+    }).join('');
+    drawer.innerHTML = `
+      <div class="mobile-drawer-inner">
+        <div class="mobile-drawer-links">${cloneLinks}</div>
+        <div class="mobile-drawer-foot">
+          <a href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+          <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(drawer);
+
+    function close() {
+      burger.classList.remove('open');
+      drawer.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
     }
-    loop();
-
-    // grow ring on hoverable elements
-    document.querySelectorAll('a, button, input, textarea, select, .card, .who-card, .step').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+    function open() {
+      burger.classList.add('open');
+      drawer.classList.add('open');
+      burger.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    burger.addEventListener('click', () => {
+      drawer.classList.contains('open') ? close() : open();
+    });
+    drawer.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') close();
+      if (e.target === drawer) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
     });
   }
 
-  /* ───────── 10. Animated scroll-down hint on hero ───────── */
+  /* 10. Scroll-down hint */
   function initScrollHint() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
@@ -245,27 +244,25 @@
     hint.setAttribute('aria-hidden', 'true');
     hint.innerHTML = '<span class="scroll-hint-text">Scroll</span><span class="scroll-hint-line"></span>';
     hero.appendChild(hint);
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 120) hint.classList.add('hide');
       else hint.classList.remove('hide');
     }, { passive: true });
   }
 
-  /* ───────── Boot ───────── */
+  /* Boot */
   function boot() {
     initRevealObserver();
-    if (reduce) return; // skip the heavy stuff for reduced-motion users
+    initMobileMenu(); // mobile menu always available
+    if (reduce) return;
     initScrollProgress();
     initHeroTitle();
-    initStatCounter();
+    initStatReveal();
     initMagnetic();
     initTilt();
     initPortraitParallax();
     initMarquee();
     initScrollHint();
-    // Cursor is opt-in: only enabled if body has data-cursor="true"
-    if (document.body.dataset.cursor === 'true') initCursor();
   }
 
   if (document.readyState === 'loading') {

@@ -62,22 +62,30 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.nav-brand { display: flex; align-items: center; gap: .9rem; }
+.nav-brand { display: flex; align-items: center; gap: .85rem; }
 
-/* Logo in nav (replaces the old pulse dot) */
+/* Logo in nav — SVG fills its container */
 .nav-logo-link {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px;
-  background: var(--ink);
-  border-radius: 8px;
-  transition: transform .25s ease, background .25s;
+  width: 40px; height: 40px;
+  background: transparent;
+  transition: transform .25s ease, opacity .25s;
 }
-.nav-logo-link:hover { transform: scale(1.05); background: var(--blue); }
+.nav-logo-link:hover { transform: scale(1.05); opacity: .85; }
 .nav-logo {
-  width: 22px; height: 22px;
+  width: 100%; height: 100%;
   display: block;
+  object-fit: contain;
 }
 
+/* Animated pulse dot — left of "Available" */
+.nav-pulse {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--pulse-green);
+  display: inline-block;
+  animation: glow 2.8s ease-in-out infinite;
+  margin-left: .4rem;
+}
 @keyframes glow {
   0%,100% { opacity:1; box-shadow: 0 0 0 0 rgba(78,166,115,0.4); }
   50% { opacity:.6; box-shadow: 0 0 0 5px rgba(78,166,115,0); }
@@ -257,18 +265,22 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase; color: var(--muted); line-height: 1.4;
 }
 
-/* ── MARQUEE ── */
+/* ── MARQUEE — clearly separates hero from next section ── */
 .marquee-wrap {
   width: 100%;
+  display: block;
   position: relative;
-  z-index: 4;
+  z-index: 50;
+  clear: both;
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: var(--parchment);
-  padding: 1rem 0;
-  display: block;
+  background: var(--ink);
+  padding: 1.1rem 0;
+  margin: 0;
 }
+.marquee-item { color: rgba(250,252,255,.55) !important; }
+.marquee-item .sep { color: var(--blue-light) !important; }
 .marquee-inner {
   display: flex; white-space: nowrap;
   animation: marquee 32s linear infinite;
@@ -610,12 +622,10 @@ section { padding: 6.5rem 4rem; }
   gap: 3rem;
 }
 .footer-logo {
-  width: 44px; height: 44px;
+  width: 56px; height: 56px;
   display: block;
-  background: var(--blue);
-  border-radius: 10px;
-  padding: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  object-fit: contain;
 }
 .footer-col h4 {
   font-family: 'Syne', sans-serif;
@@ -836,8 +846,14 @@ section { padding: 6.5rem 4rem; }
     padding: .9rem 1.25rem;
     gap: 1rem;
   }
-  .nav-brand { gap: .7rem; }
-  .nav-available { display: none; }
+  .nav-brand { gap: .55rem; flex-wrap: nowrap; }
+  .nav-name { font-size: .76rem; }
+  .nav-available {
+    display: inline-block;
+    font-size: .52rem;
+    letter-spacing: .12em;
+  }
+  .nav-pulse { width: 6px; height: 6px; margin-left: .2rem; }
   .nav-links { display: none !important; }   /* replaced by hamburger drawer */
   .nav-burger { display: flex !important; }
 
@@ -849,58 +865,80 @@ section { padding: 6.5rem 4rem; }
     display: flex;
     flex-direction: column;
   }
-  /* MOBILE STACK ORDER: content → photo → stats */
+  /* MOBILE STACK ORDER: content → photo (square, framed) → stats */
   .hero-right {
     order: 2;
-    min-height: auto;
-    max-height: none;
-    padding: 0;
-    display: block;
-    background: linear-gradient(180deg, var(--sky), var(--blue-soft));
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 1rem 1.25rem 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    background: var(--warm-white);
+    grid-template-rows: none !important;
   }
-  /* Photo as a clean block, no overlay */
+  /* Photo: contained SQUARE with rounded corners, location pill IN its corner */
   .hero-portrait-wrap {
-    position: relative;
-    inset: auto;
-    height: 56vh;
-    max-height: 460px;
+    position: relative !important;
+    inset: auto !important;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-height: none !important;
     width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
     overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(180deg, var(--sky), var(--blue-soft));
+    box-shadow: 0 18px 50px -22px rgba(13,27,46,0.28);
   }
   .hero-portrait-wrap img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 20%;
-    transform: none !important;        /* kill parallax on mobile */
+    object-position: center 18%;
+    transform: none !important;
     filter: none !important;
   }
+  /* Location pill — exactly in the top-right corner of the photo box */
   .hero-location {
-    top: 1rem; right: 1rem;
-    font-size: .54rem; padding: .35rem .65rem;
+    position: absolute !important;
+    top: .8rem !important; right: .8rem !important;
+    font-size: .56rem; padding: .4rem .7rem;
     letter-spacing: .14em;
+    background: rgba(250,252,255,0.92);
+    border-radius: 6px;
+    z-index: 5;
   }
-  /* Stats — always visible, sit BELOW the photo */
+  /* Stats grid — bulletproof visible BELOW the photo box */
   .hero-right .stat-grid {
     display: grid !important;
     visibility: visible !important;
     opacity: 1 !important;
-    position: relative;
-    margin: 0;
-    grid-template-columns: 1fr 1fr;
-    background: var(--border);
-    z-index: 2;
+    position: relative !important;
+    margin: 1.5rem 0 .5rem !important;
+    grid-template-columns: 1fr 1fr !important;
+    background: var(--border) !important;
+    z-index: 3;
+    width: 100%;
+    border: 1px solid var(--border);
+    gap: 1px;
   }
   .stat {
     background: var(--warm-white) !important;
-    backdrop-filter: none;
-    padding: 1.6rem 1.2rem;
-    border: none;
+    backdrop-filter: none !important;
+    padding: 1.4rem 1.1rem !important;
+    border: none !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: block !important;
   }
-  .stat-num, .stat-label { opacity: 1 !important; transform: none !important; }
-  .stat-num { font-size: 1.9rem; }
-  .stat-num sup { font-size: 1rem; }
+  .stat-num, .stat-label {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  .stat-num { font-size: 1.7rem !important; }
+  .stat-num sup { font-size: .95rem; }
+  .stat-label { font-size: .58rem !important; }
 
   /* Content block — first on mobile */
   .hero-left {
@@ -1081,10 +1119,11 @@ section { padding: 6.5rem 4rem; }
   .footer-col h4 { margin-bottom: .5rem; }
 
   .breadcrumbs { font-size: .54rem; }
-  .nav-name { letter-spacing: .02em; }
-  /* Hide name on tiny phones, show only logo + brand */
-  .nav-logo-link { width: 32px; height: 32px; }
-  .nav-logo { width: 20px; height: 20px; }
+  .nav-name { font-size: .7rem; letter-spacing: .02em; }
+  .nav-available { display: none; }   /* hide text on tiny phones, keep dot */
+  .nav-pulse { display: inline-block; }
+  .nav-logo-link { width: 34px; height: 34px; }
+  .nav-logo { width: 100%; height: 100%; }
   .footer-col { font-size: .82rem; }
 
   /* Card footers: ensure CTA + price don't crowd */

@@ -808,10 +808,13 @@ section { padding: 6.5rem 4rem; }
   }
   .hero-right {
     order: 1;
-    min-height: 60vh;
-    padding: 2.5rem 1.25rem;
+    min-height: 50vh;
+    max-height: 60vh;
+    padding: 2rem 1.25rem;
   }
-  .hero-title { font-size: clamp(2.4rem, 9vw, 3.5rem); }
+  .hero-portrait-wrap img { object-position: center 20%; }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .hero-eyebrow { margin-bottom: 1.5rem; }
   .hero-sub { max-width: 100%; font-size: .76rem; }
   .hero-btns { flex-direction: column; gap: .6rem; }
   .hero-btns a {
@@ -909,7 +912,23 @@ section { padding: 6.5rem 4rem; }
 
   .modal { padding: 2rem 1.4rem; max-height: 96vh; }
 
-  .marquee-item { gap: 1.5rem; padding-right: 1.5rem; }
+  .marquee-item { gap: 1.5rem; padding-right: 1.5rem; font-size: .56rem; }
+  .marquee-inner { animation-duration: 40s; }
+
+  /* Stop hero blob from causing horizontal overflow on phones */
+  .hero::after { width: 280px; height: 280px; top: 30%; left: 10%; opacity: .7; }
+
+  /* Stat numbers shouldn't wrap weird */
+  .stat-num { font-size: 1.7rem; }
+  .stat-num sup { font-size: .9rem; }
+
+  /* Ensure cards never overflow horizontally */
+  .card, .who-card, .step { word-wrap: break-word; }
+
+  /* Footer columns stack neatly */
+  .site-footer { gap: 1.8rem 1.2rem; }
+  .footer-col h4 { font-size: .64rem; margin-bottom: .6rem; }
+  .footer-col p, .footer-col a { font-size: .56rem; line-height: 1.85; }
 }
 
 /* Small phones (≤ 480px) */
@@ -931,7 +950,37 @@ section { padding: 6.5rem 4rem; }
   .footer-col h4 { margin-bottom: .5rem; }
 
   .breadcrumbs { font-size: .54rem; }
+  .nav-name { letter-spacing: .02em; }
+
+  /* Card footers: ensure CTA + price don't crowd */
+  .card-footer { gap: .8rem; }
+  .card-price { font-size: .9rem; }
+  .card-meta { font-size: .54rem; }
+
+  /* Premium card on tiny phones */
+  .card-premium { padding: 1.6rem 1.2rem; }
+
+  /* Form inputs slightly larger on tiny screens for thumb accuracy */
+  .form-row input, .form-row select, .form-row textarea {
+    font-size: .76rem; padding: .85rem .9rem;
+  }
+  .form-row label { font-size: .56rem; }
+
+  /* Hero portrait shorter on phone */
+  .hero-right { min-height: 42vh; max-height: 55vh; }
+
+  /* CTA email link wraps better */
+  .cta-email { font-size: 1.05rem; }
 }
+
+/* Landscape phones — keep hero usable */
+@media (max-width:900px) and (orientation:landscape) {
+  .hero-right { min-height: 70vh; max-height: 80vh; }
+  .hero-left { padding: 2.5rem 1.25rem; }
+}
+
+/* Prevent horizontal scrolling at any size */
+html, body { max-width: 100%; overflow-x: hidden; }
 
 /* Touch target safety — make buttons & links comfortably tappable */
 @media (hover: none) and (pointer: coarse) {

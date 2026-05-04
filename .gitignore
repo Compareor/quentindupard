@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / OS junk
+.idea/
+.vscode/
+*.swp
+*~
+
+# Backup files from sed/text editors
+*.bak
+*.orig
+*.tmp
+
+# Node / build output (in case you ever add a build step)
+node_modules/
+dist/
+build/
+
+# Local env files (never commit)
+.env
+.env.*

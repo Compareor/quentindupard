@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c7dbef"/>
+      <stop offset="100%" stop-color="#a8c5e2"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="42%">
+      <stop offset="0%" stop-color="#fafcff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fafcff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#halo)"/>
+
+  <!-- Stylised silhouette -->
+  <g fill="#0d1b2e" opacity="0.18">
+    <ellipse cx="400" cy="430" rx="120" ry="135"/>
+    <path d="M 200 1000 C 200 740, 290 620, 400 620 C 510 620, 600 740, 600 1000 Z"/>
+  </g>
+
+  <!-- Initials -->
+  <text x="400" y="500" text-anchor="middle"
+        font-family="Syne, sans-serif" font-size="220" font-weight="800"
+        fill="#0d1b2e" opacity="0.35"
+        letter-spacing="-12">QD</text>
+
+  <!-- Subtle label -->
+  <text x="400" y="930" text-anchor="middle"
+        font-family="IBM Plex Mono, monospace" font-size="22"
+        fill="#0d1b2e" opacity="0.5"
+        letter-spacing="6">QUENTIN DUPARD</text>
+</svg>

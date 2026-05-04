@@ -1,0 +1,172 @@
+# Quentin Dupard — Full Site Content
+
+> Independent consultant for B2B SaaS go-to-market strategy and global hiring advisory. 5+ years in international operations. 150+ Employer of Record (EOR) providers audited. US legal entity, working with clients worldwide.
+
+This document contains the complete content of quentindupard.com in plain markdown for use as LLM context. Last updated: 2026-05-04.
+
+---
+
+## Identity
+
+- **Name**: Quentin Dupard
+- **Role**: GTM Strategy & Global Hiring Consultant (independent)
+- **Email**: quentin.dupard@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/quentindupard/
+- **Operating from**: US legal entity, working with clients globally
+- **Status**: Currently taking new engagements
+
+## Headline
+
+> GTM Strategy. Global Hiring. Delivered.
+
+I help SaaS companies and fast-growing teams build go-to-market strategies that win — and guide organisations expanding globally through the complexity of international hiring, compliance, and workforce structure. 5+ years in global operations. Clients across every region.
+
+## Key Numbers
+
+- 5+ years in global operations
+- 150+ EOR / global payroll providers audited
+- 3 core service lines
+- Worldwide reach (EMEA, APAC, Americas)
+
+---
+
+## Services
+
+### 1. GTM Strategy for SaaS & Growth Teams (Core Service)
+
+Go-to-market strategy consulting for B2B SaaS companies, HR tech platforms, and high-growth teams entering new markets or scaling existing revenue motions. I design and build the full GTM architecture — from ICP and positioning to sales playbooks and channel execution — grounded in how buyers actually make decisions, not how vendors wish they did.
+
+**Engagement format**: Hourly · Daily · Project — scoped to your situation.
+
+**What's included**:
+- Ideal Customer Profile (ICP) definition and segmentation strategy
+- Competitive positioning and value proposition architecture
+- Pricing strategy, packaging design, and monetisation modelling
+- Sales playbook development and objection handling frameworks
+- Channel strategy across inbound, outbound, and partnerships
+- GTM diagnostic and quick-win audit for existing motions
+- Discovery call frameworks and qualification methodology
+- Buyer persona research and job-to-be-done mapping
+
+**Best fit**: Founders and revenue leaders at Series A through C SaaS companies who have early product-market fit and need to translate it into a repeatable, scalable revenue motion. Particular depth in HR tech, B2B platforms, and developer-adjacent products. Methodology is sector-agnostic.
+
+Common starting points include: a sales motion that worked at $1M ARR but is breaking at $10M; positioning that resonates with founders but loses against competitors in deals; international expansion that's not converting; or a new product line that needs its own GTM thesis.
+
+### 2. Global Hiring Consultant (Core Service)
+
+Advisory for organisations hiring and managing talent across borders. Whether you're scaling a distributed team, entering a new country, or restructuring how your international workforce is employed, I help you make the right structural decisions, stay compliant, and avoid the costly mistakes that come from moving fast without the right expertise.
+
+**Engagement format**: Hourly · Daily · Project — scoped to your situation.
+
+**What's included**:
+- International hiring strategy and workforce structure design
+- Employment model assessment (cost, risk, speed, scalability)
+- Cross-border compliance review and risk identification
+- Vendor and partner evaluation for global employment solutions
+- Onboarding processes and HR ops design for distributed teams
+- Country-level expansion readiness and go/no-go assessment
+- Misclassification audits and contractor-to-employee transitions
+- EOR vs entity vs contractor decision frameworks
+
+**Best fit**: People leaders, COOs, and founders at companies expanding across regions — EMEA, APAC, Americas — who need someone who actually understands the operational and compliance reality of international workforce expansion.
+
+Common situations: deciding whether to use an EOR or set up an entity in a new country; restructuring a contractor-heavy workforce to reduce misclassification risk; evaluating multiple EOR vendors with conflicting promises; building global HR ops processes that scale beyond 50 international hires.
+
+**Independence note**: No commissions, no provider bias. Independent advisory only.
+
+### 3. EOR & HR Tech Market Due Diligence (Premium Engagement)
+
+Specialist due diligence support for private equity firms, venture capital funds, and strategic acquirers evaluating Employer of Record platforms, global payroll software, or HR tech targets. I work alongside your financial and legal teams as the operational domain expert — providing the commercial and technical depth that standard DD processes don't capture.
+
+**Engagement format**: Custom Quote — scope-dependent. NDA standard. Confidential.
+
+**What's included**:
+- Product quality, architecture, and technical debt assessment
+- Entity ownership model analysis (owned vs partner-dependent network)
+- Regulatory compliance exposure and liability mapping by region
+- Competitive positioning, differentiation, and moat sustainability
+- Pricing model, margin structure, and unit economics review
+- GTM maturity, commercial team capability, and pipeline quality
+- Global coverage depth and international expansion readiness
+- Customer reference framework and reference call coordination
+
+**Best fit**: PE / VC firms and strategic acquirers running diligence on EOR / global payroll / HR tech targets. Typically a 2–4 week intensive during the diligence window. Output is a confidential, structured report defensible in front of an IC.
+
+---
+
+## Background & Experience
+
+5+ years navigating the complexity of global operations from the inside. Career has lived at the intersection of product, sales, and international operations — launching go-to-market motions in markets where the rulebook didn't exist, auditing employment providers that promised one thing and delivered another, and working alongside founders trying to figure out structural workforce decisions.
+
+### Credentials
+
+- **5+ Years Global Operations**: Cross-functional leadership across product, sales, and international expansion. Track record of restructuring GTM motions, improving unit economics, and driving compliance-first scale.
+- **International Sales Leadership**: Led market expansion across EMEA and MENA regions. Deep understanding of how B2B SaaS is bought and sold across regulatory and cultural environments.
+- **150+ Provider Audits**: Audited over 150 EOR and global payroll providers across all major regions — pricing models, entity structures, compliance depth, product quality, and margin architecture.
+- **Founder & Operator**: Founded an independent advisory platform in the global employment space. Built proprietary frameworks for provider evaluation and market intelligence.
+
+### Operating Principles
+
+- **Independent & unbiased**: No referral fees, vendor commissions, or kickbacks. Recommendations based on what's right for the client, not what pays.
+- **Operator, not theorist**: Strategies have to survive Monday morning execution, not just look good in a board deck.
+- **Clean engagements**: No retainer traps, no scope drift, no artificial dependency. Every engagement ends with documented outputs the client owns independently.
+
+---
+
+## How I Work (Process)
+
+1. **Discovery Call** — 30 minutes, free, no obligation. I understand your challenge, timeline, and what a successful outcome looks like. Every engagement is scoped specifically; no generic proposals.
+2. **Transparent Proposal** — Clear statement of work with transparent rates, milestone checkpoints, and hard delivery dates. No surprise overruns. No scope drift without your approval.
+3. **Embedded Delivery** — I work directly with your team, not through intermediaries. Decisions get made, documentation gets written, the work gets done on time and to spec.
+4. **Clean Handoff** — Every engagement ends with documented outputs your team owns independently. No artificial dependency, no lock-in. You leave with the work, not just the consultant.
+
+---
+
+## Who I Work With
+
+- **SaaS & Growth Companies**: You have product-market fit and are ready to scale. You need a GTM strategy built on real buyer intelligence — not a deck that looks good but doesn't hold up in the field. Sector-agnostic, with particular depth in HR tech and B2B platforms.
+- **Global Hiring Teams**: You're hiring across regions (EMEA, APAC, Americas) and need someone who understands the operational and compliance reality of international workforce expansion. No commissions, no provider bias.
+- **Investors & Acquirers**: You're evaluating an EOR, global payroll, or HR tech target. You need a domain expert who can tell you what the financials can't — product architecture, compliance depth, competitive position, GTM maturity. Confidential engagements welcome.
+
+---
+
+## FAQ
+
+**Where are you based, and which time zones do you work in?**
+US legal entity, working with clients globally. Flex across time zones — most engagements involve teams in multiple regions.
+
+**What types of companies do you typically work with?**
+B2B SaaS (often Series A through C), HR tech platforms, fast-scaling teams hiring across borders, and investors evaluating EOR / global payroll / HR tech targets.
+
+**How are engagements structured and priced?**
+Three formats: hourly, daily, or project-based. Discovery calls are free. After that, transparent statement of work with fixed milestones and rates. No retainers, no surprises.
+
+**What's the typical engagement length?**
+Single advisory call to 12-week project. Most GTM and global hiring engagements run 4–8 weeks. Due diligence is typically 2–4 weeks for the intensive window.
+
+**Do you work with early-stage startups?**
+Yes, but the deepest value comes when you have early product-market fit and are ready to scale. Pre-PMF positioning work is also possible on an hourly basis.
+
+**How quickly can you start?**
+Discovery calls within 48 hours. Most engagements kick off within 1–2 weeks of signed SOW.
+
+**Can you work alongside our existing consultants or agencies?**
+Often yes — particularly for due diligence work. For GTM and hiring work, I prefer being the lead strategic voice but happy to coordinate with adjacent partners.
+
+**Do you take retainers?**
+Generally no — milestone-based engagements with clear deliverables. If a long-term advisory relationship makes sense, we can structure something, but no billing for time that doesn't produce value.
+
+**Do you sign NDAs?**
+Yes — almost every engagement involves one, especially due diligence. Confidential engagements are the default.
+
+**Do you take referral fees from vendors?**
+No. Ever. Recommendations on EOR providers, payroll vendors, or any third-party tool are based purely on fit. Independence is foundational.
+
+---
+
+## Contact
+
+- **Email**: quentin.dupard@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/quentindupard/
+- **Response time**: Within 24 hours during the work week
+- **Discovery calls**: Free, 30 minutes, no obligation

@@ -1,0 +1,11 @@
+# robots.txt — quentindupard.com
+User-agent: *
+Allow: /
+Disallow:
+
+# Sitemap
+Sitemap: https://quentindupard.com/sitemap.xml
+
+# LLM-readable index (proposed standard: https://llmstxt.org)
+# https://quentindupard.com/llms.txt
+# https://quentindupard.com/llms-full.txt

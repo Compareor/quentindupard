@@ -1,0 +1,31 @@
+# Quentin Dupard
+
+> Independent consultant for B2B SaaS go-to-market strategy and global hiring advisory. 5+ years in international operations. 150+ EOR (Employer of Record) providers audited across all major regions. US legal entity, working with clients worldwide.
+
+Quentin Dupard runs an independent consulting practice serving SaaS companies, HR tech platforms, fast-scaling international teams, and investors evaluating EOR / global payroll / HR tech targets. The practice is built on operator depth — every recommendation is grounded in pattern recognition from running global GTM motions and auditing hundreds of employment providers, not consulting templates.
+
+Three focused service lines, scoped hourly, daily, or project-based. No referral fees, no vendor commissions, no retainer traps.
+
+## Pages
+
+- [Home](https://quentindupard.com/index.html): Practice overview, three service lines summary, background, process, and contact.
+- [About](https://quentindupard.com/about.html): Full background, values, principles, and FAQ.
+- [Services](https://quentindupard.com/services.html): Full service descriptions for GTM Strategy, Global Hiring, and EOR Due Diligence with engagement details.
+- [Contact](https://quentindupard.com/contact.html): Contact form, email, and LinkedIn channels.
+
+## Services
+
+- **GTM Strategy for SaaS & Growth Teams**: Go-to-market strategy consulting for B2B SaaS — ICP definition, positioning, pricing, sales playbooks, and channel strategy. Best fit: Series A through C SaaS, HR tech, B2B platforms.
+- **Global Hiring Consultant**: International workforce structure design, employment model assessment, cross-border compliance, and EOR / payroll vendor evaluation. No commissions, independent advisory.
+- **EOR & HR Tech Market Due Diligence**: Specialist domain due diligence for PE / VC firms and strategic acquirers evaluating Employer of Record, global payroll, and HR tech targets. 2–4 week intensive, confidential.
+
+## Contact
+
+- Email: quentin.dupard@gmail.com
+- LinkedIn: https://www.linkedin.com/in/quentindupard/
+- Sitemap: https://quentindupard.com/sitemap.xml
+
+## Optional
+
+- [Sitemap (XML)](https://quentindupard.com/sitemap.xml): Machine-readable list of all pages.
+- [Full content (Markdown)](https://quentindupard.com/llms-full.txt): Long-form version of the site's content for LLM context.

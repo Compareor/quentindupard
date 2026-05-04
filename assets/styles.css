@@ -140,8 +140,8 @@ img { max-width: 100%; display: block; }
 .hero-title .accent { color: var(--blue); display: block; }
 
 .hero-sub {
-  font-size: 0.75rem; line-height: 1.85;
-  color: var(--muted); max-width: 460px;
+  font-size: 0.92rem; line-height: 1.75;
+  color: var(--muted); max-width: 520px;
   margin-bottom: 2.8rem;
   opacity: 0; animation: up .7s .42s forwards;
 }
@@ -298,7 +298,7 @@ section { padding: 6.5rem 4rem; }
 }
 .page-hero h1 .accent { color: var(--blue); display: block; }
 .page-hero p {
-  font-size: 0.78rem; line-height: 1.85; color: var(--muted);
+  font-size: 0.95rem; line-height: 1.8; color: var(--muted);
 }
 .page-hero p strong { color: var(--ink); font-weight: 400; }
 
@@ -318,7 +318,7 @@ section { padding: 6.5rem 4rem; }
   display: grid; grid-template-columns: 1fr 1.4fr;
   gap: 5rem; align-items: end; margin-bottom: 4rem;
 }
-.services-sub { font-size: 0.72rem; line-height: 1.85; color: var(--muted); }
+.services-sub { font-size: 0.88rem; line-height: 1.8; color: var(--muted); }
 
 .cards {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -351,16 +351,16 @@ section { padding: 6.5rem 4rem; }
   color: var(--ink); line-height: 1.2;
 }
 .card-desc {
-  font-size: 0.7rem; line-height: 1.85;
+  font-size: 0.84rem; line-height: 1.8;
   color: var(--muted); flex: 1;
 }
 .card-bullets {
   list-style: none; display: flex;
-  flex-direction: column; gap: 0.35rem;
+  flex-direction: column; gap: 0.45rem;
 }
 .card-bullets li {
-  font-size: 0.66rem; line-height: 1.6;
-  color: var(--muted); padding-left: 1.2rem;
+  font-size: 0.78rem; line-height: 1.65;
+  color: var(--muted); padding-left: 1.3rem;
   position: relative;
 }
 .card-bullets li::before {
@@ -415,8 +415,8 @@ section { padding: 6.5rem 4rem; }
 }
 .about-pull em { color: var(--blue-light); font-style: normal; }
 .about-body {
-  font-size: 0.71rem; line-height: 1.85;
-  color: rgba(250,252,255,.55);
+  font-size: 0.86rem; line-height: 1.8;
+  color: rgba(250,252,255,.65);
 }
 .about-body strong { color: rgba(250,252,255,.85); font-weight: 400; }
 .about-creds { display: flex; flex-direction: column; gap: 0; }
@@ -431,13 +431,13 @@ section { padding: 6.5rem 4rem; }
   background: var(--blue-light); flex-shrink: 0; margin-top: .35rem;
 }
 .cred-body {
-  font-size: 0.69rem; line-height: 1.65;
-  color: rgba(250,252,255,.55);
+  font-size: 0.82rem; line-height: 1.7;
+  color: rgba(250,252,255,.65);
 }
 .cred-body strong {
-  display: block; color: rgba(250,252,255,.9);
-  font-weight: 400; margin-bottom: .15rem;
-  font-size: 0.72rem;
+  display: block; color: rgba(250,252,255,.95);
+  font-weight: 400; margin-bottom: .25rem;
+  font-size: 0.86rem;
 }
 
 /* About page extended */
@@ -481,7 +481,7 @@ section { padding: 6.5rem 4rem; }
   font-size: .9rem; font-weight: 600;
   color: var(--ink); margin-bottom: .8rem;
 }
-.step-desc { font-size: .67rem; line-height: 1.8; color: var(--muted); }
+.step-desc { font-size: .82rem; line-height: 1.75; color: var(--muted); }
 
 /* ── WHO ── */
 .who { background: var(--warm-white); }
@@ -502,7 +502,7 @@ section { padding: 6.5rem 4rem; }
   font-size: 1rem; font-weight: 600;
   color: var(--ink); margin-bottom: .8rem;
 }
-.who-desc { font-size: .68rem; line-height: 1.8; color: var(--muted); }
+.who-desc { font-size: .84rem; line-height: 1.75; color: var(--muted); }
 
 /* ── FAQ (about / services pages) ── */
 .faq { background: var(--parchment); }
@@ -514,10 +514,10 @@ section { padding: 6.5rem 4rem; }
 .faq-item:first-child { border-top: 1px solid var(--border); }
 .faq-q {
   font-family: 'Syne', sans-serif;
-  font-size: 1rem; font-weight: 600;
-  color: var(--ink); margin-bottom: .7rem;
+  font-size: 1.15rem; font-weight: 600;
+  color: var(--ink); margin-bottom: .8rem;
 }
-.faq-a { font-size: .72rem; line-height: 1.85; color: var(--muted); }
+.faq-a { font-size: .86rem; line-height: 1.8; color: var(--muted); }
 
 /* ── CTA ── */
 .cta {
@@ -556,7 +556,7 @@ section { padding: 6.5rem 4rem; }
   color: transparent; display: block;
 }
 .cta-sub {
-  font-size: .72rem; color: rgba(250,252,255,.5);
+  font-size: .9rem; color: rgba(250,252,255,.55);
   margin-bottom: 2.8rem; line-height: 1.7;
 }
 .cta-email {
@@ -745,7 +745,7 @@ section { padding: 6.5rem 4rem; }
   max-width: 1080px; margin: 0 auto;
 }
 .contact-info-block {
-  font-size: .72rem; line-height: 1.85;
+  font-size: .88rem; line-height: 1.8;
   color: var(--muted); margin-bottom: 2rem;
 }
 .contact-channels { display: flex; flex-direction: column; gap: 1.2rem; }
@@ -817,9 +817,9 @@ section { padding: 6.5rem 4rem; }
     display: flex;
     flex-direction: column;
   }
-  /* MOBILE STACK ORDER: photo → stats → content */
+  /* MOBILE STACK ORDER: content → photo → stats */
   .hero-right {
-    order: 1;
+    order: 2;
     min-height: auto;
     max-height: none;
     padding: 0;
@@ -863,14 +863,30 @@ section { padding: 6.5rem 4rem; }
   .stat-num { font-size: 1.9rem; }
   .stat-num sup { font-size: 1rem; }
 
-  /* Content block */
+  /* Content block — first on mobile */
   .hero-left {
-    order: 2;
-    padding: 3rem 1.25rem 3rem;
+    order: 1;
+    padding: 2.5rem 1.25rem 2rem;
   }
-  .hero-title { font-size: clamp(2.2rem, 9vw, 3rem); }
-  .hero-eyebrow { margin-bottom: 1.3rem; }
-  .hero-sub { margin-bottom: 2rem; }
+  .hero-title { font-size: clamp(2.4rem, 10vw, 3.4rem); }
+  .hero-eyebrow { margin-bottom: 1.3rem; font-size: .68rem; }
+  .hero-sub {
+    margin-bottom: 2rem;
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+  .services-sub, .contact-info-block { font-size: .92rem; }
+  .card-desc { font-size: .88rem; }
+  .card-bullets li { font-size: .82rem; }
+  .who-desc, .step-desc { font-size: .88rem; line-height: 1.7; }
+  .about-body { font-size: .9rem; }
+  .cred-body { font-size: .86rem; }
+  .cred-body strong { font-size: .9rem; }
+  .faq-q { font-size: 1.05rem; }
+  .faq-a { font-size: .9rem; }
+  .page-hero p { font-size: 1rem; }
+  .cta-sub { font-size: .95rem; }
+  .section-h { font-size: clamp(1.9rem, 7vw, 2.4rem); }
   .hero-btns {
     flex-direction: column;
     gap: .6rem;
@@ -1093,10 +1109,10 @@ html, body { max-width: 100%; overflow-x: hidden; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Stat reveal — clean opacity/translate (no count-up flicker) */
+/* Stat reveal — subtle, never blocks visibility */
 .stat-fade {
-  opacity: 0;
-  transform: translateY(8px);
+  opacity: 1;
+  transform: none;
   transition: opacity .55s ease, transform .55s ease;
 }
 .stat-fade.show { opacity: 1; transform: none; }

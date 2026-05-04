@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -81,7 +81,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
 <nav class="site-nav" aria-label="Primary">
   <div class="nav-brand">
-    <div class="nav-pulse" aria-hidden="true"></div>
+    <a href="/" class="nav-logo-link" aria-label="Home">
+      <img src="/assets/qd-favicon-dark.svg" alt="QD" class="nav-logo" width="32" height="32">
+    </a>
     <a href="/" class="nav-name">Quentin Dupard</a>
     <span class="nav-available">Available</span>
   </div>
@@ -207,6 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="site-footer">
   <div class="footer-col">
+    <img src="/assets/qd-favicon-dark.svg" alt="QD" class="footer-logo" width="40" height="40">
     <h4>Quentin Dupard</h4>
     <p>GTM Strategy &amp; Global Hiring Consultant. Independent advisory for SaaS, HR tech, and investors expanding worldwide.</p>
   </div>
@@ -237,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<script src="/assets/animations.js" defer></script>
+<script src="/assets/animations.js?v=3" defer></script>
 <script>
 // Pre-fill service from query string (?service=gtm | global-hiring | due-diligence)
 (function () {

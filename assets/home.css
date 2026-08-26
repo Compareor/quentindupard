@@ -1388,6 +1388,10 @@
 
   .carousel-btn { width: 46px; height: 46px; }
 
+  /* The session dock is fixed to the bottom-left, exactly where the dots sat.
+     Group dots with the arrows on the right so they clear it. */
+  .carousel-controls { justify-content: flex-end; gap: 14px; }
+
   .theme-toggle { min-height: 32px; }
 }
 

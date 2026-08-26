@@ -530,9 +530,9 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
      A fade that approximates the band's colour will always seam, because the
      band has radial washes the approximation does not. */
   --band:
-    radial-gradient(60% 70% at 12% 0%,  rgba(122, 88, 255, 0.30), transparent 70%),
-    radial-gradient(52% 64% at 90% 100%, rgba(34, 206, 238, 0.20), transparent 70%),
-    linear-gradient(168deg, #0b1024 0%, #060814 100%);
+    radial-gradient(60% 70% at 12% 0%,  rgba(132, 104, 255, 0.22), transparent 72%),
+    radial-gradient(52% 64% at 90% 100%, rgba(52, 200, 232, 0.15), transparent 72%),
+    linear-gradient(168deg, #2b3358 0%, #232a4a 100%);
   background: none;
 }
 
@@ -540,7 +540,8 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 [data-theme="dark"] .invert {
   --text:        #0d1424;
   --text-dim:    rgba(13, 20, 36, 0.72);
-  --text-faint:  rgba(13, 20, 36, 0.60);
+  /* 0.60 measured 4.22:1 against the muted band — under AA at 12px. */
+  --text-faint:  rgba(13, 20, 36, 0.68);
   --text-ghost:  rgba(13, 20, 36, 0.34);
 
   --cyan:        #0b6f85;
@@ -577,9 +578,9 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   --accent-edge: rgba(93, 140, 220, 0.38);
 
   --band:
-    radial-gradient(60% 70% at 12% 0%,  rgba(122, 88, 255, 0.16), transparent 70%),
-    radial-gradient(52% 64% at 90% 100%, rgba(34, 206, 238, 0.14), transparent 70%),
-    linear-gradient(168deg, #ffffff 0%, #eef2fd 100%);
+    radial-gradient(60% 70% at 12% 0%,  rgba(122, 88, 255, 0.12), transparent 72%),
+    radial-gradient(52% 64% at 90% 100%, rgba(34, 206, 238, 0.10), transparent 72%),
+    linear-gradient(168deg, #ccd5ea 0%, #c1cbe1 100%);
   background: none;
 }
 
@@ -615,12 +616,12 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
     transparent 100%);
 }
 
-.invert { --bleed: 120px; }
+.invert { --bleed: 170px; }
 /* A quieter alternative: lifts the ground so the section separates without
    shouting. Its background lives on the bleed layer, like the inverted bands,
    so it fades at both ends instead of meeting the page on a line. */
 .tinted {
-  --bleed: 90px;
+  --bleed: 130px;
   --band:
     radial-gradient(70% 80% at 50% 0%, rgba(122, 88, 255, 0.10), transparent 72%),
     linear-gradient(180deg, var(--tint), var(--tint));

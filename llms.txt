@@ -60,7 +60,7 @@ Long-form working notes. Free to read, no gate.
 
 ## Links
 
-- [About Quentin Dupard](https://quentindupard.com/about): background, previous projects, and what he will not do
+- [About Quentin Dupard](https://quentindupard.com/about/): background, previous projects, and what he will not do
 - [Home](https://quentindupard.com/): positioning, pricing, and an AI trained on his notes
 - [LinkedIn](https://www.linkedin.com/in/quentindupard/)
 - Email: quentin.dupard@gmail.com

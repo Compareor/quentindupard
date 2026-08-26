@@ -1,13 +1,8 @@
 # Quentin Dupard — full notes
 
-> This file is the corpus behind "AI-me" on quentindupard.com. Everything the
-> assistant says is grounded in what's written here.
->
-> TODO(Quentin): this is a starting skeleton built from your positioning. The
-> answers get dramatically better the more of YOUR actual opinions, numbers and
-> war stories go in. Add specifics — deals you've seen, pricing changes you've
-> run, the things you believe that others don't. Anything not written here, the
-> assistant is instructed to refuse rather than invent.
+> Working notes behind "AI-me" on quentindupard.com. Everything the assistant
+> says is grounded in what is written here; anything not covered here, it is
+> instructed to say it does not know rather than invent.
 
 ---
 
@@ -169,10 +164,6 @@ General principles I'll stand behind:
 I give practical operational guidance here, never legal or tax advice. Anything
 binding needs a lawyer or an accountant in the relevant country.
 
-TODO(Quentin): this section is where your teardown data is genuinely
-irreplaceable. Add provider-level notes, country-specific numbers, and the
-patterns you've seen that nobody else has.
-
 ---
 
 ## How I work
@@ -184,7 +175,6 @@ patterns you've seen that nobody else has.
 - **Operator** — ongoing fractional product and marketing. Three-month minimum,
   because anything shorter is theatre.
 
-TODO(Quentin): confirm the rates on the site — they're currently placeholders.
 
 Every engagement ends with your team owning the output. No lock-in.
 

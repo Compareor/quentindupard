@@ -1283,6 +1283,22 @@
   }
   function countAsk() {
     try { localStorage.setItem(FREE_KEY, String(asked() + 1)); } catch (_) { /* private mode */ }
+    paintQuota();
+  }
+
+  /* Say the limit exists BEFORE someone hits it. A cap you only discover by
+     running into it reads as a bait-and-switch, not a free tier. */
+  function paintQuota() {
+    const el = $('#ask-quota');
+    if (!el) return;
+    const left = Math.max(0, FREE_LIMIT - asked());
+    if (left === 0) {
+      el.textContent = 'Free questions used. ';
+      el.className = 'ask-quota is-out';
+    } else {
+      el.textContent = `${left} of ${FREE_LIMIT} free question${left === 1 ? '' : 's'} left. `;
+      el.className = 'ask-quota';
+    }
   }
 
   function showPaywall() {
@@ -1463,6 +1479,7 @@
     initMail();
     initMac();
     initAsk();
+    paintQuota();
     initVisitor();
   }
 

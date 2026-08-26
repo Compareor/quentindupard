@@ -1413,3 +1413,7 @@
   .win { width: calc(100vw - 24px); left: 12px !important; }
   .win-bar { cursor: default; }
 }
+
+/* Free-tier counter, shown before the limit is reached rather than after. */
+.ask-quota { color: var(--cyan); font-weight: 560; }
+.ask-quota.is-out { color: var(--text-faint); }

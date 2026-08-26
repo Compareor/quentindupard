@@ -35,14 +35,13 @@ binding = "RATE_LIMIT"
 id = "6e4d8954df9e4b359d0fb2972e014541"
 
 # ── Full event stream ────────────────────────────────────────
-# Analytics Engine must be enabled on the account first, and a disabled
-# dataset fails the entire deploy (error 10089). The KV counters that /stats
-# reads do not depend on it, and functions/api/track.js skips the write when
-# the binding is absent. To turn it on: enable Analytics Engine in the
-# dashboard, then uncomment.
-# [[analytics_engine_datasets]]
-# binding = "ANALYTICS"
-# dataset = "qd_events"
+# Analytics Engine must be ENABLED on the account before this deploys — a
+# disabled dataset fails the whole build with error 10089, it does not
+# degrade. The binding name must match env.ANALYTICS in track.js and the
+# dataset must match the one created in the dashboard.
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "qd_events"
 
 # ── Custom domain ────────────────────────────────────────────
 # Declared here, not just in the dashboard. wrangler reconciles routes from

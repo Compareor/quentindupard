@@ -42,7 +42,11 @@
 
 .act-grid {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
+  /* A matching empty column on the right. Without it the act-mark's 92px
+     pushed every section's content right, leaving ~124px of margin on the
+     left and almost none on the right — most visible in Act 02, where the
+     cards are full width and run to the edge. */
+  grid-template-columns: 92px minmax(0, 1fr) 92px;
   gap: 32px;
   align-items: start;
 }

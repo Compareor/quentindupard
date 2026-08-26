@@ -1,0 +1,12 @@
+# Source and config must not be published as static files.
+src/
+functions/
+node_modules/
+package.json
+package-lock.json
+wrangler.toml
+.assetsignore
+DEPLOY.md
+.git/
+.github/
+.claude/

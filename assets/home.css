@@ -1379,12 +1379,20 @@
   .dot::after {
     content: '';
     position: absolute;
-    inset: -14px;
+    inset: -18px;              /* 7px dot + 36px = a 43px target */
     border-radius: 50%;
   }
 
   /* Same trick for the mail list and inbox rows. */
   .mail-item { min-height: 56px; }
+
+  .mail-folder,
+  .footer-mail,
+  .footer-mark,
+  .footer-social,
+  .crumb,
+  .faq-item summary { min-height: 44px; display: flex; align-items: center; }
+  .footer-col h2 { min-height: 0; }
 
   .carousel-btn { width: 46px; height: 46px; }
 

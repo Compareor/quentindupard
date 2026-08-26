@@ -23,11 +23,11 @@ run_worker_first = ["/api/*", "/services", "/services/", "/contact", "/contact/"
 # Create these in the dashboard (Storage & Databases -> KV), then paste the ids.
 [[kv_namespaces]]
 binding = "STATS"
-id = "REPLACE_WITH_QD_STATS_ID"
+id = "002d98d00fc348b6aa970612c9e295d9"
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = "REPLACE_WITH_QD_RATE_LIMIT_ID"
+id = "6e4d8954df9e4b359d0fb2972e014541"
 
 # ── Full event stream. Optional: without it the KV counters still work ──
 [[analytics_engine_datasets]]

@@ -1,483 +1,981 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PW2D5SZD');</script>
-<!-- End Google Tag Manager -->
-
-<!-- ── PRIMARY SEO ─────────────────────────────────────────── -->
-<title>Quentin Dupard | GTM Strategy & Global Hiring Consultant</title>
-<meta name="description" content="Independent consultant for B2B SaaS go-to-market strategy and global hiring advisory. 5+ years in international operations, 150+ EOR providers audited. Working with clients worldwide.">
-<meta name="keywords" content="GTM consultant, go-to-market strategy, SaaS consultant, global hiring consultant, EOR advisory, international hiring, employer of record, HR tech due diligence, fractional GTM, global workforce strategy, Quentin Dupard">
+<title>Quentin Dupard | Fractional Product &amp; Marketing for Growing Businesses</title>
+<meta name="description" content="Fractional product and marketing. I find revenue your business is already sitting on: pricing, positioning, activation and retention. Deepest in B2B SaaS, useful anywhere there is a funnel and a price.">
 <meta name="author" content="Quentin Dupard">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://quentindupard.com/">
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
 <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full content">
 
-<!-- ── OPEN GRAPH ─────────────────────────────────────────── -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Quentin Dupard">
-<meta property="og:title" content="Quentin Dupard — GTM Strategy & Global Hiring Consultant">
-<meta property="og:description" content="Independent consultant specialising in GTM strategy for SaaS and global hiring advisory. 150+ EOR providers audited. Clients worldwide.">
+<meta property="og:title" content="Fractional product &amp; marketing | Quentin Dupard">
+<meta property="og:description" content="Pricing, positioning, activation, retention. Describe your business and I'll tell you where the revenue is going.">
 <meta property="og:url" content="https://quentindupard.com/">
 <meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
-<meta property="og:image:alt" content="Portrait of Quentin Dupard, GTM and global hiring consultant">
 <meta property="og:locale" content="en_US">
-
-<!-- ── TWITTER ─────────────────────────────────────────── -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quentin Dupard — GTM Strategy & Global Hiring Consultant">
-<meta name="twitter:description" content="Independent consultant for B2B SaaS GTM and global hiring. 150+ EOR providers audited.">
+<meta name="twitter:title" content="Fractional product &amp; marketing | Quentin Dupard">
+<meta name="twitter:description" content="Pricing, positioning, activation, retention. Describe your business and I'll tell you where the revenue is going.">
 <meta name="twitter:image" content="https://quentindupard.com/assets/quentindupard.jpg">
 
-<!-- ── FAVICON & THEME ─────────────────────────────────────── -->
-<!-- Favicons (Google-friendly: ICO at root + SVG with light/dark variants) -->
-<link rel="icon" href="/favicon.ico" sizes="any">
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/svg+xml" href="/assets/qd-favicon-light.svg" media="(prefers-color-scheme: dark)">
-<link rel="apple-touch-icon" href="/assets/qd-favicon-dark.svg">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#0d1b2e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
 
-<!-- ── FONTS & STYLES ─────────────────────────────────────── -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v=4">
+<link rel="stylesheet" href="/assets/glass.css?v=20">
+<link rel="stylesheet" href="/assets/home.css?v=26">
 
-<!-- ── STRUCTURED DATA: Person ─────────────────────────────── -->
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://quentindupard.com/#website",
+  "url": "https://quentindupard.com/",
+  "name": "Quentin Dupard",
+  "description": "Fractional product and marketing. Pricing, positioning, activation and revenue growth.",
+  "inLanguage": "en",
+  "publisher": { "@id": "https://quentindupard.com/#quentin" }
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://quentindupard.com/#quentin",
   "name": "Quentin Dupard",
   "url": "https://quentindupard.com/",
   "image": "https://quentindupard.com/assets/quentindupard.jpg",
-  "jobTitle": "GTM Strategy & Global Hiring Consultant",
-  "description": "Independent consultant specialising in go-to-market strategy for SaaS companies and global hiring advisory for organisations expanding internationally.",
+  "jobTitle": "Product & Marketing Operator",
+  "description": "Fractional product and marketing operator. Positioning, pricing, activation and revenue growth for businesses of any kind, with the deepest experience in B2B SaaS.",
   "email": "mailto:quentin.dupard@gmail.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/quentindupard/"
-  ],
+  "sameAs": ["https://www.linkedin.com/in/quentindupard/"],
   "knowsAbout": [
-    "Go-to-market strategy",
-    "B2B SaaS",
-    "Global hiring",
-    "Employer of Record",
-    "International compliance",
-    "HR tech due diligence",
-    "Sales playbooks",
-    "ICP definition"
+    "Product strategy", "Product marketing", "Positioning", "Messaging",
+    "SaaS pricing", "Packaging", "Product-led growth", "Activation",
+    "Retention", "Expansion revenue", "Growth marketing", "Monetisation"
   ]
 }
 </script>
 
-<!-- ── STRUCTURED DATA: ProfessionalService ────────────────── -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Quentin Dupard Consulting",
+  "name": "Quentin Dupard, Fractional Product & Growth",
   "url": "https://quentindupard.com/",
-  "image": "https://quentindupard.com/assets/quentindupard.jpg",
-  "priceRange": "$$$",
-  "description": "GTM strategy consulting for SaaS companies and global hiring advisory for organisations expanding internationally. Premium due diligence for EOR & HR tech investors.",
   "areaServed": "Worldwide",
-  "founder": {
-    "@type": "Person",
-    "name": "Quentin Dupard"
-  },
+  "priceRange": "€€€",
+  "description": "Fractional product and marketing: pricing, packaging, positioning, activation, retention and expansion revenue. Any business with a funnel and a price.",
+  "@id": "https://quentindupard.com/#practice",
+  "provider": { "@id": "https://quentindupard.com/#quentin" },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Consulting Services",
+    "name": "Engagements",
     "itemListElement": [
       {
         "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "0",
         "itemOffered": {
           "@type": "Service",
-          "name": "GTM Strategy for SaaS & Growth Teams",
-          "description": "Go-to-market strategy consulting for B2B SaaS — ICP definition, positioning, pricing, sales playbooks, and channel strategy."
+          "name": "Free — research and AI-me",
+          "description": "All published research, sample deliverables, and an AI trained on Quentin's notes. No gate."
         }
       },
       {
         "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "500",
         "itemOffered": {
           "@type": "Service",
-          "name": "Global Hiring Consultant",
-          "description": "International hiring strategy, employment model assessment, cross-border compliance, and EOR vendor evaluation."
+          "name": "Espresso, a 90-minute teardown",
+          "description": "A 90-minute teardown of your product, pricing and funnel, with a written follow-up."
         }
       },
       {
         "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "6000",
         "itemOffered": {
           "@type": "Service",
-          "name": "EOR & HR Tech Market Due Diligence",
-          "description": "Specialist due diligence for PE / VC firms evaluating Employer of Record, global payroll, and HR tech targets."
+          "name": "Sprint, two weeks embedded",
+          "description": "Two weeks embedded with your team moving one revenue lever, usually pricing or activation."
+        }
+      },
+      {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "8000",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Operator, fractional product and marketing",
+          "description": "Ongoing fractional product and marketing leadership. Three-month minimum."
         }
       }
     ]
   }
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://quentindupard.com/#faq",
+  "about": { "@id": "https://quentindupard.com/#quentin" },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a fractional product and marketing operator do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire. In practice that means pricing and packaging decisions, positioning and messaging, improving conversion and activation, and deciding what to build versus what to kill. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you improve SaaS activation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Identify the single action that delivers first value, measure what share of signups reach it within a week, then remove everything between signup and that moment. Pre-populating new accounts with realistic sample data is the most reliable single change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a B2B SaaS company change its pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with your product and their invoice does not grow, the model caps your revenue. A 10-15% increase applied only to new customers is the lowest-risk experiment available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get more clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most companies asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an engagement cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three formats: a 90-minute teardown from €500, a two-week embedded sprint from €6,000, and ongoing fractional work from €8,000 per month with a three-month minimum. Hybrid and on-site delivery cost more than remote."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW2D5SZD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
 
-<!-- NAV -->
-<header>
-<nav class="site-nav" aria-label="Primary">
-  <div class="nav-brand">
-    <a href="/" class="nav-logo-link" aria-label="Home">
-      <img src="/assets/qd-favicon-dark.svg" alt="QD" class="nav-logo" width="32" height="32">
-    </a>
-    <a href="/" class="nav-name">Quentin Dupard</a>
-    <span class="nav-pulse" aria-hidden="true"></span>
-    <span class="nav-available">Available</span>
-  </div>
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Primary">
+  <a href="/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
   <div class="nav-links">
-    <a href="/services">Services</a>
+    <a href="/#work">What I do</a>
+    <a href="/#work-done">Previously</a>
+    <a href="/research/">Research</a>
+    <a href="/#pricing">Pricing</a>
     <a href="/about">About</a>
-    <a href="/#process">Process</a>
-    <a href="/contact" class="nav-cta">Work Together</a>
   </div>
+  <a href="#talk" class="btn btn-primary nav-cta">Talk to me</a>
 </nav>
-</header>
 
 <main>
 
-<!-- HERO -->
-<section class="hero" id="hero" aria-labelledby="hero-title">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Independent Consultant · Worldwide</p>
-    <h1 class="hero-title" id="hero-title">
-      GTM Strategy.<br>
-      <span class="stroke">Global Hiring.</span>
-      <span class="accent">Delivered.</span>
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="shell hero-inner">
+    <p class="eyebrow hero-eyebrow" id="visitor-line">
+      <span id="visitor-text">Fractional product &amp; marketing</span>
+    </p>
+
+    <h1 class="hero-title glint">
+      Tell me your business.<br>
+      <span class="gradient-text">I'll tell you where it's leaking.</span>
     </h1>
-    <p class="hero-sub">
-      I help <strong>SaaS companies and fast-growing teams</strong> build go-to-market strategies that win — and guide <strong>organisations expanding globally</strong> through the complexity of international hiring, compliance, and workforce structure.<br><br>
-      5+ years in global operations. Clients across every region.
+
+    <p class="lede hero-lede">
+      Fractional product and marketing. I find the revenue your business has
+      already earned but isn't collecting.
     </p>
-    <div class="hero-btns">
-      <a href="/services" class="btn-dark">View Services</a>
-      <a href="/contact" class="btn-outline">Get in Touch</a>
-    </div>
-  </div>
 
-  <div class="hero-right">
-    <div class="hero-portrait-wrap" aria-hidden="true">
-      <img src="/assets/quentindupard.jpg"
-           alt="Quentin Dupard, GTM strategy and global hiring consultant"
-           onerror="this.onerror=null;this.src='assets/quentin-placeholder.svg';">
-    </div>
-    <div class="hero-location">US Entity · Global Reach</div>
-    <div class="stat-grid">
-      <div class="stat">
-        <div class="stat-num">5<sup>+</sup></div>
-        <div class="stat-label">Years global ops</div>
+    <div class="ask glass glass-thick" id="ask">
+      <!-- The transcript is open from the first paint, with AI-me having
+           already spoken. A collapsed box reads as a search field; an open
+           conversation reads as something already talking to you. -->
+      <div class="chat" id="chat" aria-live="polite">
+        <div class="msg msg-ai">
+          <span class="msg-who">AI-me</span>
+          <p>Tell me what you sell, who buys it, and what isn't working. I'll
+             name the most likely place you're losing money — usually your
+             pricing, your positioning, or the gap between interest and purchase.</p>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-num">150<sup>+</sup></div>
-        <div class="stat-label">EOR providers audited</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">🌐</div>
-        <div class="stat-label">Global reach</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Core service lines</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-inner">
-    <div class="marquee-item">
-      GTM Strategy <span class="sep">◆</span>
-      HR SaaS Positioning <span class="sep">◆</span>
-      Sales Playbooks <span class="sep">◆</span>
-      Global Hiring Advisory <span class="sep">◆</span>
-      International Compliance <span class="sep">◆</span>
-      ICP Definition <span class="sep">◆</span>
-      EOR Selection <span class="sep">◆</span>
-      Workforce Structure <span class="sep">◆</span>
-      Market Entry <span class="sep">◆</span>
-      Investor Due Diligence <span class="sep">◆</span>
-      Misclassification Audits <span class="sep">◆</span>
-      Revenue Operations <span class="sep">◆</span>
-    </div>
-    <div class="marquee-item">
-      GTM Strategy <span class="sep">◆</span>
-      HR SaaS Positioning <span class="sep">◆</span>
-      Sales Playbooks <span class="sep">◆</span>
-      Global Hiring Advisory <span class="sep">◆</span>
-      International Compliance <span class="sep">◆</span>
-      ICP Definition <span class="sep">◆</span>
-      EOR Selection <span class="sep">◆</span>
-      Workforce Structure <span class="sep">◆</span>
-      Market Entry <span class="sep">◆</span>
-      Investor Due Diligence <span class="sep">◆</span>
-      Misclassification Audits <span class="sep">◆</span>
-      Revenue Operations <span class="sep">◆</span>
-    </div>
-  </div>
-</div>
+      <form class="ask-form" id="ask-form" autocomplete="off">
+        <label class="visually-hidden" for="ask-input">Describe your business</label>
+        <input
+          class="ask-input"
+          id="ask-input"
+          type="text"
+          name="q"
+          placeholder="What you sell, who buys it, and what is not working…"
+          maxlength="280"
+          required>
+        <button class="btn btn-primary ask-send" type="submit" id="ask-send">
+          <span class="ask-send-label">Ask</span>
+          <span class="ask-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
 
-<!-- SERVICES SUMMARY -->
-<section class="services" id="services" aria-labelledby="services-h">
-  <div class="services-intro reveal">
-    <div>
-      <p class="section-label">What I Do</p>
-      <h2 class="section-h" id="services-h">Three focused<br>service lines.</h2>
-    </div>
-    <p class="services-sub">
-      I work across two complementary disciplines — go-to-market strategy for SaaS and high-growth teams, and global hiring advisory for organisations expanding across regions. A premium due diligence offering serves investors and acquirers who need genuine domain depth. Each engagement is scoped to your situation — hourly, daily, or project-based depending on what makes sense.
-    </p>
-  </div>
+      <div class="ask-chips" id="ask-chips">
+        <button class="chip" type="button">Signups are fine, nobody sticks around</button>
+        <button class="chip" type="button">Ads cost more every month</button>
+        <button class="chip" type="button">Great retention, no expansion revenue</button>
+        <button class="chip" type="button">We have never once changed our pricing</button>
+        <button class="chip" type="button">How do I get more clients?</button>
+      </div>
 
-  <div class="cards">
-    <article class="card reveal">
-      <p class="card-num">01 — Core Service</p>
-      <h3 class="card-title">GTM Strategy<br>for SaaS &amp; Growth Teams</h3>
-      <p class="card-desc">
-        Go-to-market strategy consulting for B2B SaaS companies, HR tech platforms, and high-growth teams entering new markets or scaling existing revenue motions. ICP, positioning, pricing, sales playbooks, and channel execution — grounded in how buyers actually decide.
+      <p class="ask-disclaimer">
+        A first pass, not a diagnosis. The useful version happens once I can ask
+        you questions back.
       </p>
-      <ul class="card-bullets">
-        <li>ICP definition and segmentation strategy</li>
-        <li>Competitive positioning and value proposition architecture</li>
-        <li>Pricing strategy, packaging, and monetisation modelling</li>
-        <li>Sales playbook development and objection handling</li>
-        <li>Channel strategy across inbound, outbound, partnerships</li>
-      </ul>
-      <div class="card-footer">
-        <div>
-          <div class="card-price">Hourly · Daily · Project</div>
-          <div class="card-meta">Engagement format based on your needs</div>
-        </div>
-        <a href="/services#gtm" class="card-inquire">Learn more →</a>
-      </div>
-    </article>
+    </div>
 
-    <article class="card reveal">
-      <p class="card-num">02 — Core Service</p>
-      <h3 class="card-title">Global Hiring<br>Consultant</h3>
-      <p class="card-desc">
-        Advisory for organisations hiring and managing talent across borders. Whether you're scaling a distributed team, entering a new country, or restructuring how your international workforce is employed, I help you make the right structural decisions and stay compliant.
+    <p class="scroll-cue reveal" data-reveal="blur">There's a whole argument below. Keep going.</p>
+  </div>
+</section>
+
+<!-- ══ SYMPTOMS — the visitor picks themselves out ══════ -->
+<section class="symptoms" id="symptoms" aria-labelledby="symptoms-h">
+  <div class="shell">
+    <h2 class="symptoms-h reveal" id="symptoms-h">Which one is you?</h2>
+    <ul class="symptom-list">
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="We get plenty of signups but almost nobody comes back after the first session.">
+        <span class="symptom-say">&ldquo;We get plenty of signups. Nobody comes back.&rdquo;</span>
+        <span class="symptom-is">Activation</span>
+      </button></li>
+
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="Revenue is flat even though the product is better than it has ever been.">
+        <span class="symptom-say">&ldquo;The product keeps getting better. Revenue doesn&rsquo;t.&rdquo;</span>
+        <span class="symptom-is">Pricing</span>
+      </button></li>
+
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="Everyone loves the demo and then the deal goes quiet for weeks.">
+        <span class="symptom-say">&ldquo;They love the demo. Then it goes quiet.&rdquo;</span>
+        <span class="symptom-is">Positioning</span>
+      </button></li>
+
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="Our biggest customers pay roughly the same as our smallest ones.">
+        <span class="symptom-say">&ldquo;Our biggest customers pay the same as our smallest.&rdquo;</span>
+        <span class="symptom-is">Packaging</span>
+      </button></li>
+
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="Retention is strong but revenue is not growing from existing customers.">
+        <span class="symptom-say">&ldquo;Nobody churns. Nobody spends more either.&rdquo;</span>
+        <span class="symptom-is">Expansion revenue</span>
+      </button></li>
+
+      <li><button class="symptom reveal" type="button" data-track="symptom_pick"
+        data-q="Our ads used to work and now they cost more every month for the same result.">
+        <span class="symptom-say">&ldquo;Ads worked last year. Now they just cost more.&rdquo;</span>
+        <span class="symptom-is">CAC &amp; channel</span>
+      </button></li>
+    </ul>
+    <p class="symptoms-note reveal">Pick the one that stings. It goes straight into the box above.</p>
+  </div>
+</section>
+
+<!-- ══ ACT 01 — THE THESIS ═══════════════════════════════ -->
+<section class="act invert" id="thesis">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 01</p>
+    <div class="act-body">
+      <h2 class="statement line-reveal reveal glint">
+        AI can replace the execution.<br>
+        <span class="gradient-text">Not the ideas.</span>
+      </h2>
+      <p class="lede reveal">
+        Shipping used to be the hard part. It isn't any more, and everybody
+        noticed at roughly the same time. What's left is the stuff no model will
+        do for you: deciding what's worth building, who you're building it for,
+        how you explain it, and what to charge.
       </p>
-      <ul class="card-bullets">
-        <li>International hiring strategy and workforce structure design</li>
-        <li>Employment model assessment — cost, risk, speed, scale</li>
-        <li>Cross-border compliance review and risk identification</li>
-        <li>Vendor and partner evaluation for global employment</li>
-        <li>Country-level expansion readiness and go/no-go assessment</li>
-      </ul>
-      <div class="card-footer">
-        <div>
-          <div class="card-price">Hourly · Daily · Project</div>
-          <div class="card-meta">Engagement format based on your needs</div>
-        </div>
-        <a href="/services#global-hiring" class="card-inquire">Learn more →</a>
-      </div>
-    </article>
-
-    <article class="card card-span card-premium reveal">
-      <p class="card-num">03 — Premium Engagement</p>
-      <h3 class="card-title">EOR &amp; HR Tech Market Due Diligence</h3>
-      <div class="premium-body">
-        <p class="card-desc">
-          Specialist due diligence support for PE firms, VC funds, and strategic acquirers evaluating Employer of Record platforms, global payroll software, or HR tech targets. I work alongside your financial and legal teams as the operational domain expert.<br><br>
-          With 150+ provider audits across all global regions, I bring market-wide perspective to assess what a target's product truly delivers, where compliance liabilities are hidden, and whether the business is positioned to compete at scale.
-        </p>
-        <ul class="card-bullets" style="align-self:start; margin-top:.4rem;">
-          <li>Product quality, architecture, and technical debt assessment</li>
-          <li>Entity ownership model analysis (owned vs partner network)</li>
-          <li>Regulatory compliance exposure and liability mapping</li>
-          <li>Competitive positioning and moat sustainability</li>
-          <li>Pricing model, margin structure, unit economics review</li>
-          <li>GTM maturity, commercial team capability, pipeline quality</li>
-          <li>Global coverage depth and expansion readiness</li>
-        </ul>
-      </div>
-      <div class="card-footer" style="margin-top:1.5rem;">
-        <div>
-          <div class="card-price">Custom Quote</div>
-          <div class="card-meta">Scope-dependent · Confidential engagements</div>
-        </div>
-        <a href="/services#due-diligence" class="card-inquire">Learn more →</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ABOUT SUMMARY -->
-<section class="about" id="about" aria-labelledby="about-h">
-  <div class="about-grid">
-    <div class="reveal">
-      <p class="section-label">Background</p>
-      <h2 class="section-h" id="about-h" style="color:var(--warm-white);margin-bottom:1.5rem;">Five years inside global operations.</h2>
-      <p class="about-pull">
-        5+ years navigating <em>the complexity</em> of global operations — from the inside.
+      <p class="lede reveal">
+        Those are creative calls. Frameworks don't produce them. They come from
+        having sat in the product review and then on the sales call two hours
+        later, and noticing the two rooms believe completely different things
+        about the same customer. That gap is where most of my useful ideas come
+        from, and it's what I'm actually selling.
       </p>
-      <p class="about-body">
-        I've worked at the intersection of product, sales, and international operations across multiple geographies — building things, running audits, coordinating cross-border teams, and closing deals in markets where the rules are different and the margin for error is thin.<br><br>
-        That operational depth is what makes the work different. I don't build strategies from templates. I build them from pattern recognition earned across <strong>150+ provider audits</strong>, multiple markets, and years of understanding how global hiring, SaaS GTM, and international compliance actually behave under pressure.<br><br>
-        <strong>US legal entity. Working with clients globally.</strong> Clean, milestone-based engagements from anywhere in the world.
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACT 02 — WHAT I DO ════════════════════════════════ -->
+<section class="act" id="work">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 02</p>
+    <div class="act-body">
+      <h2 class="reveal">Five places the money<br><span class="gradient-text">is usually hiding.</span></h2>
+
+      <div class="work-list">
+        <article class="glass work-item reveal" data-reveal="left">
+          <span class="work-n"><svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle class="dw" cx="20" cy="20" r="15"/>
+              <circle class="dw d1" cx="20" cy="20" r="9"/>
+              <circle class="pop d2" cx="20" cy="20" r="3.2" fill="currentColor" stroke="none"/>
+            </svg>
+            <b>01</b></span>
+          <div>
+            <h3>Positioning &amp; messaging</h3>
+            <p>Cheapest thing to change, usually the biggest lift. Read your homepage and ask whether it could describe three other businesses. If it could, more paid spend just buys you confusion at a higher velocity. This is a writing problem, not a workshop problem.</p>
+          </div>
+        </article>
+
+        <article class="glass work-item reveal" data-reveal="left">
+          <span class="work-n"><svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect class="grow" x="6" y="24" width="7" height="10" rx="2" fill="currentColor" stroke="none"/>
+              <rect class="grow d1" x="16.5" y="17" width="7" height="17" rx="2" fill="currentColor" stroke="none"/>
+              <rect class="grow d2" x="27" y="8" width="7" height="26" rx="2" fill="currentColor" stroke="none"/>
+            </svg>
+            <b>02</b></span>
+          <div>
+            <h3>Pricing &amp; packaging</h3>
+            <p>The fastest revenue lever there is, and the one teams touch least because changing it feels dangerous. It usually isn't. Most pricing got set once, early, by two or three people who were guessing. Then nobody touched it again.</p>
+          </div>
+        </article>
+
+        <article class="glass work-item reveal" data-reveal="left">
+          <span class="work-n"><svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path class="dw" d="M22.5 4 L10 22 h8.5 L16 36 L30 17 h-8.5z" stroke-linejoin="round"/>
+            </svg>
+            <b>03</b></span>
+          <div>
+            <h3>Activation</h3>
+            <p>Signups are vanity until someone reaches the moment the product actually works. I find that moment, measure how many people get there, and cut everything standing between the two.</p>
+          </div>
+        </article>
+
+        <article class="glass work-item reveal" data-reveal="left">
+          <span class="work-n"><svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path class="dw" d="M5 31 C13 31 15.5 14 24 14 C29.5 14 32 10 34.5 6" stroke-linecap="round"/>
+              <path class="dw d1" d="M26.5 6 H35 V14.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <b>04</b></span>
+          <div>
+            <h3>Expansion revenue</h3>
+            <p>Retention gets all the attention; expansion pays the bills. If your customers can't spend more with you as they grow, you've built a business that has to win new logos forever just to stand still.</p>
+          </div>
+        </article>
+
+        <article class="glass work-item reveal" data-reveal="left">
+          <span class="work-n"><svg class="ico" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path class="dw" d="M5 20 H17" stroke-linecap="round"/>
+              <path class="dw d1" d="M17 20 C24 20 25 11 32 11" stroke-linecap="round"/>
+              <path class="dw d2 fade" d="M17 20 C24 20 25 29 32 29" stroke-linecap="round"/>
+              <circle class="pop d2" cx="34.5" cy="11" r="3" fill="currentColor" stroke="none"/>
+            </svg>
+            <b>05</b></span>
+          <div>
+            <h3>Product strategy</h3>
+            <p>What to build, and the harder one, what to kill. Most roadmaps are just a record of things nobody was willing to cancel. I'm comfortable being the person who says that out loud.</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACT 03 — PREVIOUS WORK ═══════════════════════════ -->
+<section class="act" id="work-done">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 03</p>
+    <div class="act-body">
+      <h2 class="reveal">Previously.</h2>
+      <p class="lede reveal">
+        A deliberately mixed list. These are projects I have actually worked on,
+        not sectors I claim to specialise in. The point is the opposite of
+        specialism: the same handful of levers kept working across businesses
+        that had almost nothing else in common.
       </p>
-      <a href="/about" class="btn-blue" style="margin-top:2rem;">Read full bio →</a>
-    </div>
-    <div class="about-creds reveal">
-      <div class="cred">
-        <div class="cred-dot"></div>
-        <div class="cred-body">
-          <strong>5+ Years Global Operations</strong>
-          Cross-functional leadership across product, sales, and international expansion. Track record of restructuring go-to-market motions, improving unit economics, and driving compliance-first operational scale.
+
+      <div class="carousel reveal" data-reveal="scale">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="prev-track" tabindex="0"
+               role="region" aria-roledescription="carousel" aria-label="Previous work">
+          <article class="glass done-card" role="group" aria-roledescription="slide" aria-label="01 of 5">
+            <span class="done-index" aria-hidden="true">01</span>
+            <div class="done-body">
+              <span class="done-tag">Course business</span>
+              <h3>Health and wellness</h3>
+              <p>Reworked the offer, the tier structure and the path from interested visitor to finished checkout.</p>
+            </div>
+            <span class="done-foot">Offer &amp; checkout</span>
+          </article>
+          <article class="glass done-card" role="group" aria-roledescription="slide" aria-label="02 of 5">
+            <span class="done-index" aria-hidden="true">02</span>
+            <div class="done-body">
+              <span class="done-tag">SaaS platform</span>
+              <h3>HR tech, built not advised</h3>
+              <p>I built the product itself rather than writing a deck about it. This is also where the 150+ provider teardowns came from.</p>
+            </div>
+            <span class="done-foot">Product, end to end</span>
+          </article>
+          <article class="glass done-card" role="group" aria-roledescription="slide" aria-label="03 of 5">
+            <span class="done-index" aria-hidden="true">03</span>
+            <div class="done-body">
+              <span class="done-tag">Bricks and mortar</span>
+              <h3>Local grocery business</h3>
+              <p>Bootstrapped, with no budget, no brand and no funnel to speak of. Grew revenue out of what was already there.</p>
+            </div>
+            <span class="done-foot">Revenue from scratch</span>
+          </article>
+          <article class="glass done-card" role="group" aria-roledescription="slide" aria-label="04 of 5">
+            <span class="done-index" aria-hidden="true">04</span>
+            <div class="done-body">
+              <span class="done-tag">Marketplace</span>
+              <h3>Comparison platform</h3>
+              <p>Built the lead acquisition side. Comparison is a brutal format because buyers arrive already suspicious.</p>
+            </div>
+            <span class="done-foot">Lead acquisition</span>
+          </article>
+          <article class="glass done-card" role="group" aria-roledescription="slide" aria-label="05 of 5">
+            <span class="done-index" aria-hidden="true">05</span>
+            <div class="done-body">
+              <span class="done-tag">Product</span>
+              <h3>Apps, end to end</h3>
+              <p>From deciding what to build through to how it gets sold. Doing both is why my product opinions survive a sales call.</p>
+            </div>
+            <span class="done-foot">Build to sell</span>
+          </article>
+          </div>
         </div>
-      </div>
-      <div class="cred">
-        <div class="cred-dot"></div>
-        <div class="cred-body">
-          <strong>International Sales Leadership</strong>
-          Led market expansion across EMEA and MENA regions. Deep understanding of how B2B SaaS is bought and sold across different regulatory and cultural environments.
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-dot"></div>
-        <div class="cred-body">
-          <strong>150+ Provider Audits</strong>
-          Audited over 150 EOR and global payroll providers across all major regions — pricing models, entity structures, compliance depth, product quality, and margin architecture.
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-dot"></div>
-        <div class="cred-body">
-          <strong>Founder</strong>
-          Founded an independent advisory platform in the global employment space, developing proprietary frameworks for provider evaluation and market intelligence.
+
+        <div class="carousel-ui">
+          <div class="carousel-controls">
+            <div class="carousel-dots" id="prev-dots">
+            <button type="button" class="dot is-active" data-go="0" aria-label="Go to slide 1"></button>
+            <button type="button" class="dot" data-go="1" aria-label="Go to slide 2"></button>
+            <button type="button" class="dot" data-go="2" aria-label="Go to slide 3"></button>
+            <button type="button" class="dot" data-go="3" aria-label="Go to slide 4"></button>
+            <button type="button" class="dot" data-go="4" aria-label="Go to slide 5"></button>
+            </div>
+            <div class="carousel-arrows">
+              <button class="carousel-btn" type="button" id="prev-back" aria-label="Previous">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="carousel-btn" type="button" id="prev-next" aria-label="Next">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process" id="process" aria-labelledby="process-h">
-  <p class="section-label reveal">How I Work</p>
-  <h2 class="section-h reveal" id="process-h" style="margin-bottom:2.5rem;">No surprises. Clean engagements.</h2>
-  <div class="process-row reveal">
-    <div class="step">
-      <div class="step-n">01</div>
-      <h3 class="step-title">Discovery Call</h3>
-      <p class="step-desc">30 minutes. I understand your challenge, timeline, and what a successful outcome looks like. Every engagement is scoped specifically — no generic proposals.</p>
-    </div>
-    <div class="step">
-      <div class="step-n">02</div>
-      <h3 class="step-title">Transparent Proposal</h3>
-      <p class="step-desc">A clear statement of work with transparent hourly or daily rates, milestone checkpoints, and hard delivery dates. No surprise overruns, no scope drift without your approval.</p>
-    </div>
-    <div class="step">
-      <div class="step-n">03</div>
-      <h3 class="step-title">Embedded Delivery</h3>
-      <p class="step-desc">I work directly with your team — not through intermediaries. Decisions get made, documentation gets written, and the work gets done on time and to spec.</p>
-    </div>
-    <div class="step">
-      <div class="step-n">04</div>
-      <h3 class="step-title">Clean Handoff</h3>
-      <p class="step-desc">Every engagement ends with documented outputs your team owns independently. No artificial dependency, no lock-in. You leave with the work, not just the consultant.</p>
+<!-- ══ ACT 04 — BUY ME ═══════════════════════════════════ -->
+<section class="act tinted" id="pricing">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 04</p>
+    <div class="act-body">
+      <h2 class="reveal">I'm a product.<br><span class="gradient-text">So here's the pricing page.</span></h2>
+      <p class="lede reveal">
+        Every company I work with has one. It seemed only fair.
+      </p>
+
+      <!-- Delivery mode changes the price because it changes my week.
+           TODO(Quentin): set the real uplifts in assets/home.js (MODES). -->
+      <div class="modes reveal" role="radiogroup" aria-label="Delivery mode">
+        <button class="mode is-active" type="button" role="radio" aria-checked="true" data-mode="remote">Remote</button>
+        <button class="mode" type="button" role="radio" aria-checked="false" data-mode="hybrid">Hybrid</button>
+        <button class="mode" type="button" role="radio" aria-checked="false" data-mode="onsite">On-site</button>
+      </div>
+      <p class="mode-note reveal" id="mode-note">
+        Remote by default. Everything happens over video and inside your tools,
+        which is how most of this work gets done anyway.
+      </p>
+
+      <!-- TODO(Quentin): these are placeholder rates — set your real ones. -->
+      <div class="tiers">
+        <article class="glass tier tier-wide tier-free reveal" data-reveal="scale">
+          <p class="tier-name">Free</p>
+          <p class="tier-price" data-fixed><span class="tier-amount">&euro;0</span><span>/ forever</span></p>
+          <p class="tier-desc">Everything I know, written down. Ask AI-me on this page, read the research, take the PDFs. No email required, no gate, no drip sequence.</p>
+          <ul class="tier-list tier-list-inline">
+            <li>Ask AI-me anything</li>
+            <li>All six research pieces</li>
+            <li>Sample deliverables</li>
+          </ul>
+          <a class="btn btn-glass tier-cta" href="#ask">Start asking</a>
+        </article>
+
+        <article class="glass tier reveal" data-reveal="scale">
+          <p class="tier-name">Espresso</p>
+          <p class="tier-price" data-base="500" data-unit="one-off"><span class="tier-amount">€500</span><span>/ one-off</span></p>
+          <p class="tier-desc">Ninety minutes on your business, and a written teardown afterwards. Most people leave with two things to change this week.</p>
+          <ul class="tier-list">
+            <li>Live teardown call</li>
+            <li>Written follow-up</li>
+            <li>No deck</li>
+          </ul>
+          <button class="btn btn-glass tier-add" type="button" data-tier="Espresso" data-price="500">Add to cart</button>
+        </article>
+
+        <article class="glass tier tier-featured reveal" data-reveal="scale">
+          <span class="tier-badge">Most chosen</span>
+          <p class="tier-name">Sprint</p>
+          <p class="tier-price" data-base="6000" data-unit="2 weeks"><span class="tier-amount">€6,000</span><span>/ 2 weeks</span></p>
+          <p class="tier-desc">Embedded with your team. We pick one lever, usually pricing or activation, and actually move it rather than writing a document about moving it.</p>
+          <ul class="tier-list">
+            <li>Two weeks, in your tools</li>
+            <li>One lever, shipped</li>
+            <li>Your team owns it after</li>
+          </ul>
+          <button class="btn btn-primary tier-add" type="button" data-tier="Sprint" data-price="6000">Add to cart</button>
+        </article>
+
+        <article class="glass tier reveal" data-reveal="scale">
+          <p class="tier-name">Operator</p>
+          <p class="tier-price" data-base="8000" data-unit="month"><span class="tier-amount">€8,000</span><span>/ month</span></p>
+          <p class="tier-desc">Fractional product and growth. I'm in your standups, your pricing debates, and your board deck. Minimum three months, because anything shorter is theatre.</p>
+          <ul class="tier-list">
+            <li>Ongoing, part-time</li>
+            <li>Strategy and execution</li>
+            <li>3-month minimum</li>
+          </ul>
+          <button class="btn btn-glass tier-add" type="button" data-tier="Operator" data-price="8000">Add to cart</button>
+        </article>
+
+        <article class="glass tier tier-wide tier-custom reveal" data-reveal="scale">
+          <p class="tier-name">Custom</p>
+          <p class="tier-price" data-fixed><span class="tier-amount">Let's talk</span></p>
+          <p class="tier-desc">Something that does not fit the three above. A workshop, a board session, a second opinion on a decision you have already made. Priced on the problem.</p>
+          <ul class="tier-list tier-list-inline">
+            <li>Scoped together</li>
+            <li>Fixed price before we start</li>
+            <li>I will say if it is not worth it</li>
+          </ul>
+          <a class="btn btn-glass tier-cta" href="#inbox">Describe it</a>
+        </article>
+
+      </div>
+
+      <div class="cart-row reveal">
+        <button class="btn btn-ghost dodge" type="button" id="dodge-btn">Is there a cheaper option?</button>
+        <div class="cart-summary" id="cart-summary" hidden>
+          <span id="cart-text"></span>
+          <button class="btn btn-primary" type="button" id="cart-buy">Buy now</button>
+        </div>
+      </div>
+
+      <div class="compare-wrap reveal">
+        <table class="compare">
+          <caption class="visually-hidden">What is included in each engagement</caption>
+          <thead>
+            <tr>
+              <th scope="col">What's included</th>
+              <th scope="col">Espresso</th>
+              <th scope="col">Sprint</th>
+              <th scope="col">Operator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Live teardown of your business</th><td data-y>Yes</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Written follow-up you can circulate</th><td data-y>Yes</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Working inside your tools</th><td data-n>No</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">One lever actually shipped</th><td data-n>No</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Pricing or packaging rebuild</th><td data-n>No</td><td>One</td><td>Ongoing</td></tr>
+            <tr><th scope="row">In your standups and planning</th><td data-n>No</td><td data-n>No</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Board and investor material</th><td data-n>No</td><td data-n>No</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Async access between sessions</th><td data-n>No</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Your team owns everything after</th><td data-y>Yes</td><td data-y>Yes</td><td data-y>Yes</td></tr>
+            <tr><th scope="row">Commitment</th><td>90 minutes</td><td>2 weeks</td><td>3 months min.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHO -->
-<section class="who" id="who" aria-labelledby="who-h">
-  <p class="section-label reveal">Who I Work With</p>
-  <h2 class="section-h reveal" id="who-h" style="margin-bottom:3rem;">Built for these teams.</h2>
-  <div class="who-grid reveal">
-    <article class="who-card">
-      <span class="who-icon" aria-hidden="true">🚀</span>
-      <h3 class="who-title">SaaS &amp; Growth Companies</h3>
-      <p class="who-desc">You have product-market fit and are ready to scale. You need a GTM strategy built on real buyer intelligence — not a deck that looks good but doesn't hold up in the field. Sector-agnostic, with particular depth in HR tech and B2B platforms.</p>
-    </article>
-    <article class="who-card">
-      <span class="who-icon" aria-hidden="true">🌐</span>
-      <h3 class="who-title">Global Hiring Teams</h3>
-      <p class="who-desc">You're hiring across regions — EMEA, APAC, Americas — and need someone who understands the operational and compliance reality of international workforce expansion. No commissions, no provider bias, just independent advisory.</p>
-    </article>
-    <article class="who-card">
-      <span class="who-icon" aria-hidden="true">📊</span>
-      <h3 class="who-title">Investors &amp; Acquirers</h3>
-      <p class="who-desc">You're evaluating an EOR, global payroll, or HR tech target. You need a domain expert who can tell you what the financials can't — product architecture, compliance depth, competitive position, and GTM maturity. Confidential engagements welcome.</p>
-    </article>
+<!-- ══ ACT 05 — THE FORT ═════════════════════════════════ -->
+<section class="act" id="fort">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 05</p>
+    <div class="act-body">
+      <h2 class="reveal">My personal fort.</h2>
+      <p class="lede reveal">
+        My research, my frameworks, and the things I steal from. Open a folder.
+        The documents are real and you can take them with you.
+      </p>
+
+      <!-- Desktop is rendered from window.QD_DESKTOP in assets/content.js -->
+      <div class="mac reveal" data-reveal="scale" id="mac">
+        <div class="mac-bar">
+          <span class="mac-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="mac-menu">Finder</span>
+          <span class="mac-menu">File</span>
+          <span class="mac-menu">View</span>
+          <span class="mac-menu">Go</span>
+          <span class="mac-clock" id="mac-clock"></span>
+        </div>
+        <div class="mac-desk" id="mac-desk">
+          <!-- folder icons injected here -->
+        </div>
+      </div>
+      <p class="mac-hint reveal">Double-click a folder. Everything in Research downloads as a PDF.</p>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta" id="contact" aria-labelledby="cta-h">
-  <div class="cta-status reveal">
-    <div class="cta-status-dot" aria-hidden="true"></div>
-    Currently taking new engagements
+<!-- ══ ACT 06 — TALK ═════════════════════════════════════ -->
+<section class="act invert" id="talk">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 06</p>
+    <div class="act-body">
+      <h2 class="reveal">Want to speak with me,<br><span class="gradient-text">or AI-me?</span></h2>
+      <p class="lede reveal">
+        One of us answers instantly at three in the morning. The other one is
+        actually going to fix your funnel.
+      </p>
+
+      <div class="choice-grid">
+        <div class="glass choice reveal" data-reveal="left">
+          <p class="choice-kind">The real one</p>
+          <h3>Me</h3>
+          <p>Thirty minutes, no deck, no discovery script. You describe the problem and I tell you whether I'm the right person for it. Including when I'm not.</p>
+          <a class="btn btn-primary" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">Book 30 minutes</a>
+        </div>
+
+        <div class="glass choice reveal" data-reveal="right">
+          <p class="choice-kind">The instant one</p>
+          <h3>AI-me</h3>
+          <p>Trained on my notes and opinions. Faster, cheaper, available now, and it will tell you when it doesn't know. Which is more than most consultants manage.</p>
+          <button class="btn btn-glass" type="button" id="talk-ai">Ask AI-me →</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <h2 class="cta-title reveal" id="cta-h">
-    Let's build<br>
-    <span class="ghost">something real.</span>
-  </h2>
-  <p class="cta-sub reveal">Hourly, daily, or project-based.<br>US entity · working with clients globally.</p>
-  <a href="mailto:quentin.dupard@gmail.com" class="cta-email reveal">quentin.dupard@gmail.com</a>
-  <div class="cta-btns reveal">
-    <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener" class="btn-ghost-light">LinkedIn</a>
-    <a href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener" class="btn-blue" style="color:var(--warm-white);">Book a Discovery Call →</a>
+</section>
+
+<!-- ══ ACT 07 — INBOX ════════════════════════════════════ -->
+<section class="act" id="inbox">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 07</p>
+    <div class="act-body">
+      <h2 class="reveal">Or just write to me.</h2>
+      <p class="lede reveal">
+        My mailbox, open. Read what people say about the work, take the
+        attachments, and write me one yourself. It lands in my actual inbox, and
+        you keep a copy in Sent.
+      </p>
+
+      <!-- Mailbox is rendered from window.QD_MAILBOX in assets/content.js -->
+      <div class="glass mail reveal" data-reveal="scale" id="mail">
+        <div class="mail-bar">
+          <div class="mail-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="mail-title">Mailbox</span>
+          <span class="mail-demo" title="Sample content. See the note below.">Demo</span>
+          <button class="btn btn-primary mail-new" type="button" id="mail-new" data-track="compose_open">New message</button>
+        </div>
+
+        <div class="mail-body">
+          <nav class="mail-side" aria-label="Mailbox folders">
+            <button class="mail-folder is-active" type="button" data-folder="inbox">
+              Inbox <span class="mail-badge" id="mail-unread">0</span>
+            </button>
+            <button class="mail-folder" type="button" data-folder="sent">
+              Sent <span class="mail-badge" id="mail-sent-count">0</span>
+            </button>
+          </nav>
+
+          <ul class="mail-list" id="mail-list" aria-label="Messages"></ul>
+
+          <article class="mail-read" id="mail-read">
+            <p class="mail-empty" id="mail-empty">Select a message to read it.</p>
+          </article>
+        </div>
+      </div>
+
+      <p class="mac-hint reveal">
+        The recommendations here are placeholders until I swap in real ones.
+        The compose button is not a placeholder: write something and it arrives
+        in my actual inbox, and you get a copy in Sent.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ — the visible half of the FAQPage schema ══════ -->
+<section class="act" id="faq">
+  <div class="shell act-grid">
+    <p class="act-mark">Act 08</p>
+    <div class="act-body">
+      <h2 class="reveal">Questions I get asked.</h2>
+
+      <div class="faq">
+        <details class="glass faq-item reveal" data-track="faq_open">
+          <summary>What does a fractional product and marketing operator do?</summary>
+          <p>Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire. In practice that means pricing and packaging decisions, positioning and messaging, improving conversion and activation, and deciding what to build versus what to kill. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price.</p>
+        </details>
+
+        <details class="glass faq-item reveal" data-track="faq_open">
+          <summary>How do I get more clients?</summary>
+          <p>Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most businesses asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.</p>
+        </details>
+
+        <details class="glass faq-item reveal" data-track="faq_open">
+          <summary>How do you improve activation?</summary>
+          <p>Identify the single action that delivers first value, measure what share of signups reach it within a week, then remove everything between signup and that moment. Pre-populating new accounts with realistic sample data is the most reliable single change I know. <a href="/research/activation/">The long version is here.</a></p>
+        </details>
+
+        <details class="glass faq-item reveal" data-track="faq_open">
+          <summary>When should a business change its pricing?</summary>
+          <p>If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with what you sell and their invoice does not grow, the model caps your revenue. A 10&ndash;15% increase applied only to new customers is the lowest-risk experiment available. <a href="/research/pricing-metric/">The long version is here.</a></p>
+        </details>
+
+        <details class="glass faq-item reveal" data-track="faq_open">
+          <summary>How much does an engagement cost?</summary>
+          <p>Three formats: a 90-minute teardown from &euro;500, a two-week embedded sprint from &euro;6,000, and ongoing fractional work from &euro;8,000 per month with a three-month minimum. Hybrid and on-site delivery cost more than remote. <a href="#pricing">Full pricing is above.</a></p>
+        </details>
+      </div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="footer-col">
-    <img src="/assets/qd-favicon-light.svg" alt="QD" class="footer-logo" width="40" height="40">
-    <h4>Quentin Dupard</h4>
-    <p>GTM Strategy &amp; Global Hiring Consultant. Independent advisory for SaaS, HR tech, and investors expanding worldwide.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Navigate</h4>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <div class="footer-col">
-    <h4>Services</h4>
-    <a href="/services#gtm">GTM Strategy</a>
-    <a href="/services#global-hiring">Global Hiring</a>
-    <a href="/services#due-diligence">EOR Due Diligence</a>
-  </div>
-  <div class="footer-col">
-    <h4>Connect</h4>
-    <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:quentin.dupard@gmail.com">Email</a>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Quentin Dupard · GTM &amp; Global Hiring Consultant · US Entity</span>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-      <a href="mailto:quentin.dupard@gmail.com" aria-label="Email">Email</a>
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Fractional product &amp; marketing</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Working worldwide</strong><br>
+          Remote by default<br>
+          On-site when it earns it
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Book 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="What I do">
+        <h2>What I do</h2>
+        <a href="/research/positioning/">Positioning &amp; messaging</a>
+        <a href="/research/pricing-metric/">Pricing &amp; packaging</a>
+        <a href="/research/activation/">Activation</a>
+        <a href="/research/expansion-revenue/">Expansion revenue</a>
+        <a href="/research/what-to-kill/">Product strategy</a>
+        <a href="/research/rising-cac/">Acquisition &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Engagements">
+        <h2>Engagements</h2>
+        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/#pricing">Sprint &mdash; two weeks</a>
+        <a href="/#pricing">Operator &mdash; ongoing</a>
+        <a href="/#pricing">Compare all three</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/">Home</a>
+        <a href="/about">About me</a>
+        <a href="/#work-done">Previously</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/research/">Research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More">
+        <h2>More</h2>
+        <a href="/#ask">Ask AI-me</a>
+        <a href="/#inbox">Write to me</a>
+        <a href="/stats/">Live stats</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">Full notes</a>
+      </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        No cookies, no third-party trackers, no analytics scripts.
+        <a href="/stats/">The numbers I do keep are public.</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
     </div>
   </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
 </footer>
 
-<script src="/assets/animations.js?v=4" defer></script>
+<!-- Live session stats — what this page knows about your visit, in real time -->
+<aside class="stats glass glass-thin collapsed" id="stats" aria-label="Session panel">
+  <button class="stats-toggle" type="button" id="stats-toggle" aria-expanded="false">
+    <span class="stats-live" aria-hidden="true"></span> Live
+  </button>
+  <dl class="stats-body" id="stats-body">
+    <div><dt>On page</dt><dd id="s-time">0s</dd></div>
+    <div><dt>Scrolled</dt><dd id="s-scroll">0%</dd></div>
+    <div><dt>Act</dt><dd id="s-act">Hero</dd></div>
+    <div><dt>Clicks</dt><dd id="s-clicks">0</dd></div>
+
+    <!-- iOS 27 shipped a user-facing Liquid Glass transparency control.
+         Same idea: the reader decides how much glass they want. -->
+    <div class="glass-ctl">
+      <label for="theme-toggle">Theme</label>
+      <button class="theme-toggle" type="button" id="theme-toggle"
+              role="switch" aria-checked="false" aria-label="Switch between light and dark">
+        <span class="theme-knob" aria-hidden="true"></span>
+        <span class="theme-sun" aria-hidden="true">☀</span>
+        <span class="theme-moon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+
+    <div class="glass-ctl">
+      <label for="glass-level">Glass</label>
+      <input type="range" id="glass-level" min="0" max="100" value="50"
+             aria-label="Liquid Glass transparency">
+    </div>
+  </dl>
+</aside>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<!-- Finder windows open into here -->
+<div class="mac-windows" id="mac-windows"></div>
+
+<!-- Compose ─────────────────────────────────────────────── -->
+<div class="modal" id="compose" hidden>
+  <div class="modal-scrim" data-close-compose></div>
+  <div class="glass glass-thick modal-panel" role="dialog" aria-modal="true" aria-labelledby="compose-h">
+    <div class="modal-head">
+      <h3 id="compose-h">New message</h3>
+      <button class="ask-close" type="button" data-close-compose aria-label="Close">&times;</button>
+    </div>
+
+    <form id="compose-form" autocomplete="on">
+      <label class="field">
+        <span>To</span>
+        <input type="text" value="Quentin Dupard &lt;quentin.dupard@gmail.com&gt;" readonly>
+      </label>
+      <label class="field">
+        <span>From</span>
+        <input type="email" id="compose-from" placeholder="you@company.com" required>
+      </label>
+      <label class="field">
+        <span>Subject</span>
+        <input type="text" id="compose-subject" placeholder="Where do you think we're leaking?" maxlength="120" required>
+      </label>
+      <label class="field field-grow">
+        <span>Message</span>
+        <textarea id="compose-body" rows="6" placeholder="What you sell, who buys it, and what's not working." maxlength="2000" required></textarea>
+      </label>
+
+      <!-- Spam trap. Hidden from people, irresistible to bots. -->
+      <div class="hp" aria-hidden="true">
+        <label>Company<input type="text" id="compose-company" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <p class="modal-note">
+        This one is real: it lands in my actual inbox and I reply from there.
+        I keep your address to write back and for nothing else. No list, no CRM,
+        no newsletter.
+      </p>
+
+      <div class="modal-actions">
+        <button class="btn btn-glass" type="button" data-close-compose>Cancel</button>
+        <button class="btn btn-primary" type="submit" id="compose-submit">
+          <span id="compose-submit-label">Send</span>
+        </button>
+      </div>
+      <p class="compose-status" id="compose-status" role="status" hidden></p>
+    </form>
+  </div>
+</div>
+
+<script src="/assets/track.js?v=5"></script>
+<script src="/assets/content.js?v=4"></script>
+<script src="/assets/home.js?v=16" defer></script>
 </body>
 </html>

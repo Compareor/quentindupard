@@ -1,133 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PW2D5SZD');</script>
-<!-- End Google Tag Manager -->
-
-<title>Page Not Found — Quentin Dupard</title>
-<meta name="description" content="The page you're looking for doesn't exist. Head back to the homepage or explore Quentin Dupard's GTM and global hiring consulting services.">
+<title>Not found | Quentin Dupard</title>
+<meta name="description" content="That page does not exist.">
 <meta name="robots" content="noindex, follow">
 
-<!-- Favicons (Google-friendly: ICO at root + SVG with light/dark variants) -->
-<link rel="icon" href="/favicon.ico" sizes="any">
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/svg+xml" href="/assets/qd-favicon-light.svg" media="(prefers-color-scheme: dark)">
-<link rel="apple-touch-icon" href="/assets/qd-favicon-dark.svg">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#0d1b2e">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v=4">
+<link rel="stylesheet" href="/assets/glass.css?v=20">
+<link rel="stylesheet" href="/assets/home.css?v=26">
+<link rel="stylesheet" href="/assets/article.css?v=3">
 
-<style>
-.notfound {
-  min-height: 100vh;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 6rem 1.5rem; text-align: center;
-  background: linear-gradient(180deg, var(--warm-white) 0%, var(--parchment) 100%);
-}
-.notfound h1 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(5rem, 18vw, 12rem);
-  line-height: 1; letter-spacing: -0.04em;
-  color: var(--blue);
-  margin-bottom: 1rem;
-}
-.notfound p {
-  font-size: .8rem; color: var(--muted);
-  max-width: 480px; line-height: 1.85;
-  margin-bottom: 2.5rem;
-}
-.notfound h2 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(1.4rem, 4vw, 2rem);
-  margin-bottom: 1rem; color: var(--ink);
-}
-.notfound-btns { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
-</style>
+<script>document.documentElement.classList.remove('no-js');</script>
+<script>
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW2D5SZD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
 
-<header>
-<nav class="site-nav" aria-label="Primary">
-  <div class="nav-brand">
-    <a href="/" class="nav-logo-link" aria-label="Home">
-      <img src="/assets/qd-favicon-dark.svg" alt="QD" class="nav-logo" width="32" height="32">
-    </a>
-    <a href="/" class="nav-name">Quentin Dupard</a>
-    <span class="nav-pulse" aria-hidden="true"></span>
-    <span class="nav-available">Available</span>
-  </div>
+<div class="mesh" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Primary">
+  <a href="/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
   <div class="nav-links">
-    <a href="/services">Services</a>
+    <a href="/#work">What I do</a>
+    <a href="/#work-done">Previously</a>
+    <a href="/research/">Research</a>
+    <a href="/#pricing">Pricing</a>
     <a href="/about">About</a>
-    <a href="/#process">Process</a>
-    <a href="/contact" class="nav-cta">Work Together</a>
   </div>
+  <a href="/#talk" class="btn btn-primary nav-cta">Talk to me</a>
 </nav>
-</header>
 
-<main class="notfound">
-  <h1>404</h1>
-  <h2>This page wandered off.</h2>
-  <p>The page you're looking for doesn't exist — maybe it was moved, renamed, or never existed at all. Let's get you back on track.</p>
-  <div class="notfound-btns">
-    <a href="/" class="btn-dark">Back to Home</a>
-    <a href="/services" class="btn-outline">View Services</a>
-    <a href="/contact" class="btn-blue" style="color:var(--warm-white);">Contact</a>
+<main>
+<section class="hero">
+  <div class="shell hero-inner">
+    <p class="eyebrow hero-eyebrow">404</p>
+
+    <h1 class="hero-title">
+      Nothing here.<br>
+      <span class="gradient-text">Which is its own kind of funnel leak.</span>
+    </h1>
+
+    <p class="lede hero-lede">
+      Either I moved something or the link was wrong. The useful stuff is
+      all one click away.
+    </p>
+
+    <div class="ask-chips" style="justify-content:center;max-width:640px;">
+      <a class="chip" href="/">Home</a>
+      <a class="chip" href="/research/">Research</a>
+      <a class="chip" href="/#pricing">Pricing</a>
+      <a class="chip" href="/about">About me</a>
+      <a class="chip" href="/#talk">Talk to me</a>
+    </div>
   </div>
+</section>
 </main>
 
 <footer class="site-footer">
-  <div class="footer-col">
-    <img src="/assets/qd-favicon-light.svg" alt="QD" class="footer-logo" width="40" height="40">
-    <h4>Quentin Dupard</h4>
-    <p>GTM Strategy &amp; Global Hiring Consultant. Independent advisory for SaaS, HR tech, and investors expanding worldwide.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Navigate</h4>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <div class="footer-col">
-    <h4>Services</h4>
-    <a href="/services#gtm">GTM Strategy</a>
-    <a href="/services#global-hiring">Global Hiring</a>
-    <a href="/services#due-diligence">EOR Due Diligence</a>
-  </div>
-  <div class="footer-col">
-    <h4>Connect</h4>
-    <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:quentin.dupard@gmail.com">Email</a>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Quentin Dupard · GTM &amp; Global Hiring Consultant · US Entity</span>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-      <a href="mailto:quentin.dupard@gmail.com" aria-label="Email">Email</a>
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Fractional product &amp; marketing</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Working worldwide</strong><br>
+          Remote by default<br>
+          On-site when it earns it
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Book 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="What I do">
+        <h2>What I do</h2>
+        <a href="/research/positioning/">Positioning &amp; messaging</a>
+        <a href="/research/pricing-metric/">Pricing &amp; packaging</a>
+        <a href="/research/activation/">Activation</a>
+        <a href="/research/expansion-revenue/">Expansion revenue</a>
+        <a href="/research/what-to-kill/">Product strategy</a>
+        <a href="/research/rising-cac/">Acquisition &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Engagements">
+        <h2>Engagements</h2>
+        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/#pricing">Sprint &mdash; two weeks</a>
+        <a href="/#pricing">Operator &mdash; ongoing</a>
+        <a href="/#pricing">Compare all three</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/">Home</a>
+        <a href="/about">About me</a>
+        <a href="/#work-done">Previously</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/research/">Research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More">
+        <h2>More</h2>
+        <a href="/#ask">Ask AI-me</a>
+        <a href="/#inbox">Write to me</a>
+        <a href="/stats/">Live stats</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">Full notes</a>
+      </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        No cookies, no third-party trackers, no analytics scripts.
+        <a href="/stats/">The numbers I do keep are public.</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
     </div>
   </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
 </footer>
 
-<script src="/assets/animations.js?v=4" defer></script>
+<script src="/assets/track.js?v=5"></script>
 </body>
 </html>

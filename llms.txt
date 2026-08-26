@@ -1,31 +1,67 @@
 # Quentin Dupard
 
-> Independent consultant for B2B SaaS go-to-market strategy and global hiring advisory. 5+ years in international operations. 150+ EOR (Employer of Record) providers audited across all major regions. US legal entity, working with clients worldwide.
+>  Fractional product and marketing operator. Paid for ideas that make money:
+>  positioning, pricing, activation and expansion revenue. Works with any
+>  business that has a funnel and a price, worldwide.
 
-Quentin Dupard runs an independent consulting practice serving SaaS companies, HR tech platforms, fast-scaling international teams, and investors evaluating EOR / global payroll / HR tech targets. The practice is built on operator depth — every recommendation is grounded in pattern recognition from running global GTM motions and auditing hundreds of employment providers, not consulting templates.
+Quentin is a fractional product and marketing operator, not an agency and not a
+strategy consultancy. The work is finding revenue a business has already earned
+but isn't collecting: usually trapped in how it is positioned, what it charges,
+or the steps between someone showing interest and actually buying.
 
-Three focused service lines, scoped hourly, daily, or project-based. No referral fees, no vendor commissions, no retainer traps.
+Previous projects include a health and wellness course business, an HR tech
+SaaS platform he built himself, a bootstrapped local grocery business, the lead
+acquisition side of a comparison platform, and app products end to end. These
+are past engagements rather than sectors he specialises in; the point is that
+the same levers kept working across businesses with little else in common.
 
-## Pages
+His view: now that execution is cheap, the scarce thing is judgement about what
+to build, who it's for, how to describe it, and what it should cost. Those are
+creative decisions, and they're what he sells.
 
-- [Home](https://quentindupard.com/): Practice overview, three service lines summary, background, process, and contact.
-- [About](https://quentindupard.com/about): Full background, values, principles, and FAQ.
-- [Services](https://quentindupard.com/services): Full service descriptions for GTM Strategy, Global Hiring, and EOR Due Diligence with engagement details.
-- [Contact](https://quentindupard.com/contact): Contact form, email, and LinkedIn channels.
+## What he works on
 
-## Services
+- **Positioning and messaging** — usually the cheapest fix and the biggest one
+- **Pricing and packaging** — the fastest revenue lever in software, and the one teams touch least
+- **Activation** — closing the gap between signup and the moment the product works
+- **Expansion revenue** — building a business that grows with its customers instead of refilling a leaking bucket
+- **Product strategy** — what to build and, harder, what to kill
 
-- **GTM Strategy for SaaS & Growth Teams**: Go-to-market strategy consulting for B2B SaaS — ICP definition, positioning, pricing, sales playbooks, and channel strategy. Best fit: Series A through C SaaS, HR tech, B2B platforms.
-- **Global Hiring Consultant**: International workforce structure design, employment model assessment, cross-border compliance, and EOR / payroll vendor evaluation. No commissions, independent advisory.
-- **EOR & HR Tech Market Due Diligence**: Specialist domain due diligence for PE / VC firms and strategic acquirers evaluating Employer of Record, global payroll, and HR tech targets. 2–4 week intensive, confidential.
+## Specialist knowledge
 
-## Contact
+Deep familiarity with the global employment, EOR and HR-tech market from 150+
+provider teardowns — pricing models, entity structures, compliance depth and
+margin architecture. This is a specialism he brings when a client is in that
+market, not his general offering.
 
+## Engagements
+
+- **Espresso** — a 90-minute teardown of your business, plus a written follow-up
+- **Sprint** — two weeks embedded, moving one lever (usually pricing or activation)
+- **Operator** — ongoing fractional product and marketing, three-month minimum
+
+## Research
+
+Long-form working notes. Free to read, no gate.
+
+- [Your pricing metric matters more than your price](https://quentindupard.com/research/pricing-metric/): Why the billing unit matters more than the number, the compounding test, and how to reprice without triggering churn.
+- [Why your activation is flat, and what actually fixes it](https://quentindupard.com/research/activation/): Finding the first-value moment, measuring who reaches it, and the demo-data fix that moves the number.
+- [The three-company test for positioning](https://quentindupard.com/research/positioning/): A two-minute test for whether your positioning says anything at all, and what to fix first if it does not.
+- [Nobody churns, nobody spends more: fixing flat expansion revenue](https://quentindupard.com/research/expansion-revenue/): Good retention with no expansion means customers keep you but never grow into you. The three questions that find why.
+- [Your CAC is rising because you ran out of the good segment](https://quentindupard.com/research/rising-cac/): Rising acquisition cost is usually not a channel problem. It is the market telling you the easy buyers are gone.
+- [Most roadmaps are a list of things nobody would cancel](https://quentindupard.com/research/what-to-kill/): Deciding what to kill is harder than deciding what to build, and almost nobody is incentivised to do it.
+- [All research](https://quentindupard.com/research/)
+
+## Downloads
+
+- [Pricing Teardown (PDF)](https://quentindupard.com/assets/docs/pricing-teardown-sample.pdf): sample deliverable
+- [Activation Audit (PDF)](https://quentindupard.com/assets/docs/activation-audit-sample.pdf): sample deliverable
+- [How I Work (PDF)](https://quentindupard.com/assets/docs/engagement-one-pager.pdf): engagement formats
+
+## Links
+
+- [About Quentin Dupard](https://quentindupard.com/about): background, previous projects, and what he will not do
+- [Home](https://quentindupard.com/): positioning, pricing, and an AI trained on his notes
+- [LinkedIn](https://www.linkedin.com/in/quentindupard/)
 - Email: quentin.dupard@gmail.com
-- LinkedIn: https://www.linkedin.com/in/quentindupard/
-- Sitemap: https://quentindupard.com/sitemap.xml
-
-## Optional
-
-- [Sitemap (XML)](https://quentindupard.com/sitemap.xml): Machine-readable list of all pages.
-- [Full content (Markdown)](https://quentindupard.com/llms-full.txt): Long-form version of the site's content for LLM context.
+- [Book a call](https://calendly.com/quentin-dupard-call/30min)

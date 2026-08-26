@@ -21,3 +21,6 @@ build/
 # Local env files (never commit)
 .env
 .env.*
+
+# Claude Code local session data
+.claude/

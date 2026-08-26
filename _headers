@@ -1,0 +1,20 @@
+# Cloudflare Pages security + caching headers.
+# No build step here, so this file is the only place these can be set.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Fingerprinted by ?v= query strings, so these can be cached hard.
+/assets/*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/assets/docs/*
+  Cache-Control: public, max-age=2592000
+
+# Per-visitor and never shared.
+/api/*
+  Cache-Control: no-store

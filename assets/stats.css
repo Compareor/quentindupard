@@ -1,0 +1,164 @@
+/* ── Live stats page ─────────────────────────────────────── */
+
+.stats-hero { padding: 150px 0 48px; }
+.stats-hero .hero-eyebrow { display: inline-flex; }
+
+.kpis {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 14px; margin-bottom: 18px;
+}
+.kpi { padding: 22px 20px; text-align: center; }
+.kpi-n {
+  font-size: 34px; font-weight: 620; letter-spacing: -0.035em; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(140deg, var(--text), var(--cyan));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  margin-bottom: 7px;
+}
+.kpi-l { font-size: 12px; color: var(--text-faint); letter-spacing: 0.02em; }
+
+.notice { padding: 16px 20px; margin-bottom: 18px; }
+.notice p { font-size: 14px; line-height: 1.6; color: var(--text-dim); }
+
+.panels {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 14px; margin-bottom: 14px;
+}
+.panel { padding: 22px; }
+.panel-h {
+  font-size: 13px; font-weight: 560; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--text-faint);
+  margin-bottom: 18px;
+}
+.panel-empty { font-size: 13.5px; color: var(--text-faint); }
+.panel-note { margin-top: 16px; font-size: 12px; line-height: 1.55; color: var(--text-faint); }
+
+/* Bar list */
+.bars { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.bar-row { display: flex; flex-direction: column; gap: 5px; }
+.bar-top {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  font-size: 13.5px;
+}
+.bar-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-val { color: var(--text-faint); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.bar-track { height: 6px; border-radius: 3px; background: var(--tint-strong); overflow: hidden; }
+.bar-fill {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  transition: width .7s var(--ease);
+}
+
+/* Column chart */
+.chart {
+  display: flex; align-items: flex-end; gap: 6px;
+  height: 168px;
+}
+.col { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 7px; height: 100%; justify-content: flex-end; }
+.col-bar {
+  width: 100%; min-height: 3px; border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--accent-a), var(--accent-b));
+  transition: height .7s var(--ease);
+}
+.col-label { font-size: 10px; color: var(--text-faint); white-space: nowrap; }
+
+.session-panel { margin-bottom: 40px; }
+.session-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.session-list dt { font-size: 12px; color: var(--text-faint); margin-bottom: 5px; }
+.session-list dd { font-size: 14px; font-weight: 560; color: var(--text); word-break: break-all; }
+
+@media (max-width: 900px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .panels { grid-template-columns: 1fr; }
+  .session-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .stats-hero { padding: 116px 0 36px; }
+  .col-label { display: none; }
+}
+
+/* ── Funnel ──────────────────────────────────────────────── */
+.panel-sub {
+  margin-top: -10px; margin-bottom: 18px;
+  font-size: 13px; line-height: 1.5; color: var(--text-faint);
+}
+
+.funnel-panel { padding: 24px; margin-bottom: 14px; }
+.funnel { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+
+.funnel-step { position: relative; }
+.funnel-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 14px; margin-bottom: 6px;
+}
+.funnel-name { font-size: 14px; color: var(--text); font-weight: 500; }
+.funnel-val {
+  font-size: 13px; color: var(--text-faint);
+  font-variant-numeric: tabular-nums; flex-shrink: 0;
+}
+.funnel-track {
+  height: 10px; border-radius: 5px;
+  background: var(--tint-strong); overflow: hidden;
+}
+.funnel-fill {
+  height: 100%; border-radius: 5px;
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  transition: width .8s var(--ease);
+}
+.funnel-drop {
+  display: inline-block; margin-top: 6px;
+  font-size: 11.5px; font-weight: 600;
+  color: #c0392b;
+}
+[data-theme="dark"] .funnel-drop { color: #ff9b9b; }
+
+/* ── Friction ────────────────────────────────────────────── */
+.friction-panel { padding: 24px; margin-bottom: 40px; }
+.friction {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.friction > div { display: flex; flex-direction: column; gap: 3px; }
+.friction-n {
+  font-size: 26px; font-weight: 620; letter-spacing: -0.03em;
+  color: var(--text); font-variant-numeric: tabular-nums; line-height: 1;
+}
+.friction-l { font-size: 13px; font-weight: 550; color: var(--text); }
+.friction-h { font-size: 11.5px; line-height: 1.4; color: var(--text-faint); }
+
+.kpi-live .kpi-l { display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+.kpis { grid-template-columns: repeat(5, 1fr); }
+
+@media (max-width: 900px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .friction { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Demand ──────────────────────────────────────────────── */
+.demand-panel { padding: 24px; margin-bottom: 14px; }
+.demand-nums {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-bottom: 26px;
+  padding-bottom: 22px; border-bottom: 1px solid var(--hair);
+}
+.demand-nums > div { display: flex; flex-direction: column; gap: 4px; }
+.demand-n {
+  font-size: 28px; font-weight: 620; letter-spacing: -0.03em; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(140deg, var(--text), var(--cyan));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+.demand-l { font-size: 12.5px; color: var(--text-faint); }
+
+.demand-splits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+.demand-h {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .demand-nums { grid-template-columns: repeat(2, 1fr); }
+  .demand-splits { grid-template-columns: 1fr; gap: 22px; }
+}

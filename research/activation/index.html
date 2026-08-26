@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Why your activation is flat, and what actually fixes it | Quentin Dupard</title>
+<meta name="description" content="Signups are vanity until someone reaches the moment your product visibly works. How to find that moment, measure it honestly, and remove what stands in the way.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://quentindupard.com/research/activation/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="Why your activation is flat, and what actually fixes it">
+<meta property="og:description" content="Signups are vanity until someone reaches the moment your product visibly works. How to find that moment, measure it honestly, and remove what stands in the way.">
+<meta property="og:url" content="https://quentindupard.com/research/activation/">
+<meta property="og:image" content="https://quentindupard.com/assets/research/activation.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why your activation is flat, and what actually fixes it">
+<meta name="twitter:description" content="Signups are vanity until someone reaches the moment your product visibly works. How to find that moment, measure it honestly, and remove what stands in the way.">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=20">
+<link rel="stylesheet" href="/assets/home.css?v=26">
+<link rel="stylesheet" href="/assets/article.css?v=3">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why your activation is flat, and what actually fixes it",
+  "description": "Signups are vanity until someone reaches the moment your product visibly works. How to find that moment, measure it honestly, and remove what stands in the way.",
+  "url": "https://quentindupard.com/research/activation/",
+  "author": {
+    "@id": "https://quentindupard.com/#quentin",
+    "@type": "Person",
+    "name": "Quentin Dupard",
+    "url": "https://quentindupard.com/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Quentin Dupard"
+  },
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "image": "https://quentindupard.com/assets/research/activation.svg",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://quentindupard.com/research/activation/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://quentindupard.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": "https://quentindupard.com/research/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Why your activation is flat, and what actually fixes it",
+      "item": "https://quentindupard.com/research/activation/"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is activation in SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The point at which a new user reaches the moment the product visibly works for them. Not signup, not completing onboarding: the specific action that makes someone think the product does what it promised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure activation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name the first-value action precisely, then measure what share of signups reach it within seven days. Most teams have never calculated this and find the number far lower than they expected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I improve activation quickly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pre-populate new accounts with realistic sample data so the product is never empty on first open, and remove any signup field, empty state or third-party dependency standing between signup and first value."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Primary">
+  <a href="/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/#work">What I do</a>
+    <a href="/#work-done">Previously</a>
+    <a href="/research/">Research</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/about">About</a>
+  </div>
+  <a href="/#talk" class="btn btn-primary nav-cta">Talk to me</a>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/research/">&larr; Research</a>
+    <h1>Why your activation is flat, and what actually fixes it</h1>
+    <div class="article-meta">
+      <span>Activation</span>
+      <span>5 min read</span>
+      <span>Quentin Dupard</span>
+      <span>Updated August 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+<figure class="article-figure">
+  <img src="/assets/research/activation.svg"
+       alt=""
+       width="1200" height="630"
+       loading="eager" decoding="async">
+</figure>
+
+    <div class="prose">
+
+      <p class="stand-first">Flat activation is almost never an onboarding problem, which is unfortunate, because onboarding is what most teams build when activation is flat.</p>
+
+      <p>Tours, checklists, welcome emails, progress bars. All of it is decoration applied to a distance that is simply too long. If it takes eleven steps and a colleague's help before anything useful happens, a nicer tour of those eleven steps will not save you.</p>
+
+      <h2>Find the moment</h2>
+
+      <p>Every product has a point where a new user goes from sceptical to convinced. Not signup. Not completing setup. The specific instant where the thing does what it promised and they can see it.</p>
+
+      <p>For an analytics product it is seeing their own data in a chart, not sample data. For a scheduling tool it is someone else booking a slot. For a writing tool it is finishing something they would have written anyway, faster.</p>
+
+      <p>Name it precisely. Vague definitions produce vague metrics, and you will end up optimising "completed onboarding", which measures compliance with your flow rather than value received.</p>
+
+      <h2>Measure it honestly</h2>
+
+      <p>What percentage of signups reach that moment within seven days?</p>
+
+      <p>Almost nobody has this number when I ask. When they go and get it, the answer is usually far lower than anyone in the room guessed. That figure is the ceiling on everything your marketing spend can achieve. Doubling traffic against a low activation rate just doubles the number of people who form a negative first impression.</p>
+
+      <div class="callout">
+        <p>Activation is a multiplier on every acquisition euro you will ever spend. Fix it before you spend more, not after.</p>
+      </div>
+
+      <h2>Cut the distance</h2>
+
+      <p>Go through the path from signup to that moment and be ruthless about three categories:</p>
+
+      <ul>
+        <li><strong>Fields you do not need yet.</strong> Company size, role, phone number, team name. Every one is a chance to abandon, collected for a sales process that has not started. Ask later.</li>
+        <li><strong>Empty states.</strong> A blank dashboard is the most common activation killer in software. Someone signed up curious and you showed them a void and asked them to fill it.</li>
+        <li><strong>Dependencies on other people.</strong> Anything requiring an admin, an integration, an IT ticket, or a colleague to accept an invite adds days, and days are where intent dies.</li>
+      </ul>
+
+      <h2>The change that works most often</h2>
+
+      <p>Pre-populate new accounts with realistic sample data so the product is never empty on first open. This is also the cheapest way to find out whether people even want the thing, before you go and <a href="/research/pricing-metric/">argue about what to charge for it</a>.</p>
+
+      <p>Not a tour explaining what would be there. Actual data, in the real interface, that the user can click, filter, sort and break. It lets someone experience the product working before they have invested anything, which inverts the usual order where you demand investment before demonstrating value.</p>
+
+      <p class="pull">Show the product working before you ask anyone to make it work.</p>
+
+      <p>This is more effort than a checklist, which is why teams reach for the checklist. It is also, in my experience, the single change most likely to move the number.</p>
+
+      <h2>What to do on Monday</h2>
+
+      <ol>
+        <li>Write down your activation moment in one sentence. Get three colleagues to agree it is the right one.</li>
+        <li>Query what share of last quarter's signups reached it inside seven days.</li>
+        <li>Sit down and complete signup yourself, on a phone, on the real product, timing each step.</li>
+        <li>Delete the worst step. Then measure again in a fortnight.</li>
+      </ol>
+
+
+      <h2>Common questions</h2>
+      <div class="faq faq-inline">
+        <details class="glass faq-item">
+          <summary>What is activation in SaaS?</summary>
+          <p>The point at which a new user reaches the moment the product visibly works for them. Not signup, not completing onboarding: the specific action that makes someone think the product does what it promised.</p>
+        </details>
+        <details class="glass faq-item">
+          <summary>How do I measure activation?</summary>
+          <p>Name the first-value action precisely, then measure what share of signups reach it within seven days. Most teams have never calculated this and find the number far lower than they expected.</p>
+        </details>
+        <details class="glass faq-item">
+          <summary>How do I improve activation quickly?</summary>
+          <p>Pre-populate new accounts with realistic sample data so the product is never empty on first open, and remove any signup field, empty state or third-party dependency standing between signup and first value.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="glass article-cta">
+      <h2>Want this done to your business?</h2>
+      <p>An activation audit maps the real distance between signup and first value, and what to cut.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">Book 30 minutes</a>
+        <a class="btn btn-glass" href="/#ask">Ask AI-me first</a>
+      </div>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Fractional product &amp; marketing</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Working worldwide</strong><br>
+          Remote by default<br>
+          On-site when it earns it
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Book 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="What I do">
+        <h2>What I do</h2>
+        <a href="/research/positioning/">Positioning &amp; messaging</a>
+        <a href="/research/pricing-metric/">Pricing &amp; packaging</a>
+        <a href="/research/activation/">Activation</a>
+        <a href="/research/expansion-revenue/">Expansion revenue</a>
+        <a href="/research/what-to-kill/">Product strategy</a>
+        <a href="/research/rising-cac/">Acquisition &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Engagements">
+        <h2>Engagements</h2>
+        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/#pricing">Sprint &mdash; two weeks</a>
+        <a href="/#pricing">Operator &mdash; ongoing</a>
+        <a href="/#pricing">Compare all three</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/">Home</a>
+        <a href="/about">About me</a>
+        <a href="/#work-done">Previously</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/research/">Research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More">
+        <h2>More</h2>
+        <a href="/#ask">Ask AI-me</a>
+        <a href="/#inbox">Write to me</a>
+        <a href="/stats/">Live stats</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">Full notes</a>
+      </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        No cookies, no third-party trackers, no analytics scripts.
+        <a href="/stats/">The numbers I do keep are public.</a>
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/track.js?v=5"></script>
+<script src="/assets/article.js?v=2" defer></script>
+</body>
+</html>

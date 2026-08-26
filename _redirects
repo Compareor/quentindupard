@@ -1,0 +1,9 @@
+# /services and /contact are NOT redirected. They return 410 Gone via
+# functions/services/index.js and functions/contact/index.js, so search engines
+# drop the URLs entirely instead of forwarding them. The old positioning should
+# not survive anywhere, including as a redirect target.
+#
+# /about was rebuilt in place on the same URL, so it needs no rule.
+
+# Enforce one canonical form so /research and /research/ aren't both crawled.
+/research   /research/   301

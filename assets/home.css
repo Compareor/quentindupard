@@ -1346,3 +1346,54 @@
 }
 .paywall-h { font-size: 16px !important; font-weight: 620; color: var(--text) !important; margin-bottom: 8px; }
 .paywall-note { margin-top: 12px; font-size: 12.5px; color: var(--text-faint) !important; }
+
+/* ══ Touch and mobile ergonomics ══════════════════════════
+   Scoped to coarse pointers so the desktop keeps its tighter
+   proportions — these are hit-area fixes, not a visual redesign.
+   ═══════════════════════════════════════════════════════ */
+
+/* iOS Safari zooms the whole page when a focused field is under 16px, then
+   leaves the viewport scaled. Every text input has to clear that bar. */
+.field input,
+.field textarea,
+.news-row .ask-input {
+  font-size: 16px;
+}
+
+@media (pointer: coarse) {
+  /* 44px is the documented minimum comfortable target. */
+  .chip,
+  .mode,
+  .footer-col a,
+  .nav-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn { min-height: 44px; }
+
+  /* The carousel dots stay 7px visually — a bigger dot would look wrong —
+     but get an invisible 36px hit area so they are actually tappable. */
+  .dot { position: relative; }
+  .dot::after {
+    content: '';
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+  }
+
+  /* Same trick for the mail list and inbox rows. */
+  .mail-item { min-height: 56px; }
+
+  .carousel-btn { width: 46px; height: 46px; }
+
+  .theme-toggle { min-height: 32px; }
+}
+
+/* The Finder windows are a desktop conceit: dragging a floating window on a
+   phone is worse than useless, and the layer sits over the whole viewport. */
+@media (max-width: 700px) {
+  .win { width: calc(100vw - 24px); left: 12px !important; }
+  .win-bar { cursor: default; }
+}

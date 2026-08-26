@@ -1023,6 +1023,8 @@
       // Drag by the title bar, pointer events so it works with touch too.
       bar.addEventListener('pointerdown', (e) => {
         if (e.target === close) return;
+        // Dragging fights page scroll on touch; windows stay put there.
+        if (isTouch) return;
         const startX = e.clientX, startY = e.clientY;
         const originLeft = parseFloat(win.style.left), originTop = parseFloat(win.style.top);
         win.style.zIndex = String(++z);

@@ -40,7 +40,7 @@
               const w = document.createElement('span');
               w.className = 'w';
               w.textContent = part;
-              w.style.transitionDelay = (index++ * 45) + 'ms';
+              w.style.transitionDelay = (index++ * 26) + 'ms';
               into.appendChild(w);
             }
           });
@@ -96,11 +96,11 @@
         entry.target.classList.add('in');
         obs.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.02, rootMargin: '0px 0px 140px 0px' });
 
     targets.forEach((el, i) => {
       if (!el.classList.contains('line-reveal')) {
-        el.style.transitionDelay = Math.min(i % 4, 3) * 80 + 'ms';
+        el.style.transitionDelay = Math.min(i % 3, 2) * 45 + 'ms';
       }
       obs.observe(el);
     });
@@ -112,7 +112,7 @@
       targets.forEach((el) => {
         if (el.getBoundingClientRect().top < window.innerHeight * 1.2) el.classList.add('in');
       });
-    }, 2600);
+    }, 1400);
   }
 
   /* ══ 2. Progress rail + live session stats ════════════════ */
@@ -357,40 +357,87 @@
     setTimeout(close, 14000);
   }
 
-  /* ══ 4. The button you cannot click ═══════════════════════ */
+  /* ══ 4. Newsletter opt-in ═════════════════════════════════
+     "No thanks" slides away from the pointer. Keyboard and touch users get
+     the punchline instead of an unwinnable game — a control that can never
+     be activated is a trap, not a joke.
+     ────────────────────────────────────────────────────────── */
+  function initNewsletter() {
+    const ask = $('#news-ask');
+    const form = $('#news-form');
+    const done = $('#news-done');
+    const yes = $('#news-yes');
+    const no = $('#news-no');
+    if (!ask || !form) return;
 
-  function initDodge() {
-    const btn = $('#dodge-btn');
-    if (!btn) return;
-
+    /* ── the evasive No ── */
     let dodges = 0;
     const GIVE_UP_AT = 6;
 
     function relent() {
-      btn.style.transform = '';
-      btn.textContent = 'Fine — the cheaper option is doing it yourself. The link is above.';
-      btn.disabled = true;
+      no.style.transform = '';
+      no.textContent = 'Fine, I respect it. No hard feelings.';
+      no.disabled = true;
+      track('newsletter_declined', { target: 'relented' });
     }
 
     function dodge() {
       if (dodges >= GIVE_UP_AT) { relent(); return; }
       dodges++;
-      track('dodge', { attempt: dodges });
-      const x = (Math.random() - 0.5) * 260;
-      const y = (Math.random() - 0.5) * 90;
-      btn.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
+      const x = (Math.random() - 0.5) * 240;
+      const y = (Math.random() - 0.5) * 80;
+      no.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`;
     }
 
     if (!reduceMotion) {
-      btn.addEventListener('mouseenter', dodge);
-      btn.addEventListener('touchstart', (e) => { e.preventDefault(); dodge(); }, { passive: false });
+      no.addEventListener('mouseenter', dodge);
+      no.addEventListener('touchstart', (e) => { e.preventDefault(); dodge(); }, { passive: false });
     }
+    no.addEventListener('click', relent);
+    no.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') relent(); });
 
-    // Keyboard users get the punchline rather than an unwinnable game —
-    // a control that can never be activated is a trap, not a joke.
-    btn.addEventListener('click', relent);
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') relent();
+    /* ── the Yes ── */
+    yes.addEventListener('click', () => {
+      ask.hidden = true;
+      form.hidden = false;
+      $('#news-email').focus();
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = $('#news-email').value.trim();
+      if (!email) return;
+
+      const submit = $('#news-submit');
+      const status = $('#news-status');
+      submit.disabled = true;
+      submit.textContent = 'Subscribing…';
+      status.hidden = true;
+
+      try {
+        const res = await fetch('https://formspree.io/f/xeenaboo', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', accept: 'application/json' },
+          body: JSON.stringify({
+            email,
+            _subject: '[quentindupard.com] Newsletter signup',
+            message: 'Newsletter subscription request.',
+            _gotcha: $('#news-hp').value
+          })
+        });
+        if (!res.ok) throw new Error('formspree ' + res.status);
+
+        form.hidden = true;
+        done.hidden = false;
+        track('newsletter_subscribed', { target: 'ok' });
+      } catch (_) {
+        submit.disabled = false;
+        submit.textContent = 'Subscribe';
+        status.hidden = false;
+        status.textContent = 'That did not go through. Email me and I will add you by hand.';
+        status.className = 'news-status is-bad';
+        track('newsletter_failed', { target: 'error' });
+      }
     });
   }
 
@@ -812,31 +859,34 @@
       let delivered = false;
       let note = '';
 
+      /* Formspree rather than the edge function: it works on any host, so the
+         form is live today instead of waiting on the Cloudflare migration, and
+         there is no API key to leak. Same endpoint the old site used. */
       try {
-        const res = await fetch('/api/contact', {
+        const res = await fetch('https://formspree.io/f/xeenaboo', {
           method: 'POST',
-          headers: { 'content-type': 'application/json' },
+          headers: { 'content-type': 'application/json', accept: 'application/json' },
           body: JSON.stringify({
-            from, subject, body: bodyText,
-            company: $('#compose-company').value,      // honeypot
-            elapsed: Date.now() - composeOpenedAt
+            email: from,
+            _subject: `[quentindupard.com] ${subject}`,
+            message: bodyText,
+            _gotcha: $('#compose-company').value      // Formspree's own honeypot
           })
         });
-        const data = await res.json().catch(() => ({}));
 
-        if (!res.ok) {
+        if (res.ok) {
+          delivered = true;
+        } else {
+          const data = await res.json().catch(() => ({}));
+          note = (data.errors && data.errors[0] && data.errors[0].message) || 'The form service rejected it.';
           submit.disabled = false;
           label.textContent = 'Send';
-          setStatus(data.error || 'That did not go through. Try again, or email me directly.', 'bad');
+          setStatus(note + ' Try again, or email me directly.', 'bad');
           track('compose_failed', { target: String(res.status) });
           return;
         }
-        delivered = !!data.delivered;
-        note = data.note || '';
       } catch (_) {
-        // Offline, or no endpoint on this host. The message still gets filed
-        // locally and the mailto fallback below is offered.
-        note = 'No connection to the server, so this was not delivered.';
+        note = 'No connection, so this was not delivered.';
       }
 
       submit.disabled = false;
@@ -1167,8 +1217,129 @@
     });
   }
 
+  /* The AI is the opening move, not the destination. Once it has answered,
+     hand the visitor to the real conversation — carrying what they typed so
+     they do not have to explain themselves twice. */
+  let handoffShown = false;
+
+  function offerHandoff(question) {
+    if (handoffShown) return;
+    handoffShown = true;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'msg msg-handoff';
+
+    const p = document.createElement('p');
+    p.textContent = 'That is a first pass from my notes. The useful version is a conversation where I can ask you questions back — which is free, and usually thirty minutes.';
+    wrap.appendChild(p);
+
+    const row = document.createElement('div');
+    row.className = 'handoff-actions';
+
+    const book = document.createElement('a');
+    book.className = 'btn btn-primary';
+    book.href = 'https://calendly.com/quentin-dupard-call/30min';
+    book.target = '_blank';
+    book.rel = 'noopener';
+    book.textContent = 'Talk to the real me';
+    book.dataset.track = 'handoff_book';
+
+    const write = document.createElement('button');
+    write.className = 'btn btn-glass';
+    write.type = 'button';
+    write.textContent = 'Send it to me instead';
+    write.dataset.track = 'handoff_write';
+    write.addEventListener('click', () => {
+      // Pre-fill the mailbox with what they already told the AI.
+      const subject = $('#compose-subject');
+      const body = $('#compose-body');
+      if (subject && !subject.value) subject.value = question.slice(0, 110);
+      if (body && !body.value) {
+        body.value = question + '\n\n(Asked AI-me first. Sending it to you directly.)';
+      }
+      $('#inbox').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      setTimeout(() => $('#mail-new').click(), reduceMotion ? 0 : 700);
+    });
+
+    row.append(book, write);
+    wrap.appendChild(row);
+    chat.appendChild(wrap);
+  }
+
+  /* ══ Free tier ════════════════════════════════════════════
+     A handful of questions free, then a paywall. The counter lives in
+     localStorage, which a determined visitor can clear — that is fine for a
+     €5 product where the point is a nudge, not DRM. Real enforcement needs
+     the account system behind /api/ask, which is a server-side change.
+     ────────────────────────────────────────────────────────── */
+  const FREE_KEY = 'qd:asked';
+  const FREE_LIMIT = 5;
+
+  function asked() {
+    try { return parseInt(localStorage.getItem(FREE_KEY) || '0', 10); }
+    catch (_) { return 0; }
+  }
+  function countAsk() {
+    try { localStorage.setItem(FREE_KEY, String(asked() + 1)); } catch (_) { /* private mode */ }
+  }
+
+  function showPaywall() {
+    const wrap = document.createElement('div');
+    wrap.className = 'msg msg-paywall';
+
+    const h = document.createElement('p');
+    h.className = 'paywall-h';
+    h.textContent = `That is your ${FREE_LIMIT} free questions.`;
+    wrap.appendChild(h);
+
+    const p = document.createElement('p');
+    p.textContent = 'If AI-me is genuinely useful, it is €5 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.';
+    wrap.appendChild(p);
+
+    const row = document.createElement('div');
+    row.className = 'handoff-actions';
+
+    /* Hosted Stripe checkout. Payment details never touch this site.
+       TODO(Quentin): replace with your real Stripe Payment Link. */
+    const pay = document.createElement('a');
+    pay.className = 'btn btn-primary';
+    pay.href = 'https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK';
+    pay.target = '_blank';
+    pay.rel = 'noopener';
+    pay.textContent = 'Unlock for €5/month';
+    pay.dataset.track = 'paywall_subscribe';
+
+    const talk = document.createElement('a');
+    talk.className = 'btn btn-glass';
+    talk.href = 'https://calendly.com/quentin-dupard-call/30min';
+    talk.target = '_blank';
+    talk.rel = 'noopener';
+    talk.textContent = 'Or just talk to me — free';
+    talk.dataset.track = 'paywall_talk';
+
+    row.append(pay, talk);
+    wrap.appendChild(row);
+
+    const note = document.createElement('p');
+    note.className = 'paywall-note';
+    note.textContent = 'The research on this site stays free and ungated either way.';
+    wrap.appendChild(note);
+
+    chat.appendChild(wrap);
+    chat.scrollTop = chat.scrollHeight;
+    track('paywall_shown', { target: String(asked()) });
+  }
+
   async function submitQuestion(question) {
     if (ask.classList.contains('is-loading')) return;
+
+    if (asked() >= FREE_LIMIT) {
+      addMessage('you', question);
+      input.value = '';
+      showPaywall();
+      return;
+    }
+    countAsk();
     track('ask_submit', { length: question.length });
 
     addMessage('you', question);
@@ -1208,6 +1379,7 @@
 
     reply.msg.classList.remove('streaming');
     ask.classList.remove('is-loading');
+    offerHandoff(question);
     chat.scrollTop = chat.scrollHeight;
   }
 
@@ -1282,7 +1454,7 @@
   function boot() {
     initReveal();
     initScrollMeta();
-    initDodge();
+    initNewsletter();
     initCarousel();
     initModes();
     initCart();

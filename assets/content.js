@@ -66,6 +66,46 @@ window.QD_MAILBOX = [
     ]
   },
   {
+    id: 'rec-courses',
+    from: 'Amara Boateng',
+    email: 'amara@—.com',
+    role: 'Founder, online course business',
+    subject: 'Best money we spent this year',
+    time: 'Fri',
+    body: [
+      'I wanted to say thank you properly rather than in a Slack message.',
+      'We had been blaming the ads. You looked at the funnel for about twenty minutes and said the ads were fine, the checkout was the problem, and the tier structure was making people choose between three things they did not understand.',
+      'We rebuilt the offer the way you suggested. Same traffic, same spend, noticeably more sales. My co-founder still brings it up.',
+      'If anyone wants to talk to a happy client, send them to me.'
+    ]
+  },
+  {
+    id: 'rec-grocery',
+    from: 'Tomas Ricci',
+    email: 'tomas@—.it',
+    role: 'Owner, independent grocery',
+    subject: 'It worked and I still do not have a marketing team',
+    time: 'Thu',
+    body: [
+      'I run a shop. I was fairly sure none of this applied to me.',
+      'You did not try to sell me software or a funnel. You looked at what we already had, changed what we put in front of people and what we charged for the bundles, and it moved.',
+      'Whatever you call what you do, it is not what the agencies were trying to sell me.'
+    ]
+  },
+  {
+    id: 'rec-marketplace',
+    from: 'Priya Raman',
+    email: 'priya@—.co',
+    role: 'Growth lead, comparison marketplace',
+    subject: 'CAC finally stopped climbing',
+    time: 'Wed',
+    body: [
+      'The segment analysis was the unlock. We had been averaging three completely different businesses together and wondering why the blended number kept getting worse.',
+      'Once we split payback by segment it was obvious which one to stop paying for. That conversation took an afternoon and saved us a quarter of arguing.',
+      'Thanks again. Genuinely useful.'
+    ]
+  },
+  {
     id: 'rec-nope',
     from: 'Quentin Dupard',
     email: 'quentin.dupard@gmail.com',

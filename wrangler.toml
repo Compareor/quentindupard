@@ -6,10 +6,15 @@
 
 name = "quentindupard"
 main = "src/index.js"
-compatibility_date = "2026-08-01"
+compatibility_date = "2026-08-26"
 
 # The Anthropic SDK needs Node built-ins on the Workers runtime.
 compatibility_flags = ["nodejs_compat"]
+
+# Keep the site on one origin. Left to default these are true, which would
+# publish an identical copy at quentindupard.workers.dev and split SEO.
+workers_dev = false
+preview_urls = false
 
 [assets]
 directory = "."
@@ -29,10 +34,23 @@ id = "002d98d00fc348b6aa970612c9e295d9"
 binding = "RATE_LIMIT"
 id = "6e4d8954df9e4b359d0fb2972e014541"
 
-# ── Full event stream. Optional: without it the KV counters still work ──
-[[analytics_engine_datasets]]
-binding = "ANALYTICS"
-dataset = "qd_events"
+# ── Full event stream ────────────────────────────────────────
+# Analytics Engine must be enabled on the account first, and a disabled
+# dataset fails the entire deploy (error 10089). The KV counters that /stats
+# reads do not depend on it, and functions/api/track.js skips the write when
+# the binding is absent. To turn it on: enable Analytics Engine in the
+# dashboard, then uncomment.
+# [[analytics_engine_datasets]]
+# binding = "ANALYTICS"
+# dataset = "qd_events"
+
+# ── Custom domain ────────────────────────────────────────────
+# Declared here, not just in the dashboard. wrangler reconciles routes from
+# this file: the first deploy log showed it was about to REMOVE the custom
+# domain because the file did not mention it.
+[[routes]]
+pattern = "quentindupard.com"
+custom_domain = true
 
 # ANTHROPIC_API_KEY is a SECRET, not a var. Set it with:
 #   npx wrangler secret put ANTHROPIC_API_KEY

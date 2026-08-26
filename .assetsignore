@@ -10,3 +10,7 @@ DEPLOY.md
 .git/
 .github/
 .claude/
+
+# wrangler build temp output (a source map was being served publicly)
+.wrangler/
+CNAME

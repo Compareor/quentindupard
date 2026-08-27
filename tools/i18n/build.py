@@ -155,6 +155,38 @@ def switcher(locale, page, dock=False):
             + ''.join(items) + '</div>')
 
 
+
+def unwrap_nav_end(src):
+    """
+    Remove a <div class="nav-end"> wrapper, keeping its contents.
+
+    Balanced scan rather than a regex: the wrapper contains the language
+    switcher, which is itself a div, and a non-greedy match to the first
+    </div> closes on the wrong tag and leaves mangled markup behind. The
+    English pass writes back over its own source, so a wrapper produced by an
+    earlier run is the input to the next one and this has to be exact.
+    """
+    open_tag = '<div class="nav-end">'
+    while True:
+        start = src.find(open_tag)
+        if start < 0:
+            return src
+        depth, i = 1, start + len(open_tag)
+        while depth and i < len(src):
+            nxt_open = src.find('<div', i)
+            nxt_close = src.find('</div>', i)
+            if nxt_close < 0:
+                return src                       # unbalanced; leave it alone
+            if 0 <= nxt_open < nxt_close:
+                depth += 1
+                i = nxt_open + 4
+            else:
+                depth -= 1
+                i = nxt_close + 6
+        inner = src[start + len(open_tag): i - 6]
+        src = src[:start] + inner + src[i:]
+
+
 def build_page(page, locale, table):
     src = open(os.path.join(ROOT, page), encoding='utf-8').read()
     meta = LOCALES[locale]
@@ -185,21 +217,24 @@ def build_page(page, locale, table):
     src = src.replace('<link rel="canonical"', alternates(page) + '\n<link rel="canonical"', 1)
 
     # Two homes for the language control. The homepage has the session dock,
-    # where the theme and glass controls already live and where the reader is
-    # told to look; every other page has no dock, so it goes in the nav
-    # instead. Never both, because two pickers on one page is a bug report.
-    #
-    # The nav variant is stripped unconditionally before deciding. The English
-    # pass writes back over its own source, so a switcher left by an earlier
-    # run is part of the input to the next one.
+    # where the theme and glass controls already live; every other page has no
+    # dock, so it goes in the nav instead. Never both.
+    src = unwrap_nav_end(src)
     src = re.sub(r'\s*<div class="lang-switch" role=.*?</div>', '', src, flags=re.S)
 
     dock = re.search(r'<div class="lang-switch" data-lang-dock[^>]*>.*?</div>', src, re.S)
     if dock:
         src = src[:dock.start()] + switcher(locale, page, dock=True) + src[dock.end():]
-    else:
-        src = re.sub(r'(<a[^>]*class="[^"]*nav-cta[^"]*")',
-                     switcher(locale, page) + r'\n  \1', src, count=1)
+
+    # The CTA is wrapped on EVERY page, dock or not. The nav is three columns
+    # whose outer two share a flex basis, so the links sit on the centre of the
+    # nav rather than on whatever the brand and buttons leave over. Leaving the
+    # CTA bare on the homepage made the brand column stretch instead.
+    src = re.sub(r'(<a[^>]*class="[^"]*nav-cta[^"]*"[^>]*>.*?</a>)',
+                 lambda m: '<div class="nav-end">'
+                           + ('' if dock else switcher(locale, page))
+                           + m.group(1) + '</div>',
+                 src, count=1, flags=re.S)
 
     return src, stats
 

@@ -288,7 +288,15 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 .nav-brand:hover .brand-logo,
 .footer-mark:hover .brand-logo { transform: rotate(-6deg) scale(1.06); }
 
-.nav-links { display: flex; align-items: center; gap: 4px; }
+/* Three columns with equal-width ends, so the link row is centred on the nav
+   itself rather than on whatever space the brand and the buttons leave over.
+   Without this the links sit in a different place on the homepage (where the
+   language switcher lives in the session dock) than on every other page. */
+.nav-brand, .nav-end { flex: 1 1 0; min-width: 0; }
+.nav-links { flex: 0 0 auto; display: flex; align-items: center; gap: 4px; }
+
+/* The switcher and the CTA read as one cluster at the right-hand end. */
+.nav-end { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
 .nav-links a {
   padding: 8px 14px;
   font-size: 14px; font-weight: 450;
@@ -683,7 +691,6 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   border: 1px solid var(--glass-stroke);
   border-radius: var(--r-pill);
   background: var(--tint);
-  margin-left: auto;
 }
 .lang-opt {
   font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;

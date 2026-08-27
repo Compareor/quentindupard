@@ -728,19 +728,22 @@
         from.textContent = m.from;
         const time = document.createElement('span');
         time.className = 'mail-item-time';
-        time.textContent = m.time;
+        time.textContent = t(m.time);
         top.append(from, time);
 
         const subject = document.createElement('div');
         subject.className = 'mail-item-subject';
-        subject.textContent = m.subject;
+        subject.textContent = t(m.subject);
 
         li.append(top, subject);
 
         if (m.attach && m.attach.length) {
           const clip = document.createElement('div');
           clip.className = 'mail-item-clip';
-          clip.textContent = '📎 ' + m.attach.length + ' attachment' + (m.attach.length > 1 ? 's' : '');
+          // Two forms rather than an 's' glued on: French and Spanish do not
+          // pluralise by suffixing the English word.
+          const n = m.attach.length;
+          clip.textContent = '📎 ' + t(n > 1 ? '{n} attachments' : '{n} attachment').replace('{n}', n);
           li.appendChild(clip);
         }
 
@@ -783,7 +786,7 @@
 
       const subj = document.createElement('p');
       subj.className = 'mail-read-subject';
-      subj.textContent = m.subject;
+      subj.textContent = t(m.subject);
 
       const fromLine = document.createElement('p');
       fromLine.className = 'mail-read-from';
@@ -791,7 +794,7 @@
 
       const meta = document.createElement('p');
       meta.className = 'mail-read-meta';
-      meta.textContent = [m.role, m.email].filter(Boolean).join(' · ');
+      meta.textContent = [m.role && t(m.role), m.email].filter(Boolean).join(' · ');
 
       head.append(subj, fromLine, meta);
       read.appendChild(head);
@@ -800,7 +803,7 @@
       body.className = 'mail-read-body';
       (m.body || []).forEach((para) => {
         const p = document.createElement('p');
-        p.textContent = para;   // text node — never innerHTML for stored content
+        p.textContent = t(para);   // text node — never innerHTML for stored content
         body.appendChild(p);
       });
       read.appendChild(body);
@@ -1005,7 +1008,7 @@
 
       const name = document.createElement('span');
       name.className = 'folder-name';
-      name.textContent = folderData.name;
+      name.textContent = t(folderData.name);
       btn.appendChild(name);
 
       const open = () => openFolder(folderData);
@@ -1114,11 +1117,11 @@
 
         const label = document.createElement('span');
         label.className = 'file-name';
-        label.textContent = item.name;
+        label.textContent = t(item.name);
 
         const meta = document.createElement('span');
         meta.className = 'file-meta';
-        meta.textContent = item.meta || '';
+        meta.textContent = item.meta ? t(item.meta) : '';
 
         node.append(icon, label, meta);
         body.appendChild(node);
@@ -1152,7 +1155,12 @@
 
     let data = null;
     try {
-      const res = await fetch('/api/visitor', { headers: { accept: 'application/json' } });
+      // The country name comes back localised, so the endpoint has to be told
+      // which language the page is in — it cannot infer it from Accept-Language
+      // when the visitor is reading a translation their browser did not ask for.
+      const lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
+      const res = await fetch('/api/visitor?lang=' + encodeURIComponent(lang),
+                              { headers: { accept: 'application/json' } });
       if (res.ok) data = await res.json();
     } catch (_) { /* no edge function — keep the default eyebrow */ }
     if (!data) return;
@@ -1173,12 +1181,14 @@
     const city = data.city || data.country || '';
     let greeting = '';
 
+    /* Built from a template rather than concatenated, because the place a
+       city name sits in the sentence is not the same in every language. */
     if (city) {
-      greeting = returning
-        ? `Welcome back. Still need me in ${city}?`
-        : `Welcome. Do you need me in ${city}?`;
+      greeting = t(returning
+        ? 'Welcome back. Still need me in {city}?'
+        : 'Welcome. Do you need me in {city}?').replace('{city}', city);
     } else if (returning) {
-      greeting = 'Welcome back.';
+      greeting = t('Welcome back.');
     }
     if (!greeting) return;
 

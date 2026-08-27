@@ -13,10 +13,15 @@
 export async function onRequestGet({ request }) {
   const cf = request.cf || {};
 
+  // The page tells us its language; Accept-Language would be wrong, because a
+  // visitor reading /es/ on an English browser should still get "México".
+  const url = new URL(request.url);
+  const lang = (url.searchParams.get('lang') || 'en').slice(0, 5).replace(/[^a-zA-Z-]/g, '') || 'en';
+
   const body = {
     city:     cf.city              || '',
     region:   cf.region            || '',
-    country:  countryName(cf.country) || '',
+    country:  countryName(cf.country, lang) || '',
     timezone: cf.timezone          || '',
     // asOrganization is the network operator — a company name on a corporate
     // network, an ISP on home broadband. The client decides which is worth
@@ -28,16 +33,20 @@ export async function onRequestGet({ request }) {
   return new Response(JSON.stringify(body), {
     headers: {
       'content-type': 'application/json; charset=utf-8',
-      // Per-visitor response — must never be shared by a cache.
+      // Per-visitor AND per-language — must never be shared by a cache.
       'cache-control': 'private, no-store',
+      'vary': 'Accept-Language',
       'x-robots-tag': 'noindex'
     }
   });
 }
 
 /* Cloudflare gives a two-letter code; a name reads better in the UI.
-   Only the markets that actually show up in this site's traffic are mapped —
-   anything else falls through to the code, which is still meaningful. */
+   Intl.DisplayNames does this properly in every language the runtime knows,
+   which is a great deal better than the hand-written English table this used
+   to be — that table had no answer at all for a visitor reading in French.
+   The table survives as a fallback for a runtime without Intl.DisplayNames,
+   and the bare code is the last resort, which is still meaningful. */
 const COUNTRIES = {
   US: 'United States',  GB: 'United Kingdom', FR: 'France',      DE: 'Germany',
   ES: 'Spain',          IT: 'Italy',          NL: 'Netherlands', BE: 'Belgium',
@@ -53,7 +62,11 @@ const COUNTRIES = {
   MY: 'Malaysia',       TH: 'Thailand',       VN: 'Vietnam',     UA: 'Ukraine'
 };
 
-function countryName(code) {
+function countryName(code, lang) {
   if (!code) return '';
+  try {
+    const name = new Intl.DisplayNames([lang || 'en'], { type: 'region' }).of(code);
+    if (name && name !== code) return name;
+  } catch (_) { /* unknown locale, or no Intl.DisplayNames */ }
   return COUNTRIES[code] || code;
 }

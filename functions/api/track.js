@@ -20,13 +20,19 @@
  *       write ceiling, queried later with SQL. The right home for
  *       volume and for anything you want to slice after the fact.
  *   Workers KV (binding: STATS)
- *       Small pre-aggregated counters that /api/stats reads
- *       directly, plus 5-minute presence keys. Cheap to read and
- *       enough on its own to render the stats page.
+ *       A few sharded JSON documents holding the aggregates that
+ *       /api/stats renders, plus 5-minute presence keys. See
+ *       _aggregate.js for why documents rather than one key per
+ *       counter: a batch is now one read and one write, not one
+ *       write per counter it touched.
  *
  * Counters only. No event log in KV, no IP, nothing that
  * reconstructs one person's path through the site.
  */
+
+import {
+  SHARD_KEYS, emptyDoc, merge, readDoc, shardFor
+} from './_aggregate.js';
 
 const NAME_PATTERN = /^[a-z][a-z0-9_]{1,38}$/;
 
@@ -57,9 +63,6 @@ const ALLOWED_EVENTS = new Set([
   'toast_shown', 'toast_dismissed', 'toast_cta'
 ]);
 
-// Cap distinct label keys so nobody can fill the namespace by posting
-// arbitrary strings. Past the cap, new labels roll into `other`.
-const MAX_LABEL_KEYS = 400;
 const MAX_BATCH = 60;
 
 export async function onRequestPost({ request, env }) {
@@ -83,12 +86,15 @@ export async function onRequestPost({ request, env }) {
   const visitor = clean(body.visitor);
   const session = clean(body.session);
 
-  // Fold the batch into key -> delta. This is the whole point: one write per
-  // distinct counter, however many events contributed to it.
-  const deltas = new Map();
-  const add = (key, n) => deltas.set(key, (deltas.get(key) || 0) + (n || 1));
+  // Accumulate the whole batch in memory first. Nothing touches KV until the
+  // shape is final, so the read-modify-write window stays as short as possible.
+  const delta = emptyDoc();
+  const bump = (into, key, n) => { if (key) into[key] = (into[key] || 0) + (n || 1); };
+  const forDay = (metric) => {
+    const d = delta.days[day] = delta.days[day] || {};
+    d[metric] = (d[metric] || 0) + 1;
+  };
 
-  const labelled = [];
   let sawPageView = false;
 
   for (const raw of events) {
@@ -99,30 +105,28 @@ export async function onRequestPost({ request, env }) {
     const target = clean(props.target);
     const section = clean(props.section);
 
-    add('total:events');
-    add(`event:${event}`);
-    add(`day:${day}:events`);
-    add(`source:${source}`);
-    if (campaign) add(`campaign:${campaign}`);
-    if (medium) add(`medium:${medium}`);
-    if (section) add(`section:${section}`);
-    if (target) labelled.push([event, target]);
+    bump(delta.totals, 'events');
+    bump(delta.events, event);
+    bump(delta.sources, source);
+    if (campaign) bump(delta.campaigns, campaign);
+    if (medium) bump(delta.mediums, medium);
+    if (section) bump(delta.sections, section);
+    forDay('events');
+
+    if (target) {
+      const into = delta.targets[event] = delta.targets[event] || {};
+      into[target] = (into[target] || 0) + 1;
+      if (/download/.test(event)) bump(delta.files, target);
+    }
+
     if (event === 'page_view') sawPageView = true;
 
     writeStream(env, { event, target, section, source, campaign, medium });
   }
 
-  // Label keys are budgeted, so resolve them after the main fold.
-  for (const [event, target] of labelled) {
-    const key = `target:${event}:${target}`;
-    const allowed = await withinLabelBudget(env.STATS, key);
-    add(allowed ? key : `target:${event}:other`);
-    if (/download/.test(event)) add(`file:${target}`);
-  }
-
   if (sawPageView) {
-    add('total:views');
-    add(`day:${day}:views`);
+    bump(delta.totals, 'views');
+    forDay('views');
 
     // Unique-ish visitors: a first-seen marker with a 90-day TTL. Enough for a
     // headline number, not enough to be a profile.
@@ -131,8 +135,8 @@ export async function onRequestPost({ request, env }) {
       try {
         if (!(await env.STATS.get(seenKey))) {
           await env.STATS.put(seenKey, '1', { expirationTtl: 60 * 60 * 24 * 90 });
-          add('total:visitors');
-          add(`day:${day}:visitors`);
+          bump(delta.totals, 'visitors');
+          forDay('visitors');
         }
       } catch (_) { /* ignore */ }
     }
@@ -144,9 +148,21 @@ export async function onRequestPost({ request, env }) {
     catch (_) { /* ignore */ }
   }
 
-  await Promise.all(Array.from(deltas, ([key, n]) => bump(env.STATS, key, n)));
+  await commit(env.STATS, session || visitor || 'anon', delta);
 
   return new Response(null, { status: 204 });
+}
+
+/* One read, one write, whatever the batch contained.
+   KV has no compare-and-swap, so two batches landing on the same shard in the
+   same instant can lose one of them. Sharding by session makes that rare; the
+   Analytics Engine stream above is the exact record if it ever matters. */
+async function commit(kv, seed, delta) {
+  const key = SHARD_KEYS[shardFor(seed)];
+  try {
+    const doc = (await readDoc(kv, key)) || emptyDoc();
+    await kv.put(key, JSON.stringify(merge(doc, delta)));
+  } catch (_) { /* analytics must never break a request */ }
 }
 
 /* Full-fidelity event stream. Analytics Engine has no meaningful write
@@ -162,29 +178,6 @@ function writeStream(env, row) {
       indexes: [row.event]
     });
   } catch (_) { /* never let analytics break a request */ }
-}
-
-async function withinLabelBudget(kv, key) {
-  try {
-    if (await kv.get(key)) return true;             // already counted
-    const used = parseInt((await kv.get('meta:labelCount')) || '0', 10);
-    if (used >= MAX_LABEL_KEYS) return false;
-    await kv.put('meta:labelCount', String(used + 1));
-    return true;
-  } catch (_) {
-    return false;
-  }
-}
-
-/* KV has no atomic increment, so this is read-modify-write. Two batches
-   landing on the same counter in the same instant can lose a tick. At this
-   site's volume that changes no decision these numbers inform, and if it ever
-   does, the Analytics Engine stream above is the exact record. */
-async function bump(kv, key, n) {
-  try {
-    const current = parseInt((await kv.get(key)) || '0', 10);
-    await kv.put(key, String(current + n));
-  } catch (_) { /* ignore */ }
 }
 
 function clean(value) {

@@ -122,6 +122,31 @@ Notes worth knowing:
 
 ---
 
+## Notes on the KV budget
+
+Cloudflare's free KV tier allows **1,000 writes and 1,000 list operations a
+day, account-wide** — shared by the stats counters, the AI-me rate limit, and
+admin saves.
+
+Both of the things that used to spend that budget carelessly are fixed:
+
+- `/api/stats` reads five documents and does one list, regardless of how much
+  data has accumulated. It used to list eight prefixes and issue a `get` per
+  key — measured at 192 gets and 9 lists on two days of data.
+- `/api/track` writes one document per batch instead of one key per counter,
+  taking a visit from roughly 40 writes to about 3.
+
+The first request to `/api/stats` after this change folds the old per-key
+counters into `agg:v1:legacy` and sets `agg:v1:migrated`. That one request is
+expensive; every one after it is not. The old keys are left in place because
+deleting them would spend the daily delete budget for no benefit.
+
+If you ever do run out of writes, `/api/ask` now falls back to a much tighter
+per-isolate limit rather than becoming uncapped. Keep a monthly spend limit on
+the Anthropic account regardless — that is the real backstop.
+
+---
+
 ## Notes on the free tier
 
 AI-me allows 5 questions, then shows the $10/month prompt. The counter is in

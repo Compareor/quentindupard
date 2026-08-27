@@ -8,8 +8,10 @@
  * framing to parse on the client.
  *
  * Required binding:   ANTHROPIC_API_KEY  (secret)
- * Optional binding:   RATE_LIMIT         (KV namespace — without it the
- *                                         endpoint still works but is uncapped)
+ * Optional binding:   RATE_LIMIT         (KV namespace)
+ *
+ * This is the only endpoint on the site that costs money per call, so its
+ * rate limit fails CLOSED. See underRateLimit below.
  */
 
 import Anthropic from '@anthropic-ai/sdk';
@@ -19,6 +21,13 @@ const MODEL = 'claude-opus-5';
 const MAX_QUESTION_CHARS = 280;
 const WINDOW_SECONDS = 3600;
 const MAX_PER_WINDOW = 12;
+
+/* Used when KV cannot be trusted — no binding, an outage, or the daily write
+   quota gone. Deliberately much tighter than the KV limit, because the
+   in-memory counter below only sees one isolate. */
+const DEGRADED_PER_WINDOW = 3;
+/* Isolates are cheap and numerous; this bounds the map, not the traffic. */
+const MEMORY_MAX_KEYS = 5000;
 
 /* The corpus rarely changes and the isolate stays warm between requests, so
    holding it in module scope saves a subrequest on most calls. */
@@ -48,7 +57,9 @@ export async function onRequestPost(context) {
   }
 
   const allowed = await underRateLimit(request, env);
-  if (!allowed) return text('Rate limit reached.', 429);
+  if (!allowed) {
+    return text('That is enough questions for one hour. Email me instead and I will answer properly: quentin.dupard@gmail.com', 429);
+  }
 
   const corpus = await loadCorpus(request);
   const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
@@ -159,22 +170,82 @@ async function loadCorpus(request) {
   return corpusCache || 'No notes are currently loaded.';
 }
 
+/**
+ * Per-IP cap, failing closed.
+ *
+ * The previous version returned `true` on any KV error so a hiccup would not
+ * break the page. That is the right call for analytics and the wrong one here:
+ * KV's free tier allows 1,000 writes a day across the whole account, and
+ * /api/track spends them. When that quota runs out, every `put` throws — so
+ * the old code removed the only brake on a paid endpoint at exactly the moment
+ * the site was busiest.
+ *
+ * Now an unusable KV falls back to a per-isolate counter with a much lower
+ * cap. It is leaky, because an isolate is not the world, but it is a real
+ * brake rather than an open door. The account-level spend limit in the
+ * Anthropic console remains the actual backstop.
+ */
 async function underRateLimit(request, env) {
-  if (!env.RATE_LIMIT) return true;   // no KV bound — do not block the feature
-
   const ip = request.headers.get('cf-connecting-ip') || 'unknown';
   // Hashed so the KV store never holds a raw IP, matching what the homepage
   // claims about not retaining them.
   const key = 'ask:' + (await sha256(ip));
 
+  if (!env.RATE_LIMIT) return memoryAllows(key);
+
   try {
-    const used = parseInt((await env.RATE_LIMIT.get(key)) || '0', 10);
+    const raw = await env.RATE_LIMIT.get(key);
+    const now = Math.floor(Date.now() / 1000);
+
+    let used = 0;
+    let resetAt = now + WINDOW_SECONDS;
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      // A window that is re-extended on every request never resets, so the
+      // expiry is stored and carried forward rather than recomputed.
+      if (parsed && parsed.resetAt > now) {
+        used = parsed.used || 0;
+        resetAt = parsed.resetAt;
+      }
+    }
+
     if (used >= MAX_PER_WINDOW) return false;
-    await env.RATE_LIMIT.put(key, String(used + 1), { expirationTtl: WINDOW_SECONDS });
+
+    await env.RATE_LIMIT.put(
+      key,
+      JSON.stringify({ used: used + 1, resetAt }),
+      { expirationTtl: Math.max(60, resetAt - now) }
+    );
     return true;
   } catch (_) {
-    return true;   // KV hiccup should degrade to "allowed", not to a broken page
+    return memoryAllows(key);
   }
+}
+
+/* Per-isolate fallback. Survives only as long as the isolate does, which is
+   fine: it exists to blunt a burst, not to be an accounting record. */
+const memoryCounts = new Map();
+
+function memoryAllows(key) {
+  const now = Date.now();
+
+  // Prune on write rather than on a timer — there is no timer in a Worker.
+  if (memoryCounts.size > MEMORY_MAX_KEYS) {
+    for (const [k, entry] of memoryCounts) {
+      if (entry.resetAt <= now) memoryCounts.delete(k);
+    }
+    // Still full of live entries: something abnormal is happening, so stop.
+    if (memoryCounts.size > MEMORY_MAX_KEYS) return false;
+  }
+
+  const entry = memoryCounts.get(key);
+  if (!entry || entry.resetAt <= now) {
+    memoryCounts.set(key, { used: 1, resetAt: now + WINDOW_SECONDS * 1000 });
+    return true;
+  }
+  if (entry.used >= DEGRADED_PER_WINDOW) return false;
+  entry.used++;
+  return true;
 }
 
 async function sha256(value) {

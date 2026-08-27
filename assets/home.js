@@ -1321,7 +1321,7 @@
        TODO(Quentin): replace with your real Stripe Payment Link. */
     const pay = document.createElement('a');
     pay.className = 'btn btn-primary';
-    pay.href = 'https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK';
+    pay.href = 'https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00';
     pay.target = '_blank';
     pay.rel = 'noopener';
     pay.textContent = 'Unlock for $10/month';

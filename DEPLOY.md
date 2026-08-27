@@ -79,7 +79,7 @@ What degrades, visibly and honestly:
 
 | What | Where | Why |
 |---|---|---|
-| Stripe Payment Link | `assets/home.js`, search `REPLACE_WITH_YOUR_PAYMENT_LINK` | The $10/month AI-me paywall points at a placeholder. Create a Payment Link in Stripe (no code, and card details never touch this site). |
+| Stripe Payment Link | `assets/home.js`, search `https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00` | The $10/month AI-me paywall points at a placeholder. Create a Payment Link in Stripe (no code, and card details never touch this site). |
 | Real recommendations | `assets/content.js` | The mailbox entries are illustrative. Your LinkedIn recommendations are real and worth more. |
 | Result numbers | `index.html`, Act 03 | The carousel describes what you did but not what changed. |
 | Research images | `assets/research/*.svg` | Glass placeholders sized 1200×630. Replace the file, keep the name. |

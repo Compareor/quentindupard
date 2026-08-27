@@ -28,8 +28,10 @@ directory = "."
 binding = "ASSETS"
 # Serve /404.html for unmatched paths rather than a bare Worker error.
 not_found_handling = "404-page"
-# Let the Worker see requests first so /api/* and the 410s are handled.
-run_worker_first = ["/api/*", "/services", "/services/", "/contact", "/contact/"]
+# Let the Worker see requests first so /api/*, the 410s, and the language
+# negotiation on "/" are handled. Without "/" in this list the assets layer
+# answers the homepage directly and negotiate() never runs at all.
+run_worker_first = ["/", "/api/*", "/services", "/services/", "/contact", "/contact/"]
 
 # ── Counters for /stats, and the ask rate limit ──────────────
 # Create these in the dashboard (Storage & Databases -> KV), then paste the ids.

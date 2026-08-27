@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -12,15 +12,15 @@
 <link rel="alternate" hreflang="en" href="https://quentindupard.com/privacy/">
 <link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/privacy/">
 <link rel="alternate" hreflang="es" href="https://quentindupard.com/es/privacy/">
-<link rel="canonical" href="https://quentindupard.com/privacy/">
-<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+<link rel="canonical" href="https://quentindupard.com/fr/privacy/">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Résumé du site lisible par les IA">
 
-<meta property="og:locale" content="en_GB">
+<meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Quentin Dupard">
 <meta property="og:title" content="Privacy &amp; what this site stores">
 <meta property="og:description" content="Every key this site writes to your browser, every service that sees anything, and a switch to turn the analytics off.">
-<meta property="og:url" content="https://quentindupard.com/privacy/">
+<meta property="og:url" content="https://quentindupard.com/fr/privacy/">
 <meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy &amp; what this site stores">
@@ -56,11 +56,15 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "url": "https://quentindupard.com/privacy/",
+  "url": "https://quentindupard.com/fr/privacy/",
   "name": "Privacy & what this site stores",
   "description": "What quentindupard.com stores in your browser and on its server, which third parties are involved, and how to opt out of the analytics.",
-  "isPartOf": { "@id": "https://quentindupard.com/#website" },
-  "about": { "@id": "https://quentindupard.com/#quentin" },
+  "isPartOf": {
+    "@id": "https://quentindupard.com/#website"
+  },
+  "about": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
   "dateModified": "2026-08-27"
 }
 </script>
@@ -70,8 +74,18 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://quentindupard.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://quentindupard.com/privacy/" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://quentindupard.com/fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Confidentialité",
+      "item": "https://quentindupard.com/fr/privacy/"
+    }
   ]
 }
 </script>
@@ -90,8 +104,8 @@
 <div class="mesh" aria-hidden="true"></div>
 <div class="rail" id="rail" aria-hidden="true"></div>
 
-<nav class="nav glass glass-thin" aria-label="Primary">
-  <a href="/" class="nav-brand">
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/fr/" class="nav-brand">
     <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
       <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
       <path fill-rule="evenodd" fill="var(--on-accent)"
@@ -102,21 +116,17 @@
     Quentin Dupard
   </a>
   <div class="nav-links">
-    <a href="/#work">What I do</a>
-    <a href="/#work-done">Previously</a>
-    <a href="/research/">Research</a>
-    <a href="/#pricing">Pricing</a>
-    <a href="/about/">About</a>
+    <a href="/fr/#work">Ce que je fais</a> <a href="/fr/#work-done">Réalisations</a> <a href="/fr/research/">Recherche</a> <a href="/fr/#pricing">Tarifs</a> <a href="/fr/about/">À propos</a>
   </div>
-  <div class="lang-switch" role="group" aria-label="Language"><span class="lang-opt is-on" aria-current="true">EN</span><a class="lang-opt" href="/fr/privacy/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><a class="lang-opt" href="/es/privacy/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div>
-  <a href="/#talk" class="btn btn-primary nav-cta">Talk to me</a>
+  <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/privacy/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><span class="lang-opt is-on" aria-current="true">FR</span><a class="lang-opt" href="/es/privacy/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div>
+  <a href="/fr/#talk" class="btn btn-primary nav-cta">Me parler</a>
 </nav>
 
 <main>
 <article>
 <header class="article-hero">
   <div class="shell">
-    <a class="crumb" href="/">&larr; Home</a>
+    <a class="crumb" href="/fr/">&larr; Home</a>
     <h1>Privacy, and what this site actually stores</h1>
     <div class="article-meta">
       <span>Written to be checked</span>
@@ -166,7 +176,7 @@
       <p>Interactions are batched and posted to this site&rsquo;s own <code>/api/track</code>, which folds them into counters. What is kept is the count, not the trail.</p>
 
       <ul>
-        <li><strong>Aggregate counters.</strong> How many people scrolled past a section, how many opened the pricing table, which links were clicked. Totals, not sequences. You can see the whole set yourself on the <a href="/stats/">live stats page</a> &mdash; that is the same data I have.</li>
+        <li><strong>Aggregate counters.</strong> How many people scrolled past a section, how many opened the pricing table, which links were clicked. Totals, not sequences. You can see the whole set yourself on the <a href="/fr/stats/">live stats page</a> &mdash; that is the same data I have.</li>
         <li><strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.</li>
         <li><strong>A presence key</strong> against the random session id, kept five minutes, which is how &ldquo;reading now&rdquo; works.</li>
         <li><strong>A rate-limit counter</strong> for AI-me, stored against a one-way hash of your IP address. The hash cannot be reversed to an address, and the address itself is never written down.</li>
@@ -230,7 +240,7 @@
     <div class="footer-top">
 
       <div class="footer-brand">
-        <a href="/" class="footer-mark">
+        <a href="/fr/" class="footer-mark">
           <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
       <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
       <path fill-rule="evenodd" fill="var(--on-accent)"
@@ -240,70 +250,66 @@
     </svg>
           Quentin Dupard
         </a>
-        <p class="footer-role">Fractional product &amp; marketing</p>
+        <p class="footer-role">Produit &amp; marketing à temps partagé</p>
 
         <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
 
         <p class="footer-where">
-          <strong>Working worldwide</strong><br>
-          Remote by default<br>
-          On-site when it earns it
+          <strong>J'interviens partout</strong><br> À distance par défaut<br> Sur place quand ça le justifie
         </p>
 
         <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
-          Book 30 minutes
+          Réserver 30 minutes
         </a>
 
         <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
-          <span class="footer-social-icon" aria-hidden="true">in</span>
-          Follow on LinkedIn
+          <span class="footer-social-icon" aria-hidden="true">in</span> Me suivre sur LinkedIn
         </a>
       </div>
 
-      <nav class="footer-col" aria-label="What I do">
-        <h2>What I do</h2>
-        <a href="/research/positioning/">Positioning &amp; messaging</a>
-        <a href="/research/pricing-metric/">Pricing &amp; packaging</a>
-        <a href="/research/activation/">Activation</a>
-        <a href="/research/expansion-revenue/">Expansion revenue</a>
-        <a href="/research/what-to-kill/">Product strategy</a>
-        <a href="/research/rising-cac/">Acquisition &amp; CAC</a>
+      <nav class="footer-col" aria-label="Ce que je fais">
+        <h2>Ce que je fais</h2>
+        <a href="/fr/research/positioning/">Positionnement &amp; discours</a>
+        <a href="/fr/research/pricing-metric/">Prix &amp; packaging</a>
+        <a href="/fr/research/activation/">Activation</a>
+        <a href="/fr/research/expansion-revenue/">Revenus d'expansion</a>
+        <a href="/fr/research/what-to-kill/">Stratégie produit</a>
+        <a href="/fr/research/rising-cac/">Acquisition &amp; CAC</a>
       </nav>
 
-      <nav class="footer-col" aria-label="Engagements">
-        <h2>Engagements</h2>
-        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
-        <a href="/#pricing">Sprint &mdash; two weeks</a>
-        <a href="/#pricing">Operator &mdash; ongoing</a>
-        <a href="/#pricing">Compare all three</a>
-        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      <nav class="footer-col" aria-label="Missions">
+        <h2>Missions</h2>
+        <a href="/fr/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/fr/#pricing">Sprint &mdash; deux semaines</a>
+        <a href="/fr/#pricing">Operator &mdash; au long cours</a>
+        <a href="/fr/#pricing">Comparer les trois</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Comment je travaille (PDF)</a>
       </nav>
 
       <nav class="footer-col" aria-label="Site">
         <h2>Site</h2>
-        <a href="/">Home</a>
-        <a href="/about/">About me</a>
-        <a href="/#work-done">Previously</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/research/">Research</a>
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/about/">À propos de moi</a>
+        <a href="/fr/#work-done">Réalisations</a>
+        <a href="/fr/#faq">FAQ</a>
+        <a href="/fr/research/">Recherche</a>
       </nav>
 
-      <nav class="footer-col" aria-label="More">
-        <h2>More</h2>
-        <a href="/#ask">Ask AI-me</a>
-        <a href="/#inbox">Write to me</a>
-        <a href="/stats/">Live stats</a>
-        <a href="/privacy/">Privacy</a>
+      <nav class="footer-col" aria-label="Plus">
+        <h2>Plus</h2>
+        <a href="/fr/#ask">Demander à l'IA-moi</a>
+        <a href="/fr/#inbox">M'écrire</a>
+        <a href="/fr/stats/">Statistiques en direct</a>
+        <a href="/fr/privacy/">Confidentialité</a>
         </nav>
 
     </div>
 
     <div class="footer-legal">
       <p class="footer-privacy">
-        First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept.
-        <a href="/stats/">The numbers are public</a> and <a href="/privacy/">so is the detail</a>.
+        Mesure d'audience maison, agrégée. Pas de publicité, pas de profils, aucune IP conservée. <a href="/fr/stats/">Les chiffres sont publics</a> et <a href="/fr/privacy/">le détail aussi</a>.
       </p>
-      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Tous droits réservés.</p>
     </div>
   </div>
 

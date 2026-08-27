@@ -8,6 +8,10 @@
 <meta name="description" content="Fractional product and marketing. I find revenue your business is already sitting on: pricing, positioning, activation and retention. Deepest in B2B SaaS, useful anywhere there is a funnel and a price.">
 <meta name="author" content="Quentin Dupard">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/">
 <link rel="canonical" href="https://quentindupard.com/">
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
 <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full content">
@@ -18,7 +22,7 @@
 <meta property="og:description" content="Pricing, positioning, activation, retention. Describe your business and I'll tell you where the revenue is going.">
 <meta property="og:url" content="https://quentindupard.com/">
 <meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fractional product &amp; marketing | Quentin Dupard">
 <meta name="twitter:description" content="Pricing, positioning, activation, retention. Describe your business and I'll tell you where the revenue is going.">
@@ -950,6 +954,13 @@
       <label for="glass-level">Glass</label>
       <input type="range" id="glass-level" min="0" max="100" value="50"
              aria-label="Liquid Glass transparency">
+    </div>
+
+    <!-- Filled per locale by tools/i18n/build.py. The same control lives in
+         the nav on pages that have no session dock. -->
+    <div class="glass-ctl">
+      <label id="lang-label">Language</label>
+      <div class="lang-switch" data-lang-dock role="group" aria-labelledby="lang-label"><span class="lang-opt is-on" aria-current="true">EN</span><a class="lang-opt" href="/fr/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><a class="lang-opt" href="/es/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div>
     </div>
   </dl>
 </aside>

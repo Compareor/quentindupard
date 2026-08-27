@@ -672,3 +672,35 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 @media (prefers-reduced-motion: reduce) {
   .glint::after { animation: none !important; display: none; }
 }
+
+/* ── Language switcher ───────────────────────────────────────
+   Sits in the nav between the links and the CTA. Three two-letter codes
+   rather than flags: a flag is a country, and none of these languages
+   belongs to one country. */
+.lang-switch {
+  display: inline-flex; align-items: center;
+  gap: 1px; padding: 2px;
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-pill);
+  background: var(--tint);
+  margin-left: auto;
+}
+.lang-opt {
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;
+  padding: 5px 9px; border-radius: var(--r-pill);
+  color: var(--text-faint); text-decoration: none;
+  transition: color .18s var(--ease), background .18s var(--ease);
+}
+.lang-opt:hover { color: var(--text); }
+.lang-opt.is-on {
+  color: var(--text);
+  background: var(--panel);
+  box-shadow: var(--specular), var(--lift-sm);
+}
+
+@media (max-width: 900px) {
+  /* The nav collapses to brand + CTA on small screens; the switcher stays,
+     because a French visitor on a phone needs it more than a desktop one. */
+  .lang-switch { margin-left: 0; }
+  .lang-opt { padding: 6px 8px; font-size: 11px; }
+}

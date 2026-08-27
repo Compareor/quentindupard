@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Recherche | Quentin Dupard</title>
+<meta name="description" content="Notes de travail sur les prix, l'activation et le positionnement. Les frameworks que j'utilise vraiment, écrits en entier.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/research/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/research/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/research/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/research/">
+<link rel="canonical" href="https://quentindupard.com/fr/research/">
+
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="Recherche">
+<meta property="og:description" content="Notes de travail sur les prix, l'activation et le positionnement. Les frameworks que j'utilise vraiment, écrits en entier.">
+<meta property="og:url" content="https://quentindupard.com/fr/research/">
+<meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Recherche">
+<meta name="twitter:description" content="Notes de travail sur les prix, l'activation et le positionnement. Les frameworks que j'utilise vraiment, écrits en entier.">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=25">
+<link rel="stylesheet" href="/assets/home.css?v=38">
+<link rel="stylesheet" href="/assets/article.css?v=4">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Recherche",
+  "url": "https://quentindupard.com/fr/research/",
+  "description": "Notes de travail sur les prix, l'activation et le positionnement.",
+  "author": {
+    "@type": "Person",
+    "name": "Quentin Dupard"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Recherche",
+  "url": "https://quentindupard.com/fr/research/",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://quentindupard.com/fr/research/pricing-metric/",
+      "name": "Votre unité de facturation compte plus que votre prix"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://quentindupard.com/fr/research/activation/",
+      "name": "Why your activation is flat, and what actually fixes it"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://quentindupard.com/fr/research/positioning/",
+      "name": "Le test des trois entreprises pour le positionnement"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://quentindupard.com/fr/research/expansion-revenue/",
+      "name": "Nobody churns, nobody spends more: fixing flat expansion revenue"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://quentindupard.com/fr/research/rising-cac/",
+      "name": "Votre CAC augmente parce que vous avez épuisé le bon segment"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://quentindupard.com/fr/research/what-to-kill/",
+      "name": "La plupart des roadmaps sont une liste de choses que personne n'a voulu annuler"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/fr/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/fr/#work">Ce que je fais</a> <a href="/fr/#work-done">Réalisations</a> <a href="/fr/research/">Recherche</a> <a href="/fr/#pricing">Tarifs</a> <a href="/fr/about/">À propos</a>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/research/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><span class="lang-opt is-on" aria-current="true">FR</span><a class="lang-opt" href="/es/research/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div>
+  <a href="/fr/#talk" class="btn btn-primary nav-cta">Me parler</a>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/fr/research/">&larr; Recherche</a>
+    <h1>Recherche</h1>
+    <div class="article-meta">
+      <span>Index</span> <span>1 min de lecture</span> <span>Quentin Dupard</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+    <div class="prose">
+
+      <p class="stand-first">Notes de travail sur les sujets qu'on me demande le plus. Ce sont les frameworks que j'utilise vraiment, écrits correctement plutôt que résumés jusqu'à l'inutilité.</p>
+      </div>
+
+      <div class="hub-grid">
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/pricing-metric/">
+          <span class="hub-thumb"><img src="/assets/research/pricing-metric.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Prix</span>
+          <h2>Votre unité de facturation compte plus que votre prix</h2>
+          <p>Pourquoi l'unité de facturation compte plus que le montant, le test de composition, et comment changer ses prix sans déclencher de départs.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/activation/">
+          <span class="hub-thumb"><img src="/assets/research/activation.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Activation</span>
+          <h2>Why your activation is flat, and what actually fixes it</h2>
+          <p>Trouver le moment de première valeur, mesurer qui l'atteint, et la correction par données d'exemple qui fait bouger le chiffre.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/positioning/">
+          <span class="hub-thumb"><img src="/assets/research/positioning.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Positionnement</span>
+          <h2>Le test des trois entreprises pour le positionnement</h2>
+          <p>Un test de deux minutes pour savoir si votre positionnement dit quelque chose, et par quoi commencer si ce n'est pas le cas.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/expansion-revenue/">
+          <span class="hub-thumb"><img src="/assets/research/expansion-revenue.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Rétention</span>
+          <h2>Nobody churns, nobody spends more: fixing flat expansion revenue</h2>
+          <p>Une bonne rétention sans expansion signifie que les clients vous gardent mais ne grandissent jamais avec vous. Les trois questions qui expliquent pourquoi.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/rising-cac/">
+          <span class="hub-thumb"><img src="/assets/research/rising-cac.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Acquisition</span>
+          <h2>Votre CAC augmente parce que vous avez épuisé le bon segment</h2>
+          <p>Un coût d'acquisition qui grimpe n'est presque jamais un problème de canal. C'est le marché qui vous dit que les acheteurs faciles sont partis.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+        <a class="glass hub-card reveal" data-reveal="scale" href="/fr/research/what-to-kill/">
+          <span class="hub-thumb"><img src="/assets/research/what-to-kill.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-kind">Stratégie produit</span>
+          <h2>La plupart des roadmaps sont une liste de choses que personne n'a voulu annuler</h2>
+          <p>Décider ce qu'on arrête est plus dur que décider ce qu'on construit, et presque personne n'y a intérêt.</p>
+          <span class="hub-go">Lire &rarr;</span>
+        </a>
+      </div>
+      <div class="prose" style="margin-top:40px;">
+      <p>Tout ici est libre d'accès. Si vous voulez que ce soit appliqué à votre activité plutôt que lu, c'est à cela que servent les missions.</p>
+
+    </div>
+
+    <div class="glass article-cta">
+      <h2>Vous voulez la même chose pour votre activité ?</h2>
+      <p>Ou envoyez-moi simplement le problème et je vous dirai lequel de ces liens s'applique.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">Réserver 30 minutes</a> <a class="btn btn-glass" href="/fr/#ask">Demander d'abord à l'IA-moi</a>
+      </div>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/fr/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Produit &amp; marketing à temps partagé</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>J'interviens partout</strong><br> À distance par défaut<br> Sur place quand ça le justifie
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Réserver 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span> Me suivre sur LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Ce que je fais">
+        <h2>Ce que je fais</h2>
+        <a href="/fr/research/positioning/">Positionnement &amp; discours</a>
+        <a href="/fr/research/pricing-metric/">Prix &amp; packaging</a>
+        <a href="/fr/research/activation/">Activation</a>
+        <a href="/fr/research/expansion-revenue/">Revenus d'expansion</a>
+        <a href="/fr/research/what-to-kill/">Stratégie produit</a>
+        <a href="/fr/research/rising-cac/">Acquisition &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Missions">
+        <h2>Missions</h2>
+        <a href="/fr/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/fr/#pricing">Sprint &mdash; deux semaines</a>
+        <a href="/fr/#pricing">Operator &mdash; au long cours</a>
+        <a href="/fr/#pricing">Comparer les trois</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Comment je travaille (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/about/">À propos de moi</a>
+        <a href="/fr/#work-done">Réalisations</a>
+        <a href="/fr/#faq">FAQ</a>
+        <a href="/fr/research/">Recherche</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Plus">
+        <h2>Plus</h2>
+        <a href="/fr/#ask">Demander à l'IA-moi</a>
+        <a href="/fr/#inbox">M'écrire</a>
+        <a href="/fr/stats/">Statistiques en direct</a>
+        <a href="/fr/privacy/">Confidentialité</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        Mesure d'audience maison, agrégée. Pas de publicité, pas de profils, aucune IP conservée. <a href="/fr/stats/">Les chiffres sont publics</a> et <a href="/fr/privacy/">le détail aussi</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Tous droits réservés.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/track.js?v=6" defer></script>
+<script src="/assets/article.js?v=2" defer></script>
+</body>
+</html>

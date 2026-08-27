@@ -48,6 +48,26 @@ window.QD = window.QD || {};
   const visitorId = optedOut() ? 'opted-out' : stored(localStorage, VISITOR_KEY);
   const sessionId = optedOut() ? 'opted-out' : stored(sessionStorage, SESSION_KEY);
 
+  /* ── Language choice ──────────────────────────────────────
+     The edge negotiates the language of "/" from Accept-Language, but an
+     explicit pick always beats a guess: someone who chose English on a French
+     laptop meant it. Clicking the switcher records that in a cookie, which is
+     the only thing the Worker can read before the page is built.
+
+     Written on click rather than on arrival. A cookie set merely by landing
+     on /fr/ would mean one accidental visit locks the language for a year. */
+  document.addEventListener('click', function (event) {
+    var opt = event.target.closest && event.target.closest('a.lang-opt');
+    if (!opt) return;
+    var code = opt.dataset.trackLabel;
+    if (!code) return;
+    try {
+      document.cookie = 'qd_lang=' + code +
+        ';path=/;max-age=31536000;samesite=lax' +
+        (location.protocol === 'https:' ? ';secure' : '');
+    } catch (_) { /* the link still works without it */ }
+  });
+
   /* ── UTM capture ──────────────────────────────────────── */
 
   const UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];

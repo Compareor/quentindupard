@@ -38,6 +38,84 @@ const GONE = {
   '/contact':  'Write to me here: https://quentindupard.com/#inbox\nOr email: quentin.dupard@gmail.com'
 };
 
+
+/* ── Language negotiation ─────────────────────────────────────
+   A visitor whose browser asks for French gets French.
+
+   Three constraints shape this more than the detection itself:
+
+   1. Only the bare "/" negotiates. A deep link carries its own language, and
+      redirecting one would fight the hreflang annotations that tell search
+      engines these pages are the same page in three languages.
+   2. Crawlers are never redirected. Googlebot crawls with an English
+      Accept-Language from the US, so redirecting it is how a site ends up
+      with only one of its three languages indexed.
+   3. 302, never 301. A permanent redirect on a path whose correct
+      destination depends on a request header is a cache poisoning bug
+      waiting to happen — hence Vary as well.
+
+   An explicit choice in the switcher writes qd_lang, and that always wins:
+   someone who picked English on a French laptop meant it. */
+
+const LOCALES = ['fr', 'es'];
+
+const BOT = /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora link preview|whatsapp|telegram|discord|lighthouse|headlesschrome|gptbot|claudebot|perplexity|oai-searchbot|chatgpt-user|applebot|duckduckbot|yandex|baidu/i;
+
+function cookie(request, name) {
+  const raw = request.headers.get('cookie') || '';
+  for (const part of raw.split(';')) {
+    const [k, ...rest] = part.trim().split('=');
+    if (k === name) return rest.join('=');
+  }
+  return '';
+}
+
+/* Highest-q language the site actually speaks. Returns '' for English or for
+   anything unrecognised, because English is the fallback either way. */
+function preferredLocale(header) {
+  if (!header) return '';
+  const ranked = header
+    .split(',')
+    .map((part) => {
+      const [tag, ...params] = part.trim().split(';');
+      const q = params
+        .map(p => p.trim())
+        .filter(p => p.startsWith('q='))
+        .map(p => parseFloat(p.slice(2)))[0];
+      return { base: tag.trim().toLowerCase().split('-')[0], q: isNaN(q) ? 1 : q };
+    })
+    .filter(entry => entry.base && entry.q > 0)
+    .sort((a, b) => b.q - a.q);
+
+  for (const entry of ranked) {
+    if (entry.base === 'en') return '';          // English wins outright
+    if (LOCALES.includes(entry.base)) return entry.base;
+  }
+  return '';
+}
+
+function negotiate(request, url) {
+  if (url.pathname !== '/' || request.method !== 'GET') return null;
+  if (url.searchParams.has('lang')) return null;   // explicit override in the URL
+  if (BOT.test(request.headers.get('user-agent') || '')) return null;
+
+  const chosen = cookie(request, 'qd_lang');
+  const target = ['en', 'fr', 'es'].includes(chosen)
+    ? chosen
+    : preferredLocale(request.headers.get('accept-language'));
+
+  if (!target || target === 'en') return null;
+
+  return new Response(null, {
+    status: 302,
+    headers: {
+      location: `/${target}/${url.search}`,
+      'cache-control': 'no-store',
+      vary: 'Accept-Language, Cookie'
+    }
+  });
+}
+
 const SECURITY_HEADERS = {
   'x-content-type-options': 'nosniff',
   'referrer-policy': 'strict-origin-when-cross-origin',
@@ -50,6 +128,10 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, '') || '/';
+
+    // ── Language ──
+    const redirect = negotiate(request, url);
+    if (redirect) return redirect;
 
     // ── Permanently removed ──
     if (GONE[path]) {
@@ -93,7 +175,12 @@ export default {
     // Note that the assets layer answers most paths before this Worker runs
     // (see run_worker_first in wrangler.toml), so per-path response headers —
     // including the dashboard's noindex — belong in `_headers`, not here.
-    return withHeaders(await env.ASSETS.fetch(request));
+    const response = withHeaders(await env.ASSETS.fetch(request));
+    if (url.pathname === '/') {
+      // The root is the one URL whose content depends on request headers.
+      response.headers.set('vary', 'Accept-Language, Cookie');
+    }
+    return response;
   }
 };
 

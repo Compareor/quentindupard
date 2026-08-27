@@ -248,9 +248,15 @@ window.QD_SNAKE = (function () {
     $('#snake-board').addEventListener('touchstart', onTouchStart, { passive: true });
     $('#snake-board').addEventListener('touchmove', onTouchMove, { passive: false });
 
-    document.querySelectorAll('[data-snake-open]').forEach(b => b.addEventListener('click', open));
-    document.querySelectorAll('[data-snake-close]').forEach(b => b.addEventListener('click', close));
-    document.querySelectorAll('[data-snake-start]').forEach(b => b.addEventListener('click', start));
+    /* Delegated, not bound directly. The "Want a discount code?" button is
+       created by showPaywall() only once someone hits the free limit, so it
+       does not exist when this runs — binding to it here found nothing. */
+    document.addEventListener('click', (e) => {
+      if (!(e.target instanceof Element)) return;
+      if (e.target.closest('[data-snake-open]'))  { e.preventDefault(); open(); }
+      else if (e.target.closest('[data-snake-close]')) { close(); }
+      else if (e.target.closest('[data-snake-start]')) { start(); }
+    });
 
     const copy = $('#snake-copy');
     if (copy) {

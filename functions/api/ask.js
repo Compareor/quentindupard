@@ -83,30 +83,70 @@ export async function onRequestPost(context) {
     return text('The brain is unavailable right now. Email me instead: quentin.dupard@gmail.com', 502);
   }
 
+  /* Wait for the first token before committing to a 200.
+     Streaming starts the response as soon as the ReadableStream is handed
+     over, which means a failure after that point can only be reported inside
+     the body — as an apology in the visitor's chat. The client already falls
+     back to real cached answers on a non-OK status, so it never got the
+     chance. Holding back until there is something to say costs nothing (this
+     is time-to-first-token, which the visitor waits for anyway) and lets a
+     dead upstream degrade into a useful answer instead of an error message.
+
+     This is what an empty Anthropic balance looked like from the outside:
+     every visitor got "Something broke on my side" rather than the fallback. */
   const encoder = new TextEncoder();
+  const iterator = stream[Symbol.asyncIterator]();
+
+  let firstChunk = '';
+  let exhausted = false;
+  try {
+    for (;;) {
+      const { value, done } = await iterator.next();
+      if (done) { exhausted = true; break; }
+      if (value.type === 'content_block_delta' && value.delta.type === 'text_delta') {
+        firstChunk = value.delta.text;
+        break;
+      }
+    }
+  } catch (err) {
+    logFailure('stream-first', err);
+    return text('The brain is unavailable right now. Email me instead: quentin.dupard@gmail.com', 502);
+  }
+
+  // Ran to completion without ever producing text. A refusal is a real answer
+  // and should be shown; anything else is a fault and should fall back.
+  if (!firstChunk) {
+    let refused = false;
+    try {
+      refused = exhausted && (await stream.finalMessage()).stop_reason === 'refusal';
+    } catch (err) {
+      logFailure('final-message', err);
+    }
+    if (!refused) {
+      return text('The brain is unavailable right now. Email me instead: quentin.dupard@gmail.com', 502);
+    }
+    return text(
+      "I'm not going to answer that one. Ask me something about pricing, positioning, activation or growth instead.",
+      200
+    );
+  }
+
   const readable = new ReadableStream({
     async start(controller) {
-      let wroteSomething = false;
+      controller.enqueue(encoder.encode(firstChunk));
       try {
-        for await (const event of stream) {
-          if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
-            wroteSomething = true;
-            controller.enqueue(encoder.encode(event.delta.text));
+        for (;;) {
+          const { value, done } = await iterator.next();
+          if (done) break;
+          if (value.type === 'content_block_delta' && value.delta.type === 'text_delta') {
+            controller.enqueue(encoder.encode(value.delta.text));
           }
         }
-        const final = await stream.finalMessage();
-        if (final.stop_reason === 'refusal' && !wroteSomething) {
-          controller.enqueue(encoder.encode(
-            "I'm not going to answer that one. Ask me something about GTM, pricing, or global hiring instead."
-          ));
-        }
       } catch (err) {
+        // Text is already on the visitor's screen, so the status is spent.
+        // Saying it was cut short is more honest than stopping mid-sentence.
         logFailure('stream-read', err);
-        controller.enqueue(encoder.encode(
-          wroteSomething
-            ? '\n\n(Answer cut short — the connection dropped.)'
-            : 'Something broke on my side. Email me at quentin.dupard@gmail.com and I will answer it personally.'
-        ));
+        controller.enqueue(encoder.encode('\n\n(Answer cut short — the connection dropped.)'));
       }
       controller.close();
     }
@@ -121,16 +161,6 @@ export async function onRequestPost(context) {
   });
 }
 
-/**
- * A total outage of this endpoint used to be invisible: both failure paths
- * swallowed the error and returned friendly copy, so the feature could be down
- * for a week and look fine from the outside. The status and message are enough
- * to tell an expired key from a spend cap from a bad request, and neither
- * contains the key itself.
- *
- * Visible in the dashboard under Workers -> Logs (observability is enabled in
- * wrangler.toml) or live with `npx wrangler tail`.
- */
 function logFailure(stage, err) {
   try {
     console.error('[ask] %s failed: status=%s type=%s message=%s',

@@ -79,7 +79,7 @@ What degrades, visibly and honestly:
 
 | What | Where | Why |
 |---|---|---|
-| Stripe Payment Link | `assets/home.js`, search `REPLACE_WITH_YOUR_PAYMENT_LINK` | The €5/month AI-me paywall points at a placeholder. Create a Payment Link in Stripe (no code, and card details never touch this site). |
+| Stripe Payment Link | `assets/home.js`, search `REPLACE_WITH_YOUR_PAYMENT_LINK` | The $10/month AI-me paywall points at a placeholder. Create a Payment Link in Stripe (no code, and card details never touch this site). |
 | Real recommendations | `assets/content.js` | The mailbox entries are illustrative. Your LinkedIn recommendations are real and worth more. |
 | Result numbers | `index.html`, Act 03 | The carousel describes what you did but not what changed. |
 | Research images | `assets/research/*.svg` | Glass placeholders sized 1200×630. Replace the file, keep the name. |
@@ -89,9 +89,9 @@ What degrades, visibly and honestly:
 
 ## Notes on the free tier
 
-AI-me allows 5 questions, then shows the €5/month prompt. The counter is in
+AI-me allows 5 questions, then shows the $10/month prompt. The counter is in
 `localStorage`, so a determined visitor can clear it. That is deliberate: for a
-€5 product the limit is a nudge, not DRM. Real enforcement needs accounts behind
+$10 product the limit is a nudge, not DRM. Real enforcement needs accounts behind
 `/api/ask`, which is a server-side change and a bigger piece of work.
 
 `functions/api/contact.js` is currently **unused** — the form posts to Formspree

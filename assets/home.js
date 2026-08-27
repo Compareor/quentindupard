@@ -1271,7 +1271,7 @@
   /* ══ Free tier ════════════════════════════════════════════
      A handful of questions free, then a paywall. The counter lives in
      localStorage, which a determined visitor can clear — that is fine for a
-     €5 product where the point is a nudge, not DRM. Real enforcement needs
+     $10 product where the point is a nudge, not DRM. Real enforcement needs
      the account system behind /api/ask, which is a server-side change.
      ────────────────────────────────────────────────────────── */
   const FREE_KEY = 'qd:asked';
@@ -1311,7 +1311,7 @@
     wrap.appendChild(h);
 
     const p = document.createElement('p');
-    p.textContent = 'If AI-me is genuinely useful, it is €5 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.';
+    p.textContent = 'If AI-me is genuinely useful, it is $10 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.';
     wrap.appendChild(p);
 
     const row = document.createElement('div');
@@ -1324,7 +1324,7 @@
     pay.href = 'https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK';
     pay.target = '_blank';
     pay.rel = 'noopener';
-    pay.textContent = 'Unlock for €5/month';
+    pay.textContent = 'Unlock for $10/month';
     pay.dataset.track = 'paywall_subscribe';
 
     const talk = document.createElement('a');
@@ -1337,6 +1337,13 @@
 
     row.append(pay, talk);
     wrap.appendChild(row);
+
+    const deal = document.createElement('button');
+    deal.className = 'paywall-deal';
+    deal.type = 'button';
+    deal.setAttribute('data-snake-open', '');
+    deal.textContent = 'Want a discount code?';
+    wrap.appendChild(deal);
 
     const note = document.createElement('p');
     note.className = 'paywall-note';

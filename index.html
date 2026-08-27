@@ -34,7 +34,7 @@
 <meta name="theme-color" content="#05060f">
 
 <link rel="stylesheet" href="/assets/glass.css?v=24">
-<link rel="stylesheet" href="/assets/home.css?v=35">
+<link rel="stylesheet" href="/assets/home.css?v=37">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -1011,8 +1011,72 @@
   </div>
 </div>
 
+
+<!-- Discount game ────────────────────────────────────────── -->
+<div class="modal" id="snake" hidden>
+  <div class="modal-scrim" data-snake-close></div>
+  <div class="glass glass-thick modal-panel snake-panel" role="dialog" aria-modal="true" aria-labelledby="snake-h">
+    <div class="modal-head">
+      <h3 id="snake-h">Run the funnel</h3>
+      <button class="ask-close" type="button" data-snake-close aria-label="Close">&times;</button>
+    </div>
+
+    <!-- instructions -->
+    <div id="snake-intro">
+      <p class="snake-lede">
+        You are the funnel. Convert <strong>5 signups</strong> without hitting a
+        wall or doubling back into yourself. You get <strong>3 lives</strong>.
+      </p>
+      <ul class="snake-rules">
+        <li><span class="snake-key">↑ ↓ ← →</span> or <span class="snake-key">W A S D</span> to steer</li>
+        <li><span class="snake-key">swipe</span> on touch</li>
+        <li>Every signup you convert makes the funnel longer</li>
+        <li>Win and you get <strong>50% off your first month</strong></li>
+      </ul>
+      <div class="modal-actions">
+        <button class="btn btn-glass" type="button" data-snake-close>Not now</button>
+        <button class="btn btn-primary" type="button" data-snake-start>Start</button>
+      </div>
+    </div>
+
+    <!-- board -->
+    <div id="snake-hud" class="snake-hud" hidden>
+      <span class="snake-stat">Lives <b id="snake-lives">●●●</b></span>
+      <span class="snake-stat">Converted <b id="snake-caught">0 / 5</b></span>
+    </div>
+    <div class="snake-board" id="snake-board">
+      <canvas id="snake-canvas" aria-label="Snake game board"></canvas>
+    </div>
+
+    <!-- lost -->
+    <div id="snake-lost" hidden>
+      <p class="snake-lede"><strong>Funnel collapsed.</strong> Happens to the best of them.</p>
+      <div class="modal-actions">
+        <button class="btn btn-glass" type="button" data-snake-close>Give up</button>
+        <button class="btn btn-primary" type="button" data-snake-start>Again</button>
+      </div>
+    </div>
+
+    <!-- won -->
+    <div id="snake-won" hidden>
+      <p class="snake-lede"><strong>Five converted.</strong> Here is 50% off your first month.</p>
+      <div class="snake-code-row">
+        <code class="snake-code" id="snake-code">QD50</code>
+        <button class="btn btn-glass" type="button" id="snake-copy">Copy code</button>
+      </div>
+      <p class="snake-note">Paste it at checkout under &ldquo;Add promotion code&rdquo;.</p>
+      <div class="modal-actions">
+        <button class="btn btn-glass" type="button" data-snake-close>Close</button>
+        <a class="btn btn-primary" href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK"
+           target="_blank" rel="noopener" data-track="discount_checkout">Use it now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/assets/track.js?v=5" defer></script>
 <script src="/assets/content.js?v=5" defer></script>
-<script src="/assets/home.js?v=21" defer></script>
+<script src="/assets/home.js?v=22" defer></script>
+<script src="/assets/snake.js?v=6" defer></script>
 </body>
 </html>

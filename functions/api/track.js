@@ -52,7 +52,8 @@ const ALLOWED_EVENTS = new Set([
   // preferences
   'glass_level', 'theme_switch', 'faq_open',
   'newsletter_yes', 'newsletter_no', 'newsletter_declined', 'newsletter_subscribed',
-  'newsletter_failed', 'handoff_book', 'handoff_write', 'paywall_shown', 'paywall_subscribe', 'paywall_talk', 'carousel_prev', 'carousel_next',
+  'newsletter_failed', 'handoff_book', 'handoff_write', 'paywall_shown', 'paywall_subscribe', 'paywall_talk',
+  'discount_open', 'discount_won', 'discount_checkout', 'carousel_prev', 'carousel_next',
   'toast_shown', 'toast_dismissed', 'toast_cta'
 ]);
 

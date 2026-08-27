@@ -19,6 +19,13 @@ window.QD = window.QD || {};
   const VISITOR_KEY = 'qd:vid';
   const UTM_KEY = 'qd:utm';
   const SESSION_KEY = 'qd:sid';
+  const OPT_OUT_KEY = 'qd:no-personalisation';
+
+  /* Read on every send rather than cached at load, so the switch on /privacy
+     takes effect on the next event instead of on the next page load. */
+  function optedOut() {
+    try { return localStorage.getItem(OPT_OUT_KEY) === '1'; } catch (_) { return false; }
+  }
 
   function randomId() {
     if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
@@ -35,14 +42,18 @@ window.QD = window.QD || {};
     }
   }
 
-  const visitorId = stored(localStorage, VISITOR_KEY);
-  const sessionId = stored(sessionStorage, SESSION_KEY);
+  // Opting out must also stop the ids being MINTED, not just stop them being
+  // sent. Writing a fresh qd:vid to the browser of someone who just asked not
+  // to be counted would make the switch a lie.
+  const visitorId = optedOut() ? 'opted-out' : stored(localStorage, VISITOR_KEY);
+  const sessionId = optedOut() ? 'opted-out' : stored(sessionStorage, SESSION_KEY);
 
   /* ── UTM capture ──────────────────────────────────────── */
 
   const UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 
   function captureUtm() {
+    if (optedOut()) return {};
     const params = new URLSearchParams(location.search);
     const found = {};
     UTM_FIELDS.forEach((f) => {
@@ -126,6 +137,7 @@ window.QD = window.QD || {};
   }
 
   function flush(closing) {
+    if (optedOut()) { queue = []; return; }
     if (failed || !queue.length) return;
     const batch = queue;
     queue = [];
@@ -134,7 +146,7 @@ window.QD = window.QD || {};
   }
 
   function enqueue(event, props) {
-    if (failed) return;
+    if (failed || optedOut()) return;
     queue.push({ event, props: props || {} });
     if (queue.length >= FLUSH_SIZE) flush(false);
   }

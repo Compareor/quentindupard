@@ -141,3 +141,25 @@
 .hub-card h2 { margin: 0 24px 10px; }
 .hub-card p { margin: 0 24px 16px; }
 .hub-go { margin: auto 24px 24px; }
+
+/* ── Privacy opt-out switch ──────────────────────────────────
+   Lives in the prose, so it has to read as part of the argument rather than
+   as a widget bolted on. */
+.privacy-switch {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  padding: 20px 22px;
+  margin: 26px 0 18px;
+  border-radius: var(--r-md);
+}
+.privacy-switch-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.privacy-switch-text strong { font-size: 16px; letter-spacing: -0.015em; }
+.privacy-switch-text span { font-size: 14px; color: var(--text-dim); }
+.privacy-switch.is-off .privacy-switch-text strong { color: var(--cyan); }
+.privacy-switch .btn { flex: 0 0 auto; }
+
+.hint-line { font-size: 14px; color: var(--cyan); font-weight: 500; }
+
+@media (max-width: 560px) {
+  .privacy-switch { align-items: stretch; }
+  .privacy-switch .btn { width: 100%; }
+}

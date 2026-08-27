@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Privacy &amp; what this site stores | Quentin Dupard</title>
+<meta name="description" content="Exactly what quentindupard.com stores, where it goes, who else sees it, and how to switch the analytics off. Written to be checked, not skimmed.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://quentindupard.com/privacy/">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="Privacy &amp; what this site stores">
+<meta property="og:description" content="Every key this site writes to your browser, every service that sees anything, and a switch to turn the analytics off.">
+<meta property="og:url" content="https://quentindupard.com/privacy/">
+<meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy &amp; what this site stores">
+<meta name="twitter:description" content="Every key this site writes to your browser, and a switch to turn the analytics off.">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=25">
+<link rel="stylesheet" href="/assets/home.css?v=37">
+<link rel="stylesheet" href="/assets/article.css?v=4">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://quentindupard.com/privacy/",
+  "name": "Privacy & what this site stores",
+  "description": "What quentindupard.com stores in your browser and on its server, which third parties are involved, and how to opt out of the analytics.",
+  "isPartOf": { "@id": "https://quentindupard.com/#website" },
+  "about": { "@id": "https://quentindupard.com/#quentin" },
+  "dateModified": "2026-08-27"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://quentindupard.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://quentindupard.com/privacy/" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Primary">
+  <a href="/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/#work">What I do</a>
+    <a href="/#work-done">Previously</a>
+    <a href="/research/">Research</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/about/">About</a>
+  </div>
+  <a href="/#talk" class="btn btn-primary nav-cta">Talk to me</a>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/">&larr; Home</a>
+    <h1>Privacy, and what this site actually stores</h1>
+    <div class="article-meta">
+      <span>Written to be checked</span>
+      <span>No account required</span>
+      <span>Updated August 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+    <div class="prose">
+
+      <p class="stand-first">Most privacy pages are written so that nothing can be held against them. This one is written so you can verify it. Every item below is something you can confirm yourself in your browser&rsquo;s developer tools.</p>
+
+      <p>Short version: this site measures how people move through it, in aggregate, using its own code. It does not sell anything about you, it does not run ad tech, and it does not keep your IP address. If you would rather it counted nothing at all, there is a switch further down that works immediately.</p>
+
+      <h2>Who is responsible</h2>
+
+      <p>Quentin Dupard, operating independently. Contact for anything on this page, including a request to delete something: <a href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>. I answer these personally, usually within a day.</p>
+
+      <p>The site is hosted on Cloudflare Workers. Files are served from Cloudflare&rsquo;s network, which means Cloudflare processes the request before this site&rsquo;s own code sees it.</p>
+
+      <h2>What gets stored in your browser</h2>
+
+      <p>No advertising cookies, and no cookies at all for ordinary visitors. What the site uses is <code>localStorage</code> and <code>sessionStorage</code>, which stay on your device and are never transmitted anywhere as a block. Open the Application tab in developer tools and you will find exactly this list:</p>
+
+      <ul>
+        <li><code>qd:vid</code> &mdash; a random identifier, so a repeat visit is not counted as a new person. Not linked to a name, an email, or an IP.</li>
+        <li><code>qd:sid</code> &mdash; the same idea for a single session. Cleared when you close the tab.</li>
+        <li><code>qd:utm</code> &mdash; the campaign parameters that brought you here, if there were any, so I can tell which link worked. Session only.</li>
+        <li><code>qd:seen</code> &mdash; a flag noting you have been here before, which is what changes the greeting to &ldquo;welcome back&rdquo;.</li>
+        <li><code>qd:theme</code>, <code>qd:glass</code>, <code>qd:mode</code> &mdash; your light or dark choice, the transparency slider, and the delivery preference on the pricing table.</li>
+        <li><code>qd:asked</code> &mdash; how many free questions you have put to AI-me.</li>
+        <li><code>qd:promo</code> &mdash; a discount code, if you won one.</li>
+        <li><code>qd:sent</code> &mdash; a note that you already sent a message, so the form does not nag you.</li>
+        <li><code>qd:no-personalisation</code> &mdash; set only if you use the switch below.</li>
+      </ul>
+
+      <p>There is exactly one cookie on this domain, <code>qd_admin</code>, and it is only ever set for me when I sign in to edit the site. It cannot be set by visiting a page.</p>
+
+      <h2>What reaches the server</h2>
+
+      <p>Interactions are batched and posted to this site&rsquo;s own <code>/api/track</code>, which folds them into counters. What is kept is the count, not the trail.</p>
+
+      <ul>
+        <li><strong>Aggregate counters.</strong> How many people scrolled past a section, how many opened the pricing table, which links were clicked. Totals, not sequences. You can see the whole set yourself on the <a href="/stats/">live stats page</a> &mdash; that is the same data I have.</li>
+        <li><strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.</li>
+        <li><strong>A presence key</strong> against the random session id, kept five minutes, which is how &ldquo;reading now&rdquo; works.</li>
+        <li><strong>A rate-limit counter</strong> for AI-me, stored against a one-way hash of your IP address. The hash cannot be reversed to an address, and the address itself is never written down.</li>
+      </ul>
+
+      <p>What is never recorded: your IP address, the text of anything you type outside the message form, your name, or any sequence that would reconstruct one person&rsquo;s path through the site.</p>
+
+      <h2>The two things you type on purpose</h2>
+
+      <p><strong>The message form</strong> in the mailbox is a contact form wearing a costume, and it behaves like one. Your email address and your message go to <a href="https://formspree.io/legal/privacy-policy" rel="noopener" target="_blank">Formspree</a>, which forwards them to my inbox. That is a genuine transfer of your data to a third party and to me, because otherwise I could not reply.</p>
+
+      <p><strong>AI-me</strong> sends your question to <a href="https://www.anthropic.com/legal/privacy" rel="noopener" target="_blank">Anthropic</a> to be answered. The question is not stored on this site. Do not put confidential information into it &mdash; it is a demonstration on a public website, not a private channel.</p>
+
+      <p>The newsletter sign-up goes through Formspree too. There is no mailing-list provider behind it yet, which means there is no unsubscribe link: to come off the list, email me and I will remove you.</p>
+
+      <h2>Other services</h2>
+
+      <ul>
+        <li><strong>Cloudflare</strong> &mdash; hosting and network. Also runs its own visit measurement on this domain, which loads a small script from <code>cloudflareinsights.com</code>. It is the one third-party script on the site.</li>
+        <li><strong>Stripe</strong> and <strong>Calendly</strong> &mdash; only if you click through to them. Payment details never touch this site; checkout happens entirely on Stripe&rsquo;s own pages.</li>
+      </ul>
+
+      <p>There is no Google Analytics, no advertising pixel, no session recorder, no heatmap tool, and nothing that follows you to another website.</p>
+
+      <h2>Turn the measurement off</h2>
+
+      <p>This takes effect immediately and does not need a reload. It sets a single flag in your browser, so it applies to this device and this browser.</p>
+
+      <div class="privacy-switch glass" id="privacy-switch">
+        <div class="privacy-switch-text">
+          <strong id="privacy-state">Measurement is on</strong>
+          <span id="privacy-detail">Aggregate counts only, as described above.</span>
+        </div>
+        <button class="btn btn-glass" type="button" id="privacy-toggle" aria-pressed="false">Turn it off</button>
+      </div>
+
+      <p class="hint-line" id="privacy-cleared" hidden>Stored keys cleared. Nothing further will be counted from this browser.</p>
+
+      <p>Cloudflare&rsquo;s own measurement is separate and this switch does not control it. Browser-level tracking protection or an ad blocker will stop that one.</p>
+
+      <h2>Your rights</h2>
+
+      <p>Under the GDPR you can ask for a copy of what I hold about you, ask for it to be corrected, or ask for it to be deleted. In practice the honest answer is that unless you have written to me, I hold nothing that identifies you &mdash; the analytics are counters, and a counter cannot be traced back to a person.</p>
+
+      <p>If you have written to me, that message is in my inbox and in Formspree&rsquo;s records. Ask and I will delete both. No form, no verification hoop: <a href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>.</p>
+
+      <p>You also have the right to complain to a supervisory authority.</p>
+
+      <h2>Changes</h2>
+
+      <p>If what the site does changes, this page changes with it, and the date at the top moves. It is versioned in the same repository as the site, so the history is a matter of record rather than a promise.</p>
+
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Fractional product &amp; marketing</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Working worldwide</strong><br>
+          Remote by default<br>
+          On-site when it earns it
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Book 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="What I do">
+        <h2>What I do</h2>
+        <a href="/research/positioning/">Positioning &amp; messaging</a>
+        <a href="/research/pricing-metric/">Pricing &amp; packaging</a>
+        <a href="/research/activation/">Activation</a>
+        <a href="/research/expansion-revenue/">Expansion revenue</a>
+        <a href="/research/what-to-kill/">Product strategy</a>
+        <a href="/research/rising-cac/">Acquisition &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Engagements">
+        <h2>Engagements</h2>
+        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/#pricing">Sprint &mdash; two weeks</a>
+        <a href="/#pricing">Operator &mdash; ongoing</a>
+        <a href="/#pricing">Compare all three</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/">Home</a>
+        <a href="/about/">About me</a>
+        <a href="/#work-done">Previously</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/research/">Research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More">
+        <h2>More</h2>
+        <a href="/#ask">Ask AI-me</a>
+        <a href="/#inbox">Write to me</a>
+        <a href="/stats/">Live stats</a>
+        <a href="/privacy/">Privacy</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept.
+        <a href="/stats/">The numbers are public</a> and <a href="/privacy/">so is the detail</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/track.js?v=6" defer></script>
+<script src="/assets/article.js?v=2" defer></script>
+<script src="/assets/privacy.js?v=1" defer></script>
+</body>
+</html>

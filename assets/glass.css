@@ -359,6 +359,15 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
    rather than everything sliding the same way. */
 .reveal[data-reveal="left"]  { transform: translateX(-34px); }
 .reveal[data-reveal="right"] { transform: translateX(34px); }
+
+/* On narrow screens a horizontal reveal leaves full-width cards visibly
+   off-axis until the observer fires — and if it fires late, they just sit
+   misaligned until something forces a repaint. Vertical only below the
+   breakpoint: an un-revealed card is still correctly aligned. */
+@media (max-width: 900px) {
+  .reveal[data-reveal="left"],
+  .reveal[data-reveal="right"] { transform: translateY(20px); }
+}
 .reveal[data-reveal="scale"] { transform: scale(0.94); }
 .reveal[data-reveal="blur"]  { filter: blur(7px); transition: opacity .45s var(--ease), transform .45s var(--ease), filter .45s var(--ease); }
 .reveal.in[data-reveal="blur"] { filter: none; }

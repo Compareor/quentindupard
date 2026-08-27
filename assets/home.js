@@ -1133,13 +1133,24 @@
     const text = $('#visitor-text');
     if (!line || !text) return;
 
+    /* Returning visitors get a different opener. The flag is separate from
+       the analytics id so clearing one does not silently change the other. */
+    const SEEN_KEY = 'qd:seen';
+    let returning = false;
+    try {
+      returning = localStorage.getItem(SEEN_KEY) === '1';
+      localStorage.setItem(SEEN_KEY, '1');
+    } catch (_) { /* private mode — treat as a first visit */ }
+
+    const city = data.city || data.country || '';
     let greeting = '';
-    if (looksLikeEmployer(data.org)) {
-      greeting = data.city
-        ? `Hello, someone from ${data.org} · ${data.city}`
-        : `Hello, someone from ${data.org}`;
-    } else if (data.city || data.country) {
-      greeting = `Product & marketing · ${[data.city, data.country].filter(Boolean).join(', ')}`;
+
+    if (city) {
+      greeting = returning
+        ? `Welcome back. Still need me in ${city}?`
+        : `Welcome. Do you need me in ${city}?`;
+    } else if (returning) {
+      greeting = 'Welcome back.';
     }
     if (!greeting) return;
 
@@ -1286,6 +1297,24 @@
     paintQuota();
   }
 
+
+  /* ══ Checkout ═════════════════════════════════════════════
+     One place that knows the Payment Link. `prefilled_promo_code` only does
+     anything if the Payment Link itself has promotion codes enabled — with
+     that switch off, Stripe hides the promo field entirely and silently drops
+     the parameter, which is exactly what "the code does not work" looks like. */
+  const STRIPE_LINK = 'https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00';
+  const PROMO_KEY = 'qd:promo';
+
+  function wonPromo() {
+    try { return localStorage.getItem(PROMO_KEY) || ''; } catch (_) { return ''; }
+  }
+
+  function checkoutUrl() {
+    const code = wonPromo();
+    return code ? STRIPE_LINK + '?prefilled_promo_code=' + encodeURIComponent(code) : STRIPE_LINK;
+  }
+
   /* Say the limit exists BEFORE someone hits it. A cap you only discover by
      running into it reads as a bait-and-switch, not a free tier. */
   function paintQuota() {
@@ -1317,11 +1346,10 @@
     const row = document.createElement('div');
     row.className = 'handoff-actions';
 
-    /* Hosted Stripe checkout. Payment details never touch this site.
-       TODO(Quentin): replace with your real Stripe Payment Link. */
+    /* Hosted Stripe checkout. Payment details never touch this site. */
     const pay = document.createElement('a');
     pay.className = 'btn btn-primary';
-    pay.href = 'https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00';
+    pay.href = checkoutUrl();
     pay.target = '_blank';
     pay.rel = 'noopener';
     pay.textContent = 'Unlock for $10/month';

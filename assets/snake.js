@@ -88,6 +88,17 @@ window.QD_SNAKE = (function () {
   function reveal() {
     const out = $('#snake-code');
     if (out) out.textContent = CODE;
+
+    // Remembered so the paywall's own checkout button carries the discount too,
+    // not just the button inside this panel.
+    try { localStorage.setItem('qd:promo', CODE); } catch (_) { /* private mode */ }
+
+    const go = document.getElementById('snake-checkout');
+    if (go) {
+      const base = go.getAttribute('href').split('?')[0];
+      go.href = base + '?prefilled_promo_code=' + encodeURIComponent(CODE);
+    }
+
     setState('won');
     if (window.QD && window.QD.track) window.QD.track('discount_won', { target: CODE });
   }

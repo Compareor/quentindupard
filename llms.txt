@@ -65,3 +65,14 @@ Long-form working notes. Free to read, no gate.
 - [LinkedIn](https://www.linkedin.com/in/quentindupard/)
 - Email: quentin.dupard@gmail.com
 - [Book a call](https://calendly.com/quentin-dupard-call/30min)
+
+## Languages
+
+Every page exists in English, French and Spanish at the same path, prefixed
+with the language code. The English URL is the x-default.
+
+- English: https://quentindupard.com/
+- Français: https://quentindupard.com/fr/
+- Español: https://quentindupard.com/es/
+
+The content is the same in all three; the translations are not summaries.

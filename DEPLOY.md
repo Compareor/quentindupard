@@ -165,3 +165,39 @@ drop Formspree later; it sends via Resend and needs `RESEND_API_KEY`.
 AI-me uses `claude-opus-5`: roughly **€0.03 per question** at ~4k input tokens
 (the corpus) and ~400 output. The model is one line in `functions/api/ask.js`
 (`MODEL`) if you would rather run `claude-sonnet-5` for about a fifth of that.
+
+---
+
+## Translations
+
+The site is published in English, French and Spanish. English is the source;
+`/fr/` and `/es/` are generated files, committed to the repo, so the deploy
+stays a plain static upload and a broken translation tool can never take the
+live site down.
+
+```bash
+python3 tools/i18n/extract.py    # English copy -> i18n/en.json
+python3 tools/i18n/build.py      # i18n/fr.json + es.json -> /fr/ and /es/
+python3 tools/i18n/sitemap.py    # every page x every language, with hreflang
+python3 tools/i18n/runtime.py    # i18n/runtime.json -> assets/i18n.js
+python3 tools/i18n/verify.py     # hreflang reciprocity, canonicals, dead links
+python3 tools/i18n/selftest.py   # proves the rewriter is byte-exact
+```
+
+**After editing any English copy**, run `extract.py` then `build.py`. Keys are
+hashes of the English sentence, so changing an English sentence retires its old
+key and the translation is reported missing rather than silently left stale.
+Untranslated strings fall back to English and are counted in the build output.
+
+**To fix a translation**, edit `i18n/fr.json` or `i18n/es.json` directly (the
+key is the hash) or write a `{english: translation}` batch and run
+`apply.py fr batch.json`, which validates that the markup survived.
+
+Strings that live in JavaScript are in `i18n/runtime.json` and reach the page
+through `QD.t()` instead, because the markup carrying them does not exist until
+the script runs.
+
+Language selection: the Worker reads `Accept-Language` on `/` only, never
+redirects a crawler, and answers 302 with `Vary`. Picking a language from the
+switcher writes `qd_lang`, which always wins. Deep links are never redirected —
+they carry their own language, and redirecting them would fight the hreflang.

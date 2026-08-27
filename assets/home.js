@@ -16,6 +16,10 @@
   const $  = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
 
+  /* Translation lookup for copy that only exists once JavaScript runs. Page
+     copy is swapped at build time instead — see tools/i18n/. */
+  const t = (english) => (window.QD && window.QD.t ? window.QD.t(english) : english);
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
@@ -285,25 +289,25 @@
   const DWELL = [
     {
       at: 60,
-      html: '<strong>Already a minute?</strong> At this rate you could have just hired me and skipped the reading.',
-      cta: { label: 'Fine, book it', href: 'https://calendly.com/quentin-dupard-call/30min' }
+      html: '<strong>' + t('Already a minute?') + '</strong> ' + t('At this rate you could have just hired me and skipped the reading.'),
+      cta: { label: t('Fine, book it'), href: 'https://calendly.com/quentin-dupard-call/30min' }
     },
     {
       at: 150,
       // Deliberately a joke with no input field. A card-shaped box on a real
       // domain is phishing-shaped even when everyone's in on it.
-      html: '<strong>Two and a half minutes.</strong> This must be interesting. Please insert your credit card number.<br><em style="opacity:.6">(There is no field. That was the joke. But there is a pricing section.)</em>',
-      cta: { label: 'See the pricing', href: '#pricing' }
+      html: '<strong>' + t('Two and a half minutes.') + '</strong> ' + t('This must be interesting. Please insert your credit card number.') + '<br><em style="opacity:.6">' + t('(There is no field. That was the joke. But there is a pricing section.)') + '</em>',
+      cta: { label: t('See the pricing'), href: '#pricing' }
     },
     {
       at: 300,
-      html: '<strong>Five minutes.</strong> I think at this point I am legally your product advisor. Might as well make it official.',
-      cta: { label: 'Make it official', href: 'https://calendly.com/quentin-dupard-call/30min' }
+      html: '<strong>' + t('Five minutes.') + '</strong> ' + t('I think at this point I am legally your product advisor. Might as well make it official.'),
+      cta: { label: t('Make it official'), href: 'https://calendly.com/quentin-dupard-call/30min' }
     },
     {
       at: 600,
-      html: '<strong>Ten minutes.</strong> Genuinely — whatever you are stuck on, just send it to me. It will be faster than reading this.',
-      cta: { label: 'Send it over', href: 'mailto:quentin.dupard@gmail.com' }
+      html: '<strong>' + t('Ten minutes.') + '</strong> ' + t('Genuinely — whatever you are stuck on, just send it to me. It will be faster than reading this.'),
+      cta: { label: t('Send it over'), href: 'mailto:quentin.dupard@gmail.com' }
     }
   ];
 
@@ -343,7 +347,7 @@
     const dismiss = document.createElement('button');
     dismiss.className = 'btn btn-glass';
     dismiss.type = 'button';
-    dismiss.textContent = 'Leave me alone';
+    dismiss.textContent = t('Leave me alone');
     dismiss.addEventListener('click', () => close());
     actions.appendChild(dismiss);
 
@@ -376,7 +380,7 @@
 
     function relent() {
       no.style.transform = '';
-      no.textContent = 'Fine, I respect it. No hard feelings.';
+      no.textContent = t('Fine, I respect it. No hard feelings.');
       no.disabled = true;
       track('newsletter_declined', { target: 'relented' });
     }
@@ -434,7 +438,7 @@
         submit.disabled = false;
         submit.textContent = 'Subscribe';
         status.hidden = false;
-        status.textContent = 'That did not go through. Email me and I will add you by hand.';
+        status.textContent = t('That did not go through. Email me and I will add you by hand.');
         status.className = 'news-status is-bad';
         track('newsletter_failed', { target: 'error' });
       }
@@ -597,11 +601,11 @@
         if (cart.has(tier)) {
           cart.delete(tier);
           btn.classList.remove('added');
-          btn.textContent = 'Add to cart';
+          btn.textContent = t('Add to cart');
         } else {
           cart.set(tier, price);
           btn.classList.add('added');
-          btn.textContent = 'In cart ✓';
+          btn.textContent = t('In cart ✓');
           track('cart_add', { tier: tier });
         }
         render();
@@ -627,7 +631,7 @@
         track('cart_buy', { tiers: names });
         showToast({
           html: `<strong>Good choice.</strong> There's no card form here — ${names || 'this'} starts with a conversation, so let's just have it.`,
-          cta: { label: 'Book the call', href: 'https://calendly.com/quentin-dupard-call/30min' }
+          cta: { label: t('Book the call'), href: 'https://calendly.com/quentin-dupard-call/30min' }
         });
       });
     }
@@ -760,7 +764,7 @@
       const back = document.createElement('button');
       back.className = 'inbox-back mail-back';
       back.type = 'button';
-      back.textContent = '← All messages';
+      back.textContent = t('← All messages');
       back.style.cssText = 'font:inherit;font-size:13px;color:var(--cyan);background:none;border:none;padding:0;margin-bottom:14px;cursor:pointer;';
       back.addEventListener('click', () => {
         root.classList.remove('reading');
@@ -769,7 +773,7 @@
         read.textContent = '';
         const empty = document.createElement('p');
         empty.className = 'mail-empty';
-        empty.textContent = 'Select a message to read it.';
+        empty.textContent = t('Select a message to read it.');
         read.appendChild(empty);
       });
       read.appendChild(back);
@@ -959,7 +963,7 @@
           html: '<strong>Saved to Sent, but not delivered.</strong> '
               + (note ? note + ' ' : '')
               + 'Send it properly and it will actually reach me.',
-          cta: { label: 'Send it for real', href: mailto }
+          cta: { label: t('Send it for real'), href: mailto }
         });
       }
     });
@@ -1267,7 +1271,7 @@
     wrap.className = 'msg msg-handoff';
 
     const p = document.createElement('p');
-    p.textContent = 'That is a first pass from my notes. The useful version is a conversation where I can ask you questions back — which is free, and usually thirty minutes.';
+    p.textContent = t('That is a first pass from my notes. The useful version is a conversation where I can ask you questions back — which is free, and usually thirty minutes.');
     wrap.appendChild(p);
 
     const row = document.createElement('div');
@@ -1278,13 +1282,13 @@
     book.href = 'https://calendly.com/quentin-dupard-call/30min';
     book.target = '_blank';
     book.rel = 'noopener';
-    book.textContent = 'Talk to the real me';
+    book.textContent = t('Talk to the real me');
     book.dataset.track = 'handoff_book';
 
     const write = document.createElement('button');
     write.className = 'btn btn-glass';
     write.type = 'button';
-    write.textContent = 'Send it to me instead';
+    write.textContent = t('Send it to me instead');
     write.dataset.track = 'handoff_write';
     write.addEventListener('click', () => {
       // Pre-fill the mailbox with what they already told the AI.
@@ -1346,7 +1350,7 @@
     if (!el) return;
     const left = Math.max(0, FREE_LIMIT - asked());
     if (left === 0) {
-      el.textContent = 'Free questions used. ';
+      el.textContent = t('Free questions used. ');
       el.className = 'ask-quota is-out';
     } else {
       el.textContent = `${left} of ${FREE_LIMIT} free question${left === 1 ? '' : 's'} left. `;
@@ -1364,7 +1368,7 @@
     wrap.appendChild(h);
 
     const p = document.createElement('p');
-    p.textContent = 'If AI-me is genuinely useful, it is $10 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.';
+    p.textContent = t('If AI-me is genuinely useful, it is $10 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.');
     wrap.appendChild(p);
 
     const row = document.createElement('div');
@@ -1376,7 +1380,7 @@
     pay.href = checkoutUrl();
     pay.target = '_blank';
     pay.rel = 'noopener';
-    pay.textContent = 'Unlock for $10/month';
+    pay.textContent = t('Unlock for $10/month');
     pay.dataset.track = 'paywall_subscribe';
 
     const talk = document.createElement('a');
@@ -1384,7 +1388,7 @@
     talk.href = 'https://calendly.com/quentin-dupard-call/30min';
     talk.target = '_blank';
     talk.rel = 'noopener';
-    talk.textContent = 'Or just talk to me — free';
+    talk.textContent = t('Or just talk to me — free');
     talk.dataset.track = 'paywall_talk';
 
     row.append(pay, talk);
@@ -1394,12 +1398,12 @@
     deal.className = 'paywall-deal';
     deal.type = 'button';
     deal.setAttribute('data-snake-open', '');
-    deal.textContent = 'Want a discount code?';
+    deal.textContent = t('Want a discount code?');
     wrap.appendChild(deal);
 
     const note = document.createElement('p');
     note.className = 'paywall-note';
-    note.textContent = 'The research on this site stays free and ungated either way.';
+    note.textContent = t('The research on this site stays free and ungated either way.');
     wrap.appendChild(note);
 
     chat.appendChild(wrap);

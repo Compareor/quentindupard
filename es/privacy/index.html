@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Privacidad &amp; qué guarda este sitio | Quentin Dupard</title>
+<meta name="description" content="Exactamente qué guarda quentindupard.com, adónde va, quién más lo ve, y cómo apagar la analítica. Escrito para comprobarse, no para ojearse.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/privacy/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/privacy/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/privacy/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/privacy/">
+<link rel="canonical" href="https://quentindupard.com/es/privacy/">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Resumen del sitio legible por IA">
+
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="Privacy &amp; what this site stores">
+<meta property="og:description" content="Cada clave que este sitio escribe en tu navegador, cada servicio que ve algo, y un interruptor para apagar la analítica.">
+<meta property="og:url" content="https://quentindupard.com/es/privacy/">
+<meta property="og:image" content="https://quentindupard.com/assets/quentindupard.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy &amp; what this site stores">
+<meta name="twitter:description" content="Cada clave que este sitio escribe en tu navegador, y un interruptor para apagar la analítica.">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=26">
+<link rel="stylesheet" href="/assets/home.css?v=38">
+<link rel="stylesheet" href="/assets/article.css?v=4">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://quentindupard.com/es/privacy/",
+  "name": "Privacidad & qué guarda este sitio",
+  "description": "Qué guarda quentindupard.com en tu navegador y en su servidor, qué terceros intervienen, y cómo rechazar la analítica.",
+  "isPartOf": {
+    "@id": "https://quentindupard.com/#website"
+  },
+  "about": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
+  "dateModified": "2026-08-27"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://quentindupard.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacidad",
+      "item": "https://quentindupard.com/es/privacy/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/es/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/es/#work">Qué hago</a> <a href="/es/#work-done">Trabajos</a> <a href="/es/research/">Investigación</a> <a href="/es/#pricing">Precios</a> <a href="/es/about/">Sobre mí</a>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/privacy/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><a class="lang-opt" href="/fr/privacy/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><span class="lang-opt is-on" aria-current="true">ES</span></div>
+  <a href="/es/#talk" class="btn btn-primary nav-cta">Hablemos</a>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/es/">&larr; Inicio</a>
+    <h1>Privacidad, y qué guarda realmente este sitio</h1>
+    <div class="article-meta">
+      <span>Escrito para comprobarse</span> <span>Sin cuenta</span> <span>Actualizado en agosto de 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+    <div class="prose">
+
+      <p class="stand-first">La mayoría de las páginas de privacidad se escriben para que no se les pueda reprochar nada. Esta se escribe para que puedas verificarla. Cada punto de abajo es algo que puedes confirmar tú mismo en las herramientas de desarrollo de tu navegador.</p>
+
+      <p>Versión corta: este sitio mide cómo se mueve la gente por él, de forma agregada, con su propio código. No vende nada sobre ti, no usa tecnología publicitaria, y no guarda tu dirección IP. Si prefieres que no cuente nada en absoluto, más abajo hay un interruptor que actúa al instante.</p>
+
+      <h2>Quién es responsable</h2>
+
+      <p>Quentin Dupard, a título independiente. Contacto para cualquier cosa de esta página, incluida una solicitud de borrado: <a href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>. Respondo personalmente, normalmente en un día.</p>
+
+      <p>El sitio está alojado en Cloudflare Workers. Los archivos se sirven desde la red de Cloudflare, lo que significa que Cloudflare procesa la petición antes de que la vea el código del propio sitio.</p>
+
+      <h2>Qué se guarda en tu navegador</h2>
+
+      <p>Ninguna cookie publicitaria. Lo que usa el sitio es <code>localStorage</code> y <code>sessionStorage</code>, que se quedan en tu dispositivo y nunca se transmiten a ningún sitio en bloque. Abre la pestaña Aplicación en las herramientas de desarrollo y encontrarás exactamente esta lista:</p>
+
+      <ul>
+        <li><code>qd:vid</code> &mdash; un identificador aleatorio, para que una visita repetida no se cuente como una persona nueva. No está ligado a un nombre, un correo ni una IP.</li>
+        <li><code>qd:sid</code> &mdash; la misma idea para una sola sesión. Se borra al cerrar la pestaña.</li>
+        <li><code>qd:utm</code> &mdash; los parámetros de campaña que te trajeron aquí, si los hubo, para saber qué enlace funcionó. Solo durante la sesión.</li>
+        <li><code>qd:seen</code> &mdash; una marca que indica que ya has estado aquí, que es lo que cambia el saludo a &ldquo;bienvenido de nuevo&rdquo;.</li>
+        <li><code>qd:theme</code>, <code>qd:glass</code>, <code>qd:mode</code> &mdash; tu elección de claro u oscuro, el control de transparencia, y el modo de trabajo preferido en la tabla de precios.</li>
+        <li><code>qd:asked</code> &mdash; cuántas preguntas gratuitas le has hecho a la IA-yo.</li>
+        <li><code>qd:promo</code> &mdash; un código de descuento, si ganaste uno.</li>
+        <li><code>qd:sent</code> &mdash; una nota de que ya enviaste un mensaje, para que el formulario no insista.</li>
+        <li><code>qd:no-personalisation</code> &mdash; se fija solo si usas el interruptor de abajo.</li>
+      </ul>
+
+      <p>El sitio se publica en inglés, francés y español. Cuál te toca en la página de inicio se deduce de la cabecera <code>Accept-Language</code> que tu navegador ya envía en cada petición; no se guarda nada para hacerlo, y elegir un idioma en el selector lo sobrescribe durante un año. Las demás páginas se sirven en el idioma de su propia dirección, así que un enlace que te hayan mandado se abre en el idioma en que fue escrito.</p>
+
+
+      <p>En este dominio existen dos cookies y ninguna se pone por el mero hecho de visitar una página. <code>qd_lang</code> solo se escribe cuando eliges un idioma en el selector, para que una elección explícita gane a la deducción hecha desde la configuración de tu navegador. <code>qd_admin</code> solo se pone para mí, cuando inicio sesión para editar el sitio.</p>
+
+      <h2>Qué llega al servidor</h2>
+
+      <p>Las interacciones se agrupan y se envían al <code>/api/track</code> del propio sitio, que las suma en contadores. Lo que se guarda es la cuenta, no el rastro.</p>
+
+      <ul>
+        <li><strong>Contadores agregados.</strong> Cuánta gente pasó de una sección, cuántos abrieron la tabla de precios, qué enlaces se clicaron. Totales, no secuencias. Puedes ver el conjunto entero en la <a href="/es/stats/">página de estadísticas en directo</a>: son exactamente los mismos datos que tengo yo.</li>
+        <li><strong>Una marca de primera visita</strong> asociada al <code>qd:vid</code> aleatorio, guardada 90 días, para que la cuenta de visitantes signifique algo.</li>
+        <li><strong>Una clave de presencia</strong> asociada al identificador de sesión aleatorio, guardada cinco minutos: así funciona &ldquo;leyendo ahora&rdquo;.</li>
+        <li><strong>Un contador de límite</strong> para la IA-yo, guardado contra un hash unidireccional de tu dirección IP. El hash no se puede revertir a una dirección, y la dirección en sí nunca se escribe.</li>
+      </ul>
+
+      <p>Lo que nunca se registra: tu dirección IP, el texto de lo que escribas fuera del formulario de mensaje, tu nombre, o cualquier secuencia que reconstruyera el recorrido de una persona por el sitio.</p>
+
+      <h2>Las dos cosas que escribes a propósito</h2>
+
+      <p><strong>El formulario de mensaje</strong> del buzón es un formulario de contacto disfrazado, y se comporta como tal. Tu dirección de correo y tu mensaje van a <a href="https://formspree.io/legal/privacy-policy" rel="noopener" target="_blank">Formspree</a>, que los reenvía a mi bandeja. Eso es una transferencia real de tus datos a un tercero y a mí, porque de otro modo no podría responder.</p>
+
+      <p><strong>La IA-yo</strong> envía tu pregunta a <a href="https://www.anthropic.com/legal/privacy" rel="noopener" target="_blank">Anthropic</a> para responderla. La pregunta no se guarda en este sitio. No pongas información confidencial &mdash; es una demostración en una web pública, no un canal privado.</p>
+
+      <p>El alta de la newsletter también pasa por Formspree. Todavía no hay ningún proveedor de listas de correo detrás, lo que significa que no hay enlace de baja: para salir de la lista, escríbeme y te quito.</p>
+
+      <h2>Otros servicios</h2>
+
+      <ul>
+        <li><strong>Cloudflare</strong> &mdash; alojamiento y red. También ejecuta su propia medición de visitas en este dominio, que carga un pequeño script desde <code>cloudflareinsights.com</code>. Es el único script de terceros del sitio.</li>
+        <li><strong>Stripe</strong> y <strong>Calendly</strong> &mdash; solo si haces clic para ir a ellos. Los datos de pago nunca tocan este sitio; el pago ocurre íntegramente en las páginas de Stripe.</li>
+      </ul>
+
+      <p>No hay Google Analytics, ni píxel publicitario, ni grabador de sesiones, ni mapa de calor, ni nada que te siga a otra web.</p>
+
+      <h2>Apagar la medición</h2>
+
+      <p>Esto surte efecto de inmediato y no necesita recargar. Pone una sola marca en tu navegador, así que se aplica a este dispositivo y a este navegador.</p>
+
+      <div class="privacy-switch glass" id="privacy-switch">
+        <div class="privacy-switch-text">
+          <strong id="privacy-state">La medición está activada</strong> <span id="privacy-detail">Solo cuentas agregadas, como se describe arriba.</span>
+        </div>
+        <button class="btn btn-glass" type="button" id="privacy-toggle" aria-pressed="false">Apagarla</button>
+      </div>
+
+      <p class="hint-line" id="privacy-cleared" hidden>Claves guardadas borradas. No se contará nada más desde este navegador.</p>
+
+      <p>La medición propia de Cloudflare es aparte y este interruptor no la controla. La protección antirrastreo del navegador o un bloqueador de anuncios sí la detendrán.</p>
+
+      <h2>Tus derechos</h2>
+
+      <p>Según el RGPD puedes pedir una copia de lo que tengo sobre ti, pedir que se corrija, o pedir que se borre. En la práctica, la respuesta honesta es que si no me has escrito, no tengo nada que te identifique: la analítica son contadores, y un contador no se puede rastrear hasta una persona.</p>
+
+      <p>Si me has escrito, ese mensaje está en mi bandeja y en los registros de Formspree. Pídelo y borraré ambos. Sin formulario, sin aros de verificación: <a href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>.</p>
+
+      <p>También tienes derecho a reclamar ante una autoridad de control.</p>
+
+      <h2>Cambios</h2>
+
+      <p>Si cambia lo que hace el sitio, esta página cambia con él, y la fecha de arriba avanza. Está versionada en el mismo repositorio que el sitio, así que el historial es un hecho comprobable y no una promesa.</p>
+
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/es/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Producto &amp; marketing fraccional</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Trabajo en todo el mundo</strong><br> En remoto por defecto<br> Presencial cuando lo merece
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Reservar 30 minutos
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span> Sígueme en LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Qué hago">
+        <h2>Qué hago</h2>
+        <a href="/es/research/positioning/">Posicionamiento &amp; mensaje</a>
+        <a href="/es/research/pricing-metric/">Precio &amp; empaquetado</a>
+        <a href="/es/research/activation/">Activación</a>
+        <a href="/es/research/expansion-revenue/">Ingresos por expansión</a>
+        <a href="/es/research/what-to-kill/">Estrategia de producto</a>
+        <a href="/es/research/rising-cac/">Adquisición &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Formatos de trabajo">
+        <h2>Formatos de trabajo</h2>
+        <a href="/es/#pricing">Espresso &mdash; 90 minutos</a>
+        <a href="/es/#pricing">Sprint &mdash; dos semanas</a>
+        <a href="/es/#pricing">Operator &mdash; continuo</a>
+        <a href="/es/#pricing">Comparar los tres</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Cómo trabajo (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Sitio">
+        <h2>Sitio</h2>
+        <a href="/es/">Inicio</a>
+        <a href="/es/about/">Sobre mí</a>
+        <a href="/es/#work-done">Trabajos</a>
+        <a href="/es/#faq">FAQ</a>
+        <a href="/es/research/">Investigación</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Más">
+        <h2>Más</h2>
+        <a href="/es/#ask">Pregunta a la IA-yo</a>
+        <a href="/es/#inbox">Escríbeme</a>
+        <a href="/es/stats/">Estadísticas en directo</a>
+        <a href="/es/privacy/">Privacidad</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        Analítica propia, contada en agregado. Sin publicidad, sin perfiles, sin guardar ninguna IP. <a href="/es/stats/">Las cifras son públicas</a> y <a href="/es/privacy/">el detalle también</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Todos los derechos reservados.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/i18n.js?v=1" defer></script>
+<script src="/assets/track.js?v=7" defer></script>
+<script src="/assets/article.js?v=2" defer></script>
+<script src="/assets/privacy.js?v=1" defer></script>
+</body>
+</html>

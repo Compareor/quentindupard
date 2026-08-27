@@ -275,9 +275,9 @@ window.QD_SNAKE = (function () {
         try {
           await navigator.clipboard.writeText(CODE);
           copy.textContent = 'Copied';
-          setTimeout(() => { copy.textContent = 'Copy code'; }, 1800);
+          setTimeout(() => { copy.textContent = t('Copy code'); }, 1800);
         } catch (_) {
-          copy.textContent = 'Select it manually';
+          copy.textContent = t('Select it manually');
         }
       });
     }

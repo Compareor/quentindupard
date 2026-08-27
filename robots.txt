@@ -35,6 +35,8 @@ User-agent: cohere-ai
 Allow: /
 
 # Sitemap
+# The site is published in three languages at /, /fr/ and /es/. The sitemap
+# carries the hreflang annotations that tie them together.
 Sitemap: https://quentindupard.com/sitemap.xml
 
 # LLM-readable index (proposed standard: https://llmstxt.org)

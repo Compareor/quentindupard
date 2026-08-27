@@ -9,6 +9,10 @@
 (function () {
   'use strict';
 
+  // Copy that only exists once this script runs; page copy is swapped at build
+  // time instead. See tools/i18n/.
+  const t = (english) => (window.QD && window.QD.t ? window.QD.t(english) : english);
+
   const $ = s => document.querySelector(s);
 
   const EVENT_LABELS = {
@@ -66,7 +70,7 @@
     if (!rows || !rows.length) {
       const li = document.createElement('li');
       li.className = 'panel-empty';
-      li.textContent = 'Nothing recorded yet.';
+      li.textContent = t('Nothing recorded yet.');
       el.appendChild(li);
       return;
     }
@@ -104,7 +108,7 @@
     if (!days || !days.length) {
       const p = document.createElement('p');
       p.className = 'panel-empty';
-      p.textContent = 'Nothing recorded yet.';
+      p.textContent = t('Nothing recorded yet.');
       el.appendChild(p);
       return;
     }
@@ -153,7 +157,7 @@
     if (!base) {
       const li = document.createElement('li');
       li.className = 'panel-empty';
-      li.textContent = 'Nothing recorded yet.';
+      li.textContent = t('Nothing recorded yet.');
       el.appendChild(li);
       return;
     }
@@ -285,7 +289,7 @@
       'The numbers below are your own session only. Once the site is on Cloudflare Pages with a STATS namespace bound, ' +
       'this page shows totals across everyone who has ever visited.'
     );
-    $('#updated').textContent = 'session only';
+    $('#updated').textContent = t('session only');
   }
 
   async function load() {

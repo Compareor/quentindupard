@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar | Quentin Dupard</title>
+<meta name="description" content="Decidir qué matar es más difícil que decidir qué construir, y casi nadie tiene incentivos para hacerlo. Un método práctico para recortar una hoja de ruta sin comité.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/research/what-to-kill/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/research/what-to-kill/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/research/what-to-kill/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/research/what-to-kill/">
+<link rel="canonical" href="https://quentindupard.com/es/research/what-to-kill/">
+
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar">
+<meta property="og:description" content="Decidir qué matar es más difícil que decidir qué construir, y casi nadie tiene incentivos para hacerlo. Un método práctico para recortar una hoja de ruta sin comité.">
+<meta property="og:url" content="https://quentindupard.com/es/research/what-to-kill/">
+<meta property="og:image" content="https://quentindupard.com/assets/research/what-to-kill.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar">
+<meta name="twitter:description" content="Decidir qué matar es más difícil que decidir qué construir, y casi nadie tiene incentivos para hacerlo. Un método práctico para recortar una hoja de ruta sin comité.">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=26">
+<link rel="stylesheet" href="/assets/home.css?v=38">
+<link rel="stylesheet" href="/assets/article.css?v=4">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar",
+  "description": "Decidir qué matar es más difícil que decidir qué construir, y casi nadie tiene incentivos para hacerlo. Un método práctico para recortar una hoja de ruta sin comité.",
+  "url": "https://quentindupard.com/es/research/what-to-kill/",
+  "author": {
+    "@id": "https://quentindupard.com/#quentin",
+    "@type": "Person",
+    "name": "Quentin Dupard",
+    "url": "https://quentindupard.com/es/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Quentin Dupard"
+  },
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "image": "https://quentindupard.com/assets/research/what-to-kill.svg",
+  "inLanguage": "es",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://quentindupard.com/research/what-to-kill/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://quentindupard.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Investigación",
+      "item": "https://quentindupard.com/es/research/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar",
+      "item": "https://quentindupard.com/es/research/what-to-kill/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo decido qué quitar de una hoja de ruta de producto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pregunta para qué está realmente cada línea. Todo lo que esté en la hoja de ruta por un cliente ruidoso, la preferencia de un directivo, o el esfuerzo ya invertido en lugar de evidencia de demanda es candidato. Si nadie puede nombrar quién lo pidió y qué dejarán de hacer cuando se entregue, no debería estar ahí."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué se hinchan las hojas de ruta de producto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque añadir es socialmente fácil y quitar es socialmente caro. Cada línea tiene a alguien detrás, así que lo predeterminado es acumular. El exceso es un problema de incentivos, no de planificación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debo quitar funciones que nadie usa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normalmente sí, pero comprueba antes si el poco uso significa poco valor o mala visibilidad. Una función usada por el 2 % de las cuentas que son tus cuentas mejor pagadas no es candidata a eliminarse."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/es/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/es/#work">Qué hago</a> <a href="/es/#work-done">Trabajos</a> <a href="/es/research/">Investigación</a> <a href="/es/#pricing">Precios</a> <a href="/es/about/">Sobre mí</a>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/research/what-to-kill/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><a class="lang-opt" href="/fr/research/what-to-kill/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><span class="lang-opt is-on" aria-current="true">ES</span></div>
+  <a href="/es/#talk" class="btn btn-primary nav-cta">Hablemos</a>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/es/research/">&larr; Investigación</a>
+    <h1>La mayoría de las hojas de ruta son una lista de cosas que nadie quiso cancelar</h1>
+    <div class="article-meta">
+      <span>Estrategia de producto</span> <span>5 min de lectura</span> <span>Quentin Dupard</span> <span>Actualizado en agosto de 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+<figure class="article-figure">
+  <img src="/assets/research/what-to-kill.svg"
+       alt=""
+       width="1200" height="630"
+       loading="eager" decoding="async">
+</figure>
+
+    <div class="prose">
+
+      <p class="stand-first">Decidir qué construir es la parte divertida y todo el mundo quiere opinar. Decidir qué matar es la parte que realmente da forma a un producto, y casi nadie tiene incentivos para hacerlo.</p>
+
+      <p>Mira la mayoría de las hojas de ruta y encontrarás una lista de cosas que nadie quiso cancelar. Cada línea tiene una persona detrás, una historia, una reunión donde se aprobó. Quitarla significa decirle a alguien que lo suyo no importa. Así que lo predeterminado es acumular, y el producto se vuelve más lento, más difícil de explicar y más difícil de vender.</p>
+
+      <h2>El exceso es un problema de incentivos</h2>
+
+      <p>A nadie lo ascienden por la función que no entregó. Añadir es visible, atribuible y seguro. Quitar es invisible, conflictivo y ligeramente arriesgado para la carrera. Con esos incentivos, cualquier equipo acumulará, por muy bueno que sea su proceso.</p>
+
+      <p>Por eso el exceso en las hojas de ruta no responde a mejores frameworks de priorización. No se sale puntuando de un problema que va fundamentalmente sobre quién tiene que decirle que no a quién.</p>
+
+      <div class="callout">
+        <p>Si nadie del equipo puede nombrar quién lo pidió y qué dejarán de hacer cuando se entregue, no debería estar en la hoja de ruta.</p>
+      </div>
+
+      <h2>Tres preguntas por línea</h2>
+
+      <h3>¿Quién concretamente pidió esto?</h3>
+
+      <p>No «los clientes». Un nombre. Si la respuesta honesta es una cuenta ruidosa, o un directivo que lo mencionó una vez, conviene saberlo antes de que consuma un trimestre. Un cliente que pide alto no es demanda, es una muestra de uno con buen momento.</p>
+
+      <h3>¿Qué dejarán de hacer cuando exista?</h3>
+
+      <p>La demanda real desplaza algo: una hoja de cálculo, un proceso manual, un competidor, un autónomo. Si no se desplaza nada, la función es un capricho, y los caprichos no se adoptan, lo que significa que tampoco se renuevan.</p>
+
+      <h3>¿Está esto aquí por evidencia o por el esfuerzo ya invertido?</h3>
+
+      <p>El coste hundido es la razón más común por la que una línea condenada sobrevive a una reunión de planificación. El trabajo ya hecho está perdido, lo entregues o no. La única pregunta es si el trabajo restante es el mejor uso del próximo trimestre.</p>
+
+      <p class="pull">El trabajo que ya has hecho no es un argumento para terminarlo.</p>
+
+      <h2>Matar cosas sin comité</h2>
+
+      <ol>
+        <li>Lista todo lo que está en marcha y todo lo comprometido. Incluye las líneas discretas de las que nadie habla.</li>
+        <li>Pásale a cada una las tres preguntas de arriba. Hazlo rápido; los casos evidentes son evidentes.</li>
+        <li>Separa «matar» de «ahora no». Las líneas de «ahora no» van a una lista con fecha de revisión, lo que hace que cancelar sea políticamente sobrevivible.</li>
+        <li>Anuncia qué has matado y por qué. Cancelar en silencio alimenta la creencia de que las cosas se abandonan a escondidas, lo que hace que la gente pelee más por sus líneas la próxima vez.</li>
+      </ol>
+
+      <p>Si la ayuda externa suele ser útil aquí no es por la lucidez. Es porque alguien de fuera puede decir aquello en lo que todos están de acuerdo en privado y absorber el coste social de decirlo. Eso vale con frecuencia más que el análisis.</p>
+
+      <p>Una vez la hoja de ruta es honesta, la siguiente pregunta suele ser <a href="/es/research/pricing-metric/">si estás cobrando correctamente</a> por lo que sobrevive.</p>
+
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq faq-inline">
+        <details class="glass faq-item">
+          <summary>¿Cómo decido qué quitar de una hoja de ruta de producto?</summary>
+          <p>Pregunta para qué está realmente cada línea. Todo lo que esté en la hoja de ruta por un cliente ruidoso, la preferencia de un directivo, o el esfuerzo ya invertido en lugar de evidencia de demanda es candidato. Si nadie puede nombrar quién lo pidió y qué dejarán de hacer cuando se entregue, no debería estar ahí.</p>
+        </details>
+        <details class="glass faq-item">
+          <summary>¿Por qué se hinchan las hojas de ruta de producto?</summary>
+          <p>Porque añadir es socialmente fácil y quitar es socialmente caro. Cada línea tiene a alguien detrás, así que lo predeterminado es acumular. El exceso es un problema de incentivos, no de planificación.</p>
+        </details>
+        <details class="glass faq-item">
+          <summary>¿Debo quitar funciones que nadie usa?</summary>
+          <p>Normalmente sí, pero comprueba antes si el poco uso significa poco valor o mala visibilidad. Una función usada por el 2 % de las cuentas que son tus cuentas mejor pagadas no es candidata a eliminarse.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="glass article-cta">
+      <h2>¿Quieres esto mismo para tu negocio?</h2>
+      <p>Una opinión externa suele ser la forma más barata de cancelar algo que todos quieren cancelar en privado.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">Reservar 30 minutos</a> <a class="btn btn-glass" href="/es/#ask">Pregunta antes a la IA-yo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/es/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Producto &amp; marketing fraccional</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Trabajo en todo el mundo</strong><br> En remoto por defecto<br> Presencial cuando lo merece
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Reservar 30 minutos
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span> Sígueme en LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Qué hago">
+        <h2>Qué hago</h2>
+        <a href="/es/research/positioning/">Posicionamiento &amp; mensaje</a>
+        <a href="/es/research/pricing-metric/">Precio &amp; empaquetado</a>
+        <a href="/es/research/activation/">Activación</a>
+        <a href="/es/research/expansion-revenue/">Ingresos por expansión</a>
+        <a href="/es/research/what-to-kill/">Estrategia de producto</a>
+        <a href="/es/research/rising-cac/">Adquisición &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Formatos de trabajo">
+        <h2>Formatos de trabajo</h2>
+        <a href="/es/#pricing">Espresso &mdash; 90 minutos</a>
+        <a href="/es/#pricing">Sprint &mdash; dos semanas</a>
+        <a href="/es/#pricing">Operator &mdash; continuo</a>
+        <a href="/es/#pricing">Comparar los tres</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Cómo trabajo (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Sitio">
+        <h2>Sitio</h2>
+        <a href="/es/">Inicio</a>
+        <a href="/es/about/">Sobre mí</a>
+        <a href="/es/#work-done">Trabajos</a>
+        <a href="/es/#faq">FAQ</a>
+        <a href="/es/research/">Investigación</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Más">
+        <h2>Más</h2>
+        <a href="/es/#ask">Pregunta a la IA-yo</a>
+        <a href="/es/#inbox">Escríbeme</a>
+        <a href="/es/stats/">Estadísticas en directo</a>
+        <a href="/es/privacy/">Privacidad</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        Analítica propia, contada en agregado. Sin publicidad, sin perfiles, sin guardar ninguna IP. <a href="/es/stats/">Las cifras son públicas</a> y <a href="/es/privacy/">el detalle también</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Todos los derechos reservados.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/i18n.js?v=1" defer></script>
+<script src="/assets/track.js?v=7" defer></script>
+<script src="/assets/article.js?v=2" defer></script>
+</body>
+</html>

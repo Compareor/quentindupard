@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Estadísticas en directo | Quentin Dupard</title>
+<meta name="description" content="Estadísticas acumuladas en directo de quentindupard.com: tráfico, campañas, descargas e interacciones, en público.">
+<meta name="robots" content="noindex, follow">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/stats/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/stats/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/stats/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/stats/">
+<link rel="canonical" href="https://quentindupard.com/es/stats/">
+
+<!-- Google's search results read /favicon.ico specifically, so it must be a
+     real ICO at the site root. The SVG is preferred by modern browsers. -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=26">
+<link rel="stylesheet" href="/assets/home.css?v=38">
+<link rel="stylesheet" href="/assets/stats.css?v=6">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/es/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/es/#work">Qué hago</a> <a href="/es/#work-done">Trabajos</a> <a href="/es/research/">Investigación</a> <a href="/es/#pricing">Precios</a> <a href="/es/about/">Sobre mí</a>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/stats/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><a class="lang-opt" href="/fr/stats/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><span class="lang-opt is-on" aria-current="true">ES</span></div>
+  <a href="/es/#talk" class="btn btn-primary nav-cta">Hablemos</a>
+</nav>
+
+<main>
+<section class="hero stats-hero">
+  <div class="shell">
+    <p class="eyebrow hero-eyebrow" style="margin-bottom:22px;">
+      Actualizado cada 30 segundos · <span id="updated">cargando…</span>
+    </p>
+    <h1 style="font-size:clamp(34px,5vw,62px);margin-bottom:20px;">
+      Mis estadísticas,<br><span class="gradient-text">en público.</span>
+    </h1>
+    <p class="lede" style="max-width:640px;">
+      Cada acción de este sitio está instrumentada y cada campaña está etiquetada. En lugar de afirmar que mido cosas, aquí están las cifras, acumuladas de todos los que han visitado alguna vez. Solo agregados: aquí nadie es identificable, y no se guarda ninguna IP.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="shell">
+
+    <div class="kpis" id="kpis">
+      <div class="glass kpi"><p class="kpi-n" id="k-visitors">—</p><p class="kpi-l">Visitantes</p></div>
+      <div class="glass kpi"><p class="kpi-n" id="k-views">—</p><p class="kpi-l">Páginas vistas</p></div>
+      <div class="glass kpi"><p class="kpi-n" id="k-events">—</p><p class="kpi-l">Acciones registradas</p></div>
+      <div class="glass kpi"><p class="kpi-n" id="k-downloads">—</p><p class="kpi-l">Descargas</p></div>
+      <div class="glass kpi kpi-live"><p class="kpi-n" id="k-live">—</p><p class="kpi-l"><span class="stats-live" aria-hidden="true"></span> Leyendo ahora</p></div>
+    </div>
+
+    <div class="glass notice" id="notice" hidden>
+      <p id="notice-text"></p>
+    </div>
+
+    <div class="glass panel funnel-panel">
+      <h2 class="panel-h">El embudo</h2>
+      <p class="panel-sub">Cada paso como porcentaje de todos los que llegaron. La mayor caída es lo que hay que arreglar.</p>
+      <ol class="funnel" id="funnel"><li class="panel-empty">Todavía no hay datos.</li></ol>
+    </div>
+
+    <div class="panels">
+      <div class="glass panel">
+        <h2 class="panel-h">Últimos 14 días</h2>
+        <div class="chart" id="chart"><p class="panel-empty">Todavía no hay datos.</p></div>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">De dónde viene la gente</h2>
+        <ul class="bars" id="sources"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Qué hace la gente</h2>
+        <ul class="bars" id="events"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Los más descargados</h2>
+        <ul class="bars" id="files"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Los más clicados</h2>
+        <ul class="bars" id="clicks"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Secciones alcanzadas</h2>
+        <ul class="bars" id="sections"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Campañas</h2>
+        <ul class="bars" id="campaigns"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Hasta dónde se desplaza la gente</h2>
+        <p class="panel-sub">Porcentaje de visitantes que llega a cada profundidad.</p>
+        <ul class="bars" id="scrolldepth"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+
+      <div class="glass panel">
+        <h2 class="panel-h">Cuánto tiempo se quedan</h2>
+        <p class="panel-sub">Sesiones completadas, por duración.</p>
+        <ul class="bars" id="dwell"><li class="panel-empty">Todavía no hay datos.</li></ul>
+      </div>
+    </div>
+
+    <div class="glass panel demand-panel">
+      <h2 class="panel-h">Demanda</h2>
+      <p class="panel-sub">Qué mete la gente en el carrito, qué formato quiere y cómo quiere que se entregue.</p>
+      <div class="demand">
+        <div class="demand-nums">
+          <div><span class="demand-n" id="d-views">—</span><span class="demand-l">Vieron los precios</span></div>
+          <div><span class="demand-n" id="d-adds">—</span><span class="demand-l">Añadidos al carrito</span></div>
+          <div><span class="demand-n" id="d-buys">—</span><span class="demand-l">Clicaron comprar</span></div>
+          <div><span class="demand-n" id="d-rate">—</span><span class="demand-l">Tasa de carrito</span></div>
+        </div>
+        <div class="demand-splits">
+          <div>
+            <h3 class="demand-h">Formato añadido</h3>
+            <ul class="bars" id="tiers"><li class="panel-empty">Todavía no hay datos.</li></ul>
+          </div>
+          <div>
+            <h3 class="demand-h">Modo elegido</h3>
+            <ul class="bars" id="modes"><li class="panel-empty">Todavía no hay datos.</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass panel friction-panel">
+      <h2 class="panel-h">Fricción</h2>
+      <p class="panel-sub">Señales de que algo confunde o está roto. Estas cifras deberían estar cerca de cero.</p>
+      <div class="friction" id="friction">
+        <div><span class="friction-n" id="f-rage">—</span><span class="friction-l">Clics de rabia</span><span class="friction-h">El mismo elemento clicado 3&times; en menos de un segundo</span></div>
+        <div><span class="friction-n" id="f-dead">—</span><span class="friction-l">Clics muertos</span><span class="friction-h">Ha clicado algo que no es clicable</span></div>
+        <div><span class="friction-n" id="f-err">—</span><span class="friction-l">Errores JS</span><span class="friction-h">Fallos de script en el navegador</span></div>
+        <div><span class="friction-n" id="f-bounce">—</span><span class="friction-l">Se fueron en menos de 10 s</span><span class="friction-h">Llegaron y se marcharon al instante</span></div>
+      </div>
+    </div>
+
+    <div class="glass panel session-panel">
+      <h2 class="panel-h">Esta sesión — solo tú</h2>
+      <dl class="session-list">
+        <div><dt>Tu origen</dt><dd id="my-source">—</dd></div>
+        <div><dt>Campaña</dt><dd id="my-campaign">—</dd></div>
+        <div><dt>Acciones en esta visita</dt><dd id="my-events">0</dd></div>
+        <div><dt>Identificador anónimo</dt><dd id="my-id">—</dd></div>
+      </dl>
+      <p class="panel-note">
+        Ese identificador es una cadena aleatoria en tu propio navegador. Me permite contar visitas repetidas sin saber nada de ti. Borra los datos del sitio y desaparece.
+      </p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/es/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Producto &amp; marketing fraccional</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Trabajo en todo el mundo</strong><br> En remoto por defecto<br> Presencial cuando lo merece
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Reservar 30 minutos
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span> Sígueme en LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Qué hago">
+        <h2>Qué hago</h2>
+        <a href="/es/research/positioning/">Posicionamiento &amp; mensaje</a>
+        <a href="/es/research/pricing-metric/">Precio &amp; empaquetado</a>
+        <a href="/es/research/activation/">Activación</a>
+        <a href="/es/research/expansion-revenue/">Ingresos por expansión</a>
+        <a href="/es/research/what-to-kill/">Estrategia de producto</a>
+        <a href="/es/research/rising-cac/">Adquisición &amp; CAC</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Formatos de trabajo">
+        <h2>Formatos de trabajo</h2>
+        <a href="/es/#pricing">Espresso &mdash; 90 minutos</a>
+        <a href="/es/#pricing">Sprint &mdash; dos semanas</a>
+        <a href="/es/#pricing">Operator &mdash; continuo</a>
+        <a href="/es/#pricing">Comparar los tres</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Cómo trabajo (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Sitio">
+        <h2>Sitio</h2>
+        <a href="/es/">Inicio</a>
+        <a href="/es/about/">Sobre mí</a>
+        <a href="/es/#work-done">Trabajos</a>
+        <a href="/es/#faq">FAQ</a>
+        <a href="/es/research/">Investigación</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Más">
+        <h2>Más</h2>
+        <a href="/es/#ask">Pregunta a la IA-yo</a>
+        <a href="/es/#inbox">Escríbeme</a>
+        <a href="/es/stats/">Estadísticas en directo</a>
+        <a href="/es/privacy/">Privacidad</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        Analítica propia, contada en agregado. Sin publicidad, sin perfiles, sin guardar ninguna IP. <a href="/es/stats/">Las cifras son públicas</a> y <a href="/es/privacy/">el detalle también</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Todos los derechos reservados.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/i18n.js?v=1" defer></script>
+<script src="/assets/track.js?v=7" defer></script>
+<script src="/assets/stats.js?v=5" defer></script>
+</body>
+</html>

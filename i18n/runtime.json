@@ -2,27 +2,27 @@
   "_readme": "User-facing strings that live in JavaScript rather than HTML. Keyed by the English source, same as the page catalogue. Regenerate assets/i18n.js with: python3 tools/i18n/runtime.py",
   "Already a minute?": {
     "fr": "Déjà une minute ?",
-    "es": "¿Ya un minuto?"
+    "es": "¿Ya llevas un minuto?"
   },
   "At this rate you could have just hired me and skipped the reading.": {
-    "fr": "À ce rythme vous auriez pu m'embaucher et vous épargner la lecture.",
-    "es": "A este ritmo podrías haberme contratado y ahorrarte la lectura."
+    "fr": "À ce rythme, vous auriez pu m'embaucher et vous éviter toute cette lecture.",
+    "es": "A este ritmo ya podrías haberme contratado y ahorrarte la lectura."
   },
   "Fine, book it": {
-    "fr": "D'accord, je réserve",
-    "es": "Vale, lo reservo"
+    "fr": "Bon, je réserve",
+    "es": "Va, lo reservo"
   },
   "Two and a half minutes.": {
     "fr": "Deux minutes et demie.",
     "es": "Dos minutos y medio."
   },
   "This must be interesting. Please insert your credit card number.": {
-    "fr": "Ça doit être intéressant. Veuillez insérer votre numéro de carte bancaire.",
-    "es": "Esto debe de ser interesante. Introduce tu número de tarjeta."
+    "fr": "Ça doit être passionnant. Veuillez insérer votre numéro de carte bancaire.",
+    "es": "Debe de ser fascinante. Introduzca su número de tarjeta."
   },
   "(There is no field. That was the joke. But there is a pricing section.)": {
-    "fr": "(Il n'y a pas de champ. C'était la blague. Mais il y a une section tarifs.)",
-    "es": "(No hay ningún campo. Esa era la broma. Pero sí hay una sección de precios.)"
+    "fr": "(Il n'y a pas de champ. C'était ça, la blague. En revanche il y a bien une section tarifs.)",
+    "es": "(No hay ningún campo. Esa era la broma. Lo que sí hay es una sección de precios.)"
   },
   "See the pricing": {
     "fr": "Voir les tarifs",
@@ -33,24 +33,24 @@
     "es": "Cinco minutos."
   },
   "I think at this point I am legally your product advisor. Might as well make it official.": {
-    "fr": "À ce stade je suis probablement votre conseiller produit officiel. Autant l'officialiser.",
-    "es": "A estas alturas soy prácticamente tu asesor de producto. Ya puestos, hagámoslo oficial."
+    "fr": "À ce stade, je suis juridiquement votre conseiller produit. Autant régulariser la situation.",
+    "es": "A estas alturas soy legalmente tu asesor de producto. Ya puestos, formalicémoslo."
   },
   "Make it official": {
-    "fr": "Officialiser",
-    "es": "Hacerlo oficial"
+    "fr": "Régulariser",
+    "es": "Formalizarlo"
   },
   "Ten minutes.": {
     "fr": "Dix minutes.",
     "es": "Diez minutos."
   },
   "Genuinely — whatever you are stuck on, just send it to me. It will be faster than reading this.": {
-    "fr": "Sincèrement : quel que soit votre blocage, envoyez-le-moi. Ce sera plus rapide que de lire ceci.",
-    "es": "En serio: sea lo que sea que te bloquea, mándamelo. Será más rápido que leer esto."
+    "fr": "Franchement, quel que soit votre blocage, envoyez-le-moi. Ce sera plus rapide que de lire tout ça.",
+    "es": "En serio: sea lo que sea que te tiene atascado, mándamelo. Será más rápido que leer todo esto."
   },
   "Send it over": {
-    "fr": "Envoyer",
-    "es": "Mandarlo"
+    "fr": "Envoyez-le-moi",
+    "es": "Mándamelo"
   },
   "Book the call": {
     "fr": "Réserver l'appel",
@@ -97,12 +97,12 @@
     "es": "solo esta sesión"
   },
   "Leave me alone": {
-    "fr": "Laissez-moi tranquille",
-    "es": "Déjame en paz"
+    "fr": "Non merci, sans façon",
+    "es": "Déjame en paz, gracias"
   },
   "Fine, I respect it. No hard feelings.": {
     "fr": "Très bien, je respecte. Sans rancune.",
-    "es": "Vale, lo respeto. Sin rencores."
+    "es": "Vale, lo respeto. Sin rencor."
   },
   "The research on this site stays free and ungated either way.": {
     "fr": "La recherche de ce site reste gratuite et sans formulaire dans tous les cas.",
@@ -113,28 +113,28 @@
     "es": "No ha pasado. Escríbeme y te añado a mano."
   },
   "Want a discount code?": {
-    "fr": "Vous voulez un code de réduction ?",
-    "es": "¿Quieres un código de descuento?"
+    "fr": "Envie d'un code promo ?",
+    "es": "¿Te interesa un código de descuento?"
   },
   "Unlock for $10/month": {
     "fr": "Débloquer pour 10 $/mois",
     "es": "Desbloquear por 10 $/mes"
   },
   "Or just talk to me — free": {
-    "fr": "Ou parlez-moi simplement — gratuit",
-    "es": "O habla conmigo — gratis"
+    "fr": "Ou parlez-m'en directement — c'est gratuit",
+    "es": "O háblame directamente — es gratis"
   },
   "Talk to the real me": {
-    "fr": "Parler au vrai moi",
-    "es": "Hablar con el yo real"
+    "fr": "Parler au vrai",
+    "es": "Hablar con el de verdad"
   },
   "Send it to me instead": {
-    "fr": "Me l'envoyer plutôt",
-    "es": "Mándamelo mejor"
+    "fr": "Envoyez-le-moi plutôt",
+    "es": "Mándamelo a mí mejor"
   },
   "Free questions used. ": {
     "fr": "Questions gratuites épuisées. ",
-    "es": "Preguntas gratuitas agotadas. "
+    "es": "Se acabaron las preguntas gratis. "
   },
   "If AI-me is genuinely useful, it is $10 a month for unlimited questions. If it is not, do not pay — talk to me directly instead, which is free.": {
     "fr": "Si l'IA-moi est réellement utile, c'est 10 $ par mois pour des questions illimitées. Si elle ne l'est pas, ne payez pas : parlez-moi directement, c'est gratuit.",
@@ -150,15 +150,15 @@
   },
   "Welcome. Do you need me in {city}?": {
     "fr": "Bienvenue. Vous avez besoin de moi à {city} ?",
-    "es": "Bienvenido. ¿Me necesitas en {city}?"
+    "es": "Bienvenida. ¿Me necesitas en {city}?"
   },
   "Welcome back. Still need me in {city}?": {
-    "fr": "Bon retour. Toujours besoin de moi à {city} ?",
-    "es": "Bienvenido de nuevo. ¿Sigues necesitándome en {city}?"
+    "fr": "Content de vous revoir. Toujours besoin de moi à {city} ?",
+    "es": "Cuánto tiempo. ¿Sigues necesitándome en {city}?"
   },
   "Welcome back.": {
-    "fr": "Bon retour.",
-    "es": "Bienvenido de nuevo."
+    "fr": "Content de vous revoir.",
+    "es": "Cuánto tiempo."
   },
   "Co-founder, B2B analytics platform": {
     "fr": "Cofondatrice, plateforme d'analytique B2B",
@@ -201,12 +201,12 @@
     "es": "Recomendación — encantada de ponerlo por escrito"
   },
   "Best money we spent this year": {
-    "fr": "Le meilleur argent dépensé cette année",
-    "es": "El mejor dinero que gastamos este año"
+    "fr": "Le meilleur investissement de l'année",
+    "es": "La mejor inversión del año"
   },
   "It worked and I still do not have a marketing team": {
-    "fr": "Ça a marché et je n'ai toujours pas d'équipe marketing",
-    "es": "Funcionó y sigo sin tener equipo de marketing"
+    "fr": "Ça a marché, et je n'ai toujours pas d'équipe marketing",
+    "es": "Funcionó, y sigo sin equipo de marketing"
   },
   "CAC finally stopped climbing": {
     "fr": "Le CAC a enfin cessé de grimper",
@@ -309,8 +309,8 @@
     "es": "La prueba de composición.txt"
   },
   "Positioning smell test.txt": {
-    "fr": "Test olfactif du positionnement.txt",
-    "es": "Prueba rápida de posicionamiento.txt"
+    "fr": "Positionnement, le test qui pique.txt",
+    "es": "Posicionamiento, la prueba del olfato.txt"
   },
   "Why deals really stall.txt": {
     "fr": "Pourquoi les affaires s'enlisent vraiment.txt",
@@ -402,10 +402,10 @@
   },
   "Thanks again. Genuinely useful.": {
     "fr": "Merci encore. Vraiment utile.",
-    "es": "Gracias de nuevo. Realmente útil."
+    "es": "Gracias otra vez. De verdad útil."
   },
   "Honestly — no, and you should not pay me for this.": {
-    "fr": "Honnêtement : non, et vous ne devriez pas me payer pour ça.",
+    "fr": "Franchement, non — et vous ne devriez pas me payer pour ça.",
     "es": "Con franqueza: no, y no deberíais pagarme por esto."
   },
   "You do not have a narrative problem, you have a retention problem, and no deck survives a diligence process where net revenue retention is where yours currently is. Any consultant who takes this brief is selling you a nicer way to present the issue.": {

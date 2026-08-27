@@ -392,6 +392,12 @@
       "about/index.html"
     ]
   },
+  "183907f5d82c": {
+    "en": "Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire. In practice that means pricing and packaging decisions, positioning and messaging, improving conversion and activation, and deciding what to build versus what to kill. Where the answer is something that does not exist yet, I build it: whole products, ecommerce, newsletters, operations automation, and the marketing strategy around them. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "189b60f00ffb": {
     "en": "Tell me what you sell, who buys it, and what isn't working. I'll name the most likely place you're losing money — usually your pricing, your positioning, or the gap between interest and purchase.",
     "pages": [
@@ -575,12 +581,6 @@
     "en": "A deliberately mixed list, because the point is that the levers travel:",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "24beb5753825": {
-    "en": "Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire. In practice that means pricing and packaging decisions, positioning and messaging, improving conversion and activation, and deciding what to build versus what to kill. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price.",
-    "pages": [
-      "index.html"
     ]
   },
   "2500a04def01": {
@@ -1413,6 +1413,12 @@
       "stats/index.html"
     ]
   },
+  "5e498c69a296": {
+    "en": "Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire: pricing and packaging, positioning and messaging, conversion and activation, and deciding what to build versus what to kill. Where the answer is something that does not exist yet, he builds it — whole products, ecommerce, newsletters, operations automation, and the marketing strategy around them. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "5ef1838e8f39": {
     "en": "Liquid Glass transparency",
     "pages": [
@@ -1667,6 +1673,12 @@
     "en": "Copy code",
     "pages": [
       "index.html"
+    ]
+  },
+  "6c140807dc7d": {
+    "en": "Some of it is advice and some of it is building. I have shipped whole products end to end &mdash; ecommerce, newsletters and content engines, internal tooling, operations automation &mdash; and I will take a marketing strategy whole rather than the part that fits in a slide. Where the answer to a revenue problem is something that does not exist yet, building it myself is usually faster than writing a specification and handing it over.",
+    "pages": [
+      "about/index.html"
     ]
   },
   "6c1780ec9c4d": {
@@ -3451,6 +3463,12 @@
       "index.html"
     ]
   },
+  "d38396f3e36c": {
+    "en": "Both, and the building is not a side line. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, operations automation. If the answer to your revenue problem is a thing that does not exist yet, I would rather build it than write you a specification and hand it to someone else. The same applies to marketing: I will take the whole strategy, not just the part that fits in a slide.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "d4b374149bab": {
     "en": "<span class=\"friction-n\" id=\"f-err\">—</span><span class=\"friction-l\">JS errors</span><span class=\"friction-h\">Script failures in the browser</span>",
     "pages": [
@@ -3648,6 +3666,12 @@
     "en": "Should I switch from sales-led to product-led growth?",
     "pages": [
       "research/rising-cac/index.html"
+    ]
+  },
+  "e0f5f28ceedb": {
+    "en": "Both. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, and operations automation. Where the answer to a revenue problem is something that does not exist yet, I build it rather than writing a specification for someone else. The same applies to marketing strategy, taken whole rather than in pieces.",
+    "pages": [
+      "index.html"
     ]
   },
   "e11497665633": {
@@ -3872,6 +3896,12 @@
   },
   "ecfe5af27ba8": {
     "en": "Written follow-up",
+    "pages": [
+      "index.html"
+    ]
+  },
+  "ee00703d89ea": {
+    "en": "Do you only advise, or do you build things too?",
     "pages": [
       "index.html"
     ]

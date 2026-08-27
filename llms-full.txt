@@ -224,3 +224,12 @@ is flat despite happy customers.
 - Email: quentin.dupard@gmail.com
 - LinkedIn: https://www.linkedin.com/in/quentindupard/
 - Book a call: https://calendly.com/quentin-dupard-call/30min
+
+## Building, not only advising
+
+Quentin builds as well as advises. He has shipped whole products end to end:
+ecommerce, newsletters and content engines, internal tooling, and operations
+automation. Where the answer to a revenue problem is something that does not
+exist yet, he builds it rather than writing a specification for someone else.
+The same applies to marketing strategy, which he takes whole rather than in
+pieces. This is not limited to one industry.

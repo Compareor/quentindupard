@@ -1040,8 +1040,25 @@
 @keyframes toast-in  { from { opacity: 0; transform: translateY(16px) scale(0.96); } }
 @keyframes toast-out { to   { opacity: 0; transform: translateY(8px) scale(0.97); } }
 
-.toast-actions { display: flex; gap: 8px; margin-top: 11px; }
-.toast-actions .btn { padding: 8px 14px; font-size: 13px; }
+/* Two buttons that fit on one row in English and do not in French. `.btn`
+   carries white-space: nowrap, so without wrapping here the second label
+   simply ran past the card edge. They share a row when both fit and take a
+   full row each when they do not, which is also what you want on a phone. */
+.toast-actions {
+  display: flex; flex-wrap: wrap; align-items: stretch;
+  gap: 8px; margin-top: 11px;
+}
+.toast-actions .btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 9px 14px;
+  font-size: 13px;
+  line-height: 1.25;
+  /* A label longer than the whole card has to be allowed to break. */
+  white-space: normal;
+  text-align: center;
+}
+
 
 /* ── Footer ──────────────────────────────────────────────── */
 .site-footer {
@@ -1188,7 +1205,10 @@
      starts collapsed to its pill rather than disappearing — otherwise the
      glass control would be unreachable on mobile entirely. */
   .stats { left: 12px; bottom: 12px; min-width: 0; padding: 9px 12px; }
-  .toasts { right: 12px; left: 90px; bottom: 12px; max-width: none; }
+  .toasts { right: 12px; left: 12px; bottom: 74px; max-width: none; }
+  .toast { padding: 13px 15px; }
+  /* Full-width stacked buttons, at the 44px minimum touch target. */
+  .toast-actions .btn { flex: 1 1 100%; min-height: 44px; }
 }
 
 @media (max-width: 560px) {

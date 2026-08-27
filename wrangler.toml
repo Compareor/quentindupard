@@ -16,6 +16,13 @@ compatibility_flags = ["nodejs_compat"]
 workers_dev = false
 preview_urls = false
 
+# ── Logs ─────────────────────────────────────────────────────
+# Without this, console.error goes nowhere and an outage in /api/ask is
+# invisible: both of its failure paths return friendly copy to the visitor.
+[observability]
+enabled = true
+head_sampling_rate = 1
+
 [assets]
 directory = "."
 binding = "ASSETS"

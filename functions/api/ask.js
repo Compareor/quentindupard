@@ -78,7 +78,8 @@ export async function onRequestPost(context) {
       system: systemPrompt(corpus),
       messages: [{ role: 'user', content: question }]
     });
-  } catch (_) {
+  } catch (err) {
+    logFailure('stream-create', err);
     return text('The brain is unavailable right now. Email me instead: quentin.dupard@gmail.com', 502);
   }
 
@@ -99,7 +100,8 @@ export async function onRequestPost(context) {
             "I'm not going to answer that one. Ask me something about GTM, pricing, or global hiring instead."
           ));
         }
-      } catch (_) {
+      } catch (err) {
+        logFailure('stream-read', err);
         controller.enqueue(encoder.encode(
           wroteSomething
             ? '\n\n(Answer cut short — the connection dropped.)'
@@ -117,6 +119,26 @@ export async function onRequestPost(context) {
       'x-robots-tag': 'noindex'
     }
   });
+}
+
+/**
+ * A total outage of this endpoint used to be invisible: both failure paths
+ * swallowed the error and returned friendly copy, so the feature could be down
+ * for a week and look fine from the outside. The status and message are enough
+ * to tell an expired key from a spend cap from a bad request, and neither
+ * contains the key itself.
+ *
+ * Visible in the dashboard under Workers -> Logs (observability is enabled in
+ * wrangler.toml) or live with `npx wrangler tail`.
+ */
+function logFailure(stage, err) {
+  try {
+    console.error('[ask] %s failed: status=%s type=%s message=%s',
+      stage,
+      (err && (err.status || err.statusCode)) || 'none',
+      (err && err.error && err.error.error && err.error.error.type) || (err && err.name) || 'unknown',
+      (err && err.message) || String(err));
+  } catch (_) { /* logging must never be the thing that breaks the request */ }
 }
 
 function systemPrompt(corpus) {

@@ -650,6 +650,30 @@
     catch (_) { /* private mode — it just won't persist across reloads */ }
   }
 
+
+  /* ══ Edited content overlay ═══════════════════════════════ */
+
+  async function loadContent() {
+    // The fort and the inbox do not render until this settles, so it must not
+    // be able to hang. A slow edge is not a reason for an empty section.
+    const stop = new AbortController();
+    const timer = setTimeout(() => stop.abort(), 2500);
+    try {
+      const res = await fetch('/api/content', {
+        headers: { accept: 'application/json' },
+        signal: stop.signal
+      });
+      if (res.status === 204 || !res.ok) return;          // nothing edited yet
+      const store = await res.json();
+      if (Array.isArray(store.desktop) && store.desktop.length) window.QD_DESKTOP = store.desktop;
+      if (Array.isArray(store.mailbox) && store.mailbox.length) window.QD_MAILBOX = store.mailbox;
+    } catch (_) {
+      // Offline, blocked, slow, or the route is not deployed. Defaults stand.
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
   function initMail() {
     const root = $('#mail');
     const list = $('#mail-list');
@@ -1511,8 +1535,11 @@
     initCarousel();
     initModes();
     initCart();
-    initMail();
-    initMac();
+
+    /* The fort and the inbox render from window.QD_DESKTOP / QD_MAILBOX. Those
+       ship with the page, so both work with no network at all; /api/content
+       only overlays them when something has actually been edited in /admin. */
+    loadContent().then(() => { initMail(); initMac(); });
     initAsk();
     paintQuota();
     initVisitor();

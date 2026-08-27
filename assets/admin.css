@@ -1,0 +1,147 @@
+/* ==========================================================
+   /admin — the content editor.
+
+   Uses the site's tokens so it feels like the same product, but none of the
+   homepage layout: this is a form, and forms want density, not storytelling.
+   ========================================================== */
+
+/* ── Lock ─────────────────────────────────────────────────── */
+.lock {
+  min-height: 100vh;
+  display: grid; place-items: center;
+  padding: 24px;
+}
+.lock-card {
+  width: 100%; max-width: 380px;
+  padding: 34px 32px 30px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.lock-card h1 { font-size: 26px; letter-spacing: -0.03em; }
+.lock-sub { font-size: 14px; color: var(--text-dim); line-height: 1.55; margin-top: -8px; }
+.lock-err {
+  font-size: 13.5px; color: #b0203a; font-weight: 500;
+}
+[data-theme="dark"] .lock-err { color: #ff8fa3; }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field > span {
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+
+input[type="text"], input[type="password"], input[type="url"], select, textarea {
+  width: 100%;
+  font: inherit; font-size: 14.5px;
+  color: var(--text);
+  background: var(--panel-soft);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-sm);
+  padding: 10px 13px;
+  transition: border-color .18s var(--ease), background .18s var(--ease);
+}
+textarea { resize: vertical; min-height: 84px; line-height: 1.55; }
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent-edge);
+  background: var(--panel);
+}
+
+/* ── Shell ────────────────────────────────────────────────── */
+.admin-bar {
+  position: sticky; top: 0; z-index: 40;
+  border-radius: 0;
+  border-left: 0; border-right: 0; border-top: 0;
+}
+.admin-bar-in {
+  max-width: 1000px; margin: 0 auto;
+  padding: 12px 22px;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.admin-title { font-size: 15px; letter-spacing: -0.02em; }
+.admin-tabs { display: flex; gap: 4px; }
+.tab {
+  font: inherit; font-size: 13.5px; font-weight: 500;
+  padding: 6px 13px; border-radius: var(--r-pill);
+  border: 1px solid transparent; background: none; color: var(--text-dim);
+  cursor: pointer;
+}
+.tab.is-on { background: var(--tint-strong); color: var(--text); border-color: var(--glass-stroke); }
+.admin-state { font-size: 12.5px; color: var(--text-faint); margin-left: auto; }
+.admin-state.is-dirty { color: var(--cyan); font-weight: 550; }
+.admin-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-sm { padding: 8px 14px; font-size: 13px; }
+
+.admin-body { max-width: 1000px; margin: 0 auto; padding: 26px 22px 120px; }
+/* glass.css gives every <section> the homepage's 96px rhythm. Editor panes are
+   panes, not acts. */
+.admin-body section { padding: 0; }
+
+/* ── Cards ────────────────────────────────────────────────── */
+.card {
+  background: var(--panel-soft);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-md);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.card-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px;
+  background: var(--tint);
+  border-bottom: 1px solid var(--glass-stroke);
+}
+.card-head input[type="text"] { background: transparent; border-color: transparent; font-weight: 600; }
+.card-head input[type="text"]:focus-visible { background: var(--panel); border-color: var(--accent-edge); }
+.card-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+
+.row {
+  display: grid;
+  /* kind · name · destination · caption · controls */
+  grid-template-columns: 148px minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 0.8fr) auto;
+  gap: 8px; align-items: center;
+}
+.row-note   { grid-template-columns: 148px minmax(0, 1fr) minmax(0, 0.6fr) auto; }
+.row-attach { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr) minmax(0, 0.7fr) auto; }
+.stack { display: flex; flex-direction: column; gap: 8px; }
+
+.icon-btn {
+  font: inherit; font-size: 13px; line-height: 1;
+  padding: 9px 10px;
+  background: var(--panel-soft);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-sm);
+  color: var(--text-dim); cursor: pointer;
+}
+.icon-btn:hover { color: var(--text); background: var(--panel); }
+.icon-btn.is-danger:hover { color: #b0203a; border-color: #b0203a55; }
+.btn-group { display: flex; gap: 6px; }
+
+.add {
+  font: inherit; font-size: 13.5px; font-weight: 550;
+  align-self: flex-start;
+  padding: 9px 14px; cursor: pointer;
+  background: none; color: var(--cyan);
+  border: 1px dashed var(--glass-stroke-strong);
+  border-radius: var(--r-sm);
+}
+.add:hover { background: var(--tint); }
+
+.hint { font-size: 12.5px; color: var(--text-faint); line-height: 1.5; }
+.pane-note {
+  font-size: 13.5px; color: var(--text-dim); line-height: 1.6;
+  margin-bottom: 18px; max-width: 62ch;
+}
+
+.mail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 760px) {
+  .row, .row-note, .row-attach { grid-template-columns: minmax(0, 1fr); }
+  /* Stacked fields lose the visual grouping the grid gave them, so each item
+     needs its own boundary or the card reads as one long list of boxes. */
+  .card-body > .row,
+  .card-body > .stack { padding-bottom: 14px; border-bottom: 1px solid var(--hair); }
+  .card-body > .row:last-of-type { border-bottom: 0; padding-bottom: 0; }
+  .mail-grid { grid-template-columns: minmax(0, 1fr); }
+  .admin-state { width: 100%; margin-left: 0; order: 9; }
+  .admin-actions { width: 100%; }
+  .admin-actions .btn { flex: 1; }
+}

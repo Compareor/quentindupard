@@ -24,3 +24,7 @@ build/
 
 # Claude Code local session data
 .claude/
+.dev.vars
+
+# wrangler local dev state
+.wrangler/

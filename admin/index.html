@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Content · Quentin Dupard</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script>
+/* Same pre-paint theme switch as the rest of the site, so opening the editor
+   does not flash light at someone who set the site to dark. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+<link rel="stylesheet" href="/assets/glass.css?v=25">
+<link rel="stylesheet" href="/assets/admin.css?v=3">
+</head>
+<body>
+<div class="mesh" aria-hidden="true"></div>
+
+<!-- Lock screen -->
+<main class="lock" id="lock">
+  <form class="glass glass-thick lock-card" id="lock-form" autocomplete="off">
+    <h1>Content</h1>
+    <p class="lock-sub">The fort's folders and the inbox. Everything else is in the repo.</p>
+    <label class="field">
+      <span>Password</span>
+      <input type="password" id="pw" name="password" autocomplete="current-password" required>
+    </label>
+    <p class="lock-err" id="lock-err" role="alert" hidden></p>
+    <button class="btn btn-primary" type="submit" id="lock-go">Unlock</button>
+  </form>
+</main>
+
+<!-- Editor -->
+<div class="admin" id="admin" hidden>
+  <header class="admin-bar glass">
+    <div class="admin-bar-in">
+      <strong class="admin-title">Content</strong>
+      <nav class="admin-tabs" id="tabs">
+        <button class="tab is-on" type="button" data-tab="desktop">Folders</button>
+        <button class="tab" type="button" data-tab="mailbox">Inbox</button>
+      </nav>
+      <span class="admin-state" id="state"></span>
+      <div class="admin-actions">
+        <a class="btn btn-glass btn-sm" href="/" target="_blank" rel="noopener">View site</a>
+        <button class="btn btn-glass btn-sm" type="button" id="reset">Reset to shipped</button>
+        <button class="btn btn-primary btn-sm" type="button" id="save">Save</button>
+        <button class="btn btn-glass btn-sm" type="button" id="signout">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-body">
+    <section id="pane-desktop"></section>
+    <section id="pane-mailbox" hidden></section>
+  </main>
+</div>
+
+<!-- Shipped defaults. The editor seeds from these and diffs against them. -->
+<script src="/assets/content.js?v=5"></script>
+<script src="/assets/admin.js?v=2"></script>
+</body>
+</html>

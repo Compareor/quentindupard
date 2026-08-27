@@ -1,7 +1,8 @@
 # robots.txt — quentindupard.com
 User-agent: *
 Allow: /
-Disallow:
+Disallow: /admin
+Disallow: /api/
 
 # Sitemap
 Sitemap: https://quentindupard.com/sitemap.xml

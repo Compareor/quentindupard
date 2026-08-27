@@ -75,11 +75,46 @@ What degrades, visibly and honestly:
 
 ---
 
+## The content editor
+
+`/admin` edits the fort's folders and the mailbox. Everything else on the site
+is a file in this repo.
+
+1. Set the password. It is a secret, not a variable:
+
+   ```
+   npx wrangler secret put ADMIN_PASSWORD
+   ```
+
+   Or in the dashboard: **Workers & Pages -> quentindupard -> Settings ->
+   Variables and Secrets -> Add -> Secret**. Make it long. There is no second
+   factor and no lockout beyond eight wrong guesses per IP per hour, so the
+   length of the password IS the security.
+
+2. Open `https://quentindupard.com/admin`, unlock, edit, Save.
+
+Notes worth knowing:
+
+- Saving writes one KV value. The site ships with the same content baked into
+  `assets/content.js`, and only overlays the saved version when it exists, so a
+  KV outage or an empty store falls back to what is in the repo rather than to
+  an empty fort.
+- **Reset to shipped** reloads the repo defaults into the editor. It does not
+  save until you press Save.
+- Changing `ADMIN_PASSWORD` signs out every open session, because the session
+  cookie is signed with the password itself.
+- The page is `noindex` and disallowed in `robots.txt`.
+- Attachments and PDFs point at files already in `/assets/docs`. There is no
+  upload — adding a new PDF means committing the file, then pointing an entry
+  at it.
+
+---
+
 ## Things that still need you
 
 | What | Where | Why |
 |---|---|---|
-| Stripe Payment Link | `assets/home.js`, search `https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00` | The $10/month AI-me paywall points at a placeholder. Create a Payment Link in Stripe (no code, and card details never touch this site). |
+| Promotion codes on the Payment Link | Stripe dashboard | **`QD50` cannot work until this is on.** Payment Links ship with promotion codes disabled, which hides the "Add promotion code" field entirely and makes `?prefilled_promo_code=` a no-op. Open the Payment Link, and under its options enable **Allow promotion codes**. |
 | Real recommendations | `assets/content.js` | The mailbox entries are illustrative. Your LinkedIn recommendations are real and worth more. |
 | Result numbers | `index.html`, Act 03 | The carousel describes what you did but not what changed. |
 | Research images | `assets/research/*.svg` | Glass placeholders sized 1200×630. Replace the file, keep the name. |

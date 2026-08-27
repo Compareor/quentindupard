@@ -14,13 +14,21 @@ import { onRequestPost as contactPost } from '../functions/api/contact.js';
 import { onRequestPost as trackPost }   from '../functions/api/track.js';
 import { onRequestGet  as statsGet }    from '../functions/api/stats.js';
 import { onRequestGet  as visitorGet }  from '../functions/api/visitor.js';
+import { login, logout, read as adminRead, write as adminWrite, publicContent }
+  from '../functions/api/admin.js';
 
 const API = {
   '/api/ask':     { POST: askPost },
   '/api/contact': { POST: contactPost },
   '/api/track':   { POST: trackPost },
   '/api/stats':   { GET:  statsGet },
-  '/api/visitor': { GET:  visitorGet }
+  '/api/visitor': { GET:  visitorGet },
+  '/api/content': { GET:  publicContent },
+
+  // Dashboard. Everything but the login is cookie-gated inside the handlers.
+  '/api/admin/login':   { POST: login },
+  '/api/admin/logout':  { POST: logout },
+  '/api/admin/content': { GET:  adminRead, PUT: adminWrite }
 };
 
 // Superseded by the current positioning. 410 rather than 301 so search engines
@@ -82,6 +90,9 @@ export default {
     }
 
     // ── Static assets ──
+    // Note that the assets layer answers most paths before this Worker runs
+    // (see run_worker_first in wrangler.toml), so per-path response headers —
+    // including the dashboard's noindex — belong in `_headers`, not here.
     return withHeaders(await env.ASSETS.fetch(request));
   }
 };

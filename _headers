@@ -18,3 +18,13 @@
 # Per-visitor and never shared.
 /api/*
   Cache-Control: no-store
+
+# The dashboard. robots.txt stops the crawl; this stops the listing if
+# something ever links to it, and keeps it out of shared caches.
+/admin
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store

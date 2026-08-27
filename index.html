@@ -34,7 +34,7 @@
 <meta name="theme-color" content="#05060f">
 
 <link rel="stylesheet" href="/assets/glass.css?v=25">
-<link rel="stylesheet" href="/assets/home.css?v=37">
+<link rel="stylesheet" href="/assets/home.css?v=38">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -555,18 +555,6 @@
 
       <!-- TODO(Quentin): these are placeholder rates — set your real ones. -->
       <div class="tiers">
-        <article class="glass tier tier-wide tier-free reveal" data-reveal="scale">
-          <p class="tier-name">Free</p>
-          <p class="tier-price" data-fixed><span class="tier-amount">&euro;0</span><span>/ forever</span></p>
-          <p class="tier-desc">Everything I know, written down. Ask AI-me on this page, read the research, take the PDFs. No email required, no gate, no drip sequence.</p>
-          <ul class="tier-list tier-list-inline">
-            <li>Ask AI-me anything</li>
-            <li>All six research pieces</li>
-            <li>Sample deliverables</li>
-          </ul>
-          <a class="btn btn-glass tier-cta" href="#ask">Start asking</a>
-        </article>
-
         <article class="glass tier reveal" data-reveal="scale">
           <p class="tier-name">Espresso</p>
           <p class="tier-price" data-base="500" data-unit="one-off"><span class="tier-amount">€500</span><span>/ one-off</span></p>
@@ -603,6 +591,14 @@
           </ul>
           <button class="btn btn-glass tier-add" type="button" data-tier="Operator" data-price="8000">Add to cart</button>
         </article>
+
+        <p class="tier-free-note reveal">
+          Nothing above is a paywall on the thinking: the
+          <a href="#work-done">research</a>, the
+          <a href="/assets/docs/engagement-one-pager.pdf" download data-track="click_pdf" data-track-label="one-pager">sample deliverables</a>
+          and five questions to <a href="#ask">AI-me</a> cost nothing and want no email.
+          Unlimited questions are $10 a month.
+        </p>
 
         <article class="glass tier tier-wide tier-custom reveal" data-reveal="scale">
           <p class="tier-name">Custom</p>

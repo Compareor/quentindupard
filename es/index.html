@@ -38,7 +38,7 @@
 <meta name="theme-color" content="#05060f">
 
 <link rel="stylesheet" href="/assets/glass.css?v=31">
-<link rel="stylesheet" href="/assets/home.css?v=44">
+<link rel="stylesheet" href="/assets/home.css?v=45">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -555,7 +555,7 @@
 
       <!-- TODO(Quentin): these are placeholder rates — set your real ones. -->
       <div class="tiers">
-        <article class="glass tier reveal" data-reveal="scale">
+        <article class="glass tier reveal" data-reveal="scale" data-remote-only>
           <p class="tier-name">Espresso</p>
           <p class="tier-price" data-base="500" data-unit="one-off"><span class="tier-amount">500 €</span><span>/ puntual</span></p>
           <p class="tier-desc">Noventa minutos sobre tu negocio, y un análisis escrito después. La mayoría se va con dos cosas que cambiar esta semana.</p>
@@ -565,6 +565,7 @@
             <li>Ni una diapositiva</li>
           </ul>
           <button class="btn btn-glass tier-add" type="button" data-tier="Espresso" data-price="500">Añadir al carrito</button>
+          <p class="tier-unavailable" hidden>Noventa minutos no justifican un avión. Solo en remoto.</p>
         </article>
 
         <article class="glass tier tier-featured reveal" data-reveal="scale">
@@ -1065,7 +1066,7 @@
 <script src="/assets/i18n.js?v=7" defer></script>
 <script src="/assets/track.js?v=8" defer></script>
 <script src="/assets/content.js?v=7" defer></script>
-<script src="/assets/home.js?v=34" defer></script>
+<script src="/assets/home.js?v=35" defer></script>
 <script src="/assets/snake.js?v=9" defer></script>
 </body>
 </html>

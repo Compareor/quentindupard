@@ -224,3 +224,74 @@
   .portrait img { border-radius: var(--r-md); }
   .portrait-caption { text-align: center; }
 }
+
+/* ── Location map ────────────────────────────────────────────
+   Inline SVG, no map library and no tile server: an embedded map would put a
+   third-party script and a per-visitor request to someone else's servers on a
+   site whose privacy page says there is exactly one third-party script.
+
+   Equirectangular, standard parallel 34N, so the six cities sit in true
+   relative position rather than eyeballed. There is no coastline — this is a
+   plot of where, not an atlas — which is also why it needs the caption. */
+.map {
+  margin: 24px 0 26px;
+  padding: 22px 20px 16px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--glass-stroke);
+  background: var(--glass-thin);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+}
+.map-svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.map-grid line {
+  stroke: var(--glass-stroke);
+  stroke-width: 1;
+  stroke-dasharray: 3 6;
+}
+
+.map-pin text {
+  /* The plot is authored at 920 wide and rendered around 640, so type set at
+     a comfortable size in the source arrives about a third smaller. */
+  font-size: 20px; font-weight: 500;
+  fill: var(--text-dim);
+  letter-spacing: -0.01em;
+}
+.map-pin .map-dot { fill: var(--text-ghost); }
+
+.map-pin.is-current text { fill: var(--text); font-weight: 620; }
+.map-pin.is-current .map-dot { fill: var(--cyan); }
+.map-pin.is-current .map-halo {
+  fill: none; stroke: var(--cyan); stroke-width: 1.5;
+  transform-origin: center; transform-box: fill-box;
+  animation: map-ping 2.8s var(--ease) infinite;
+}
+@keyframes map-ping {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(2.6); opacity: 0; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-pin.is-current .map-halo { animation: none; opacity: 0.5; }
+}
+
+.map-caption {
+  display: flex; flex-wrap: wrap; gap: 8px 22px;
+  margin-top: 16px;
+  font-size: 13px; color: var(--text-faint);
+}
+.map-key { display: inline-flex; align-items: center; gap: 8px; }
+.map-key-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--text-ghost); flex-shrink: 0;
+}
+.map-key-dot.is-current { background: var(--cyan); }
+
+@media (max-width: 700px) {
+  .map { padding: 16px 12px 12px; }
+  /* City labels stop being legible when a 920-wide plot is squeezed onto a
+     phone, so they scale up as the drawing scales down. */
+  .map-pin text { font-size: 26px; }
+  .map-pin .map-dot { r: 7; }
+  .map-caption { flex-direction: column; gap: 6px; }
+}

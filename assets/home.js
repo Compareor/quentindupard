@@ -563,6 +563,21 @@
         btn.dataset.price = String(priceFor(parseInt(btn.dataset.base || btn.dataset.price, 10)));
       });
 
+      /* Espresso is ninety minutes. Travelling for it makes no sense for
+         either side, so it is offered remote only rather than quietly priced
+         at a number nobody should pay. */
+      $$('[data-remote-only]').forEach((tier) => {
+        const available = mode === 'remote';
+        tier.classList.toggle('is-unavailable', !available);
+        const btn = tier.querySelector('.tier-add');
+        const why = tier.querySelector('.tier-unavailable');
+        if (btn) {
+          btn.disabled = !available;
+          btn.setAttribute('aria-disabled', String(!available));
+        }
+        if (why) why.hidden = available;
+      });
+
       const note = $('#mode-note');
       if (note) note.textContent = MODES[mode].note;
     }
@@ -639,8 +654,20 @@
       meta.textContent = `${money(total)} · ${mode}`;
     }
 
-    // A mode switch changes the price of a basket already on screen.
-    document.addEventListener('qd:mode', render);
+    // A mode switch changes the price of a basket already on screen — and can
+    // withdraw an engagement entirely. Anything the new mode does not offer
+    // comes out of the basket first, or the total would include something
+    // that cannot be bought.
+    document.addEventListener('qd:mode', () => {
+      $$('[data-remote-only] .tier-add').forEach((btn) => {
+        if (mode !== 'remote' && cart.has(btn.dataset.tier)) {
+          cart.delete(btn.dataset.tier);
+          setButton(btn, false);
+          track('cart_remove', { target: btn.dataset.tier });
+        }
+      });
+      render();
+    });
 
     if (clear) {
       clear.addEventListener('click', () => {

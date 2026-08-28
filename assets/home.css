@@ -1636,3 +1636,25 @@
 @media (prefers-reduced-motion: reduce) {
   .cart-dock, .cart-dock.bump .cart-dock-in { animation: none; }
 }
+
+/* ── An engagement the current delivery mode does not offer ──
+   Espresso is ninety minutes; travelling for it makes no sense for either
+   side. Dimmed and disabled rather than removed, so the reader can see what
+   they would get back by switching to remote instead of wondering where a
+   tier went. */
+.tier.is-unavailable {
+  opacity: 0.55;
+  filter: saturate(0.6);
+}
+.tier.is-unavailable .tier-price,
+.tier.is-unavailable .tier-list { text-decoration: line-through; text-decoration-thickness: 1px; }
+.tier.is-unavailable .tier-add {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.tier-unavailable {
+  margin-top: 10px;
+  font-size: 12.5px; line-height: 1.5;
+  color: var(--text-faint);
+  text-align: center;
+}

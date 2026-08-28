@@ -45,16 +45,41 @@ const MEMORY_MAX_KEYS = 5000;
    message is only turned away if it matches an unambiguous off-topic pattern
    AND contains no business vocabulary. A French visitor asking about
    tarification, or a Spanish one about precios, must never hit this. */
-const BUSINESS_WORDS = /\b(pricing|price|prices|paywall|churn|retention|retain|activation|activate|onboard\w*|funnel|conversion|convert|saas|b2b|b2c|market\w*|product|revenue|mrr|arr|cac|ltv|customer|client|user|signup|sign-up|subscription|subscriber|positioning|messaging|launch|growth|lead|leads|ecommerce|e-commerce|checkout|cart|trial|freemium|tier|packaging|upsell|expansion|acquisition|retarget\w*|seo|geo|landing|newsletter|audience|competitor|pitch|deck|investor|runway|margin|business|startup|agency|ads?|campaign|brand\w*|website|traffic|analytics|cohort|segment\w*|persona|roadmap|feature|mvp|hiring|freelance|consult\w*|invoice|contract|scale|scaling|monetis\w*|monetiz\w*)\b|\b(prix|tarif\w*|tarification|marge|chiffre d.affaires|clientèle|abonnement|entonnoir|acquisition|croissance|marché|produit|vente|panier|devis|prospect|entreprise|lancement|positionnement)\b|\b(precio|precios|tarifa\w*|margen|facturaci[oó]n|clientela|suscripci[oó]n|embudo|crecimiento|mercado|producto|venta|carrito|presupuesto|empresa|lanzamiento|posicionamiento)\b/i;
+/* JS word boundaries do not see accented letters as word characters, so
+   /\bécris\b/ never matches "écris-moi" while /\bescribe\b/ matches fine.
+   Rather than special-case every accent, strip them first and keep every
+   pattern below unaccented. */
+const deaccent = (t) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+const BUSINESS_WORDS = /\b(pricing|price|prices|paywall|churn|retention|retain|activation|activate|onboard\w*|funnel|conversion|convert\w*|saas|b2b|b2c|market\w*|product|revenue|mrr|arr|cac|ltv|customer|client\w*|user|signup|sign-up|subscri\w*|positioning|messaging|launch|growth|lead|leads|ecommerce|e-commerce|checkout|cart|trial|freemium|tier|packaging|upsell|expansion|acquisition|retarget\w*|seo|geo|landing|newsletter|audience|competitor|pitch|deck|investor|runway|margin|business|startup|agency|ads?|campaign|brand\w*|website|traffic|analytics|cohort|segment\w*|persona|roadmap|feature|mvp|hiring|freelance|consult\w*|invoice|contract|scale|scaling|monetis\w*|monetiz\w*|sell|selling|sales|buy\w*)\b|\b(prix|tarif\w*|tarification|marge|chiffre d.affaires|clientele|abonnement|abonnes?|entonnoir|tunnel|acquisition|croissance|marche|produit|vente|ventes|panier|devis|prospect|entreprise|lancement|positionnement|fidelisation|retention|conversion|audience|strategie|campagne|publicite|site web|boutique|offre)\b|\b(precio|precios|tarifa\w*|margen|facturacion|clientela|suscripcion|suscriptor\w*|embudo|crecimiento|mercado|producto|venta|ventas|carrito|presupuesto|empresa|negocio|lanzamiento|posicionamiento|fidelizacion|retencion|conversion|audiencia|estrategia|campana|publicidad|sitio web|tienda|oferta)\b/;
+
+/* Every question ships the whole corpus (~3.5k tokens) as system context, so
+   an off-topic question costs almost exactly what a real one costs. These are
+   answered without calling the model at all.
+
+   Deliberately two-sided and biased towards letting things through: a message
+   is only turned away if it matches an unambiguous off-topic pattern AND
+   contains no business vocabulary. "ecris-moi une page de vente" must reach
+   the model; "ecris-moi un poeme" must not. */
 const OFF_TOPIC = [
-  /\b(write|generate|give me|create)\b.{0,24}\b(poem|song|lyrics|joke|story|essay|haiku|rap)\b/i,
-  /\b(write|fix|debug|refactor|explain)\b.{0,24}\b(code|script|function|regex|query|sql|program)\b/i,
-  /\bin (python|javascript|java|c\+\+|rust|php|swift|go)\b/i,
-  /\b(my homework|solve this equation|integral of|derivative of|prove that)\b/i,
-  /\b(recipe for|how do i cook|what.s the weather|capital of|who won the|translate this)\b/i,
-  /\b(medical|diagnos\w+ me|symptoms?|prescription|dosage)\b/i,
-  /\b(ignore (all )?(previous|prior|above)|system prompt|your instructions|you are (now )?(chatgpt|gpt|claude))\b/i,
+  // en
+  /\b(write|generate|give me|create)\b.{0,24}\b(poem|song|lyrics|joke|story|essay|haiku|rap)\b/,
+  /\b(write|fix|debug|refactor|explain)\b.{0,24}\b(code|script|function|regex|query|sql|program)\b/,
+  /\bin (python|javascript|java|c\+\+|rust|php|swift|go)\b/,
+  /\b(my homework|solve this equation|integral of|derivative of|prove that)\b/,
+  /\b(recipe for|how do i cook|what.s the weather|capital of|who won the|translate this)\b/,
+  /\b(medical|diagnose me|symptoms?|prescription|dosage)\b/,
+  /\b(ignore (all )?(previous|prior|above)|system prompt|your instructions|you are (now )?(chatgpt|gpt|claude))\b/,
+  // fr
+  /\b(ecri[st]|redige|donne[- ]moi|invente|raconte)\b.{0,24}\b(poeme|chanson|blague|histoire|nouvelle|dissertation|recette)\b/,
+  /\b(recette de|comment (faire )?cuire|quelle est la capitale|traduis|traduire ceci|mes devoirs|resous|symptomes?|posologie|quel temps fait)\b/,
+  /\b(ecri[st]|redige|corrige|debogue|explique)\b.{0,24}\b(code|script|fonction|requete|programme)\b/,
+  /\b(ignore (toutes )?les (instructions|consignes)|invite systeme|tes instructions|tu es (maintenant )?(chatgpt|gpt|claude))\b/,
+  // es
+  /\b(escribeme|escribe|redacta|inventame|dame|cuentame)\b.{0,24}\b(poema|cancion|chiste|historia|relato|redaccion|receta)\b/,
+  /\b(receta de|como (se )?cocina|cual es la capital|traduce|traducir esto|mis deberes|resuelve|sintomas?|dosis|que tiempo hace)\b/,
+  /\b(escribe|arregla|depura|explica)\b.{0,24}\b(codigo|script|funcion|consulta|programa)\b/,
+  /\b(ignora (todas )?las (instrucciones|indicaciones)|prompt del sistema|tus instrucciones|eres (ahora )?(chatgpt|gpt|claude))\b/,
 ];
 
 /* One line, in his voice, pointing at what the thing is actually for. */
@@ -64,7 +89,8 @@ const OFF_TOPIC_REPLY = {
   es: "Eso queda fuera de lo mío. Respondo sobre producto y marketing — precio, posicionamiento, activación, y por qué la gente que quiere comprarte no compra. Cuéntame qué vende tu negocio y dónde se atasca."
 };
 
-function looksOffTopic(q) {
+function looksOffTopic(raw) {
+  const q = deaccent(raw);
   if (BUSINESS_WORDS.test(q)) return false;
   return OFF_TOPIC.some((re) => re.test(q));
 }

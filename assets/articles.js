@@ -12,6 +12,13 @@
    ========================================================== */
 window.QD_ARTICLES = [
   {
+    slug: 'business-model-generation',
+    title: 'Business Model Generation by Osterwalder and Pigneur: a camera, not a compass',
+    kind: 'Book review',
+    minutes: 9,
+    img: '/assets/research/business-model-generation.svg'
+  },
+  {
     slug: 'influence-robert-cialdini',
     title: 'Influence by Robert Cialdini: which of the six still work on a machine',
     kind: 'Book review',

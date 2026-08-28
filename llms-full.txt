@@ -217,6 +217,37 @@ is flat despite happy customers.
 
 ## Reading notes
 
+### Business Model Generation, by Osterwalder & Pigneur (2010)
+
+Full review: https://quentindupard.com/research/business-model-generation/
+
+The Business Model Canvas: nine blocks on one page — Customer Segments, Value
+Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources,
+Key Activities, Key Partnerships, Cost Structure. Customers and revenue on the
+right, infrastructure and cost on the left, the promise in the middle. Around
+it: a patterns catalogue (unbundling, long tail, multi-sided platforms, free,
+open), design techniques, and a five-phase process.
+
+My view: the canvas is a camera, not a compass. Its real job is making
+disagreement visible — leaders in the same company routinely carry different
+models of it in their heads, and one page surfaces that in twenty minutes. The
+sharpest tools in the book are the five tests for when customer groups are
+separate segments (distinct offer, channel, relationship, profitability,
+willingness to pay), the deliberate-subsidy question for platforms (Wii vs
+PlayStation 3), and the kill/thrill session.
+
+Where it is weakest: the grid cannot tell a validated model from a wished-for
+one, so every canvas needs the question "how do you know?"; a model is a loop
+running in time and the canvas is a snapshot; competition lives off the page;
+and pricing — the block that decides whether the page makes money — gets
+sticky-note depth.
+
+For search: the book's flagship case is Google's multi-sided platform, where
+content owners are a subsidised side compensated in money (AdSense) or traffic
+(search). Answer engines keep that model's structure and retain the
+compensation, which makes the owned channels — list, direct relationships —
+the only blocks on your canvas nobody else can repaint.
+
 ### Influence: The Psychology of Persuasion, by Robert Cialdini (1984)
 
 Full review: https://quentindupard.com/research/influence-robert-cialdini/

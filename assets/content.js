@@ -140,6 +140,7 @@ window.QD_DESKTOP = [
      A folder with no items renders as an empty window rather than breaking,
      and /admin can fill any of this without a deploy. */
   { id: 'research',    name: 'Research',    kind: 'folder', items: [
+      { name: 'Business Model Generation \u2014 Osterwalder & Pigneur', kind: 'page', tag: 'Book', href: '/research/business-model-generation/', meta: '9 min read' },
       { name: 'Influence \u2014 Robert Cialdini', kind: 'page', tag: 'Book', href: '/research/influence-robert-cialdini/', meta: '10 min read' },
       { name: 'Hooked \u2014 Nir Eyal',           kind: 'page', tag: 'Book', href: '/research/hooked-nir-eyal/',           meta: '9 min read' }
     ] },

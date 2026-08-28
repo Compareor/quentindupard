@@ -353,9 +353,14 @@
   color: var(--text-faint);
   font-variant-numeric: tabular-nums;
 }
+/* Some books are landscape — Business Model Generation is printed wider than
+   tall — and 92px of width would render them as a stamp. The modifier trades
+   width for the same visual height. */
+.book-cover.wide img { width: 168px; }
 @media (max-width: 480px) {
   .book-cover { gap: 16px; padding: 14px 16px; }
   .book-cover img { width: 76px; }
+  .book-cover.wide img { width: 132px; }
 }
 
 /* ── Contents ────────────────────────────────────────────────

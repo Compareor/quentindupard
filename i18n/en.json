@@ -6,6 +6,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -15,6 +16,7 @@
   "00a457ff2d4a": {
     "en": "The three things I use",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
   },
@@ -55,6 +57,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -65,6 +68,12 @@
     "en": "Strategy and execution",
     "pages": [
       "index.html"
+    ]
+  },
+  "03a8cbc8ff9d": {
+    "en": "<strong>A free tier is a subsidy with a job.</strong> Name the paying side it feeds and the mechanism &mdash; the Metro newspaper carried free readers because advertisers paid for their attention. If your free users do not structurally feed a paying side, you have not designed a freemium model. You have designed a cost.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "03bdf78ed786": {
@@ -78,6 +87,12 @@
     "pages": [
       "research/index.html",
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "04ae91043eba": {
+    "en": "Ask a founder, their head of sales and their head of product to fill in the nine boxes separately and you will get three different businesses. The pricing argument you were hired for usually turns out to be a disagreement about which customer segment the company actually serves, and nobody knew, because the disagreement had nowhere to become visible. One page makes it visible in twenty minutes. That is not innovation. It is something rarer &mdash; a shared sentence everyone has agreed to argue about.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "0549a97bfa2d": {
@@ -116,6 +131,12 @@
       "index.html"
     ]
   },
+  "093cfe970eb1": {
+    "en": "Read it as a content owner, because if you publish anything, that is your box on their canvas. Your pages were always a subsidised side of someone else&rsquo;s model: you fed the platform content, and the platform compensated you &mdash; AdSense paid money, search paid traffic. An answer engine keeps every block of that model except the compensation. Your content still feeds the free side; the visit that used to be your payment is increasingly settled inside the answer.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "09d41f02a0a3": {
     "en": "<strong>Arguing against your own interest.</strong> Cialdini watches a waiter called Vincent lean in and quietly tell a table that the dish they have just ordered is not good tonight, and recommend two cheaper ones. Vincent then sells them the wine and the dessert, and out-earns every other server in the restaurant. The small concession against himself bought credibility, which he spent on the large claim. Some version of this is in most of my engagements: the fastest route to being believed about what you are good at is being specific first about what you are not.",
     "pages": [
@@ -143,6 +164,7 @@
   "0ada0f9f45f7": {
     "en": "<span>Book review</span> <span>9 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html"
     ]
   },
@@ -186,6 +208,12 @@
     "en": "Everything I notice in product and marketing — the pricing models that work, the funnels that don't, and the things I change my mind about. No schedule, no filler, no \"5 growth hacks\".",
     "pages": [
       "index.html"
+    ]
+  },
+  "0dc3510a03e2": {
+    "en": "<strong>Use it with</strong> a testing discipline &mdash; the fact-or-guess marking above is the minimum &mdash; because the canvas without evidence is a mood board. The authors evidently agreed: their next book was about testing the middle box.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "0dca8a5e81bb": {
@@ -284,10 +312,22 @@
       "privacy/index.html"
     ]
   },
+  "148f276de5f5": {
+    "en": "Nothing directly — but its flagship case study is Google’s multi-sided platform: advertisers pay, while web surfers and content owners are subsidised sides of the model. Read from 2026, that page describes the contract every publisher depends on, and the change in it: content still feeds the platform’s free side, but the compensation that used to flow back as traffic is increasingly retained inside AI answers. The practical translation is to know which side of someone else’s model each acquisition channel puts you on, what it pays — money, traffic or citations — and to keep building the owned channels no other company’s canvas can repaint.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "149548d62a9f": {
     "en": "One point in its favour: Cialdini kept working. He has since added a seventh principle, <em>unity</em> &mdash; not merely resembling someone but belonging to the same group as them &mdash; which is not in this edition and which is, if anything, the one that has aged best.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "160c8d6a5d06": {
+    "en": "Cover of Business Model Generation by Alexander Osterwalder and Yves Pigneur",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "163c94f327ff": {
@@ -303,6 +343,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -382,6 +423,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -398,6 +440,12 @@
     "en": "<strong>Write to the feeling; prove the job.</strong> The internal trigger belongs in the headline. The business case belongs on the pricing page. Most sites do this the wrong way round and then wonder why the copy tests flat.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "1cbb186620e1": {
+    "en": "<strong>Competition lives off the page.</strong> Rivals, substitutes, regulation and market shifts are relegated to an &ldquo;environment&rdquo; chapter near the back, with SWOT and a bolted-on tour of Blue Ocean Strategy. On the page where decisions get made, your model floats alone in space. The Wii story is the book&rsquo;s best material precisely because it is one of the few places two canvases are made to fight.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "1d39b0d0b925": {
@@ -419,6 +467,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -435,6 +484,12 @@
     "en": "A crawler has none of that. Neither does an assistant. You cannot make a language model feel it owes you, you cannot be more likeable to it, and it will not experience the loss of anything.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "1ee6d8eeaa63": {
+    "en": "Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships and Cost Structure. Customers and revenue sit on the right of the page, infrastructure and cost on the left, the value proposition in the middle. The book&rsquo;s definition underneath them: a business model is the rationale for how an organisation creates, delivers and captures value.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "1f223d7459e2": {
@@ -495,6 +550,12 @@
     "en": "Stored keys cleared. Nothing further will be counted from this browser.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "2266db1b9f14": {
+    "en": "The canvas will not tell you what to build, what to charge, or whether any of it is true. It will show a whole company the same picture for the first time &mdash; and most strategy problems turn out to be that picture, missing.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "229dbbeff1aa": {
@@ -587,10 +648,22 @@
       "index.html"
     ]
   },
+  "29e6e97f9994": {
+    "en": "<strong>Name your pattern and you find your real competitor.</strong> The book&rsquo;s patterns &mdash; unbundling, long tail, multi-sided platform, free, open &mdash; are competitive lenses. Lulu did not beat publishers with better marketing; it made selection irrelevant by profiting from books publishers rejected, because print-on-demand means a title that never sells costs nothing. If your rival runs a different pattern, you are not competing on features, and feature comparisons are wasted copy.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "2b67c7698b9a": {
     "en": "Act 01",
     "pages": [
       "index.html"
+    ]
+  },
+  "2bf2fbb3a283": {
+    "en": "<strong>Read it</strong> if you run, advise or own a company where the leadership would describe the business differently in private &mdash; which is most companies. Read the segments chapter, the platforms pattern and the kill/thrill page even if you skip everything else. And put the canvas on the wall before your next planning cycle: one page of visible disagreement beats forty slides of apparent alignment.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "2c032ebdf829": {
@@ -612,6 +685,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -637,6 +711,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -709,6 +784,18 @@
       "index.html"
     ]
   },
+  "339b934e179e": {
+    "en": "The rest of the book is five sections wrapped around that grid: a patterns catalogue, a set of design techniques borrowed from product design, a strategy chapter, and a five-phase process &mdash; Mobilize, Understand, Design, Implement, Manage &mdash; for running the whole thing inside a company.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "33b2c7846710": {
+    "en": "The canvas, in one paragraph",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "34093fa8dc94": {
     "en": "Something that does not fit the three above. A workshop, a board session, a second opinion on a decision you have already made. Priced on the problem.",
     "pages": [
@@ -728,6 +815,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -805,6 +893,12 @@
     "pages": [
       "research/index.html",
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "3abcba13f12c": {
+    "en": "What are the nine blocks of the Business Model Canvas?",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "3af74bb61851": {
@@ -957,6 +1051,12 @@
       "index.html"
     ]
   },
+  "4678935b79d6": {
+    "en": "<strong>Assume the model has a shelf life.</strong> The Manage chapter&rsquo;s bleakest and most useful sentence: it is best to assume that most business models, even successful ones, will have a short lifespan. The book&rsquo;s own warning case is Dell &mdash; a model so successful the company could not rethink it, stuck in a commoditised market while the growth moved elsewhere. Somebody in the building should own the question of what replaces the machine while it still works.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "46f49a6a4289": {
     "en": "From deciding what to build through to how it gets sold. Doing both is why my product opinions survive a sales call.",
     "pages": [
@@ -1018,10 +1118,17 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "stats/index.html"
+    ]
+  },
+  "4bc83d944547": {
+    "en": "<strong>Position against the model, not the product.</strong> The Wii shipped weaker technology on purpose and sold it as a feature to people the incumbents ignored. When you are outgunned on performance, the answer the book keeps illustrating is to change who you are for and what they pay for &mdash; not to close the spec gap.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "4be812c44bf9": {
@@ -1058,6 +1165,12 @@
     "en": "<strong>Effort only creates attachment when it produces something the person keeps.</strong> Aronson and Mills put women through a genuinely embarrassing initiation to join a discussion group that had been rehearsed to be as dull as possible. They rated it as excellent. This is the same mechanism as onboarding, and the difference between friction that builds loyalty and friction that loses people is entirely whether they come out the other end holding something of their own.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "4dba1bc3d4f2": {
+    "en": "Nothing directly &mdash; but its flagship case study is Google&rsquo;s multi-sided platform: advertisers pay, while web surfers and content owners are subsidised sides of the model. Read from 2026, that page describes the contract every publisher depends on, and the change in it: content still feeds the platform&rsquo;s free side, but the compensation that used to flow back as traffic is increasingly retained inside AI answers. The practical translation is to know which side of someone else&rsquo;s model each acquisition channel puts you on, what it pays &mdash; money, traffic or citations &mdash; and to keep building the owned channels no other company&rsquo;s canvas can repaint.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "4eabb64cc9a7": {
@@ -1169,10 +1282,22 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "57cc84ab7de3": {
+    "en": "<strong>The canvas is the deck.</strong> Segment, promise, proof, price &mdash; the right-hand side of the canvas read left to right is the narrative order of a sales deck, and of a homepage. If a section of your pitch does not map to a box, it is decoration.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "5820ba760560": {
     "en": "<strong>It is a filing system, not a theory.</strong> Six categories and no rule for what happens when two of them point in opposite directions, which in practice is most of the time. A discount engages self-interest and undermines commitment in the same movement. The book will explain either outcome beautifully, afterwards. It will not tell you which one you are about to get.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "584f52429be3": {
+    "en": "The authors half-know this. Buried in the making-of chapter, one of the 470 contributors calls a business model the &ldquo;core content&rdquo; or the &ldquo;short story&rdquo; of the company, and the business plan merely the full text. That one line is a better description of the canvas than the subtitle is.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "59c63f358b92": {
@@ -1212,6 +1337,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1255,6 +1381,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1276,6 +1403,7 @@
   "5d1c9cd52fdf": {
     "en": "Where it does not hold up",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
   },
@@ -1315,10 +1443,22 @@
       "stats/index.html"
     ]
   },
+  "5f0402674d3c": {
+    "en": "Yes, for the canvas, the segment-splitting tests and the patterns chapter — platforms, long tail, free and unbundling have aged better than almost any business material from 2010. The examples are a time capsule and the five-phase process chapter is corporate filler. Read it knowing what the canvas is: a tool for making a team see the same company, not a tool for finding out whether the model works.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "6037226be0c1": {
     "en": "Your team owns everything after",
     "pages": [
       "index.html"
+    ]
+  },
+  "6207d6680f2c": {
+    "en": "<strong>Audit your copy against the value-creation list.</strong> The book names the ways a proposition creates value: newness, performance, customisation, getting the job done, design, brand, price, cost reduction, risk reduction, accessibility, convenience. Read your homepage and mark which one it claims. Most B2B sites claim performance out of habit while their customers actually buy risk reduction &mdash; and the copy never says the word.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "621a27907cd6": {
@@ -1337,6 +1477,12 @@
     "en": "<strong>Answer engines take the reward and leave you the citation.</strong> Informational search is the purest case of what Eyal calls a reward of the hunt: the person is chasing information and the chase itself is the pull. That is precisely the reward an AI answer now resolves before anyone reaches your site. The craving is satisfied inside the assistant. What used to be your page&rsquo;s job &mdash; being the reward &mdash; is now the assistant&rsquo;s job, and your page&rsquo;s job is to be the thing it names.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "642d0b611d4c": {
+    "en": "Making disagreement visible. Different leaders in the same company routinely carry different models of it in their heads &mdash; different segments, different value propositions, different ideas of what is being paid for. The canvas puts all of it on one page in twenty minutes, which turns a vague strategy unease into a specific argument. Its main limit is symmetrical: it describes with equal confidence whether the boxes contain facts or wishes, so it needs an evidence discipline bolted on.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "643245fc8fd4": {
@@ -1399,6 +1545,18 @@
       "privacy/index.html"
     ]
   },
+  "670d5e470ca8": {
+    "en": "The book says the canvas is a tool for inventing new business models. In ten years of using it I have watched it do something humbler and more valuable: it ends the meeting where everyone in the room is describing a different company.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "67412db3cf21": {
+    "en": "A business model, in the book&rsquo;s definition, is the rationale for how an organisation creates, delivers and captures value. The canvas spreads that across nine blocks: who you serve (Customer Segments), what you promise them (Value Propositions), how it reaches them (Channels), how you keep them (Customer Relationships), what they pay (Revenue Streams), what you must own (Key Resources), do (Key Activities) and buy in (Key Partnerships), and what it all costs (Cost Structure). Customers and money on the right, machinery and cost on the left, the promise in the middle. One page, sticky notes, no appendix.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "67684cc288ec": {
     "en": "<strong>Say what you are not good at, in public, before anyone asks.</strong> Vincent again. The concession has to be real and it has to cost you something visible, or it reads as a humblebrag and does the opposite.",
     "pages": [
@@ -1420,6 +1578,7 @@
   "67a146bbac60": {
     "en": "Findings for marketing",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
@@ -1440,6 +1599,12 @@
     "en": "<span class=\"map-key\"><i class=\"map-key-dot is-current\"></i> Mexico City, now</span> <span class=\"map-key\"><i class=\"map-key-dot\"></i> Dubai, Madrid, Paris, London, Miami before that</span>",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "686dc56d8249": {
+    "en": "<strong>The kill/thrill session.</strong> One page of the process chapter, worth the price of the book: put the new idea in front of the team, spend twenty minutes brainstorming only reasons it will fail, then twenty minutes only reasons it will fly. Splitting the two moods stops the optimists and the sceptics from cancelling each other into mush. I run it on roadmaps and pricing changes, not business models, and it works everywhere.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "68b06eda313a": {
@@ -1485,6 +1650,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1556,6 +1722,12 @@
     "en": "Read it if you sell anything to anybody, and especially if you are the person writing the words. There is nothing else this concentrated on why one sentence gets a yes and a nearly identical sentence gets nothing at all. Chapters two and three cover the cost on their own.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "6d16b5a0d4fa": {
+    "en": "<strong>Business Model Generation</strong> <span class=\"book-author\">Alexander Osterwalder &amp; Yves Pigneur, with 470 practitioners</span> <span class=\"book-pub\">First published 2010 &middot; ISBN 978-0-470-87641-1</span>",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "6d24f5029669": {
@@ -1631,6 +1803,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1704,6 +1877,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1714,6 +1888,18 @@
     "en": "My research, my frameworks, and the things I steal from. Open a folder. The documents are real and you can take them with you.",
     "pages": [
       "index.html"
+    ]
+  },
+  "75516b5be559": {
+    "en": "Alexander Osterwalder and Yves Pigneur",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "75db7dcc0399": {
+    "en": "I use the canvas in most engagements and I have never once used it the way the book intends.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "75f6a6ec3940": {
@@ -1785,6 +1971,7 @@
   "7aee10123685": {
     "en": "Findings for product",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
@@ -1793,6 +1980,12 @@
     "en": "What are Cialdini’s six principles of influence?",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "7b9069ff7c3f": {
+    "en": "<strong>Mark every box as fact or guess.</strong> This is my repair for the canvas&rsquo;s biggest flaw: a grid full of validated knowledge looks identical to a grid full of wishes. Two colours of sticky note &mdash; tested, untested. The untested notes in Revenue Streams and Channels are your riskiest assumptions, and now they are visible.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "7c582fcd1e1b": {
@@ -1814,6 +2007,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -1868,6 +2062,18 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "80b16d079fd0": {
+    "en": "Yes, for the canvas, the segment-splitting tests and the patterns chapter &mdash; platforms, long tail, free and unbundling have aged better than almost any business material from 2010. The examples are a time capsule and the five-phase process chapter is corporate filler. Read it knowing what the canvas is: a tool for making a team see the same company, not a tool for finding out whether the model works.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "80b18c50b502": {
+    "en": "What does Business Model Generation say about SEO and AI search?",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "80da1bbcfb7f": {
     "en": "Your team owns it after",
     "pages": [
@@ -1896,6 +2102,18 @@
     "en": "No",
     "pages": [
       "index.html"
+    ]
+  },
+  "823282f1f787": {
+    "en": "Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships and Cost Structure. Customers and revenue sit on the right of the page, infrastructure and cost on the left, the value proposition in the middle. The book’s definition underneath them: a business model is the rationale for how an organisation creates, delivers and captures value.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "82aa2ed29e79": {
+    "en": "The book&rsquo;s flagship case study is Google. Three customer segments &mdash; advertisers, web surfers, content owners &mdash; one of whom pays, two of whom are subsidised, the whole thing held together because more ads need more users need more content. In 2010 that page was a neat illustration of the multi-sided platform pattern. In 2026 it reads as a contract, and the terms have changed.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "839691351b78": {
@@ -1934,6 +2152,12 @@
       "about/index.html"
     ]
   },
+  "85a5cd07bf25": {
+    "en": "Business Model Generation by Osterwalder and Pigneur: a camera, not a compass | Quentin Dupard",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "8619e5414088": {
     "en": "Most clicked",
     "pages": [
@@ -1968,6 +2192,12 @@
     "en": "Yes, with two adjustments. The mechanisms have held up better than the individual studies, many of which come from a period of social psychology that has since been reconsidered on statistical grounds, so treat the percentages as illustrations to test rather than facts to quote. And the book assumes a person is present for the persuasion, which is now often untrue — the principles that need presence have weakened and the ones that scale through a screen have been industrialised.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "8920a4d5e407": {
+    "en": "What it is actually for",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "8971fc919d70": {
@@ -2007,10 +2237,22 @@
       "index.html"
     ]
   },
+  "8b4538219048": {
+    "en": "When are customer groups separate segments?",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "8b97ba460c72": {
     "en": "Clicks",
     "pages": [
       "index.html"
+    ]
+  },
+  "8bb2207e028e": {
+    "en": "The canvas gives you the discipline for thinking about this without panic: for every acquisition channel you depend on, write down whose model it belongs to, which side of it you sit on, and what it currently pays you &mdash; money, traffic, or citations. That last currency is the new line in the ledger. It is worth less than a visit and more than nothing, and the pages on this site are built to earn it. But a channel whose payment terms just changed unilaterally is telling you something the book says plainly about every position on someone else&rsquo;s platform: you are not the customer of that model, you are a block in it. The owned channels &mdash; the list, the direct relationship &mdash; are the only boxes on your canvas nobody else can repaint.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "8bd8bd360b36": {
@@ -2079,10 +2321,23 @@
       "index.html"
     ]
   },
+  "8e74be0f22d0": {
+    "en": "A working review of Business Model Generation: what the canvas is actually for, the product and marketing findings, and the page about Google that reads differently in 2026.",
+    "pages": [
+      "research/business-model-generation/index.html",
+      "research/index.html"
+    ]
+  },
   "8e9cf4fcea88": {
     "en": "<strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "8ead4bce79ef": {
+    "en": "<strong>Draw the model you have before the one you want.</strong> Not the aspiration &mdash; the current machine, as it actually runs. Most teams discover the two differ in at least three boxes, and the gap is the roadmap conversation they have been avoiding.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "8fb9d44cfa03": {
@@ -2109,6 +2364,12 @@
       "stats/index.html"
     ]
   },
+  "918e59a3d79f": {
+    "en": "<strong>The examples are a 2010 time capsule.</strong> Skype as the disruptor, Nokia&rsquo;s &ldquo;comes with music&rdquo; as an adaptive move, LEGO Factory &mdash; which the book itself admits produced only a small fraction of revenue &mdash; as the long-tail future. Some aged into warnings. That is not disqualifying; the Dell caution aged into a prophecy. But read the cases as illustrations of patterns, not as bets that paid.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "924facb738c0": {
     "en": "Previously.",
     "pages": [
@@ -2121,10 +2382,22 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "93084a1be106": {
+    "en": "Product test: could your team fill in the nine boxes separately and produce the same company? If not, that argument is your next planning meeting.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "930d05cc36ab": {
     "en": "Yes, send it",
     "pages": [
       "index.html"
+    ]
+  },
+  "931b970481f5": {
+    "en": "<strong>Skip it</strong> if you are looking for what to charge, how to grow, or how to tell whether the model is working &mdash; the book is honest that those answers live elsewhere, it is just quiet about it. And skip the five-phase process chapter unless you work somewhere with a steering committee; it is the part written for the organisations the rest of the book is trying to rescue.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "93d42df8ba24": {
@@ -2158,6 +2431,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2195,6 +2469,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2234,6 +2509,7 @@
   "988ef3922c16": {
     "en": "Who should read it",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
@@ -2244,6 +2520,12 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "99751f31f20c": {
+    "en": "<strong>The model is a loop; the canvas is a snapshot.</strong> Google&rsquo;s model works because more users make the ads worth more, which funds better free tools, which bring more users. That loop is the business. The grid has no way to say it &mdash; which is why the book&rsquo;s own Google pages are covered in hand-drawn arrows fighting the format. A model is a machine running in time, and the canvas is a photograph of the machine switched off.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "999e62a4410b": {
     "en": "First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept. <a href=\"/stats/\">The numbers are public</a> and <a href=\"/privacy/\">so is the detail</a>.",
     "pages": [
@@ -2251,6 +2533,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2282,6 +2565,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2298,6 +2582,12 @@
     "en": "What you sell, who buys it, and what's not working.",
     "pages": [
       "index.html"
+    ]
+  },
+  "9e7abb05ce43": {
+    "en": "<strong>Segments before channels, always.</strong> The canvas is ordered: who, then what, then how it reaches them. Most marketing plans I read are ordered backwards &mdash; they start with the channel list and back into an audience. If you cannot fill the Segments and Value Proposition boxes first, the channel plan is a budget allocation, not a strategy.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "9eea1d93fd8c": {
@@ -2404,6 +2694,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2471,6 +2762,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2513,6 +2805,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
@@ -2619,6 +2912,12 @@
       "index.html"
     ]
   },
+  "b73a16ee3950": {
+    "en": "<strong>Pricing gets one box.</strong> Revenue Streams asks the right question &mdash; for what value is each segment actually willing to pay? &mdash; and answers it with a list of mechanisms: asset sale, subscription, licensing, auction. The question that determines whether the whole page makes money is dispatched at sticky-note depth. My entire trade lives inside that one box, which perhaps explains my affection for the other eight.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "b7d707d6aa6d": {
     "en": "Usually it is one of three things: what they charge, how they explain themselves, or the gap between someone showing interest and actually buying. Those are the levers I work on, and I have found the same three at the bottom of almost every engagement regardless of what the business sells.",
     "pages": [
@@ -2644,6 +2943,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2729,6 +3029,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2879,6 +3180,12 @@
       "index.html"
     ]
   },
+  "c9684a1fff3b": {
+    "en": "<strong>Co-created by 470 people, and it shows both ways.</strong> The crowd is the book&rsquo;s evidence and its bias. It was financed and produced outside traditional publishing, by practitioners, most of them consultants and facilitators &mdash; and the result is optimised for the room it was written in. The canvas is genuinely the best workshop artefact ever shipped in business print. It is better at producing agreement than at producing revenue, and agreement is what workshops sell.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "c9fcf5afae98": {
     "en": "<span class=\"demand-n\" id=\"d-buys\">—</span><span class=\"demand-l\">Clicked buy</span>",
     "pages": [
@@ -2904,6 +3211,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2928,6 +3236,12 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "cdc028dc0d50": {
+    "en": "Is Business Model Generation still worth reading?",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "ce0d25ec854b": {
     "en": "&larr; Home",
     "pages": [
@@ -2948,6 +3262,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -3027,6 +3342,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -3055,6 +3371,13 @@
     "en": "Both, and the building is not a side line. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, operations automation. If the answer to your revenue problem is a thing that does not exist yet, I would rather build it than write you a specification and hand it to someone else. The same applies to marketing: I will take the whole strategy, not just the part that fits in a slide.",
     "pages": [
       "index.html"
+    ]
+  },
+  "d433c612c785": {
+    "en": "Business Model Generation by Osterwalder and Pigneur: a camera, not a compass",
+    "pages": [
+      "research/business-model-generation/index.html",
+      "research/index.html"
     ]
   },
   "d45ddbdd3d41": {
@@ -3111,6 +3434,12 @@
       "index.html"
     ]
   },
+  "d8c206dfc68c": {
+    "en": "Making disagreement visible. Different leaders in the same company routinely carry different models of it in their heads — different segments, different value propositions, different ideas of what is being paid for. The canvas puts all of it on one page in twenty minutes, which turns a vague strategy unease into a specific argument. Its main limit is symmetrical: it describes with equal confidence whether the boxes contain facts or wishes, so it needs an evidence discipline bolted on.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "d90e03e74ada": {
     "en": "Is Hooked still worth reading in 2026?",
     "pages": [
@@ -3139,6 +3468,12 @@
     "en": "Snake game board",
     "pages": [
       "index.html"
+    ]
+  },
+  "daca87e0de0a": {
+    "en": "Marketing test: which one of the eleven value types does your homepage claim, in its actual words? If you find three, the reader found none.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "db024cac7f33": {
@@ -3180,6 +3515,7 @@
   "de344a2b920c": {
     "en": "&larr; Research",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html"
@@ -3233,6 +3569,12 @@
       "about/index.html"
     ]
   },
+  "e153d91b41c3": {
+    "en": "What is the Business Model Canvas actually good for?",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "e3577c1de70c": {
     "en": "Commitment",
     "pages": [
@@ -3258,6 +3600,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -3298,6 +3641,12 @@
     "en": "Only above a frequency threshold. Eyal’s Habit Zone requires that a behaviour occur often enough to become automatic, and no amount of perceived utility substitutes for frequency. If a business product is genuinely used once a month, you are not building a habit, you are building a reminder that fits into a routine somebody already has. The investment phase still applies at any cadence, because stored value raises switching costs whether or not the use is habitual.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "e519f17b8602": {
+    "en": "Business Model Generation",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "e52393c7cb86": {
@@ -3343,6 +3692,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -3434,10 +3784,17 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "stats/index.html"
+    ]
+  },
+  "ee72b2520001": {
+    "en": "Nine boxes on one page, and the claim that any business can be described by filling them in. The claim holds. What the book oversells is what happens next: a canvas shows you the model you have, with great clarity, and says nothing about whether it is true. It is a camera, not a compass &mdash; and a camera is worth owning.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "eea9d054da2e": {
@@ -3467,6 +3824,7 @@
   "f07ac22a9e93": {
     "en": "Common questions",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
@@ -3499,6 +3857,18 @@
     "en": "A deliberately mixed list. These are projects I have actually worked on, not sectors I claim to specialise in. The point is the opposite of specialism: the same handful of levers kept working across businesses that had almost nothing else in common.",
     "pages": [
       "index.html"
+    ]
+  },
+  "f2cd66f0c060": {
+    "en": "The book gives five tests: groups are separate segments if their needs justify a distinct offer, if they are reached through different channels, if they require different relationships, if they have substantially different profitability, or if they are willing to pay for different aspects of the offer. A persona that passes none of these is a demographic, not a segment, and does not deserve its own pricing tier or product line.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "f2fe2f8ac99d": {
+    "en": "<strong>Run your personas through the five segment tests.</strong> Distinct offer, distinct channel, distinct relationship, distinct profitability, distinct willingness to pay. A persona that fails all five is not a segment and should not have its own roadmap line, its own pricing tier, or its own onboarding flow.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "f3703a6b4cc9": {
@@ -3615,6 +3985,18 @@
       "about/index.html"
     ]
   },
+  "fa3e3b7fce64": {
+    "en": "<strong>The five tests for splitting a segment.</strong> The book says customer groups are separate segments only if they need a distinct offer, reach you through different channels, need different relationships, have substantially different profitability, or pay for different aspects of the offer. That list is a scalpel. Most of the personas I am shown fail all five tests &mdash; they are demographics wearing a name badge. Segmentation is an economics decision, not a creative-team deliverable, and this is the cleanest statement of it I know.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "faa4ba5e0251": {
+    "en": "<strong>A description tool sold as an invention tool.</strong> The subtitle promises game changers. The grid cannot tell a validated model from a wished-for one &mdash; nine boxes of confident guesses photograph beautifully. The book itself never claims the canvas tests anything, but it lets you forget that for two hundred pages, and the workshops it spawned forgot it permanently. Every canvas needs a second question the page does not ask: <em>how do you know?</em>",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "faee7ce2aa52": {
     "en": "Page views",
     "pages": [
@@ -3652,6 +4034,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -3682,6 +4065,12 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "ff3086d523ec": {
+    "en": "<strong>Which side do you subsidise, on purpose.</strong> The platforms chapter is built on the chicken-and-egg problem: a platform is worthless to each side without the other, so you lure one side with a cheap or free offer and charge the other. The book&rsquo;s contrast is exact. Sony subsidised every PlayStation 3 sold, betting on game royalties that came in under estimate. Nintendo aimed the Wii at casual players with cheaper technology and made money on the console <em>and</em> the royalties &mdash; same pattern, opposite subsidy, opposite result. The lesson generalises well beyond consoles: if part of your business is free, you should be able to say which paying side it feeds and how. If you cannot, it is not a subsidy. It is just a cost.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "ff5ac75580e3": {
     "en": "Does the Hook Model work for B2B products?",
     "pages": [
@@ -3703,6 +4092,7 @@
   "ffc84d0e413f": {
     "en": "What this means for SEO and GEO",
     "pages": [
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]

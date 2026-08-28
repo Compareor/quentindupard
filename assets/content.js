@@ -200,11 +200,30 @@ window.QD_DESKTOP = [
       {
         name: 'Read me first.txt', kind: 'note', meta: 'Note',
         body: [
-          'Product and marketing operator. Independent. I work with B2B SaaS companies worldwide.',
-          'What people pay me for is ideas — the unobvious angle on a revenue problem. I have been in the product review and on the sales call, and most of my useful ideas come from the gap between what those two rooms believe.',
+          'Independent product and marketing operator. I get called when revenue has stopped moving and the room cannot agree on why.',
+          'It is almost always one of three things: what you charge, how you explain yourself, or the gap between someone showing interest and actually paying. I have found the same three at the bottom of nearly every engagement, in businesses with nothing else in common — a grocery shop and a Series A software company have the same underlying problem.',
+          'What people pay me for is ideas, not frameworks. The useful ones come from having sat in the product review and then on the sales call two hours later, and noticed the two rooms believe completely different things about the same customer. That gap is where the work is.',
+          'I also build. Whole products, end to end: ecommerce, newsletters, internal tooling, operations automation. When the answer is something that does not exist yet, building it beats writing a specification and handing it over.',
+          'What I will not do: pretend a problem is solvable with my services when it is not, or recommend a vendor I earn a commission on. I take none.',
           'Execution got cheap. Ideas did not.'
         ]
       },
+      {
+        /* Drop an MP4 at /assets/video/intro.mp4 and this appears. Until the
+           file exists the entry is filtered out at render time, so a missing
+           video is an absent row rather than a broken player. */
+        name: 'Ninety seconds with me.mp4', kind: 'video', meta: 'Video',
+        /* DELETE THIS LINE once the file is in place. Until then the row is
+           filtered out, so the entry can sit here without a dead player. */
+        missing: true,
+        href: '/assets/video/intro.mp4',
+        poster: '/assets/video/intro-poster.jpg',
+        captions: '/assets/video/intro.vtt',
+        body: [
+          'Who I am, what I actually do, and how to tell whether I am the right person for your problem.'
+        ]
+      },
+      { name: 'How I work.pdf', kind: 'pdf', href: '/assets/docs/engagement-one-pager.pdf', meta: 'PDF · 4.3 KB' },
       { name: 'LinkedIn', kind: 'link', href: 'https://www.linkedin.com/in/quentindupard/', meta: 'Profile' },
       { name: 'Book 30 minutes', kind: 'link', href: 'https://calendly.com/quentin-dupard-call/30min', meta: 'Calendar' }
     ]

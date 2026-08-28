@@ -234,6 +234,45 @@ export async function write({ request, env }) {
   return json({ ok: true, store });
 }
 
+/**
+ * GET /api/admin/questions — everything asked of AI-me, newest first.
+ *
+ * The text is in each key's metadata, so this is one list() and no per-key
+ * reads however many questions there are. Keys expire after 90 days on their
+ * own; there is no cleanup job and no way for this to grow without bound.
+ */
+export async function questions({ request, env }) {
+  if (!(await authed(request, env))) return json({ error: 'Not signed in.' }, 401);
+  if (!env.STATS) return json({ error: 'Storage is not bound.' }, 503);
+
+  const rows = [];
+  let cursor;
+  do {
+    const page = await env.STATS.list({ prefix: 'qlog:', cursor, limit: 1000 });
+    cursor = page.list_complete ? null : page.cursor;
+    for (const k of page.keys) {
+      const m = k.metadata || {};
+      if (m.q) rows.push({ key: k.name, q: m.q, at: m.at || 0, lang: m.lang || 'en', thread: m.thread || '' });
+    }
+  } while (cursor && rows.length < 2000);
+
+  rows.sort((a, b) => b.at - a.at);
+  return json({ ok: true, questions: rows });
+}
+
+/** DELETE one logged question. */
+export async function deleteQuestion({ request, env }) {
+  if (!(await authed(request, env))) return json({ error: 'Not signed in.' }, 401);
+  if (!env.STATS) return json({ error: 'Storage is not bound.' }, 503);
+
+  let key = '';
+  try { key = String((await request.json()).key || ''); } catch (_) { /* empty */ }
+  if (!key.startsWith('qlog:')) return json({ error: 'Not a question key.' }, 400);
+
+  await env.STATS.delete(key);
+  return json({ ok: true });
+}
+
 /* Public. Returns 204 when nothing has been edited, which is the signal for
    the page to keep the defaults it already shipped with. */
 export async function publicContent({ env }) {

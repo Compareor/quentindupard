@@ -14,7 +14,8 @@ import { onRequestPost as contactPost } from '../functions/api/contact.js';
 import { onRequestPost as trackPost }   from '../functions/api/track.js';
 import { onRequestGet  as statsGet }    from '../functions/api/stats.js';
 import { onRequestGet  as visitorGet }  from '../functions/api/visitor.js';
-import { login, logout, read as adminRead, write as adminWrite, publicContent }
+import { login, logout, read as adminRead, write as adminWrite, publicContent,
+         questions as adminQuestions, deleteQuestion }
   from '../functions/api/admin.js';
 
 const API = {
@@ -28,7 +29,8 @@ const API = {
   // Dashboard. Everything but the login is cookie-gated inside the handlers.
   '/api/admin/login':   { POST: login },
   '/api/admin/logout':  { POST: logout },
-  '/api/admin/content': { GET:  adminRead, PUT: adminWrite }
+  '/api/admin/content': { GET:  adminRead, PUT: adminWrite },
+  '/api/admin/questions': { GET: adminQuestions, POST: deleteQuestion }
 };
 
 // Superseded by the current positioning. 410 rather than 301 so search engines

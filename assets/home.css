@@ -1556,3 +1556,20 @@
   text-decoration-color: var(--glass-stroke-strong);
 }
 .paywall-cancel:hover { color: var(--text); text-decoration-color: currentColor; }
+
+/* ── Video in a Finder window ────────────────────────────────
+   Self-hosted <video>, no embed: a YouTube iframe would put a second
+   third-party script on a site whose privacy page says there is exactly one. */
+.win-video { padding: 0 0 4px; }
+.win-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-bottom: 1px solid var(--glass-stroke);
+}
+.win-video p {
+  font-size: 14px; line-height: 1.6;
+  color: var(--text-dim);
+  padding: 14px 16px 0;
+}

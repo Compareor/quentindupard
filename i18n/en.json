@@ -844,12 +844,6 @@
       "stats/index.html"
     ]
   },
-  "355eaf0530e6": {
-    "en": "<strong>AI-me</strong> sends your question to <a href=\"https://www.anthropic.com/legal/privacy\" rel=\"noopener\" target=\"_blank\">Anthropic</a> to be answered. The question is not stored on this site. Do not put confidential information into it &mdash; it is a demonstration on a public website, not a private channel.",
-    "pages": [
-      "privacy/index.html"
-    ]
-  },
   "35f27aeae572": {
     "en": "Act 03",
     "pages": [
@@ -907,6 +901,12 @@
     "en": "A 90-minute teardown of your product, pricing and funnel, with a written follow-up.",
     "pages": [
       "index.html"
+    ]
+  },
+  "38df6e129f77": {
+    "en": "<strong>The questions put to AI-me</strong>, kept 90 days and then expiring on their own. See below.",
+    "pages": [
+      "privacy/index.html"
     ]
   },
   "38f3f63ceb4d": {
@@ -1046,6 +1046,12 @@
     "en": "It stops working the moment your product gets more valuable through usage rather than users. An analytics tool where one analyst processes ten times the data is delivering ten times the value on the same invoice. You have handed your best customers a volume discount they did not ask for and did not negotiate.",
     "pages": [
       "research/pricing-metric/index.html"
+    ]
+  },
+  "41ac557a4c9a": {
+    "en": "Do not put confidential information into AI-me &mdash; it is a demonstration on a public website, not a private channel, and now a question you type there is something I can read.",
+    "pages": [
+      "privacy/index.html"
     ]
   },
   "42aa199628f4": {
@@ -1275,12 +1281,6 @@
       "index.html"
     ]
   },
-  "5166fd190b49": {
-    "en": "What is never recorded: your IP address, the text of anything you type outside the message form, your name, or any sequence that would reconstruct one person&rsquo;s path through the site.",
-    "pages": [
-      "privacy/index.html"
-    ]
-  },
   "5171c5c04c5e": {
     "en": "<code>qd:no-personalisation</code> &mdash; set only if you use the switch below.",
     "pages": [
@@ -1354,6 +1354,12 @@
       "stats/index.html"
     ]
   },
+  "5b68085b7ba6": {
+    "en": "What is never recorded: your IP address, your name, the text of anything you type into the site other than the message form and AI-me, or any sequence that would reconstruct one person&rsquo;s path through the site.",
+    "pages": [
+      "privacy/index.html"
+    ]
+  },
   "5b6825d3c67a": {
     "en": "Site",
     "pages": [
@@ -1375,6 +1381,12 @@
     "en": "Working inside your tools",
     "pages": [
       "index.html"
+    ]
+  },
+  "5bb49033b91d": {
+    "en": "<strong>AI-me</strong> sends your question to <a href=\"https://www.anthropic.com/legal/privacy\" rel=\"noopener\" target=\"_blank\">Anthropic</a> to be answered, and the question is also kept here for 90 days so I can read what people actually ask. That is the whole reason: the questions tell me what to write about next, and what AI-me answers badly. Stored with it are the time, the language of the page, and a marker that dies when you close the tab so a follow-up sits next to the question before it. No IP address, no name, nothing that identifies you or connects one visit to another. Turning the measurement off with the switch below stops this too.",
+    "pages": [
+      "privacy/index.html"
     ]
   },
   "5c105b512635": {

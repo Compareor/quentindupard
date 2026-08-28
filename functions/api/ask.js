@@ -36,17 +36,22 @@ let corpusFetchedAt = 0;
 const CORPUS_TTL_MS = 10 * 60 * 1000;
 
 export async function onRequestPost(context) {
-  const { request, env } = context;
+  const { request, env, ctx } = context;
 
   if (!env.ANTHROPIC_API_KEY) {
     // Front end treats any non-OK as "not wired up" and shows its own fallback.
     return text('The brain is not configured on this deployment.', 503);
   }
 
-  let question;
+  let question, meta = {};
   try {
     const body = await request.json();
     question = String(body.q || '').trim();
+    meta = {
+      lang: String(body.lang || 'en').slice(0, 5).replace(/[^a-zA-Z-]/g, ''),
+      thread: String(body.thread || '').slice(0, 12).replace(/[^a-z0-9]/gi, ''),
+      quiet: body.quiet === true
+    };
   } catch (_) {
     return text('Malformed request.', 400);
   }
@@ -60,6 +65,10 @@ export async function onRequestPost(context) {
   if (!allowed) {
     return text('That is enough questions for one hour. Email me instead and I will answer properly: quentin.dupard@gmail.com', 429);
   }
+
+  // Logged before the answer, so a question that crashes the model is still
+  // visible rather than silently lost — those are the interesting ones.
+  ctx.waitUntil(logQuestion(env, question, meta));
 
   const corpus = await loadCorpus(request);
   const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
@@ -169,6 +178,38 @@ function logFailure(stage, err) {
       (err && err.error && err.error.error && err.error.error.type) || (err && err.name) || 'unknown',
       (err && err.message) || String(err));
   } catch (_) { /* logging must never be the thing that breaks the request */ }
+}
+
+/**
+ * Record the question for /admin.
+ *
+ * The text lives in the KV key's METADATA rather than its value, so the admin
+ * page reads every question with a single list() and no per-key get. Metadata
+ * allows 1024 bytes and questions are capped at 280 characters, so it fits
+ * with room to spare — and it keeps this off the N+1 path that the stats
+ * endpoint used to be.
+ *
+ * What is deliberately NOT stored: no IP, no visitor id, nothing that survives
+ * the tab. `thread` is the session id, which dies when the tab closes; it
+ * exists only so a follow-up question can be read next to the one before it.
+ * Ninety days, then it expires on its own — the same retention already
+ * documented for the first-seen marker.
+ */
+async function logQuestion(env, question, meta) {
+  if (!env.STATS || meta.quiet) return;      // opted out of measurement
+  try {
+    const at = Date.now();
+    const key = `qlog:${at}:${Math.random().toString(36).slice(2, 8)}`;
+    await env.STATS.put(key, '', {
+      expirationTtl: 60 * 60 * 24 * 90,
+      metadata: {
+        q: question.slice(0, 280),
+        at,
+        lang: meta.lang || 'en',
+        thread: meta.thread || ''
+      }
+    });
+  } catch (_) { /* logging must never break the answer */ }
 }
 
 function systemPrompt(corpus) {

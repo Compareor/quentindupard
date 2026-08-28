@@ -168,15 +168,18 @@
         <li><strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.</li>
         <li><strong>A presence key</strong> against the random session id, kept five minutes, which is how &ldquo;reading now&rdquo; works.</li>
         <li><strong>A rate-limit counter</strong> for AI-me, stored against a one-way hash of your IP address. The hash cannot be reversed to an address, and the address itself is never written down.</li>
+        <li><strong>The questions put to AI-me</strong>, kept 90 days and then expiring on their own. See below.</li>
       </ul>
 
-      <p>What is never recorded: your IP address, the text of anything you type outside the message form, your name, or any sequence that would reconstruct one person&rsquo;s path through the site.</p>
+      <p>What is never recorded: your IP address, your name, the text of anything you type into the site other than the message form and AI-me, or any sequence that would reconstruct one person&rsquo;s path through the site.</p>
 
       <h2>The two things you type on purpose</h2>
 
       <p><strong>The message form</strong> in the mailbox is a contact form wearing a costume, and it behaves like one. Your email address and your message go to <a href="https://formspree.io/legal/privacy-policy" rel="noopener" target="_blank">Formspree</a>, which forwards them to my inbox. That is a genuine transfer of your data to a third party and to me, because otherwise I could not reply.</p>
 
-      <p><strong>AI-me</strong> sends your question to <a href="https://www.anthropic.com/legal/privacy" rel="noopener" target="_blank">Anthropic</a> to be answered. The question is not stored on this site. Do not put confidential information into it &mdash; it is a demonstration on a public website, not a private channel.</p>
+      <p><strong>AI-me</strong> sends your question to <a href="https://www.anthropic.com/legal/privacy" rel="noopener" target="_blank">Anthropic</a> to be answered, and the question is also kept here for 90 days so I can read what people actually ask. That is the whole reason: the questions tell me what to write about next, and what AI-me answers badly. Stored with it are the time, the language of the page, and a marker that dies when you close the tab so a follow-up sits next to the question before it. No IP address, no name, nothing that identifies you or connects one visit to another. Turning the measurement off with the switch below stops this too.</p>
+
+      <p>Do not put confidential information into AI-me &mdash; it is a demonstration on a public website, not a private channel, and now a question you type there is something I can read.</p>
 
       <p>The newsletter sign-up goes through Formspree too. There is no mailing-list provider behind it yet, which means there is no unsubscribe link: to come off the list, email me and I will remove you.</p>
 

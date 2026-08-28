@@ -17,7 +17,7 @@
 }catch(e){}})();
 </script>
 <link rel="stylesheet" href="/assets/glass.css?v=29">
-<link rel="stylesheet" href="/assets/admin.css?v=3">
+<link rel="stylesheet" href="/assets/admin.css?v=4">
 </head>
 <body>
 <div class="mesh" aria-hidden="true"></div>
@@ -44,6 +44,7 @@
       <nav class="admin-tabs" id="tabs">
         <button class="tab is-on" type="button" data-tab="desktop">Folders</button>
         <button class="tab" type="button" data-tab="mailbox">Inbox</button>
+        <button class="tab" type="button" data-tab="questions">Questions</button>
       </nav>
       <span class="admin-state" id="state"></span>
       <div class="admin-actions">
@@ -58,11 +59,12 @@
   <main class="admin-body">
     <section id="pane-desktop"></section>
     <section id="pane-mailbox" hidden></section>
+    <section id="pane-questions" hidden></section>
   </main>
 </div>
 
 <!-- Shipped defaults. The editor seeds from these and diffs against them. -->
-<script src="/assets/content.js?v=5"></script>
-<script src="/assets/admin.js?v=2"></script>
+<script src="/assets/content.js?v=6"></script>
+<script src="/assets/admin.js?v=3"></script>
 </body>
 </html>

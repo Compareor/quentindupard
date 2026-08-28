@@ -294,9 +294,11 @@
     },
     {
       at: 150,
-      // Deliberately a joke with no input field. A card-shaped box on a real
-      // domain is phishing-shaped even when everyone's in on it.
-      html: '<strong>' + t('Two and a half minutes.') + '</strong> ' + t('This must be interesting. Please insert your credit card number.') + '<br><em style="opacity:.6">' + t('(There is no field. That was the joke. But there is a pricing section.)') + '</em>',
+      // Was a joke about entering a card number. It landed as a gag at the
+      // reader's expense at the exact moment they are weighing up whether to
+      // pay, which is the wrong moment to be clever. Now it just answers the
+      // question someone reading this long is probably already asking.
+      html: '<strong>' + t('Two and a half minutes.') + '</strong> ' + t('If you are weighing this up, the numbers are all on one page. Three formats, no call needed to see what they cost.'),
       cta: { label: t('See the pricing'), href: '#pricing' }
     },
     {
@@ -1082,13 +1084,18 @@
       const body = document.createElement('div');
       body.className = 'win-body';
 
-      (data.items || []).forEach((item) => {
+      /* A video row is hidden until its file actually exists. The entry can
+         then be committed ahead of the MP4 without showing a dead player. */
+      const items = (data.items || []).filter(i => !(i.kind === 'video' && i.missing));
+
+      items.forEach((item) => {
         let node;
 
-        if (item.kind === 'note') {
+        if (item.kind === 'note' || item.kind === 'video') {
           node = document.createElement('button');
           node.type = 'button';
-          node.addEventListener('click', () => openNote(item));
+          node.addEventListener('click',
+            () => (item.kind === 'video' ? openVideo(item) : openNote(item)));
         } else {
           node = document.createElement('a');
           node.href = item.href;
@@ -1111,8 +1118,9 @@
         const icon = document.createElement('span');
         icon.className = 'file-icon';
         icon.textContent =
-          item.kind === 'pdf'  ? '📄' :
-          item.kind === 'note' ? '📝' :
+          item.kind === 'pdf'   ? '📄' :
+          item.kind === 'video' ? '🎬' :
+          item.kind === 'note'  ? '📝' :
           item.kind === 'page' ? '📰' : '🔗';
 
         const label = document.createElement('span');
@@ -1477,7 +1485,18 @@
       const res = await fetch('/api/ask', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ q: question })
+        body: JSON.stringify({
+          q: question,
+          // Read by /admin so questions can be grouped into a conversation and
+          // shown in the language they were asked in. `quiet` carries the
+          // measurement opt-out through, so declining it also declines this.
+          lang: (document.documentElement.getAttribute('lang') || 'en').slice(0, 2),
+          thread: (function () {
+            try { return (sessionStorage.getItem('qd:sid') || '').slice(0, 12); }
+            catch (_) { return ''; }
+          }()),
+          quiet: optedOut()
+        })
       });
 
       if (res.status === 429) {

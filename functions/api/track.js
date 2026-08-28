@@ -51,7 +51,7 @@ const ALLOWED_EVENTS = new Set([
   'ask_submit', 'chip_click', 'ask_close', 'symptom_pick',
   'compose_open', 'compose_send', 'compose_delivered', 'compose_failed',
   'mail_open', 'mail_folder', 'attachment_download',
-  'folder_open', 'note_open', 'window_close',
+  'folder_open', 'note_open', 'window_close', 'video_play',
   'desktop_download', 'desktop_link', 'desktop_page',
   // commercial intent
   'cart_add', 'cart_remove', 'cart_buy', 'mode_change', 'dodge',

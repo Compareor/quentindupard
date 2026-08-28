@@ -265,10 +265,79 @@
     pane.appendChild(add);
   }
 
+  /* ── Questions ──────────────────────────────────────────
+     Read-only: what people actually asked AI-me. Not editable, so it is not
+     part of the save model and does not go anywhere near the content PUT. */
+
+  let questions = null;      // null = not fetched yet
+
+  function when(ms) {
+    if (!ms) return '';
+    const d = new Date(ms);
+    const mins = Math.round((Date.now() - ms) / 60000);
+    if (mins < 60) return mins + 'm ago';
+    if (mins < 60 * 24) return Math.round(mins / 60) + 'h ago';
+    return d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+
+  async function loadQuestions() {
+    const { ok, data } = await api('/api/admin/questions');
+    questions = ok && data ? (data.questions || []) : [];
+    render();
+  }
+
+  function renderQuestions() {
+    const pane = $('#pane-questions');
+    pane.textContent = '';
+
+    pane.appendChild(el('p', 'pane-note',
+      'Everything asked of AI-me, newest first. Kept 90 days, then it expires on its own. No IP and no visitor id is stored — the thread marker dies with the browser tab, and exists only so a follow-up sits next to the question before it.'));
+
+    if (questions === null) {
+      pane.appendChild(el('p', 'hint', 'Loading…'));
+      loadQuestions();
+      return;
+    }
+    if (!questions.length) {
+      pane.appendChild(el('p', 'hint', 'Nothing asked yet. Questions appear here as they are asked.'));
+      return;
+    }
+
+    const counts = questions.reduce((acc, q) => { acc[q.lang] = (acc[q.lang] || 0) + 1; return acc; }, {});
+    pane.appendChild(el('p', 'hint',
+      questions.length + ' question' + (questions.length === 1 ? '' : 's') + ' · ' +
+      Object.entries(counts).map(([l, n]) => l.toUpperCase() + ' ' + n).join(' · ')));
+
+    let lastThread = null;
+    questions.forEach((row) => {
+      const card = el('div', 'qrow' + (row.thread && row.thread === lastThread ? ' is-follow' : ''));
+      lastThread = row.thread;
+
+      const head = el('div', 'qrow-head');
+      head.append(
+        el('span', 'qrow-when', when(row.at)),
+        el('span', 'qrow-lang', row.lang.toUpperCase())
+      );
+      const del = iconBtn('✕', 'Delete this question', async () => {
+        if (!confirm('Delete this question permanently?')) return;
+        await api('/api/admin/questions', { method: 'POST', body: JSON.stringify({ key: row.key }) });
+        questions = questions.filter(q => q.key !== row.key);
+        render();
+      }, true);
+      head.appendChild(del);
+
+      card.append(head, el('p', 'qrow-q', row.q));
+      pane.appendChild(card);
+    });
+  }
+
   function render() {
     $('#pane-desktop').hidden = tab !== 'desktop';
     $('#pane-mailbox').hidden = tab !== 'mailbox';
-    if (tab === 'desktop') renderDesktop(); else renderMailbox();
+    $('#pane-questions').hidden = tab !== 'questions';
+    if (tab === 'desktop') renderDesktop();
+    else if (tab === 'mailbox') renderMailbox();
+    else renderQuestions();
   }
 
   /* ── Session ────────────────────────────────────────────── */
@@ -375,6 +444,10 @@
     const btn = e.target.closest('[data-tab]');
     if (!btn) return;
     tab = btn.dataset.tab;
+    // Questions are read-only; offering Save there implies they are not.
+    const editable = tab !== 'questions';
+    $('#save').hidden = !editable;
+    $('#reset').hidden = !editable;
     document.querySelectorAll('.tab').forEach(t => t.classList.toggle('is-on', t === btn));
     render();
   });

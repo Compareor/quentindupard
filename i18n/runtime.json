@@ -16,14 +16,6 @@
     "fr": "Deux minutes et demie.",
     "es": "Dos minutos y medio."
   },
-  "This must be interesting. Please insert your credit card number.": {
-    "fr": "Ça doit être passionnant. Veuillez insérer votre numéro de carte bancaire.",
-    "es": "Debe de ser fascinante. Introduzca su número de tarjeta."
-  },
-  "(There is no field. That was the joke. But there is a pricing section.)": {
-    "fr": "(Il n'y a pas de champ. C'était ça, la blague. En revanche il y a bien une section tarifs.)",
-    "es": "(No hay ningún campo. Esa era la broma. Lo que sí hay es una sección de precios.)"
-  },
   "See the pricing": {
     "fr": "Voir les tarifs",
     "es": "Ver los precios"
@@ -471,5 +463,45 @@
   "Cancel any time — email me and I will do it the same day": {
     "fr": "Résiliable à tout moment : écrivez-moi et je le fais le jour même",
     "es": "Cancelable cuando quieras: escríbeme y lo hago el mismo día"
+  },
+  "If you are weighing this up, the numbers are all on one page. Three formats, no call needed to see what they cost.": {
+    "fr": "Si vous hésitez, les tarifs sont tous sur une seule page. Trois formats, sans appel pour voir les prix.",
+    "es": "Si te lo estás pensando, los precios están todos en una sola página. Tres formatos, sin llamada para ver cuánto cuestan."
+  },
+  "Independent product and marketing operator. I get called when revenue has stopped moving and the room cannot agree on why.": {
+    "fr": "Opérateur produit et marketing indépendant. On m'appelle quand le chiffre a cessé de bouger et que personne dans la pièce n'arrive à s'entendre sur la raison.",
+    "es": "Operador independiente de producto y marketing. Me llaman cuando los ingresos han dejado de moverse y en la sala nadie se pone de acuerdo en por qué."
+  },
+  "It is almost always one of three things: what you charge, how you explain yourself, or the gap between someone showing interest and actually paying. I have found the same three at the bottom of nearly every engagement, in businesses with nothing else in common — a grocery shop and a Series A software company have the same underlying problem.": {
+    "fr": "C'est presque toujours l'une de ces trois choses : ce que vous facturez, la façon dont vous vous expliquez, ou l'écart entre quelqu'un qui montre de l'intérêt et quelqu'un qui paie vraiment. J'ai retrouvé les mêmes trois au fond de presque chaque mission, dans des activités qui n'avaient rien d'autre en commun : une épicerie et un éditeur de logiciel en série A ont le même problème de fond.",
+    "es": "Casi siempre es una de tres cosas: lo que cobras, cómo te explicas, o el hueco entre alguien que muestra interés y alguien que paga de verdad. He encontrado las mismas tres en el fondo de casi todos los encargos, en negocios sin nada más en común: una tienda de alimentación y una empresa de software en serie A tienen el mismo problema de fondo."
+  },
+  "What people pay me for is ideas, not frameworks. The useful ones come from having sat in the product review and then on the sales call two hours later, and noticed the two rooms believe completely different things about the same customer. That gap is where the work is.": {
+    "fr": "Ce qu'on me paie, ce sont des idées, pas des frameworks. Les bonnes viennent d'avoir assisté à la revue produit puis, deux heures plus tard, à l'appel commercial, et d'avoir remarqué que les deux salles croient des choses complètement différentes sur le même client. C'est dans cet écart que se trouve le travail.",
+    "es": "Lo que me pagan son ideas, no frameworks. Las útiles salen de haber estado en la revisión de producto y, dos horas después, en la llamada comercial, y notar que las dos salas creen cosas completamente distintas sobre el mismo cliente. En ese hueco está el trabajo."
+  },
+  "I also build. Whole products, end to end: ecommerce, newsletters, internal tooling, operations automation. When the answer is something that does not exist yet, building it beats writing a specification and handing it over.": {
+    "fr": "Je construis aussi. Des produits entiers, de bout en bout : e-commerce, newsletters, outils internes, automatisation des opérations. Quand la réponse est quelque chose qui n'existe pas encore, le construire vaut mieux que d'en rédiger le cahier des charges et de le transmettre.",
+    "es": "También construyo. Productos enteros, de principio a fin: ecommerce, newsletters, herramientas internas, automatización de operaciones. Cuando la respuesta es algo que todavía no existe, construirlo es mejor que redactar un pliego y entregarlo."
+  },
+  "What I will not do: pretend a problem is solvable with my services when it is not, or recommend a vendor I earn a commission on. I take none.": {
+    "fr": "Ce que je ne ferai pas : faire croire qu'un problème se règle avec mes services quand ce n'est pas le cas, ou recommander un prestataire sur lequel je touche une commission. Je n'en prends aucune.",
+    "es": "Lo que no voy a hacer: fingir que un problema se resuelve con mis servicios cuando no es así, ni recomendar un proveedor por el que cobre comisión. No acepto ninguna."
+  },
+  "Ninety seconds with me.mp4": {
+    "fr": "Quatre-vingt-dix secondes avec moi.mp4",
+    "es": "Noventa segundos conmigo.mp4"
+  },
+  "Video": {
+    "fr": "Vidéo",
+    "es": "Vídeo"
+  },
+  "Who I am, what I actually do, and how to tell whether I am the right person for your problem.": {
+    "fr": "Qui je suis, ce que je fais réellement, et comment savoir si je suis la bonne personne pour votre problème.",
+    "es": "Quién soy, qué hago realmente, y cómo saber si soy la persona adecuada para tu problema."
+  },
+  "How I work.pdf": {
+    "fr": "Comment je travaille.pdf",
+    "es": "Cómo trabajo.pdf"
   }
 }

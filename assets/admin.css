@@ -145,3 +145,32 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   .admin-actions { width: 100%; }
   .admin-actions .btn { flex: 1; }
 }
+
+/* ── Questions ───────────────────────────────────────────────
+   Read-only log. Deliberately plainer than the editor panes: nothing here is
+   a form field, and making it look like one would invite editing. */
+.qrow {
+  background: var(--panel-soft);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+/* A follow-up in the same browser tab, tucked under the question before it. */
+.qrow.is-follow {
+  margin-left: 22px;
+  margin-top: -4px;
+  border-left: 2px solid var(--accent-edge);
+}
+.qrow-head {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 7px;
+}
+.qrow-when { font-size: 12px; color: var(--text-faint); }
+.qrow-lang {
+  font-size: 10.5px; font-weight: 650; letter-spacing: 0.06em;
+  padding: 2px 6px; border-radius: var(--r-pill);
+  background: var(--tint-strong); color: var(--text-dim);
+}
+.qrow-head .icon-btn { margin-left: auto; padding: 5px 8px; }
+.qrow-q { font-size: 15px; line-height: 1.5; color: var(--text); }

@@ -327,7 +327,7 @@
   display: block;
   flex: 0 0 auto;
   width: 132px; height: auto;
-  aspect-ratio: 480 / 741;   /* reserves the space, so no CLS */
+  aspect-ratio: 400 / 618;   /* reserves the space, so no CLS */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 10px 26px rgba(13, 20, 36, 0.26);

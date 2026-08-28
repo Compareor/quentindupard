@@ -523,5 +523,21 @@
   "Hooked — Nir Eyal": {
     "fr": "Hooked — Nir Eyal",
     "es": "Hooked — Nir Eyal"
+  },
+  "1 item": {
+    "fr": "1 élément",
+    "es": "1 elemento"
+  },
+  "{n} items": {
+    "fr": "{n} éléments",
+    "es": "{n} elementos"
+  },
+  "10 min read": {
+    "fr": "10 min de lecture",
+    "es": "10 min de lectura"
+  },
+  "Influence — Robert Cialdini": {
+    "fr": "Influence — Robert Cialdini",
+    "es": "Influence — Robert Cialdini"
   }
 }

@@ -217,6 +217,42 @@ is flat despite happy customers.
 
 ## Reading notes
 
+### Influence: The Psychology of Persuasion, by Robert Cialdini (1984)
+
+Full review: https://quentindupard.com/research/influence-robert-cialdini/
+
+Six principles of compliance, drawn from three years of participant observation
+inside sales, fundraising and advertising organisations. Reciprocation: we repay
+what we are given, including unsolicited gifts. Commitment and consistency: we
+defend positions we have already taken, especially public and written ones.
+Social proof: when uncertain, we copy people who resemble us. Liking: we say yes
+more readily to people we know, resemble, or have been complimented by.
+Authority: we defer to credentials and to the symbols of credentials. Scarcity:
+we want what is becoming unavailable, and losing moves us more than gaining.
+
+My view: the most useful pages are the ones outside the six. The contrast
+principle in chapter one — show the expensive option first — is the cheapest
+change available to most pricing pages. Arguing against your own interest, as
+Cialdini's waiter Vincent does, buys credibility you then spend on the large
+claim. And Freedman's robot study is the part everyone skips: a commitment
+bought with a strong incentive produces compliance now and nothing later.
+
+Where it is weakest: it is a taxonomy rather than a theory, with no rule for
+what happens when two principles conflict. The "How to Say No" defence sections
+recommend conscious noticing against mechanisms the book proves are
+pre-conscious — and Cialdini opens by admitting he has been a patsy his whole
+life. He also excludes material self-interest on purpose, calling it a
+motivational given, which removes price, the variable most businesses can
+actually move.
+
+For search: four of the six principles need a person capable of feeling
+something — reciprocity needs indebtedness, liking needs charm, commitment needs
+a self-image, scarcity runs on reactance. Crawlers and answer engines have none
+of these. Two cross over intact, social proof and authority, which together
+describe how ranking and citation already work: corroboration by independent
+sources, weighted by who those sources are. Manufactured scarcity crosses over
+too, but reads as a low-trust signal.
+
 ### Hooked, by Nir Eyal (2014)
 
 Full review: https://quentindupard.com/research/hooked-nir-eyal/

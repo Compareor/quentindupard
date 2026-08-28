@@ -1089,7 +1089,10 @@
       const left = Math.max(16, rect.left + 40 + (z % 4) * 26);
       const top = Math.max(80, rect.top + 50 + (z % 4) * 24);
       win.style.left = Math.min(left, window.innerWidth - width - 16) + 'px';
-      win.style.top = top + 'px';
+      // The window is fixed-positioned, so `top` is measured against the viewport.
+      // Opening a folder while the desk sits low on screen would otherwise put the
+      // window mostly below the fold. Clamp it so it always lands somewhere visible.
+      win.style.top = Math.min(top, Math.max(80, window.innerHeight - 320)) + 'px';
 
       const bar = document.createElement('div');
       bar.className = 'win-bar';
@@ -1141,6 +1144,12 @@
       /* A video row is hidden until its file actually exists. The entry can
          then be committed ahead of the MP4 without showing a dead player. */
       const items = (data.items || []).filter(i => !(i.kind === 'video' && i.missing));
+
+      const count = document.createElement('span');
+      count.className = 'win-count';
+      count.textContent = items.length === 1 ? t('1 item')
+                                             : t('{n} items').replace('{n}', items.length);
+      win.querySelector('.win-bar').appendChild(count);
 
       items.forEach((item) => {
         let node;

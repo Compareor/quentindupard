@@ -139,9 +139,9 @@ window.QD_DESKTOP = [
        { name, kind: 'video', href: '/assets/video/x.mp4', poster: '…', body: [] }
      A folder with no items renders as an empty window rather than breaking,
      and /admin can fill any of this without a deploy. */
-  { id: 'research',    name: 'Research',    kind: 'folder', items: [] },
-  { id: 'reading',     name: 'Reading',     kind: 'folder', items: [
-      { name: 'Hooked \u2014 Nir Eyal', kind: 'page', href: '/research/hooked-nir-eyal/', meta: '9 min read' }
+  { id: 'research',    name: 'Research',    kind: 'folder', items: [
+      { name: 'Influence \u2014 Robert Cialdini', kind: 'page', href: '/research/influence-robert-cialdini/', meta: '10 min read' },
+      { name: 'Hooked \u2014 Nir Eyal',           kind: 'page', href: '/research/hooked-nir-eyal/',           meta: '9 min read' }
     ] },
   { id: 'downloads',   name: 'Downloads',   kind: 'folder', items: [] },
   { id: 'frameworks',  name: 'Frameworks',  kind: 'folder', items: [] },

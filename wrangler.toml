@@ -31,7 +31,13 @@ not_found_handling = "404-page"
 # Let the Worker see requests first so /api/*, the 410s, and the language
 # negotiation on "/" are handled. Without "/" in this list the assets layer
 # answers the homepage directly and negotiate() never runs at all.
-run_worker_first = ["/", "/api/*", "/services", "/services/", "/contact", "/contact/"]
+run_worker_first = [
+  "/", "/api/*",
+  "/services", "/services/", "/contact", "/contact/",
+  # Withdrawn research pieces answer 410 from the Worker. The assets layer
+  # would otherwise serve 404.html first and the Worker would never see them.
+  "/research/*", "/fr/research/*", "/es/research/*",
+]
 
 # ── Counters for /stats, and the ask rate limit ──────────────
 # Create these in the dashboard (Storage & Databases -> KV), then paste the ids.

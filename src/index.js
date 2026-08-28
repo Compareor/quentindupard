@@ -40,6 +40,12 @@ const GONE = {
   '/contact':  'Write to me here: https://quentindupard.com/#inbox\nOr email: quentin.dupard@gmail.com'
 };
 
+// The first run of research pieces, withdrawn to be rewritten. 410 rather than
+// a redirect to the hub: these URLs had distinct content and pointing them all
+// at an index would be a soft 404 six times over, which search engines treat
+// worse than an honest gone. Matched in every language.
+const WITHDRAWN = /^(?:\/(?:fr|es))?\/research\/(pricing-metric|activation|positioning|expansion-revenue|rising-cac|what-to-kill)$/;
+
 
 /* ── Language negotiation ─────────────────────────────────────
    A visitor whose browser asks for French gets French.
@@ -145,6 +151,21 @@ export default {
           'x-robots-tag': 'noindex, nofollow'
         }
       }));
+    }
+
+    // ── Withdrawn research ──
+    if (WITHDRAWN.test(path)) {
+      return withHeaders(new Response(
+        'Gone. This piece has been withdrawn and is being rewritten.\n\n' +
+        'Whatever is published lives here: https://quentindupard.com/research/\n',
+        {
+          status: 410,
+          headers: {
+            'content-type': 'text/plain; charset=utf-8',
+            'cache-control': 'public, max-age=86400',
+            'x-robots-tag': 'noindex, nofollow'
+          }
+        }));
     }
 
     // ── API ──

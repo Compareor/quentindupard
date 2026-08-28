@@ -44,12 +44,6 @@ market, not his general offering.
 
 Long-form working notes. Free to read, no gate.
 
-- [Your pricing metric matters more than your price](https://quentindupard.com/research/pricing-metric/): Why the billing unit matters more than the number, the compounding test, and how to reprice without triggering churn.
-- [Why your activation is flat, and what actually fixes it](https://quentindupard.com/research/activation/): Finding the first-value moment, measuring who reaches it, and the demo-data fix that moves the number.
-- [The three-company test for positioning](https://quentindupard.com/research/positioning/): A two-minute test for whether your positioning says anything at all, and what to fix first if it does not.
-- [Nobody churns, nobody spends more: fixing flat expansion revenue](https://quentindupard.com/research/expansion-revenue/): Good retention with no expansion means customers keep you but never grow into you. The three questions that find why.
-- [Your CAC is rising because you ran out of the good segment](https://quentindupard.com/research/rising-cac/): Rising acquisition cost is usually not a channel problem. It is the market telling you the easy buyers are gone.
-- [Most roadmaps are a list of things nobody would cancel](https://quentindupard.com/research/what-to-kill/): Deciding what to kill is harder than deciding what to build, and almost nobody is incentivised to do it.
 - [All research](https://quentindupard.com/research/)
 
 ## Downloads

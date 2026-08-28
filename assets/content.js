@@ -130,102 +130,18 @@ window.QD_MAILBOX = [
      'note' → opens a text window (body: array of paragraphs)
    ────────────────────────────────────────────────────────── */
 window.QD_DESKTOP = [
-  {
-    id: 'research',
-    name: 'Research',
-    kind: 'folder',
-    items: [
-      { name: 'Your pricing metric matters more than your price', kind: 'page', href: '/research/pricing-metric/', meta: '6 min read' },
-      { name: 'Why your activation is flat', kind: 'page', href: '/research/activation/', meta: '5 min read' },
-      { name: 'The three-company test for positioning', kind: 'page', href: '/research/positioning/', meta: '5 min read' },
-      { name: 'All research', kind: 'page', href: '/research/', meta: 'Index' }
-    ]
-  },
-  {
-    id: 'downloads',
-    name: 'Downloads',
-    kind: 'folder',
-    items: [
-      { name: 'Pricing Teardown.pdf', kind: 'pdf', href: '/assets/docs/pricing-teardown-sample.pdf', meta: '4.9 KB' },
-      { name: 'Activation Audit.pdf', kind: 'pdf', href: '/assets/docs/activation-audit-sample.pdf', meta: '4.5 KB' },
-      { name: 'How I Work.pdf', kind: 'pdf', href: '/assets/docs/engagement-one-pager.pdf', meta: '4.3 KB' }
-    ]
-  },
-  {
-    id: 'frameworks',
-    name: 'Frameworks',
-    kind: 'folder',
-    items: [
-      {
-        name: 'The compounding test.txt', kind: 'note', meta: 'Note',
-        body: [
-          'As a customer succeeds wildly with your product, does your invoice grow?',
-          'If not, you have built a business that must keep winning new logos just to stand still. Every pricing decision downstream of this one is cosmetic.',
-          'This single question sorts pricing models faster than any framework I know.'
-        ]
-      },
-      {
-        name: 'Positioning smell test.txt', kind: 'note', meta: 'Note',
-        body: [
-          'If your homepage could describe three other businesses, positioning is your problem and nothing downstream will fix it.',
-          'A positioning statement that excludes nobody is a description, not a position.',
-          'Name what dies when they buy you. If you cannot, there is no budget line and the deal will stall at procurement.'
-        ]
-      },
-      {
-        name: 'Why deals really stall.txt', kind: 'note', meta: 'Note',
-        body: [
-          'Teams diagnose late-stage stalls as a closing problem. It is almost always a "why now" problem.',
-          'Without urgency built into the product or the market, a rational buyer defers. Discounting a deferred decision just makes it a cheaper deferred decision.'
-        ]
-      }
-    ]
-  },
-  {
-    id: 'inspiration',
-    name: 'Inspiration',
-    kind: 'folder',
-    items: [
-      { name: 'The Only Thing That Matters', kind: 'link', href: 'https://pmarchive.com/guide_to_startups_part4.html', meta: 'Marc Andreessen' },
-      { name: 'A Smart Bear — long form', kind: 'link', href: 'https://longform.asmartbear.com/', meta: 'Jason Cohen' },
-      { name: 'Obviously Awesome (positioning)', kind: 'link', href: 'https://www.aprildunford.com/obviously-awesome', meta: 'April Dunford' },
-      { name: 'Reforge — growth models', kind: 'link', href: 'https://www.reforge.com/', meta: 'Reference' }
-    ]
-  },
-  {
-    id: 'about',
-    name: 'About me',
-    kind: 'folder',
-    items: [
-      {
-        name: 'Read me first.txt', kind: 'note', meta: 'Note',
-        body: [
-          'Independent product and marketing operator. I get called when revenue has stopped moving and the room cannot agree on why.',
-          'It is almost always one of three things: what you charge, how you explain yourself, or the gap between someone showing interest and actually paying. I have found the same three at the bottom of nearly every engagement, in businesses with nothing else in common — a grocery shop and a Series A software company have the same underlying problem.',
-          'What people pay me for is ideas, not frameworks. The useful ones come from having sat in the product review and then on the sales call two hours later, and noticed the two rooms believe completely different things about the same customer. That gap is where the work is.',
-          'I also build. Whole products, end to end: ecommerce, newsletters, internal tooling, operations automation. When the answer is something that does not exist yet, building it beats writing a specification and handing it over.',
-          'What I will not do: pretend a problem is solvable with my services when it is not, or recommend a vendor I earn a commission on. I take none.',
-          'Execution got cheap. Ideas did not.'
-        ]
-      },
-      {
-        /* Drop an MP4 at /assets/video/intro.mp4 and this appears. Until the
-           file exists the entry is filtered out at render time, so a missing
-           video is an absent row rather than a broken player. */
-        name: 'Ninety seconds with me.mp4', kind: 'video', meta: 'Video',
-        /* DELETE THIS LINE once the file is in place. Until then the row is
-           filtered out, so the entry can sit here without a dead player. */
-        missing: true,
-        href: '/assets/video/intro.mp4',
-        poster: '/assets/video/intro-poster.jpg',
-        captions: '/assets/video/intro.vtt',
-        body: [
-          'Who I am, what I actually do, and how to tell whether I am the right person for your problem.'
-        ]
-      },
-      { name: 'How I work.pdf', kind: 'pdf', href: '/assets/docs/engagement-one-pager.pdf', meta: 'PDF · 4.3 KB' },
-      { name: 'LinkedIn', kind: 'link', href: 'https://www.linkedin.com/in/quentindupard/', meta: 'Profile' },
-      { name: 'Book 30 minutes', kind: 'link', href: 'https://calendly.com/quentin-dupard-call/30min', meta: 'Calendar' }
-    ]
-  }
+  /* Emptied deliberately. Quentin is writing the real contents.
+     Item shapes, for reference when adding them back:
+       { name, kind: 'page',  href: '/research/<slug>/', meta: '6 min read' }
+       { name, kind: 'pdf',   href: '/assets/docs/<file>.pdf', meta: 'PDF · 240 KB' }
+       { name, kind: 'link',  href: 'https://…', meta: 'Author' }
+       { name, kind: 'note',  meta: 'Note', body: ['para', 'para'] }
+       { name, kind: 'video', href: '/assets/video/x.mp4', poster: '…', body: [] }
+     A folder with no items renders as an empty window rather than breaking,
+     and /admin can fill any of this without a deploy. */
+  { id: 'research',    name: 'Research',    kind: 'folder', items: [] },
+  { id: 'downloads',   name: 'Downloads',   kind: 'folder', items: [] },
+  { id: 'frameworks',  name: 'Frameworks',  kind: 'folder', items: [] },
+  { id: 'inspiration', name: 'Inspiration', kind: 'folder', items: [] },
+  { id: 'about',       name: 'About me',    kind: 'folder', items: [] }
 ];

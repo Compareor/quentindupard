@@ -163,3 +163,18 @@
   .privacy-switch { align-items: stretch; }
   .privacy-switch .btn { width: 100%; }
 }
+
+/* Empty state for a hub with nothing published yet. Says so plainly rather
+   than showing an empty grid that reads as a broken page. */
+.hub-empty {
+  padding: 34px 32px;
+  border-radius: var(--r-lg);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.hub-empty p { font-size: 16px; color: var(--text-dim); margin: 0; }
+.hub-empty p strong { color: var(--text); font-size: 18px; }
+.hub-empty .btn { margin-top: 4px; }
+@media (max-width: 560px) {
+  .hub-empty { padding: 24px 20px; }
+  .hub-empty .btn { width: 100%; margin-bottom: 6px; }
+}

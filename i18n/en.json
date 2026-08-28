@@ -1,10 +1,4 @@
 {
-  "004df6b215aa": {
-    "en": "Rarely. Positioning gets fixed by writing a specific claim someone could disagree with and defending it. The raw material is in your closed-won notes and churn interviews, in the words customers actually used.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "0052b267a8ca": {
     "en": "Fractional product &amp; marketing",
     "pages": [
@@ -12,32 +6,14 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "013ed4b00e27": {
-    "en": "Ask whether the slow segment could ever be served without a human. If yes, build that. If no, stop paying to reach them.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "01a23a288f60": {
     "en": "Campaigns",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "02561544e3d8": {
-    "en": "1. Is there an axis along which success costs more?",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "0355718326b8": {
@@ -59,32 +35,14 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "037d9d3f0af3": {
-    "en": "Segment closed-won by size and use case. Calculate payback for each, not blended.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "038ec499af2e": {
     "en": "Strategy and execution",
     "pages": [
       "index.html"
-    ]
-  },
-  "0394dbcdd542": {
-    "en": "Most often because you have exhausted your best-fit segment and are now paying to reach people who were always going to be harder to convert. The blended number hides this. Segmenting closed-won by size and use case usually makes it obvious.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "03bdf78ed786": {
@@ -105,40 +63,16 @@
       "index.html"
     ]
   },
-  "0725552ff79b": {
-    "en": "An outside opinion is often the cheapest way to cancel something everyone privately wants cancelled.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "082c1230180c": {
     "en": "Where people come from",
     "pages": [
       "stats/index.html"
     ]
   },
-  "084c4fdab606": {
-    "en": "Query what share of last quarter's signups reached it inside seven days.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "088ff9a62015": {
-    "en": "<strong>Sales keeps discounting the same line item.</strong> If reps routinely knock seats off to close, the metric does not match how the buyer thinks about value.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "08967ae70784": {
     "en": "One lever, shipped",
     "pages": [
       "index.html"
-    ]
-  },
-  "09d3ca1cad98": {
-    "en": "What I would do first",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "0a64fb0e930b": {
@@ -169,24 +103,6 @@
     "en": "Fractional product and marketing. Pricing, positioning, activation and revenue growth.",
     "pages": [
       "index.html"
-    ]
-  },
-  "0b5bc9946069": {
-    "en": "A quick way to test a new line",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "0ba68423194c": {
-    "en": "<strong>Fields you do not need yet.</strong> Company size, role, phone number, team name. Every one is a chance to abandon, collected for a sales process that has not started. Ask later.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "0bdb6fe471e5": {
-    "en": "The reason outside help is often useful here is not insight. It is that an outsider can say the thing everyone privately agrees with and absorb the social cost of saying it. That is frequently worth more than the analysis.",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "0c58f469ae6d": {
@@ -231,12 +147,6 @@
       "index.html"
     ]
   },
-  "0efa46235762": {
-    "en": "Your billing metric is the unit you charge against. Per seat, per contact, per gigabyte, per transaction, per site, flat fee. It is picked early, usually by two or three people, usually because it was the easiest thing to count. Then it never gets revisited, because changing it feels like open heart surgery on the business.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "0f18f9e71709": {
     "en": "Privacy, and what this site actually stores",
     "pages": [
@@ -253,12 +163,6 @@
     "en": "Delivery mode",
     "pages": [
       "index.html"
-    ]
-  },
-  "10e1bf6401cf": {
-    "en": "When acquisition cost climbs, the instinct is to blame the channel, the creative, or the sales team. Occasionally that is right. Usually the market is telling you something less comfortable: you have used up the people who were easy to sell to.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "10fff2cfdd84": {
@@ -291,28 +195,10 @@
       "index.html"
     ]
   },
-  "125a05b726ab": {
-    "en": "The common failure is bolting a free tier onto an enterprise product, watching thousands of signups convert at near zero, and concluding that product-led growth does not work. It was never product-led growth. The product had no moment where one person, alone, without a colleague or an admin or an integration, got something useful. Without <a href=\"/research/activation/\">that moment</a> there is nothing for a self-serve motion to stand on.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "13281fd6120a": {
-    "en": "Many products have a ceiling everyone hits in month two. Once a customer is on the highest plan with every feature unlocked, they are done. There is nowhere left for them to go, and you have capped yourself.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "138a104b733f": {
     "en": "Act",
     "pages": [
       "index.html"
-    ]
-  },
-  "141d6841161d": {
-    "en": "<strong>Payback under 12 months.</strong> Healthy. Spend more here. This is where your growth budget belongs.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "145fd3f065f2": {
@@ -334,13 +220,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -354,24 +234,6 @@
     "en": "You are the funnel. Convert <strong>5 signups</strong> without hitting a wall or doubling back into yourself. You get <strong>3 lives</strong>.",
     "pages": [
       "index.html"
-    ]
-  },
-  "16d8f173b560": {
-    "en": "The useful raw material is not in a brainstorm. It is in your closed-won notes and your churn interviews. What did people actually say when they bought, and what did they say when they left? The language is usually already there, in the words customers used, and it is almost never the language on the homepage.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "16f54d603837": {
-    "en": "If they can answer both without hedging, you have something. If they say \"it sounds like it could work for lots of businesses\", you have written another description, and it is worth going back.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "171d77d9cd0a": {
-    "en": "Open your homepage. Read the headline and the sentence under it. Now ask whether that copy could plausibly describe three other companies in your category.",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "17e9f30ec074": {
@@ -404,12 +266,6 @@
       "index.html"
     ]
   },
-  "18edb1522e33": {
-    "en": "Write down your activation moment in one sentence. Get three colleagues to agree it is the right one.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "198568bde13b": {
     "en": "How I got here",
     "pages": [
@@ -429,13 +285,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -458,13 +308,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -492,22 +336,10 @@
       "privacy/index.html"
     ]
   },
-  "20c24c94c11c": {
-    "en": "How do I improve activation quickly?",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "20d5545c4b8b": {
     "en": "Use it now",
     "pages": [
       "index.html"
-    ]
-  },
-  "20d75d28b599": {
-    "en": "Your CAC is rising because you ran out of the good segment | Quentin Dupard",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "2185f6647fdd": {
@@ -540,12 +372,6 @@
       "index.html"
     ]
   },
-  "229e4b79453e": {
-    "en": "What is a good CAC payback period?",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
   "22a67e03658c": {
     "en": "Product & Marketing Operator",
     "pages": [
@@ -558,23 +384,10 @@
       "index.html"
     ]
   },
-  "2325d8cd8acb": {
-    "en": "The three-company test for positioning",
-    "pages": [
-      "research/index.html",
-      "research/positioning/index.html"
-    ]
-  },
   "23d04efdf394": {
     "en": "The site is hosted on Cloudflare Workers. Files are served from Cloudflare&rsquo;s network, which means Cloudflare processes the request before this site&rsquo;s own code sees it.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "249adca73598": {
-    "en": "What is the lowest-risk way to raise prices?",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "24ae03d50191": {
@@ -583,34 +396,10 @@
       "about/index.html"
     ]
   },
-  "2500a04def01": {
-    "en": "Calculate net revenue retention on the existing base only. Exclude new logos entirely or the number lies to you.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "2515bb9cff55": {
-    "en": "Most pricing problems are not about the number. They are about what you charge for. How to tell whether your billing metric is capping your revenue, and what to do about it.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "25420bf9ff4c": {
     "en": "<span class=\"demand-n\" id=\"d-adds\">—</span><span class=\"demand-l\">Added to cart</span>",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "265c3a6389ff": {
-    "en": "Finding the first-value moment, measuring who reaches it, and the demo-data fix that moves the number.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
-  "277d59e0a3f5": {
-    "en": "Why is my retention good but revenue flat?",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "280b61f3d874": {
@@ -625,22 +414,10 @@
       "about/index.html"
     ]
   },
-  "28b8fd5122c8": {
-    "en": "Retention and expansion are different mechanics and they fail for different reasons. Retention means the product is worth keeping. Expansion means a customer's own success costs them more money. You can have the first without the second, and if you do, you have built a business with a hard revenue ceiling per account.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "28f74e5e90c8": {
     "en": "There's a whole argument below. Keep going.",
     "pages": [
       "index.html"
-    ]
-  },
-  "28ffec37805d": {
-    "en": "What the segments are telling you",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "292a94545c24": {
@@ -653,24 +430,6 @@
     "en": "02 of 5",
     "pages": [
       "index.html"
-    ]
-  },
-  "2a682e44b7d1": {
-    "en": "Because adding is socially easy and removing is socially expensive. Every item has someone attached to it, so the default is accumulation. Bloat is an incentive problem, not a planning problem.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "2b4367aa2162": {
-    "en": "The point at which a new user reaches the moment the product visibly works for them. Not signup, not completing onboarding: the specific action that makes someone think the product does what it promised.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "2b544cdf44ac": {
-    "en": "Look at most roadmaps and you will find a list of things nobody was willing to cancel. Each item has a person attached, a history, a meeting where it was agreed. Removing it means telling someone their thing does not matter. So the default is accumulation, and the product gets slower, harder to explain and harder to sell.",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "2b67c7698b9a": {
@@ -692,32 +451,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "2c5417dc0419": {
-    "en": "Pre-populate new accounts with realistic sample data so the product is never empty on first open. This is also the cheapest way to find out whether people even want the thing, before you go and <a href=\"/research/pricing-metric/\">argue about what to charge for it</a>.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "2c90c5676986": {
-    "en": "Because retention and expansion are different mechanics. Retention means the product is worth keeping. Expansion means the customer's success costs them more. If there is no axis along which a thriving customer consumes more, you have built a business with a revenue ceiling per account.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "2d61e139b656": {
-    "en": "This is where per-seat pricing quietly betrays you. It only tracks value when value genuinely scales with headcount. A customer processing ten times the data with the same team is getting ten times the value at the same price.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "2e0254c28e2b": {
@@ -739,20 +474,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "2f2bd4498d8d": {
-    "en": "Changing it without breaking everything",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "2f5c26f8354e": {
@@ -791,18 +514,6 @@
       "privacy/index.html"
     ]
   },
-  "31eefa82f3da": {
-    "en": "<span>Activation</span> <span>5 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "32fc9f4ac589": {
-    "en": "Measure it honestly",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "3367ce001319": {
     "en": "Ongoing, part-time",
     "pages": [
@@ -821,12 +532,6 @@
       "about/index.html"
     ]
   },
-  "345b216c257b": {
-    "en": "Someone worries a specific claim will exclude a segment, so it gets softened. Someone else notes that a competitor uses a particular phrase and it seems safe. A large customer asks for a feature and it earns a mention on the homepage. Repeat for two years and you arrive at a page that offends nobody and persuades nobody.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "35520111cae4": {
     "en": "<strong>Working worldwide</strong><br> Remote by default<br> On-site when it earns it",
     "pages": [
@@ -834,13 +539,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -850,45 +549,10 @@
       "index.html"
     ]
   },
-  "36137f26950e": {
-    "en": "What is activation in SaaS?",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "368a86c3c08b": {
     "en": "Product strategy",
     "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
-    ]
-  },
-  "36d6beac878e": {
-    "en": "Split it by segment. A healthy blended figure often hides one segment expanding well and another quietly contracting.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "373ecb3159c7": {
-    "en": "Is this here because of evidence or because of effort already spent?",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "3795b293260f": {
-    "en": "An activation audit maps the real distance between signup and first value, and what to cut.",
-    "pages": [
-      "research/activation/index.html"
+      "index.html"
     ]
   },
   "37d7e1ed0c83": {
@@ -915,12 +579,6 @@
       "privacy/index.html"
     ]
   },
-  "3935ff8ca639": {
-    "en": "Who specifically asked for this?",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "398a2ad44ba7": {
     "en": "<span class=\"friction-n\" id=\"f-bounce\">—</span><span class=\"friction-l\">Left under 10s</span><span class=\"friction-h\">Landed and immediately gone</span>",
     "pages": [
@@ -937,18 +595,6 @@
     "en": "Ask AI-me →",
     "pages": [
       "index.html"
-    ]
-  },
-  "3a43f3868e10": {
-    "en": "Why the number matters more than it looks",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "3af50052a97a": {
-    "en": "What percentage of signups reach that moment within seven days?",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "3b0b47b43e62": {
@@ -969,19 +615,6 @@
       "research/index.html"
     ]
   },
-  "3c47c5d0093c": {
-    "en": "Why your activation is flat, and what actually fixes it",
-    "pages": [
-      "research/activation/index.html",
-      "research/index.html"
-    ]
-  },
-  "3cf6a91ef580": {
-    "en": "Name it precisely. Vague definitions produce vague metrics, and you will end up optimising \"completed onboarding\", which measures compliance with your flow rather than value received.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "3d1b67a54ad0": {
     "en": "The two things you type on purpose",
     "pages": [
@@ -998,12 +631,6 @@
     "en": "Ads cost more every month",
     "pages": [
       "index.html"
-    ]
-  },
-  "3edc98babb98": {
-    "en": "Retention keeps the business alive. Expansion is what makes it worth owning.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "3f11c962cfee": {
@@ -1036,18 +663,6 @@
       "index.html"
     ]
   },
-  "40e0e273a805": {
-    "en": "What makes positioning specific enough?",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "41ac0a713232": {
-    "en": "It stops working the moment your product gets more valuable through usage rather than users. An analytics tool where one analyst processes ten times the data is delivering ten times the value on the same invoice. You have handed your best customers a volume discount they did not ask for and did not negotiate.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "41ac557a4c9a": {
     "en": "Do not put confidential information into AI-me &mdash; it is a demonstration on a public website, not a private channel, and now a question you type there is something I can read.",
     "pages": [
@@ -1058,12 +673,6 @@
     "en": "Quentin Dupard, Fractional Product & Growth",
     "pages": [
       "index.html"
-    ]
-  },
-  "42c5a77ec0bf": {
-    "en": "Signups are vanity until someone reaches the moment your product visibly works. How to find that moment, measure it honestly, and remove what stands in the way.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "43763e6ad9bd": {
@@ -1090,12 +699,6 @@
       "stats/index.html"
     ]
   },
-  "461b21f73d8e": {
-    "en": "Why your activation is flat, and what actually fixes it | Quentin Dupard",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "463bd57a7abe": {
     "en": "Pricing, positioning, activation, retention. Describe your business and I'll tell you where the revenue is going.",
     "pages": [
@@ -1120,28 +723,10 @@
       "index.html"
     ]
   },
-  "474bf7777363": {
-    "en": "<span>Acquisition</span> <span>6 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "47b832767605": {
-    "en": "Once the positioning is specific, <a href=\"/research/pricing-metric/\">what you charge</a> becomes a much easier argument — price is read as evidence of the claim you are making.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "47f6cff2e2ae": {
     "en": "Paste it at checkout under &ldquo;Add promotion code&rdquo;.",
     "pages": [
       "index.html"
-    ]
-  },
-  "48202dd2ee29": {
-    "en": "The change that works most often",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "49010b58a9dc": {
@@ -1156,22 +741,10 @@
       "index.html"
     ]
   },
-  "49872731909a": {
-    "en": "Once the roadmap is honest, the next question is usually <a href=\"/research/pricing-metric/\">whether you are charging correctly</a> for what survives.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "49f2d16167b4": {
     "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with your product and their invoice does not grow, the model caps your revenue. A 10-15% increase applied only to new customers is the lowest-risk experiment available.",
     "pages": [
       "index.html"
-    ]
-  },
-  "4b27b590d300": {
-    "en": "Cut the distance",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "4bab2d8fe13f": {
@@ -1181,13 +754,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -1203,40 +770,16 @@
       "privacy/index.html"
     ]
   },
-  "4c57e54025ed": {
-    "en": "<span>Retention</span> <span>6 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "4c7463044671": {
     "en": "Five years across product, marketing and international operations. The useful part is not the years, it is that I have sat in the product review and then on the sales call two hours later, and noticed the two rooms believe completely different things about the same customer. Most of my useful ideas come out of that gap.",
     "pages": [
       "about/index.html"
     ]
   },
-  "4c9ab3c1fd92": {
-    "en": "Name the first-value action precisely, then measure what share of signups reach it within seven days. Most teams have never calculated this and find the number far lower than they expected.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "4ca650647a1e": {
     "en": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most businesses asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.",
     "pages": [
       "index.html"
-    ]
-  },
-  "4dcf842e9534": {
-    "en": "The sequence that works:",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "4de93f91c677": {
-    "en": "<strong>New customers first.</strong> Change the model for new business only. You learn whether the market accepts it with zero risk to existing revenue.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "4eabb64cc9a7": {
@@ -1251,12 +794,6 @@
       "index.html"
     ]
   },
-  "4fe16f402e0d": {
-    "en": "Because retention and expansion are different mechanics. Retention means the product is worth keeping. Expansion means the customer&#x27;s success costs them more. If there is no axis along which a thriving customer consumes more, you have built a business with a revenue ceiling per account.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "500bbdb26cbe": {
     "en": "When should a B2B SaaS company change its pricing?",
     "pages": [
@@ -1267,12 +804,6 @@
     "en": "Previous",
     "pages": [
       "index.html"
-    ]
-  },
-  "5118e5955697": {
-    "en": "2. What does it replace?",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "511af4afd0f1": {
@@ -1315,19 +846,7 @@
     "en": "<a class=\"btn btn-primary\" href=\"https://calendly.com/quentin-dupard-call/30min\" target=\"_blank\" rel=\"noopener\">Book 30 minutes</a> <a class=\"btn btn-glass\" href=\"/#ask\">Ask AI-me first</a>",
     "pages": [
       "about/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "5880ef108afd": {
-    "en": "Should I remove features nobody uses?",
-    "pages": [
-      "research/what-to-kill/index.html"
+      "research/index.html"
     ]
   },
   "59c63f358b92": {
@@ -1367,13 +886,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -1414,14 +927,14 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
+    ]
+  },
+  "5cd5b02cf2c7": {
+    "en": "Working notes on the things I get asked about most: the frameworks I actually use, written out properly rather than summarised into uselessness.",
+    "pages": [
+      "research/index.html"
     ]
   },
   "5ce7e1108b4f": {
@@ -1466,46 +979,16 @@
       "index.html"
     ]
   },
-  "611d4c07fdff": {
-    "en": "The compounding test",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "61b64b8b7619": {
-    "en": "<strong>Expansion revenue is flat despite happy customers.</strong> Retention is fine, nobody spends more. There is no axis along which success costs them anything.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "621a27907cd6": {
     "en": "What I have worked on",
     "pages": [
       "about/index.html"
     ]
   },
-  "622c421f2f94": {
-    "en": "A positioning statement that excludes nobody is a description, not a position.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "62db27741161": {
     "en": "<code>qd:sent</code> &mdash; a note that you already sent a message, so the form does not nag you.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "639647766a09": {
-    "en": "<strong>Keep a hybrid if you need one.</strong> A platform fee plus a usage component is often the honest answer and is easier to sell than pure usage, which buyers dislike because it is unpredictable.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "63eda3bf443a": {
-    "en": "Not a tour explaining what would be there. Actual data, in the real interface, that the user can click, filter, sort and break. It lets someone experience the product working before they have invested anything, which inverts the usual order where you demand investment before demonstrating value.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "6469ad3b4d21": {
@@ -1532,18 +1015,6 @@
       "stats/index.html"
     ]
   },
-  "653b2c6771dc": {
-    "en": "<span>Positioning</span> <span>5 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "6600d3fee7ec": {
-    "en": "Is expansion revenue a customer success problem?",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "660fb09f56e2": {
     "en": "Turn the measurement off",
     "pages": [
@@ -1562,18 +1033,6 @@
       "privacy/index.html"
     ]
   },
-  "66ded81d25a9": {
-    "en": "Flat activation is almost never an onboarding problem, which is unfortunate, because onboarding is what most teams build when activation is flat.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "6770174e73fb": {
-    "en": "Tours, checklists, welcome emails, progress bars. All of it is decoration applied to a distance that is simply too long. If it takes eleven steps and a colleague's help before anything useful happens, a nicer tour of those eleven steps will not save you.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "6773d12315ad": {
     "en": "How far people scroll",
     "pages": [
@@ -1583,18 +1042,7 @@
   "67822e705ab3": {
     "en": "Expansion revenue",
     "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
+      "index.html"
     ]
   },
   "681a79899414": {
@@ -1633,10 +1081,10 @@
       "index.html"
     ]
   },
-  "6a858b532ce9": {
-    "en": "Go through the path from signup to that moment and be ruthless about three categories:",
+  "6a92c8fa8135": {
+    "en": "<strong>Nothing published here yet.</strong>",
     "pages": [
-      "research/activation/index.html"
+      "research/index.html"
     ]
   },
   "6a94bfc300f8": {
@@ -1646,44 +1094,14 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "6a9df5338da3": {
-    "en": "Look at win rate over time within each segment. Falling win rate in a segment you used to dominate means saturation, not execution.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "6b21fb791ac0": {
     "en": "About",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "6b40c7fd8af6": {
-    "en": "Read &rarr;",
-    "pages": [
-      "research/index.html"
-    ]
-  },
-  "6b8e13bb3c0c": {
-    "en": "That is the whole test. If a customer triples their usage, triples their team, triples the value they get, and still pays you the same amount, you have built a business that must keep winning new logos just to stand still.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "6bdc89608a0a": {
-    "en": "Above roughly 110% is what makes a subscription business compound, because existing customers alone grow revenue faster than churn removes it. Below 100% you are refilling a leaking bucket with new logos and growth gets more expensive every quarter.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "6bfc2b053441": {
@@ -1708,12 +1126,6 @@
     "en": "Some of it is advice and some of it is building. I have shipped whole products end to end &mdash; ecommerce, newsletters and content engines, internal tooling, operations automation &mdash; and I will take a marketing strategy whole rather than the part that fits in a slide. Where the answer to a revenue problem is something that does not exist yet, building it myself is usually faster than writing a specification and handing it over.",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "6c1780ec9c4d": {
-    "en": "Identify the single action that delivers first value, measure what share of signups reach it within a week, then remove everything between signup and that moment. Pre-populating new accounts with realistic sample data is the most reliable single change I know. <a href=\"/research/activation/\">The long version is here.</a>",
-    "pages": [
-      "index.html"
     ]
   },
   "6ca6699db13c": {
@@ -1746,12 +1158,6 @@
       "index.html"
     ]
   },
-  "6ec21ad16514": {
-    "en": "Positioning does not get fixed in a workshop. It gets fixed by someone sitting down and writing a specific claim that a reasonable person could disagree with, then defending it.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "6fc4b6b5afee": {
     "en": "Act 06",
     "pages": [
@@ -1762,12 +1168,6 @@
     "en": "One of us answers instantly at three in the morning. The other one is actually going to fix your funnel.",
     "pages": [
       "index.html"
-    ]
-  },
-  "7000437ca95d": {
-    "en": "Bloat is an incentive problem",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "70a264dd6b79": {
@@ -1782,12 +1182,6 @@
       "privacy/index.html"
     ]
   },
-  "70d9d61b4e16": {
-    "en": "Sunk cost is the most common reason a doomed item survives a planning meeting. The work already done is gone whether you ship it or not. The only question is whether the remaining work is the best use of the next quarter.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "70f8bb9a8a53": {
     "en": "Home",
     "pages": [
@@ -1795,13 +1189,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -1817,28 +1205,10 @@
       "stats/index.html"
     ]
   },
-  "71fee1475a55": {
-    "en": "1. Who is it for, stated specifically enough to exclude people?",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "7230b0a7da9f": {
     "en": "Want this in your inbox?",
     "pages": [
       "index.html"
-    ]
-  },
-  "72dae8b98b22": {
-    "en": "That last one is the uncomfortable conclusion, and it is usually the correct one. Slow-payback segments do not need better salespeople. They need to cost less to serve, which means removing the human from the transaction.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "732b93bc6a3e": {
-    "en": "Pre-populate new accounts with realistic sample data so the product is never empty on first open, and remove any signup field, empty state or third-party dependency standing between signup and first value.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "73a926113997": {
@@ -1872,13 +1242,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -1886,12 +1250,6 @@
     "en": "My research, my frameworks, and the things I steal from. Open a folder. The documents are real and you can take them with you.",
     "pages": [
       "index.html"
-    ]
-  },
-  "75c70d9598dc": {
-    "en": "<strong>Customers game the metric.</strong> Sharing logins is not a security problem, it is a pricing problem announcing itself.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "76d326193c2c": {
@@ -1906,34 +1264,10 @@
       "index.html"
     ]
   },
-  "7707a9bb84c3": {
-    "en": "How do I know if my pricing metric is wrong?",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "77dd4306fd1c": {
-    "en": "Is per-seat pricing bad?",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "77dfd2135f4d": {
     "en": "Cancel",
     "pages": [
       "index.html"
-    ]
-  },
-  "77e10bb6b9aa": {
-    "en": "If a customer has to book a call with a human to give you more money, you will collect less of it.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "77e6099e7892": {
-    "en": "The three questions",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "77e6286238bf": {
@@ -1966,40 +1300,10 @@
       "about/index.html"
     ]
   },
-  "794e7623879a": {
-    "en": "Not \"customers\". A name. If the honest answer is one loud account, or an executive who mentioned it once, that is worth knowing before it consumes a quarter. One customer asking loudly is not demand, it is a sample size of one with good timing.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "795b2e8e286c": {
-    "en": "Almost every pricing conversation I get pulled into starts with the wrong question. People ask whether they should charge more. The better question is whether they are charging for the right thing at all.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "7addb0f38305": {
     "en": "Short version: this site measures how people move through it, in aggregate, using its own code. It does not sell anything about you, it does not run ad tech, and it does not keep your IP address. If you would rather it counted nothing at all, there is a switch further down that works immediately.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "7bae0c201971": {
-    "en": "If nobody on the team can name who asked for it and what they will stop doing once it ships, it should not be on the roadmap.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "7bc2556d0464": {
-    "en": "Here is a test that takes two minutes and tends to ruin an afternoon.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "7be2b4a35079": {
-    "en": "Why vague copy happens",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "7c582fcd1e1b": {
@@ -2008,10 +1312,10 @@
       "stats/index.html"
     ]
   },
-  "7c817e3525db": {
-    "en": "Self-serve is not a pricing page. It is a product that works for one person on their first afternoon.",
+  "7ca7d24628c3": {
+    "en": "The frameworks I use are written out in full and free to read: why your pricing metric matters more than your price, why activation goes flat, and the three-company test for positioning. <a href=\"/research/\">All of it is here.</a>",
     "pages": [
-      "research/rising-cac/index.html"
+      "about/index.html"
     ]
   },
   "7cb058e4710c": {
@@ -2021,13 +1325,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2121,51 +1419,10 @@
       "index.html"
     ]
   },
-  "86ba514122e1": {
-    "en": "Positioning",
-    "pages": [
-      "research/index.html"
-    ]
-  },
-  "86d1c7a4a0f8": {
-    "en": "Running both motions",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "86d43da253b7": {
-    "en": "Nobody gets promoted for the feature they did not ship. Adding is visible, attributable and safe. Removing is invisible, contentious and slightly career-risky. Given those incentives, any team will accumulate, regardless of how good its process is.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "878bee4057e0": {
-    "en": "Announce what you killed and why. Silent cancellation breeds the belief that things get quietly dropped, which makes people fight harder for their items next time.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "87af50948144": {
-    "en": "Real demand displaces something: a spreadsheet, a manual process, a competitor, a contractor. If nothing gets displaced, the feature is a nice-to-have, and nice-to-haves do not get adopted, which means they do not get renewed on either.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "87c35eb6a266": {
     "en": "Pricing &amp; packaging",
     "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
+      "index.html"
     ]
   },
   "88bcb9f299e1": {
@@ -2186,12 +1443,6 @@
       "about/index.html"
     ]
   },
-  "899c367c1de5": {
-    "en": "What will they stop doing once it exists?",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "89b86ab0e66f": {
     "en": "Language",
     "pages": [
@@ -2199,20 +1450,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "8a48ed3d7d04": {
-    "en": "<span>Product strategy</span> <span>5 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "8aa57de6dce6": {
@@ -2227,26 +1466,8 @@
       "index.html"
     ]
   },
-  "8b5d11f82dc4": {
-    "en": "This is why roadmap bloat does not respond to better prioritisation frameworks. You cannot score your way out of a problem that is fundamentally about who has to say no to whom.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "8b97ba460c72": {
     "en": "Clicks",
-    "pages": [
-      "index.html"
-    ]
-  },
-  "8c533d1d7469": {
-    "en": "<strong>Your biggest customers are your least profitable.</strong> Support load and infrastructure cost scale with usage; your revenue does not.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "8c79ae02b3ef": {
-    "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with what you sell and their invoice does not grow, the model caps your revenue. A 10&ndash;15% increase applied only to new customers is the lowest-risk experiment available. <a href=\"/research/pricing-metric/\">The long version is here.</a>",
     "pages": [
       "index.html"
     ]
@@ -2293,45 +1514,16 @@
       "privacy/index.html"
     ]
   },
-  "8dba2ba39f9b": {
-    "en": "Acquisition &amp; CAC",
-    "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
-    ]
-  },
   "8e01f6bc7795": {
     "en": "Hybrid",
     "pages": [
       "index.html"
     ]
   },
-  "8e52dc196ffb": {
-    "en": "The fix is not always a more expensive tier. Sometimes it is an add-on, a second product, or a usage component layered onto a flat platform fee. But something has to exist above where your best customers currently sit.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "8e9cf4fcea88": {
     "en": "<strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "8f6aa8a78918": {
-    "en": "Every product has a point where a new user goes from sceptical to convinced. Not signup. Not completing setup. The specific instant where the thing does what it promised and they can see it.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "8fb9d44cfa03": {
@@ -2352,12 +1544,6 @@
       "index.html"
     ]
   },
-  "90e30479d881": {
-    "en": "Below 100%, every quarter starts in a hole. Sales is not growing the business, it is refilling it. That is survivable while acquisition is cheap and fatal when it isn't, which is why this metric tends to become urgent at exactly the wrong moment.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "924facb738c0": {
     "en": "Previously.",
     "pages": [
@@ -2370,58 +1556,16 @@
       "index.html"
     ]
   },
-  "93ca7b31ca28": {
-    "en": "If you want a single, low-risk thing to try this quarter: raise prices by ten to fifteen percent for new customers only. Existing accounts are untouched, so there is no churn risk. Watch win rate for a month.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "93fdd7e53ae1": {
-    "en": "<strong>Migrate at natural moments.</strong> Renewals, upgrades, contract changes. Never send a mass email announcing everyone is moving.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "942c7cdcb964": {
-    "en": "Almost nobody has this number when I ask. When they go and get it, the answer is usually far lower than anyone in the room guessed. That figure is the ceiling on everything your marketing spend can achieve. Doubling traffic against a low activation rate just doubles the number of people who form a negative first impression.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "94563ec383e2": {
     "en": "Me",
     "pages": [
       "index.html"
     ]
   },
-  "945bcc53f3cc": {
-    "en": "Separate \"kill\" from \"not now\". Not-now items go on a list with a date to revisit, which makes cancellation politically survivable.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "952f375412e8": {
     "en": "Start",
     "pages": [
       "index.html"
-    ]
-  },
-  "959446e2e6ad": {
-    "en": "The frameworks I use are written out in full and free to read: <a href=\"/research/pricing-metric/\">why your pricing metric matters more than your price</a>, <a href=\"/research/activation/\">why activation goes flat</a>, and <a href=\"/research/positioning/\">the three-company test for positioning</a>. <a href=\"/research/\">All of it is here.</a>",
-    "pages": [
-      "about/index.html"
-    ]
-  },
-  "95e8b5b18234": {
-    "en": "Every hour a rep spends on a thirty-month payback deal is stolen from a nine-month one.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "95f2ed1637e3": {
-    "en": "\"Teams of all sizes\" is not an answer. \"Finance teams at companies with more than one legal entity\" is. Specificity feels risky because it is visibly turning some people away. That is the point: the people who remain recognise themselves immediately, and recognition is what converts.",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "963c99f82f7a": {
@@ -2431,13 +1575,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2453,22 +1591,10 @@
       "privacy/index.html"
     ]
   },
-  "97434550a53d": {
-    "en": "Three questions that find the cause",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "97705cb30a97": {
     "en": "0s",
     "pages": [
       "index.html"
-    ]
-  },
-  "97a343fff9ef": {
-    "en": "For an analytics product it is seeing their own data in a chart, not sample data. For a scheduling tool it is someone else booking a slot. For a writing tool it is finishing something they would have written anyway, faster.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "97fad96ed6a9": {
@@ -2484,13 +1610,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2512,12 +1632,6 @@
       "privacy/index.html"
     ]
   },
-  "9866db2c295c": {
-    "en": "Without urgency, a rational buyer defers. Deals then die at the final stage and teams misdiagnose it as a closing problem, which leads to sales training that does not help. The urgency has to be real: a regulation, a contract renewal, a cost that grows, a risk that compounds. Manufactured urgency is transparent and expensive.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "9868bc4ae175": {
     "en": "Research | Quentin Dupard",
     "pages": [
@@ -2537,13 +1651,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2551,12 +1659,6 @@
     "en": "Every engagement ends with your team owning the output. No lock-in, no retainer designed to be hard to leave.",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "9a9b1b497fa3": {
-    "en": "Make the most common upgrade self-serve before you build anything new.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "9ac7d083b928": {
@@ -2571,12 +1673,6 @@
       "index.html"
     ]
   },
-  "9b322b1a16fc": {
-    "en": "Net revenue retention is expansion minus contraction minus churn, across your existing base only, ignoring new logos. Above roughly 110%, existing customers alone grow the business faster than churn shrinks it. That is what compounding means in practice.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "9b55d77491f7": {
     "en": "<span class=\"footer-social-icon\" aria-hidden=\"true\">in</span> Follow on LinkedIn",
     "pages": [
@@ -2584,13 +1680,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2600,34 +1690,16 @@
       "privacy/index.html"
     ]
   },
-  "9c3f18ef8d8e": {
-    "en": "<strong>Dependencies on other people.</strong> Anything requiring an admin, an integration, an IT ticket, or a colleague to accept an invite adds days, and days are where intent dies.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "9d3d3dd4c6f0": {
     "en": "What you sell, who buys it, and what's not working.",
     "pages": [
       "index.html"
     ]
   },
-  "9d75da39c3d0": {
-    "en": "Nobody churns, nobody spends more: fixing flat expansion revenue | Quentin Dupard",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "9eea1d93fd8c": {
     "en": "<span class=\"demand-n\" id=\"d-views\">—</span><span class=\"demand-l\">Saw the pricing</span>",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "9f20b02e0d07": {
-    "en": "Most roadmaps are a list of things nobody would cancel | Quentin Dupard",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "9f503a961f2b": {
@@ -2642,40 +1714,10 @@
       "about/index.html"
     ]
   },
-  "9fa14dc6dd38": {
-    "en": "Most teams find win rate does not move measurably, which tells you something important. You were leaving that margin on the table the entire time, and it flows straight to the bottom line because it costs nothing to deliver.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "a02dcfbcb6f8": {
     "en": "Comparison platform",
     "pages": [
       "index.html"
-    ]
-  },
-  "a091524fef37": {
-    "en": "3. Why now?",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "a0d9bbad5f93": {
-    "en": "Pricing",
-    "pages": [
-      "research/index.html"
-    ]
-  },
-  "a1112b915716": {
-    "en": "Every purchase displaces something. A spreadsheet, an agency, a contractor, a competitor, or a painful manual process someone currently owns. If you cannot name what dies when a customer buys you, there is no budget line, and the deal will stall in procurement while everyone insists they are still interested.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "a123a8879572": {
-    "en": "<strong>Grandfather generously and loudly.</strong> Tell existing customers they are on legacy pricing indefinitely. This costs you very little and buys enormous goodwill.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "a16ff39b1a09": {
@@ -2696,6 +1738,12 @@
       "about/index.html"
     ]
   },
+  "a33eb5192529": {
+    "en": "Identify the single action that delivers first value, measure what share of signups reach it within a week, then remove everything between signup and that moment. Pre-populating new accounts with realistic sample data is the most reliable single change I know. The long version is here.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "a3585f33d459": {
     "en": "Offer &amp; checkout",
     "pages": [
@@ -2706,12 +1754,6 @@
     "en": "Vendor recommendations where I would earn a commission. I do not take any",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "a52398e1a030": {
-    "en": "Apply the increase to new customers only. Existing accounts are untouched, so there is no churn risk, and you learn whether the market accepts it within a month by watching win rate.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "a5306f5e5fcf": {
@@ -2727,26 +1769,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "a5f29fa4a846": {
-    "en": "<strong>Over 18 months with a human seller involved.</strong> The economics do not support the motion. Either these deals move to self-serve or you stop chasing them.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "a60c4de41cdc": {
-    "en": "If it could, you do not have positioning. You have a description, and no amount of paid spend will fix it. You will simply be paying to confuse people at a higher velocity.",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "a64e4488a714": {
@@ -2785,12 +1809,6 @@
       "about/index.html"
     ]
   },
-  "a98fe1ca77da": {
-    "en": "If win rate does drop sharply, that is also valuable. It means you are priced at the edge of what your positioning supports, and the constraint is not the number. It is what people believe they are buying — which is <a href=\"/research/positioning/\">a positioning problem, not a pricing one</a>.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "a9a96ec01949": {
     "en": "Primary",
     "pages": [
@@ -2798,13 +1816,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -2820,30 +1832,12 @@
       "privacy/index.html"
     ]
   },
-  "aae12494ddc2": {
-    "en": "Delete the worst step. Then measure again in a fortnight.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "aaf0b524942e": {
-    "en": "How do I decide what to remove from a product roadmap?",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "ac804d65f67f": {
     "en": "LLM-friendly site summary",
     "pages": [
       "about/index.html",
       "index.html",
       "privacy/index.html"
-    ]
-  },
-  "ad339a841bec": {
-    "en": "If the first time anyone notices an account has outgrown its plan is the renewal conversation, you have been giving away the upgrade for months. Instrument the moment a customer crosses a threshold, and make the upgrade path something they can take themselves.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "ae5767cf838e": {
@@ -2858,52 +1852,16 @@
       "index.html"
     ]
   },
-  "aee867a005dd": {
-    "en": "This is the most flattering-looking problem in software. Churn is low, NPS is fine, customers say nice things on calls, and revenue is flat. Everything looks healthy right up until you model next year.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "af8f8a884096": {
     "en": "<span>Fractional product &amp; marketing</span> <span>Working worldwide</span> <span>Updated August 2026</span>",
     "pages": [
       "about/index.html"
     ]
   },
-  "af918f523fe1": {
-    "en": "Usually yes, but check whether low usage means low value or poor discovery first. A feature used by 2% of accounts that are your highest-paying accounts is not a candidate for removal.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "b068744af087": {
-    "en": "Per-seat pricing is the most common offender. It is popular because it is easy to bill and easy to forecast, not because it reflects value. It works when value genuinely scales with headcount: a communication tool, a CRM, anything where more people using it means more benefit delivered.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "b0765a10de42": {
-    "en": "Why is my customer acquisition cost going up?",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
   "b0d44b6f1279": {
     "en": "Go to slide 2",
     "pages": [
       "index.html"
-    ]
-  },
-  "b1b86689d053": {
-    "en": "Good retention with no expansion means customers keep you but never grow into you. The three questions that find why.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
-  "b1bdfb9a63d2": {
-    "en": "A pricing teardown takes ninety minutes and usually surfaces two changes you can make this quarter.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "b1d79dd4f0fb": {
@@ -2948,29 +1906,10 @@
       "privacy/index.html"
     ]
   },
-  "b69b9864239b": {
-    "en": "Your CAC is rising because you ran out of the good segment",
-    "pages": [
-      "research/index.html",
-      "research/rising-cac/index.html"
-    ]
-  },
   "b6d6657d213a": {
     "en": "<span class=\"tier-amount\">€6,000</span><span>/ 2 weeks</span>",
     "pages": [
       "index.html"
-    ]
-  },
-  "b75f0cf12a35": {
-    "en": "Pricing is also positioning. What you charge tells the market what you are, faster and louder than any messaging exercise.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "b7913bb59666": {
-    "en": "Before you spend more",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "b7d707d6aa6d": {
@@ -2983,12 +1922,6 @@
     "en": "<span>Written to be checked</span> <span>No account required</span> <span>Updated August 2026</span>",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "b8a8ec6355ce": {
-    "en": "The blended number is hiding the story",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "b93b0b0285df": {
@@ -3004,49 +1937,20 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
   "b9d3621863a2": {
     "en": "Activation",
     "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
+      "index.html"
     ]
   },
   "ba02bab743b4": {
     "en": "Fractional product and marketing operator. Positioning, pricing, activation and revenue growth for businesses of any kind, with the deepest experience in B2B SaaS.",
     "pages": [
       "index.html"
-    ]
-  },
-  "ba2e0c227fca": {
-    "en": "What is a good net revenue retention rate?",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "bba73d211c8c": {
-    "en": "The work you have already done is not an argument for finishing it.",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "bbfa773e5a63": {
@@ -3085,12 +1989,6 @@
       "index.html"
     ]
   },
-  "be4cb108126a": {
-    "en": "Rising acquisition cost is usually not a channel problem. It is the market telling you the easy buyers are gone.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "be601df25eea": {
     "en": "Research",
     "pages": [
@@ -3098,32 +1996,14 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "bed896229cd3": {
-    "en": "The three-company test for positioning | Quentin Dupard",
-    "pages": [
-      "research/positioning/index.html"
     ]
   },
   "bf33873329fd": {
     "en": "Which one is you?",
     "pages": [
       "index.html"
-    ]
-  },
-  "bf5fc9619ce0": {
-    "en": "You do not \"switch\" from sales-led to product-led. You run both and let the maths decide which owns which segment.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "bf71973b08c7": {
@@ -3144,28 +2024,10 @@
       "index.html"
     ]
   },
-  "bfe0f4b2203c": {
-    "en": "Run the three questions above on each. Do it fast; the obvious cases are obvious.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "c00105e57c8d": {
     "en": "<strong>A rate-limit counter</strong> for AI-me, stored against a one-way hash of your IP address. The hash cannot be reversed to an address, and the address itself is never written down.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "c07fd7c7d62b": {
-    "en": "Positioning work is usually the cheapest change available and the one with the largest downstream effect.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "c123c12aa44c": {
-    "en": "Split closed-won deals by company size and use case, then calculate payback period for each. The picture is usually stark: one segment paying back inside nine months, another taking two years or more, and a blended figure that looks tolerable while concealing both.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "c15bc1f0bb12": {
@@ -3174,28 +2036,10 @@
       "privacy/index.html"
     ]
   },
-  "c1d16a218d11": {
-    "en": "Signs your metric is wrong",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "c238ce6ac298": {
-    "en": "Only when value does not scale with headcount. Per-seat works for communication and collaboration tools where more people genuinely means more benefit. It fails when the product gets more valuable through usage, data volume or transactions, because it hands your heaviest users a volume discount nobody negotiated.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "c23cbcb9f4cb": {
     "en": "That page does not exist.",
     "pages": [
       "404.html"
-    ]
-  },
-  "c2e80ad00576": {
-    "en": "Find the moment",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "c323e3735207": {
@@ -3222,24 +2066,6 @@
       "index.html"
     ]
   },
-  "c5e81f1c47c4": {
-    "en": "What to do on Monday",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
-  "c61b165593ab": {
-    "en": "Why do product roadmaps get bloated?",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "c632c6aaf904": {
-    "en": "Deciding what to kill is harder than deciding what to build, and almost nobody is incentivised to do it.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "c648612c9791": {
     "en": "Go to slide 3",
     "pages": [
@@ -3252,22 +2078,10 @@
       "privacy/index.html"
     ]
   },
-  "c7199d9e9593": {
-    "en": "Retention",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "c73c276ffceb": {
     "en": "Sections reached",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "c80b049ebb20": {
-    "en": "The fear is that repricing triggers a churn event. In practice it rarely does, because you are almost never repricing existing customers.",
-    "pages": [
-      "research/pricing-metric/index.html"
     ]
   },
   "c862c4f5c46b": {
@@ -3294,19 +2108,6 @@
       "index.html"
     ]
   },
-  "c95349fb0987": {
-    "en": "Nobody churns, nobody spends more: fixing flat expansion revenue",
-    "pages": [
-      "research/expansion-revenue/index.html",
-      "research/index.html"
-    ]
-  },
-  "c975d9993f75": {
-    "en": "Working notes on the things I get asked about most. These are the frameworks I actually use, written out properly rather than summarised into uselessness.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "c9fcf5afae98": {
     "en": "<span class=\"demand-n\" id=\"d-buys\">—</span><span class=\"demand-l\">Clicked buy</span>",
     "pages": [
@@ -3326,13 +2127,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -3348,10 +2143,10 @@
       "index.html"
     ]
   },
-  "cdbce5a487e0": {
-    "en": "Write the new positioning, then run the three-company test on it again. Then show it to someone who has never seen your product and ask them two questions: who is this for, and what would they stop doing if they bought it?",
+  "cd526c240381": {
+    "en": "<a class=\"btn btn-primary\" href=\"/#ask\">Ask AI-me instead</a> <a class=\"btn btn-glass\" href=\"/#inbox\">Or ask me directly</a>",
     "pages": [
-      "research/positioning/index.html"
+      "research/index.html"
     ]
   },
   "ce0d25ec854b": {
@@ -3374,13 +2169,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -3426,12 +2215,6 @@
       "index.html"
     ]
   },
-  "d201e6698e7d": {
-    "en": "Why the billing unit matters more than the number, the compounding test, and how to reprice without triggering churn.",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "d213c37e81d9": {
     "en": "The instant one",
     "pages": [
@@ -3457,33 +2240,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "d32085e09bd0": {
-    "en": "It gets revisited far less often than it should, and it is quietly deciding your ceiling.",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "d32643c78ed1": {
-    "en": "Most roadmaps are a list of things nobody would cancel",
-    "pages": [
-      "research/index.html",
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "d34be58d5849": {
-    "en": "Ask what each item is really there for. Anything on the roadmap because of one loud customer, an executive's preference, or sunk effort rather than evidence of demand is a candidate. If nobody can name who asked for it and what they will stop doing once it ships, it should not be there.",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "d358ac3fc103": {
@@ -3504,34 +2262,10 @@
       "stats/index.html"
     ]
   },
-  "d4fc316afa43": {
-    "en": "List everything in flight and everything committed. Include the quiet items nobody discusses.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "d52d10b1d48c": {
-    "en": "Expansion is usually a packaging problem wearing a customer-success costume. A teardown finds which.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "d5d5868582fa": {
     "en": "Want this done to your business?",
     "pages": [
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "d5ea536f521b": {
-    "en": "Show the product working before you ask anyone to make it work.",
-    "pages": [
-      "research/activation/index.html"
+      "research/index.html"
     ]
   },
   "d6981f74767d": {
@@ -3546,12 +2280,6 @@
       "stats/index.html"
     ]
   },
-  "d81473b8576d": {
-    "en": "The easiest experiment nobody runs",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "d8227d556f5e": {
     "en": "Every key this site writes to your browser, every service that sees anything, and a switch to turn the analytics off.",
     "pages": [
@@ -3562,12 +2290,6 @@
     "en": "Sent <span class=\"mail-badge\" id=\"mail-sent-count\">0</span>",
     "pages": [
       "index.html"
-    ]
-  },
-  "d9081c0d25ce": {
-    "en": "Check whether your best segment is still growing or whether you have taken most of it.",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "d91ae84ca0b8": {
@@ -3582,18 +2304,6 @@
       "index.html"
     ]
   },
-  "d975239375b8": {
-    "en": "Seats, usage, volume, transactions, workflows, storage, locations. Something. When a customer doubles the value they get from you, some number on their invoice has to move. If nothing does, no playbook fixes it.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "d9e0dc91ec8a": {
-    "en": "This is more effort than a checklist, which is why teams reach for the checklist. It is also, in my experience, the single change most likely to move the number.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "da02dad348af": {
     "en": "Snake game board",
     "pages": [
@@ -3606,47 +2316,16 @@
       "index.html"
     ]
   },
-  "db6438c54a9f": {
-    "en": "Aggregate CAC is an average across segments that behave nothing alike. It tells you the temperature of a building with one room on fire.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
   "dbc03069881e": {
     "en": "My mailbox, open. Read what people say about the work, take the attachments, and write me one yourself. It lands in my actual inbox, and you keep a copy in Sent.",
     "pages": [
       "index.html"
     ]
   },
-  "dbfa6f94c3f2": {
-    "en": "You do not switch. You run both and let payback period decide which motion owns which segment. Keep humans where payback still works and move the slow segment to self-serve.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "dca468d66bf4": {
-    "en": "Your pricing metric matters more than your price",
-    "pages": [
-      "research/index.html",
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "dd19c461057a": {
-    "en": "Fixing it is a writing problem",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "dd3b86d1ef21": {
     "en": "Product",
     "pages": [
       "index.html"
-    ]
-  },
-  "dddebe245ec3": {
-    "en": "<strong>Empty states.</strong> A blank dashboard is the most common activation killer in software. Someone signed up curious and you showed them a void and asked them to fill it.",
-    "pages": [
-      "research/activation/index.html"
     ]
   },
   "de135aa1bf24": {
@@ -3658,19 +2337,7 @@
   "de344a2b920c": {
     "en": "&larr; Research",
     "pages": [
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html"
-    ]
-  },
-  "df85542609ac": {
-    "en": "Deciding what to kill is harder than deciding what to build, and almost nobody is incentivised to do it. A practical method for cutting a roadmap without a committee.",
-    "pages": [
-      "research/what-to-kill/index.html"
+      "research/index.html"
     ]
   },
   "dfbdc0995ce3": {
@@ -3679,22 +2346,10 @@
       "index.html"
     ]
   },
-  "e0e4618580bf": {
-    "en": "Sit down and complete signup yourself, on a phone, on the real product, timing each step.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "e0e740ec7388": {
     "en": "In your standups and planning",
     "pages": [
       "index.html"
-    ]
-  },
-  "e0e9d332118c": {
-    "en": "Should I switch from sales-led to product-led growth?",
-    "pages": [
-      "research/rising-cac/index.html"
     ]
   },
   "e0f5f28ceedb": {
@@ -3707,18 +2362,6 @@
     "en": "About Quentin Dupard",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "e124ddfce0da": {
-    "en": "As a customer succeeds wildly with your product, does your invoice grow?",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "e23ab947b9f9": {
-    "en": "A two-minute test for whether your positioning says anything at all, and what to fix first if it does not.",
-    "pages": [
-      "research/index.html"
     ]
   },
   "e3577c1de70c": {
@@ -3740,13 +2383,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
     ]
   },
@@ -3798,40 +2435,16 @@
       "index.html"
     ]
   },
-  "e5ca7b5f2147": {
-    "en": "Take your ten happiest customers and ask what would have to be true for them to pay you double. If the answer is \"nothing we sell\", that is your roadmap.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
-  "e5faa61585a4": {
-    "en": "A fast, uncomfortable way to find out whether your positioning says anything at all, and what to fix first if it does not.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "e622ce2e6934": {
     "en": "One address, used for one thing. Unsubscribe in a click.",
     "pages": [
       "index.html"
     ]
   },
-  "e6bb2892c1c3": {
-    "en": "Good retention with no expansion means customers keep you but never grow into you. How to tell whether the problem is structural, and the three questions that find it.",
-    "pages": [
-      "research/expansion-revenue/index.html"
-    ]
-  },
   "e71102d544b3": {
     "en": "Your rights",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "e75fb9efd682": {
-    "en": "Almost never. It is a packaging problem. No amount of quarterly business reviews will create expansion if your pricing has no mechanism for a growing customer to pay more.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "e7ce4b806765": {
@@ -3841,20 +2454,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "e85b4567b068": {
-    "en": "Acquisition",
-    "pages": [
-      "research/index.html"
     ]
   },
   "e891a4992157": {
@@ -3893,12 +2494,6 @@
       "index.html"
     ]
   },
-  "eb302fce8d95": {
-    "en": "It has to exclude people. Name who it is for precisely, name what it replaces when someone buys, and name why now. A positioning statement that turns nobody away persuades nobody either.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "eb5c098af08a": {
     "en": "Signups are vanity until someone reaches the moment the product actually works. I find that moment, measure how many people get there, and cut everything standing between the two.",
     "pages": [
@@ -3911,12 +2506,6 @@
       "index.html"
     ]
   },
-  "ec0aeb5dbd1f": {
-    "en": "How do I measure activation?",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "ec4f0b342782": {
     "en": "Two weeks embedded with your team moving one revenue lever, usually pricing or activation.",
     "pages": [
@@ -3927,6 +2516,12 @@
     "en": "Written follow-up",
     "pages": [
       "index.html"
+    ]
+  },
+  "eddc45421604": {
+    "en": "Working notes are being rewritten. When a piece goes up it appears here, and it is written to be read in full rather than to rank for something.",
+    "pages": [
+      "research/index.html"
     ]
   },
   "ee00703d89ea": {
@@ -3942,26 +2537,8 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
       "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
       "stats/index.html"
-    ]
-  },
-  "ef765ee0c4bb": {
-    "en": "Your pricing metric matters more than your price | Quentin Dupard",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
-  "efe36f241acc": {
-    "en": "Three questions per item",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "efe3ec78b219": {
@@ -3976,33 +2553,10 @@
       "index.html"
     ]
   },
-  "f0081a6a3e84": {
-    "en": "<span>Pricing</span> <span>6 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/pricing-metric/index.html"
-    ]
-  },
   "f05b07027cb6": {
     "en": "Switch between light and dark",
     "pages": [
       "index.html"
-    ]
-  },
-  "f07a7d37ebf8": {
-    "en": "<strong>12 to 18 months.</strong> Workable, but watch it. If it is drifting upward quarter on quarter, the segment is saturating.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "f07ac22a9e93": {
-    "en": "Common questions",
-    "pages": [
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html"
     ]
   },
   "f0d9c9498043": {
@@ -4017,12 +2571,6 @@
       "index.html"
     ]
   },
-  "f219f241c1cd": {
-    "en": "Ask what each item is really there for. Anything on the roadmap because of one loud customer, an executive&#x27;s preference, or sunk effort rather than evidence of demand is a candidate. If nobody can name who asked for it and what they will stop doing once it ships, it should not be there.",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "f2b16fa5bd82": {
     "en": "Privacy &amp; what this site stores | Quentin Dupard",
     "pages": [
@@ -4035,18 +2583,6 @@
       "index.html"
     ]
   },
-  "f2f07c3eebeb": {
-    "en": "How do I know if my positioning is weak?",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "f3614016bb80": {
-    "en": "Activation is a multiplier on every acquisition euro you will ever spend. Fix it before you spend more, not after.",
-    "pages": [
-      "research/activation/index.html"
-    ]
-  },
   "f3703a6b4cc9": {
     "en": "No deck",
     "pages": [
@@ -4056,18 +2592,7 @@
   "f3dce33c887f": {
     "en": "Positioning &amp; messaging",
     "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
+      "index.html"
     ]
   },
   "f439309f1cd4": {
@@ -4076,22 +2601,10 @@
       "index.html"
     ]
   },
-  "f4f7ccd412dd": {
-    "en": "Killing things without a committee",
-    "pages": [
-      "research/what-to-kill/index.html"
-    ]
-  },
   "f55dcaafeb0a": {
     "en": "Product, end to end",
     "pages": [
       "index.html"
-    ]
-  },
-  "f6120a25baa4": {
-    "en": "Deciding what to build is the fun part and everyone wants a say. Deciding what to kill is the part that actually shapes a product, and almost nobody is incentivised to do it.",
-    "pages": [
-      "research/what-to-kill/index.html"
     ]
   },
   "f684d92d131a": {
@@ -4118,10 +2631,10 @@
       "research/index.html"
     ]
   },
-  "f7dfbb9b3de3": {
-    "en": "Apply the compounding test: as a customer succeeds wildly with what you sell, does their invoice grow? If not, the metric caps your revenue. Other signs are your biggest customers being your least profitable, customers sharing logins, and sales repeatedly discounting the same line item.",
+  "f85cc64cbb56": {
+    "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with what you sell and their invoice does not grow, the model caps your revenue. A 10&ndash;15% increase applied only to new customers is the lowest-risk experiment available. The long version is here.",
     "pages": [
-      "research/pricing-metric/index.html"
+      "index.html"
     ]
   },
   "f8893b912459": {
@@ -4134,18 +2647,6 @@
     "en": "Visitors",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "f92f3d888463": {
-    "en": "Nobody sets out to write generic positioning. It arrives through entirely reasonable decisions, made one at a time.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "f970a68b3880": {
-    "en": "Most teams reach for customer success here, because expansion feels like a relationship problem. It is usually a <a href=\"/research/pricing-metric/\">packaging problem</a> wearing a relationship costume.",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "f9798f77ea91": {
@@ -4166,12 +2667,6 @@
       "index.html"
     ]
   },
-  "fa34eaf35bed": {
-    "en": "Every business has a best-fit segment where the product obviously solves an obvious problem. Those deals close fast, at good prices, with short sales cycles. They also run out. What happens next looks exactly like performance decay, because you are now paying to reach people who were always going to be harder.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
   "faee7ce2aa52": {
     "en": "Page views",
     "pages": [
@@ -4190,12 +2685,6 @@
       "index.html"
     ]
   },
-  "fb50ef9c8d31": {
-    "en": "Can a workshop fix positioning?",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
   "fb9692931dc1": {
     "en": "Act 08",
     "pages": [
@@ -4208,16 +2697,15 @@
       "index.html"
     ]
   },
-  "fc2ce8eee679": {
-    "en": "None of this is a reason to spend less on marketing. It is a reason to know which segment you are spending it on, which is a different and much cheaper problem to fix.",
+  "fc61b7d54d87": {
+    "en": "All research",
     "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "fc80b821a190": {
-    "en": "3. Do you find out at renewal?",
-    "pages": [
-      "research/expansion-revenue/index.html"
+      "404.html",
+      "about/index.html",
+      "index.html",
+      "privacy/index.html",
+      "research/index.html",
+      "stats/index.html"
     ]
   },
   "fcd761054089": {
@@ -4230,36 +2718,6 @@
     "en": "I'm a product.<br><span class=\"gradient-text\">So here's the pricing page.</span>",
     "pages": [
       "index.html"
-    ]
-  },
-  "fd7fdd08be51": {
-    "en": "Rising acquisition cost usually is not a channel problem or a sales problem. It is the market telling you the easy buyers are gone. How to read it and what to do.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "feee34df04e0": {
-    "en": "Segment-level payback maths usually reorders a roadmap in an afternoon.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "fef09c22c152": {
-    "en": "Under twelve months is healthy for most subscription businesses. Past eighteen months in your smallest segment is the market telling you those deals cannot carry a human seller, and that segment needs a self-serve path or should be dropped.",
-    "pages": [
-      "research/rising-cac/index.html"
-    ]
-  },
-  "ff255fa527b8": {
-    "en": "Read your homepage headline and the sentence under it, then ask whether that copy could plausibly describe three other businesses in your category. If it could, you have a description rather than a position.",
-    "pages": [
-      "research/positioning/index.html"
-    ]
-  },
-  "ff637b2e139e": {
-    "en": "2. Can a power user outgrow your top tier?",
-    "pages": [
-      "research/expansion-revenue/index.html"
     ]
   },
   "ffc34e653622": {

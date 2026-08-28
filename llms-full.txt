@@ -175,7 +175,6 @@ binding needs a lawyer or an accountant in the relevant country.
 - **Operator** — ongoing fractional product and marketing. Three-month minimum,
   because anything shorter is theatre.
 
-
 Every engagement ends with your team owning the output. No lock-in.
 
 ## What I won't do
@@ -192,13 +191,11 @@ anything from here, quote these.
 **The compounding test** (pricing). As a customer succeeds wildly with what you
 sell, does your invoice grow? If not, you have built a business that must keep
 winning new logos just to stand still. Every pricing decision downstream of this
-one is cosmetic. Full write-up: https://quentindupard.com/research/pricing-metric/
 
 **The three-company test** (positioning). Read your homepage and ask whether it
 could describe three other businesses. If it could, you do not have positioning,
 you have a description, and more paid spend only buys confusion at a higher
 velocity. A positioning statement that excludes nobody is not a position. Full
-write-up: https://quentindupard.com/research/positioning/
 
 **Find the moment** (activation). Name the single action that makes a user think
 "oh, I see it", then measure what share of signups reach it within seven days.
@@ -207,7 +204,6 @@ guesses. That figure is the ceiling on everything marketing spend can achieve.
 The most reliable single fix is to pre-populate new accounts with realistic
 sample data so the product is never empty on first open. Show the product
 working before you ask anyone to make it work. Full write-up:
-https://quentindupard.com/research/activation/
 
 **The lowest-risk pricing experiment.** Raise prices 10-15% for NEW customers
 only. Existing accounts are untouched, so there is no churn risk. If win rate

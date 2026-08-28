@@ -26,13 +26,10 @@ PAGES = [
     'privacy/index.html',
     'stats/index.html',
     'research/index.html',
-    'research/activation/index.html',
-    'research/expansion-revenue/index.html',
-    'research/positioning/index.html',
-    'research/pricing-metric/index.html',
-    'research/rising-cac/index.html',
-    'research/what-to-kill/index.html',
 ]
+
+# Article pages are added here as they are written. tools/new-article.py
+# appends automatically; nothing else needs editing to publish one.
 
 # JSON-LD fields that carry prose rather than identifiers.
 LD_TEXT_FIELDS = {'name', 'description', 'headline', 'text', 'articleBody',

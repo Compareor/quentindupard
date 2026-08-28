@@ -1545,3 +1545,14 @@
   .snake-code { font-size: 17px; letter-spacing: 0.08em; }
   .snake-code-row { flex-direction: column; align-items: stretch; }
 }
+
+/* Cancel route in the paywall. Understated but not hidden: a subscription you
+   cannot leave without writing an email is a support ticket waiting to happen,
+   and in the EU it is also a compliance problem. */
+.paywall-cancel {
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--glass-stroke-strong);
+}
+.paywall-cancel:hover { color: var(--text); text-decoration-color: currentColor; }

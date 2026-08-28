@@ -1342,7 +1342,33 @@
      that switch off, Stripe hides the promo field entirely and silently drops
      the parameter, which is exactly what "the code does not work" looks like. */
   const STRIPE_LINK = 'https://buy.stripe.com/6oUcN55Ridk40TwgqZ0oM00';
+
+  /* Stripe's hosted customer portal. Paste the billing.stripe.com/p/login/…
+     URL from Stripe -> Settings -> Billing -> Customer portal.
+
+     Selling a subscription with no self-serve way out is not a missing
+     feature, it is the thing consumer law is specifically about. Until the
+     URL is set the link falls back to email, which is slower but is at least
+     a route that exists. */
+  const STRIPE_PORTAL = '';
   const PROMO_KEY = 'qd:promo';
+
+  function cancelLink() {
+    const a = document.createElement('a');
+    a.className = 'paywall-cancel';
+    a.dataset.track = 'manage_subscription';
+    if (STRIPE_PORTAL) {
+      a.href = STRIPE_PORTAL;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = t('Manage or cancel your subscription');
+    } else {
+      a.href = 'mailto:quentin.dupard@gmail.com?subject=' +
+               encodeURIComponent('Cancel my AI-me subscription');
+      a.textContent = t('Cancel any time — email me and I will do it the same day');
+    }
+    return a;
+  }
 
   function wonPromo() {
     try { return localStorage.getItem(PROMO_KEY) || ''; } catch (_) { return ''; }
@@ -1415,6 +1441,12 @@
     note.className = 'paywall-note';
     note.textContent = t('The research on this site stays free and ungated either way.');
     wrap.appendChild(note);
+
+    // Shown before anyone pays, not buried in a receipt afterwards.
+    const cancel = document.createElement('p');
+    cancel.className = 'paywall-note';
+    cancel.appendChild(cancelLink());
+    wrap.appendChild(cancel);
 
     chat.appendChild(wrap);
     chat.scrollTop = chat.scrollHeight;

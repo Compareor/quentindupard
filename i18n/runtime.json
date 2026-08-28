@@ -463,5 +463,13 @@
   "{n} attachments": {
     "fr": "{n} pièces jointes",
     "es": "{n} adjuntos"
+  },
+  "Manage or cancel your subscription": {
+    "fr": "Gérer ou résilier votre abonnement",
+    "es": "Gestionar o cancelar tu suscripción"
+  },
+  "Cancel any time — email me and I will do it the same day": {
+    "fr": "Résiliable à tout moment : écrivez-moi et je le fais le jour même",
+    "es": "Cancelable cuando quieras: escríbeme y lo hago el mismo día"
   }
 }

@@ -79,6 +79,21 @@ def is_translatable(text):
 
 GENERATED_CLASSES = ('lang-switch', 'lang-opt')
 
+# Wrappers the build introduces purely for layout. They must never become
+# translatable units themselves: .nav-end holds only the CTA anchor, so left
+# alone it is a leaf block and the extractor captures the whole <a> tag as a
+# string instead of the two words inside it. Forcing recursion keeps the
+# catalogue keyed on the sentence rather than on the markup around it.
+TRANSPARENT_CLASSES = ('nav-end',)
+
+
+def is_transparent(attrs):
+    for name, value in attrs:
+        if name == 'class' and value:
+            if any(c in TRANSPARENT_CLASSES for c in value.split()):
+                return True
+    return False
+
 
 def is_generated(attrs):
     """True for markup this pipeline writes rather than a person."""
@@ -159,6 +174,8 @@ class Collector(HTMLParser):
             self._mark_inline(tag)
             return
         node = _Node(tag, end)
+        if is_transparent(attrs):
+            node.has_block = True          # never a unit; recurse into it
         if self._open:
             self._open[-1].children.append(node)
         self._open.append(node)

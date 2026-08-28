@@ -554,51 +554,32 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 }
 
 /* In dark mode the band inverts the other way, back to the light palette. */
+/* In dark mode the band does NOT flip back to the light palette.
+   Inverting literally puts a near-white slab in the middle of a dark page,
+   which is painful at night and defeats the point of choosing dark. Dark
+   interfaces separate surfaces by ELEVATION, not by inversion: the band stays
+   dark and sits lighter than the ground, so it still reads as a distinct
+   surface with an edge to scroll across.
+
+   Everything else is inherited from .invert, whose tokens are already
+   light-on-dark and therefore already correct here. Only the ground moves,
+   plus a small lift on the glass so cards still separate from a band that is
+   no longer the darkest thing on screen. */
 [data-theme="dark"] .invert {
-  --text:        #0d1424;
-  --text-dim:    rgba(13, 20, 36, 0.72);
-  /* 0.60 measured 4.22:1 against the muted band — under AA at 12px. */
-  --text-faint:  rgba(13, 20, 36, 0.68);
-  --text-ghost:  rgba(13, 20, 36, 0.34);
-
-  --cyan:        #0b6f85;
-  --violet:      #6d4bf0;
-
-  --glass-thin:    rgba(255, 255, 255, 0.34);
-  --glass-regular: rgba(255, 255, 255, 0.46);
-  --glass-thick:   rgba(255, 255, 255, 0.60);
-
-  --glass-stroke:        rgba(13, 20, 36, 0.12);
-  --glass-stroke-strong: rgba(13, 20, 36, 0.22);
-
-  --tint:        rgba(13, 20, 36, 0.05);
-  --tint-strong: rgba(13, 20, 36, 0.09);
-  --hair:        rgba(13, 20, 36, 0.10);
-
-  --panel:       rgba(255, 255, 255, 0.90);
-  --panel-soft:  rgba(255, 255, 255, 0.55);
-  --pill-bg:     rgba(255, 255, 255, 0.75);
-
-  --specular:        inset 0 1px 0 rgba(255, 255, 255, 0.85);
-  --specular-strong: inset 0 1px 0 rgba(255, 255, 255, 1);
-  --lift-sm: 0 2px 8px rgba(13, 20, 36, 0.05);
-  --lift:    0 8px 26px rgba(13, 20, 36, 0.09);
-  --lift-lg: 0 20px 56px rgba(13, 20, 36, 0.13);
-
-  --refract: linear-gradient(163deg,
-    rgba(255, 255, 255, 0.42) 0%,
-    rgba(255, 255, 255, 0.10) 22%,
-    rgba(255, 255, 255, 0) 46%);
-
-  --accent-fill:       linear-gradient(140deg, rgba(53, 214, 238, 0.62), rgba(143, 123, 255, 0.58));
-  --accent-fill-hover: linear-gradient(140deg, rgba(53, 214, 238, 0.78), rgba(143, 123, 255, 0.74));
-  --accent-edge: rgba(93, 140, 220, 0.38);
-
   --band:
-    radial-gradient(60% 70% at 12% 0%,  rgba(122, 88, 255, 0.12), transparent 72%),
-    radial-gradient(52% 64% at 90% 100%, rgba(34, 206, 238, 0.10), transparent 72%),
-    linear-gradient(168deg, #ccd5ea 0%, #c1cbe1 100%);
-  background: none;
+    radial-gradient(60% 70% at 12% 0%,  rgba(132, 104, 255, 0.20), transparent 72%),
+    radial-gradient(52% 64% at 90% 100%, rgba(52, 200, 232, 0.13), transparent 72%),
+    linear-gradient(168deg, #1a2246 0%, #141b39 100%);
+
+  /* The ground under these is lighter now, so the panels have to climb with
+     it or they flatten into the band. */
+  --glass-thin:    rgba(255, 255, 255, 0.07);
+  --glass-regular: rgba(255, 255, 255, 0.105);
+  --glass-thick:   rgba(255, 255, 255, 0.16);
+  --glass-stroke:        rgba(255, 255, 255, 0.16);
+  --glass-stroke-strong: rgba(255, 255, 255, 0.30);
+  --panel:      rgba(26, 33, 66, 0.92);
+  --panel-soft: rgba(26, 33, 66, 0.58);
 }
 
 /* ── Section blending ─────────────────────────────────────

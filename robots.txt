@@ -39,6 +39,8 @@ Allow: /
 # carries the hreflang annotations that tie them together.
 Sitemap: https://quentindupard.com/sitemap.xml
 
+# IndexNow key lives at /c269fe0f232f4c0b98944cadd64fdb68.txt
+
 # LLM-readable index (proposed standard: https://llmstxt.org)
 # https://quentindupard.com/llms.txt
 # https://quentindupard.com/llms-full.txt

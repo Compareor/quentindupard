@@ -28,3 +28,10 @@
 /admin/*
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: no-store
+
+# IndexNow key. Bing fetches this to verify a submission belongs to the site,
+# so it has to stay reachable, plain text, and out of the index.
+/c269fe0f232f4c0b98944cadd64fdb68.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex

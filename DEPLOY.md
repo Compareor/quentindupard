@@ -201,3 +201,27 @@ Language selection: the Worker reads `Accept-Language` on `/` only, never
 redirects a crawler, and answers 302 with `Vary`. Picking a language from the
 switcher writes `qd_lang`, which always wins. Deep links are never redirected —
 they carry their own language, and redirecting them would fight the hreflang.
+
+---
+
+## IndexNow
+
+Bing, Yandex and Seznam accept a push instead of waiting for their own crawl
+schedule. Google does not participate, so this complements Search Console
+rather than replacing it.
+
+```bash
+python3 tools/indexnow.py --dry-run     # show what would be sent
+python3 tools/indexnow.py               # every URL in sitemap.xml
+python3 tools/indexnow.py --urls https://quentindupard.com/research/x/
+python3 tools/indexnow.py --withdrawn   # the 410'd pieces, so they get dropped
+```
+
+The key file at `/c269fe0f232f4c0b98944cadd64fdb68.txt` is how a submission is
+verified as yours. **It has to stay deployed**: delete it and every submission
+is rejected with a 403. It is served as `text/plain` and `noindex` via
+`_headers`.
+
+Run it after publishing an article, and after withdrawing one — submitting a
+URL that now returns 410 is the fastest way to get a dead page dropped, because
+the crawler comes to look rather than waiting weeks to notice.

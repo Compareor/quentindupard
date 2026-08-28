@@ -225,3 +225,24 @@ is rejected with a 403. It is served as `text/plain` and `noindex` via
 Run it after publishing an article, and after withdrawing one — submitting a
 URL that now returns 410 is the fastest way to get a dead page dropped, because
 the crawler comes to look rather than waiting weeks to notice.
+
+### Book reviews
+
+A book write-up is a `Review` of a `Book`, not an `Article` about one — which
+is what earns a review rich result:
+
+```bash
+python3 tools/new-article.py obviously-awesome \
+  --title "Obviously Awesome, and the part everyone skips" \
+  --kind Book --minutes 5 \
+  --summary "One sentence for search results and the hub card." \
+  --book "Obviously Awesome" --author "April Dunford" --isbn "9781999023003"
+```
+
+The prose skeleton differs from an essay's: what it argues, what you took from
+it, **where it is wrong or dated**, and who should read it. That third heading
+is not optional — a review with no disagreement in it reads as a blurb, and
+nobody trusts a blurb.
+
+No rating is emitted. A number out of five says less than the paragraph
+explaining what the book got right, and inventing one would be worse than none.

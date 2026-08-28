@@ -295,3 +295,12 @@
   .map-pin .map-dot { r: 7; }
   .map-caption { flex-direction: column; gap: 6px; }
 }
+
+/* The book and author, under the stand-first on a review. */
+.book-meta {
+  font-size: 15px !important;
+  color: var(--text-faint) !important;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent-edge);
+}
+.book-meta strong { color: var(--text-dim); }

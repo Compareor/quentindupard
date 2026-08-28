@@ -51,9 +51,71 @@ def head_and_chrome():
     return nav, footer, scripts, icons, theme, defs
 
 
-def build(slug, title, kind, minutes, summary):
+def article_schema(slug, title, summary, url):
+    return f"""{main_schema}"""
+
+
+def book_schema(title, summary, url, book_title, author, isbn):
+    """
+    A book write-up is a Review of a Book, not an Article about one.
+
+    Review with itemReviewed states the relationship — this person read that
+    book and has a view — which is what earns a review rich result. No rating
+    is emitted: a number out of five says less than the paragraph explaining
+    what the book got right, and inventing one would be worse than none.
+    """
+    isbn_line = f'\n    "isbn": "{isbn}",' if isbn else ''
+    return f"""<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "{title}",
+  "description": "{summary}",
+  "url": "{url}",
+  "datePublished": "TODO-YYYY-MM-DD",
+  "author": {{ "@id": "{SITE}/#quentin" }},
+  "publisher": {{ "@id": "{SITE}/#quentin" }},
+  "inLanguage": "en",
+  "itemReviewed": {{
+    "@type": "Book",
+    "name": "{book_title}",{isbn_line}
+    "author": {{ "@type": "Person", "name": "{author}" }}
+  }}
+}}
+</script>"""
+
+
+def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None):
     nav, footer, scripts, icons, theme, defs = head_and_chrome()
     url = f'{SITE}/research/{slug}/'
+    main_schema = (book_schema(title, summary, url, book, author or 'TODO author', isbn)
+                   if book else article_schema(slug, title, summary, url))
+
+    if book:
+        body = (
+            f'      <p class="stand-first">TODO what this book got right that '
+            f'other people get wrong, in one paragraph. This is the quotable bit '
+            f'— it has to stand alone.</p>\n\n'
+            f'      <p class="book-meta"><strong>{book}</strong> &mdash; {author or "TODO author"}</p>\n\n'
+            f'      <h2>What it argues</h2>\n\n'
+            f'      <p>TODO the book\'s actual claim, stated fairly enough that '
+            f'someone who disagrees would recognise it.</p>\n\n'
+            f'      <h2>What I took from it</h2>\n\n'
+            f'      <p>TODO the part that changed how you work. Specific, from a '
+            f'real engagement if you have one.</p>\n\n'
+            f'      <h2>Where it is wrong, or dated</h2>\n\n'
+            f'      <p>TODO. A review with no disagreement in it reads as a '
+            f'blurb, and nobody trusts a blurb.</p>\n\n'
+            f'      <h2>Who should read it</h2>\n\n'
+            f'      <p>TODO, and who should not.</p>')
+    else:
+        body = (
+            '      <p class="stand-first">TODO one paragraph that states the claim. '
+            'This is what shows in search results and what an answer engine quotes, '
+            'so it has to stand alone.</p>\n\n'
+            '      <p>TODO the argument.</p>\n\n'
+            '      <h2>TODO section heading</h2>\n\n'
+            '      <p>TODO.</p>')
 
     page = f'''<!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -88,22 +150,7 @@ def build(slug, title, kind, minutes, summary):
 
 {theme}
 
-<script type="application/ld+json">
-{{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{title}",
-  "description": "{summary}",
-  "image": "{SITE}/assets/research/{slug}.svg",
-  "datePublished": "TODO-YYYY-MM-DD",
-  "dateModified": "TODO-YYYY-MM-DD",
-  "author": {{ "@id": "{SITE}/#quentin" }},
-  "publisher": {{ "@id": "{SITE}/#quentin" }},
-  "isPartOf": {{ "@id": "{SITE}/#website" }},
-  "mainEntityOfPage": "{url}",
-  "inLanguage": "en"
-}}
-</script>
+{main_schema}
 
 <script type="application/ld+json">
 {{
@@ -164,13 +211,7 @@ def build(slug, title, kind, minutes, summary):
         <img src="/assets/research/{slug}.svg" alt="" width="1200" height="630" loading="lazy" decoding="async">
       </figure>
 
-      <p class="stand-first">TODO one paragraph that states the claim. This is what shows in search results and what an answer engine quotes, so it has to stand alone.</p>
-
-      <p>TODO the argument.</p>
-
-      <h2>TODO section heading</h2>
-
-      <p>TODO.</p>
+{body}
 
       <div class="callout">
         <p>TODO the one line worth remembering.</p>
@@ -256,11 +297,15 @@ def main():
     ap.add_argument('--kind', default='Research', help='Pricing, Activation, Positioning…')
     ap.add_argument('--minutes', default='5')
     ap.add_argument('--summary', default='TODO one sentence, used in search results and on the hub card.')
+    ap.add_argument('--book', help='book title — switches the schema to a Review of a Book')
+    ap.add_argument('--author', help='the book\'s author')
+    ap.add_argument('--isbn', help='optional, but it is what disambiguates an edition')
     a = ap.parse_args()
     if not re.fullmatch(r'[a-z0-9-]+', a.slug):
         print('  slug must be lowercase letters, digits and hyphens')
         return 1
-    return build(a.slug, a.title, a.kind, a.minutes, a.summary)
+    return build(a.slug, a.title, a.kind, a.minutes, a.summary,
+                 book=a.book, author=a.author, isbn=a.isbn)
 
 
 if __name__ == '__main__':

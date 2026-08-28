@@ -424,6 +424,13 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   .shell { padding: 0 18px; }
   .nav { top: 10px; width: calc(100% - 20px); padding: 8px 8px 8px 14px; }
   .nav-links { display: none; }
+  /* With the links hidden the nav has two children, and equal-width columns
+     then give the brand half the bar whether or not it fits — the switcher
+     ended up printed over the name. Both sides size to their content here and
+     space-between does the rest. */
+  .nav-brand { flex: 0 1 auto; min-width: 0; }
+  .nav-end   { flex: 0 0 auto; gap: 8px; }
+  .nav-brand { overflow: hidden; }
 }
 
 /* ══ Dark ═════════════════════════════════════════════════
@@ -691,4 +698,16 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
      because a French visitor on a phone needs it more than a desktop one. */
   .lang-switch { margin-left: 0; }
   .lang-opt { padding: 6px 8px; font-size: 11px; }
+}
+
+
+@media (max-width: 480px) {
+  /* The wordmark truncated to "Quentin D", which reads as breakage rather than
+     as design. The mark alone is enough here: every page carries the name in
+     its own heading, and the text node stays in the accessibility tree as the
+     link's name — it is only hidden visually. */
+  .nav-brand { font-size: 0; gap: 0; }
+  .nav-brand .brand-logo { width: 28px; height: 28px; }
+  .lang-opt { padding: 5px 7px; }
+  .nav-cta { padding: 10px 16px; font-size: 14px; }
 }

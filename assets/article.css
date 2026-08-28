@@ -178,3 +178,49 @@
   .hub-empty { padding: 24px 20px; }
   .hub-empty .btn { width: 100%; margin-bottom: 6px; }
 }
+
+/* ── Portrait and intro ─────────────────────────────────────
+   The photo shares a row with the opening paragraphs rather than floating
+   into the body. .prose is 680px for readability; a 300px float left roughly
+   30 characters a line, which is worse typography than no photo at all. Below
+   the row, prose gets its full measure back.
+
+   srcset means a phone fetches 22KB instead of the 213KB original, which is
+   still what the social preview uses. */
+.about-intro {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+.about-intro-text > p:first-child { margin-top: 0; }
+/* The paragraph rules are scoped to .prose's direct children, so moving these
+   two into a wrapper stripped the space between them. */
+.about-intro-text > p + p { margin-top: 18px; }
+
+.portrait { margin: 0; }
+.portrait img {
+  display: block;
+  width: 100%; height: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: var(--specular), var(--lift);
+  background: var(--glass-thin);
+}
+.portrait-caption {
+  font-size: 12.5px; line-height: 1.5;
+  color: var(--text-faint);
+  margin: 10px 2px 0;
+}
+
+@media (max-width: 700px) {
+  /* One column: a 260px photo beside text on a phone leaves neither enough. */
+  .about-intro { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  /* 320px of portrait filled a phone screen before a word of the page showed.
+     Smaller: enough to see a face, not so much that it is the whole first
+     scroll. */
+  .portrait { max-width: 210px; margin: 0 auto 20px; }
+  .portrait img { border-radius: var(--r-md); }
+  .portrait-caption { text-align: center; }
+}

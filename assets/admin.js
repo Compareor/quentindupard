@@ -382,6 +382,9 @@
           const line = el('div', 'qrow');
           const meta = el('div', 'qrow-head');
           meta.append(el('span', 'qrow-when', clock(row.at)), el('span', 'qrow-lang', row.lang.toUpperCase()));
+          /* Answered by the off-topic gate, not the model. If real business
+             questions start showing up with this badge, the gate is too tight. */
+          if (row.offTopic) meta.appendChild(el('span', 'qrow-off', 'off-topic'));
           meta.appendChild(iconBtn('✕', 'Delete this question', async () => {
             if (!confirm('Delete this question permanently?')) return;
             await removeQuestion(row);

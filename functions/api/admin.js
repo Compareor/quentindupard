@@ -272,7 +272,7 @@ export async function questions({ request, env }) {
     cursor = page.list_complete ? null : page.cursor;
     for (const k of page.keys) {
       const m = k.metadata || {};
-      if (m.q) rows.push({ key: k.name, q: m.q, at: m.at || 0, lang: m.lang || 'en', thread: m.thread || '' });
+      if (m.q) rows.push({ key: k.name, q: m.q, at: m.at || 0, lang: m.lang || 'en', thread: m.thread || '', offTopic: m.offTopic === true });
     }
   } while (cursor && rows.length < 2000);
 

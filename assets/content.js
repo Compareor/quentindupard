@@ -132,7 +132,7 @@ window.QD_MAILBOX = [
 window.QD_DESKTOP = [
   /* Emptied deliberately. Quentin is writing the real contents.
      Item shapes, for reference when adding them back:
-       { name, kind: 'page',  href: '/research/<slug>/', meta: '6 min read' }
+       { name, kind: 'page',  href: '/research/<slug>/', meta: '6 min read', tag: 'Book' }   // tag is optional: Book, Article…
        { name, kind: 'pdf',   href: '/assets/docs/<file>.pdf', meta: 'PDF · 240 KB' }
        { name, kind: 'link',  href: 'https://…', meta: 'Author' }
        { name, kind: 'note',  meta: 'Note', body: ['para', 'para'] }
@@ -140,8 +140,8 @@ window.QD_DESKTOP = [
      A folder with no items renders as an empty window rather than breaking,
      and /admin can fill any of this without a deploy. */
   { id: 'research',    name: 'Research',    kind: 'folder', items: [
-      { name: 'Influence \u2014 Robert Cialdini', kind: 'page', href: '/research/influence-robert-cialdini/', meta: '10 min read' },
-      { name: 'Hooked \u2014 Nir Eyal',           kind: 'page', href: '/research/hooked-nir-eyal/',           meta: '9 min read' }
+      { name: 'Influence \u2014 Robert Cialdini', kind: 'page', tag: 'Book', href: '/research/influence-robert-cialdini/', meta: '10 min read' },
+      { name: 'Hooked \u2014 Nir Eyal',           kind: 'page', tag: 'Book', href: '/research/hooked-nir-eyal/',           meta: '9 min read' }
     ] },
   { id: 'downloads',   name: 'Downloads',   kind: 'folder', items: [] },
   { id: 'frameworks',  name: 'Frameworks',  kind: 'folder', items: [] },

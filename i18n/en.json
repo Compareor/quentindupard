@@ -1345,6 +1345,12 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "6444f3fd0069": {
+    "en": "<strong>Influence: The Psychology of Persuasion</strong> <span class=\"book-author\">Robert B. Cialdini</span> <span class=\"book-pub\">First published 1984 &middot; ISBN 978-0-06-189990-4</span>",
+    "pages": [
+      "research/influence-robert-cialdini/index.html"
+    ]
+  },
   "6469ad3b4d21": {
     "en": "<span class=\"demand-n\" id=\"d-rate\">—</span><span class=\"demand-l\">Cart rate</span>",
     "pages": [
@@ -2137,12 +2143,6 @@
     "en": "Book review",
     "pages": [
       "research/index.html"
-    ]
-  },
-  "94fb4efbe129": {
-    "en": "<strong>Influence: The Psychology of Persuasion</strong><br>Robert B. Cialdini &middot; first published 1984",
-    "pages": [
-      "research/influence-robert-cialdini/index.html"
     ]
   },
   "952f375412e8": {
@@ -3159,12 +3159,6 @@
       "index.html"
     ]
   },
-  "dca13b59b6d7": {
-    "en": "<strong>Hooked: How to Build Habit-Forming Products</strong><br>Nir Eyal, with Ryan Hoover &middot; first published 2014",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
-    ]
-  },
   "dd3b86d1ef21": {
     "en": "Product",
     "pages": [
@@ -3211,6 +3205,12 @@
   },
   "dfe5fb100ea7": {
     "en": "What is the difference between a habit and an addiction in Hooked?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "e09324e75e9f": {
+    "en": "<strong>Hooked: How to Build Habit-Forming Products</strong> <span class=\"book-author\">Nir Eyal, with Ryan Hoover</span> <span class=\"book-pub\">First published 2014 &middot; ISBN 978-1494277536</span>",
     "pages": [
       "research/hooked-nir-eyal/index.html"
     ]

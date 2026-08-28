@@ -1234,7 +1234,17 @@
         meta.className = 'file-meta';
         meta.textContent = item.meta ? t(item.meta) : '';
 
-        node.append(icon, label, meta);
+        node.append(icon, label);
+        /* A folder that mixes books, articles and files needs the row to say
+           which is which. Optional, translated, and after the name so a long
+           title still gets the room. */
+        if (item.tag) {
+          const tag = document.createElement('span');
+          tag.className = 'file-tag';
+          tag.textContent = t(item.tag);
+          node.appendChild(tag);
+        }
+        node.appendChild(meta);
         body.appendChild(node);
       });
 

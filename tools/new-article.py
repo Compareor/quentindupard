@@ -248,10 +248,29 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
 
     register(slug)
     add_hub_card(slug, title, kind, summary)
+    add_to_registry(slug, title, kind, minutes)
     print('\n  next: write the prose, replace every TODO, then')
     print('    python3 tools/i18n/extract.py && python3 tools/i18n/build.py')
     print('    python3 tools/i18n/sitemap.py && python3 tools/i18n/verify.py')
     return 0
+
+
+def add_to_registry(slug, title, kind, minutes):
+    """Prepend to assets/articles.js so the piece appears in every page's
+       'Read more' block. The title renders through QD.t(), so it also needs a
+       row in i18n/runtime.json before French and Spanish stop showing the
+       English one."""
+    p = os.path.join(ROOT, 'assets', 'articles.js')
+    s = open(p, encoding='utf-8').read()
+    anchor = 'window.QD_ARTICLES = [\n'
+    entry = (f"  {{\n    slug: '{slug}',\n    title: {title!r},\n"
+             f"    kind: '{kind}',\n    minutes: {minutes},\n"
+             f"    img: '/assets/research/{slug}.svg'\n  }},\n")
+    if f"slug: '{slug}'" in s:
+        return
+    s = s.replace(anchor, anchor + entry, 1)
+    open(p, 'w', encoding='utf-8').write(s)
+    print('  added to assets/articles.js — add the title to i18n/runtime.json too')
 
 
 def register(slug):

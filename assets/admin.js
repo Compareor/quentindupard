@@ -127,6 +127,9 @@
     if (!isNote) row.appendChild(input(item.href, '/path or https://…', v => { item.href = v; }, 'text'));
     row.append(
       input(item.meta, 'Caption', v => { item.meta = v; }, 'text'),
+      /* Shown as a pill on the row in the fort — Book, Article, Template…
+         Empty means no pill. */
+      input(item.tag, 'Tag', v => { if (v) item.tag = v; else delete item.tag; }, 'text'),
       orderControls(items, i)
     );
 

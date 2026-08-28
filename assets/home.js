@@ -713,6 +713,22 @@
 
   /* ══ Edited content overlay ═══════════════════════════════ */
 
+  /* Folder items come from content.js at runtime, so the build step that
+     rewrites every href into /fr/... or /es/... never sees them. Without this
+     a French visitor opening the fort got sent to the English article.
+
+     Assets are excluded: /assets/docs/x.pdf exists once, not once per
+     language, and prefixing it would 404. */
+  function localHref(href) {
+    if (typeof href !== 'string' || !href.startsWith('/')) return href;   // external or missing
+    if (/^\/(assets|api)\//.test(href)) return href;                      // one copy, all locales
+    // Strip any locale already on the path before adding this one, so an href
+    // written as /fr/... does not become /es/fr/... on the Spanish site.
+    const bare = href.replace(/^\/(fr|es)(?=\/|$)/, '') || '/';
+    const lang = document.documentElement.lang;
+    return (lang === 'fr' || lang === 'es') ? '/' + lang + bare : bare;
+  }
+
   /* The store is an overlay on the shipped file, not a replacement for it.
      Precedence is per folder: one the admin has actually put something into
      wins, one left empty falls back to whatever shipped in content.js.
@@ -1161,7 +1177,7 @@
     }
 
     function openFolder(data) {
-      const win = makeWindow(data.name);
+      const win = makeWindow(t(data.name));
       const body = document.createElement('div');
       body.className = 'win-body';
 
@@ -1185,7 +1201,7 @@
             () => (item.kind === 'video' ? openVideo(item) : openNote(item)));
         } else {
           node = document.createElement('a');
-          node.href = item.href;
+          node.href = localHref(item.href);
           if (item.kind === 'pdf') {
             node.setAttribute('download', '');
             node.dataset.track = 'desktop_download';

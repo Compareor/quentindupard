@@ -543,18 +543,6 @@
 }
 .dodge:hover { color: var(--text-faint); }
 
-.cart-summary {
-  display: flex; align-items: center; gap: 14px;
-  padding: 10px 10px 10px 20px;
-  background: var(--glass-regular);
-  backdrop-filter: blur(20px) saturate(170%);
-  -webkit-backdrop-filter: blur(20px) saturate(170%);
-  border: 1px solid var(--glass-stroke);
-  border-radius: var(--r-pill);
-  box-shadow: var(--specular);
-  animation: sheet-in .45s var(--spring);
-}
-#cart-text { font-size: 14px; font-weight: 500; white-space: nowrap; }
 
 /* ── Comparison table ────────────────────────────────────── */
 .compare-wrap {
@@ -1572,4 +1560,79 @@
   font-size: 14px; line-height: 1.6;
   color: var(--text-dim);
   padding: 14px 16px 0;
+}
+
+/* ── The basket ──────────────────────────────────────────────
+   Fixed to the viewport, not inline under the pricing table. Inline, adding an
+   engagement produced no visible response for anyone who had scrolled past the
+   tiers — the confirmation was rendered off-screen. */
+.cart-dock {
+  position: fixed; z-index: 96;
+  left: 50%; bottom: 20px;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 640px;
+  pointer-events: none;
+  animation: cart-in .5s var(--spring);
+}
+.cart-dock-in {
+  pointer-events: auto;
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 12px 12px 16px;
+  border-radius: var(--r-pill);
+}
+@keyframes cart-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(24px) scale(0.96); }
+}
+/* Fires again on every add, so a second item is acknowledged too. */
+.cart-dock.bump .cart-dock-in { animation: cart-bump .45s var(--spring); }
+@keyframes cart-bump {
+  40% { transform: scale(1.035); box-shadow: var(--specular-strong), var(--lift-lg); }
+}
+
+.cart-dock-count {
+  flex-shrink: 0;
+  display: grid; place-items: center;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--accent-fill);
+  border: 1px solid var(--accent-edge);
+  color: var(--on-accent);
+  font-size: 13px; font-weight: 650;
+}
+.cart-dock-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.cart-dock-text strong {
+  font-size: 14.5px; letter-spacing: -0.015em; color: var(--text);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.cart-dock-text span { font-size: 12.5px; color: var(--text-dim); }
+.btn-cart-clear { padding: 9px 14px; font-size: 13px; flex-shrink: 0; }
+.cart-dock .btn-primary { flex-shrink: 0; }
+
+/* The session dock and the toasts share this corner. Move them clear rather
+   than letting the basket sit on top of them.
+
+   `bottom`, not a transform: .stats transitions transform, so a transform here
+   would animate — and anything that animates can be caught mid-flight or
+   paused outright by a background tab, leaving the dock sitting under the
+   basket. Position is not something worth animating when the alternative is
+   overlap. */
+.has-cart .stats  { bottom: 92px; }
+.has-cart .toasts { bottom: 96px; }
+
+@media (max-width: 620px) {
+  .cart-dock { left: 12px; right: 12px; bottom: 12px; width: auto; transform: none; }
+  @keyframes cart-in { from { opacity: 0; transform: translateY(24px) scale(0.96); } }
+  .cart-dock-in { flex-wrap: wrap; border-radius: var(--r-lg); padding: 12px 14px; }
+  .cart-dock-text { flex: 1 1 auto; }
+  /* Buy takes the full second row: it is the reason the bar exists. */
+  .cart-dock .btn-primary { flex: 1 1 100%; order: 3; min-height: 44px; }
+  .btn-cart-clear { min-height: 40px; }
+  /* The bar wraps to two rows on a phone, so it is taller. */
+  .has-cart .stats  { bottom: 140px; }
+  .has-cart .toasts { bottom: 150px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-dock, .cart-dock.bump .cart-dock-in { animation: none; }
 }

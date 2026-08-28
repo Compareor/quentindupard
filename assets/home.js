@@ -588,12 +588,20 @@
   }
 
   function initCart() {
-    const summary = $('#cart-summary');
-    const text = $('#cart-text');
-    const buy = $('#cart-buy');
-    if (!summary) return;
+    const dock  = $('#cart-dock');
+    const items = $('#cart-items');
+    const meta  = $('#cart-meta');
+    const count = $('#cart-count');
+    const buy   = $('#cart-buy');
+    const clear = $('#cart-clear');
+    if (!dock) return;
 
     const cart = new Map();
+
+    function setButton(btn, inCart) {
+      btn.classList.toggle('added', inCart);
+      btn.textContent = inCart ? t('In cart ✓') : t('Add to cart');
+    }
 
     $$('.tier-add').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -602,29 +610,46 @@
 
         if (cart.has(tier)) {
           cart.delete(tier);
-          btn.classList.remove('added');
-          btn.textContent = t('Add to cart');
+          setButton(btn, false);
         } else {
           cart.set(tier, price);
-          btn.classList.add('added');
-          btn.textContent = t('In cart ✓');
+          setButton(btn, true);
           track('cart_add', { tier: tier });
+          /* The whole point of moving the basket: something has to happen at
+             the moment of the click. The dock is fixed, so it is on screen
+             wherever the reader is, and it flashes once on arrival. */
+          dock.classList.remove('bump');
+          void dock.offsetWidth;            // restart the animation
+          dock.classList.add('bump');
         }
         render();
       });
     });
 
     function render() {
-      if (!cart.size) { summary.hidden = true; return; }
-      // Re-derive from the base rate so a mode switch updates a filled cart
-      // instead of leaving a stale total on screen.
-      const total = Array.from(cart.keys()).reduce((sum, tier) => sum + priceFor(cart.get(tier)), 0);
-      const names = Array.from(cart.keys()).join(' + ');
-      text.textContent = `${names} · ${money(total)} · ${mode}`;
-      summary.hidden = false;
+      const open = cart.size > 0;
+      dock.hidden = !open;
+      document.documentElement.classList.toggle('has-cart', open);
+      if (!open) return;
+
+      const total = Array.from(cart.keys())
+        .reduce((sum, tier) => sum + priceFor(cart.get(tier)), 0);
+      count.textContent = String(cart.size);
+      items.textContent = Array.from(cart.keys()).join(' + ');
+      meta.textContent = `${money(total)} · ${mode}`;
     }
 
+    // A mode switch changes the price of a basket already on screen.
     document.addEventListener('qd:mode', render);
+
+    if (clear) {
+      clear.addEventListener('click', () => {
+        cart.clear();
+        $$('.tier-add').forEach(b => setButton(b, false));
+        track('cart_remove', { target: 'all' });
+        render();
+      });
+    }
 
     if (buy) {
       buy.addEventListener('click', () => {
@@ -632,7 +657,9 @@
         const names = Array.from(cart.keys()).join(' + ');
         track('cart_buy', { tiers: names });
         showToast({
-          html: `<strong>Good choice.</strong> There's no card form here — ${names || 'this'} starts with a conversation, so let's just have it.`,
+          html: `<strong>${t('Good choice.')}</strong> ` +
+                t('There is no card form here. {what} starts with a conversation, so let us just have it.')
+                  .replace('{what}', names || 'this'),
           cta: { label: t('Book the call'), href: 'https://calendly.com/quentin-dupard-call/30min' }
         });
       });

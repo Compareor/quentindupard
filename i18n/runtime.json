@@ -503,5 +503,13 @@
   "How I work.pdf": {
     "fr": "Comment je travaille.pdf",
     "es": "Cómo trabajo.pdf"
+  },
+  "Empty": {
+    "fr": "Vider",
+    "es": "Vaciar"
+  },
+  "There is no card form here. {what} starts with a conversation, so let us just have it.": {
+    "fr": "Il n'y a pas de formulaire de carte ici. {what}, ça commence par une conversation, alors autant l'avoir.",
+    "es": "Aquí no hay ningún formulario de tarjeta. {what} empieza con una conversación, así que tengámosla."
   }
 }

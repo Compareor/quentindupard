@@ -38,7 +38,7 @@
 <meta name="theme-color" content="#05060f">
 
 <link rel="stylesheet" href="/assets/glass.css?v=31">
-<link rel="stylesheet" href="/assets/home.css?v=42">
+<link rel="stylesheet" href="/assets/home.css?v=44">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -610,13 +610,6 @@
 
       </div>
 
-      <div class="cart-row reveal">
-        <div class="cart-summary" id="cart-summary" hidden>
-          <span id="cart-text"></span>
-          <button class="btn btn-primary" type="button" id="cart-buy">Tramitar pedido</button>
-        </div>
-      </div>
-
       <div class="compare-wrap reveal">
         <table class="compare">
           <caption class="visually-hidden">Qué incluye cada formato</caption>
@@ -944,6 +937,20 @@
 
 <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
 
+<!-- The basket. Fixed rather than inline: added below the pricing table it sat
+     off-screen for anyone who had scrolled, so nothing acknowledged the click. -->
+<div class="cart-dock" id="cart-dock" hidden>
+  <div class="cart-dock-in glass glass-thick">
+    <span class="cart-dock-count" id="cart-count" aria-hidden="true">0</span>
+    <div class="cart-dock-text">
+      <strong id="cart-items"></strong>
+      <span id="cart-meta"></span>
+    </div>
+    <button class="btn btn-glass btn-cart-clear" type="button" id="cart-clear">Vaciar</button>
+    <button class="btn btn-primary" type="button" id="cart-buy">Tramitar pedido</button>
+  </div>
+</div>
+
 <!-- Finder windows open into here -->
 <div class="mac-windows" id="mac-windows"></div>
 
@@ -1055,10 +1062,10 @@
   </div>
 </div>
 
-<script src="/assets/i18n.js?v=6" defer></script>
+<script src="/assets/i18n.js?v=7" defer></script>
 <script src="/assets/track.js?v=8" defer></script>
 <script src="/assets/content.js?v=7" defer></script>
-<script src="/assets/home.js?v=33" defer></script>
+<script src="/assets/home.js?v=34" defer></script>
 <script src="/assets/snake.js?v=9" defer></script>
 </body>
 </html>

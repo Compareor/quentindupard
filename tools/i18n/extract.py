@@ -26,6 +26,7 @@ PAGES = [
     'privacy/index.html',
     'stats/index.html',
     'research/index.html',
+    'research/hooked-nir-eyal/index.html',
 ]
 
 # Article pages are added here as they are written. tools/new-article.py

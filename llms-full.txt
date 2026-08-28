@@ -215,6 +215,37 @@ profitable. Customers share logins (a pricing problem announcing itself, not a
 security one). Sales routinely discounts the same line item. Expansion revenue
 is flat despite happy customers.
 
+## Reading notes
+
+### Hooked, by Nir Eyal (2014)
+
+Full review: https://quentindupard.com/research/hooked-nir-eyal/
+
+The Hook Model is a four-phase loop. A trigger cues the behaviour — external at
+first (email, notification, search result), internal later (boredom, doubt, fear
+of missing out). The action is the simplest thing done in anticipation of a
+reward, and it needs motivation, ability and a trigger present at once. The
+reward has to be variable, because predictable rewards stop producing wanting.
+Then the person invests — data, content, followers, reputation, a learned skill
+— which improves the product next pass and loads the next trigger.
+
+My view: the loop is sound and the Habit Zone (frequency × perceived utility) is
+the most useful page in the book, because it is the part that tells you to stop.
+Nearly every example is a consumer feed, and the book explains companies that
+had already won, so it diagnoses rather than predicts. The strongest idea in it
+is borrowed: Gourville's finding that a new product must be roughly nine times
+better to displace an established routine.
+
+Where it is weakest: it files Zynga under finite variability when the real
+lesson was that its acquisition trigger belonged to Facebook — habit is not a
+moat when your distribution is somebody else's platform. And the Manipulation
+Matrix asks the builder to mark their own homework.
+
+For search: organic ranking is an earned external trigger you rent, not own.
+Informational search is a reward of the hunt, which is exactly the reward an AI
+answer now resolves before anyone reaches the page. Branded search share is the
+only free measurement of a formed internal trigger.
+
 ## Contact
 
 - Email: quentin.dupard@gmail.com

@@ -45,6 +45,7 @@ market, not his general offering.
 Long-form working notes. Free to read, no gate.
 
 - [All research](https://quentindupard.com/research/)
+- [Hooked by Nir Eyal: what survives when you are not a social app](https://quentindupard.com/research/hooked-nir-eyal/): book review of the Hook Model (trigger, action, variable reward, investment), with the product and marketing findings separated, and what the model implies for SEO and generative engine optimisation
 
 ## Downloads
 

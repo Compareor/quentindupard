@@ -45,10 +45,11 @@ def head_and_chrome():
     nav = re.sub(r'<div class="nav-end">(.*?)</div>\s*</nav>', r'\1\n</nav>', nav, flags=re.S)
     footer = re.search(r'(<footer class="site-footer".*?</footer>)', src, re.S).group(1)
     scripts = re.findall(r'<script src="[^"]+" defer></script>', src)
+    styles = '\n'.join(re.findall(r'<link rel="stylesheet" href="[^"]+">', src))
     icons = re.search(r'(<link rel="icon".*?<meta name="theme-color"[^>]*>)', src, re.S).group(1)
     theme = re.search(r'(<script>\s*/\* Theme before first paint.*?</script>)', src, re.S).group(1)
     defs = re.search(r'(<svg class="svg-defs".*?</svg>)', src, re.S).group(1)
-    return nav, footer, scripts, icons, theme, defs
+    return nav, footer, scripts, icons, theme, defs, styles
 
 
 def article_schema(slug, title, summary, url):
@@ -86,7 +87,7 @@ def book_schema(title, summary, url, book_title, author, isbn):
 
 
 def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None):
-    nav, footer, scripts, icons, theme, defs = head_and_chrome()
+    nav, footer, scripts, icons, theme, defs, styles = head_and_chrome()
     url = f'{SITE}/research/{slug}/'
     main_schema = (book_schema(title, summary, url, book, author or 'TODO author', isbn)
                    if book else article_schema(slug, title, summary, url))
@@ -142,9 +143,7 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
 
 {icons}
 
-<link rel="stylesheet" href="/assets/glass.css?v=29">
-<link rel="stylesheet" href="/assets/home.css?v=42">
-<link rel="stylesheet" href="/assets/article.css?v=5">
+{styles}
 
 <script>document.documentElement.classList.remove('no-js');</script>
 

@@ -88,9 +88,13 @@ def translate_ld(source, table, prefix, locale, page, stats):
     """
     Translate prose inside schema.org blocks and point page URLs at this locale.
 
-    `@id` values are deliberately left alone. They are entity identifiers, not
-    addresses: the same person and the same website in every language, so
-    keeping them stable is what holds the graph together across locales.
+    `@id` values are treated in two ways. An id hanging off the site root
+    (`/#quentin`) names an entity that is the same person or the same website in
+    every language, so it stays stable &mdash; that is what holds the graph
+    together across locales. An id hanging off a page path
+    (`/research/x/#faq`) names something that only exists on that page, and the
+    French page is a different page with different text, so it gets localised.
+    Sharing one id between three different documents is a collision, not a graph.
     """
     def convert(node):
         if isinstance(node, dict):
@@ -100,6 +104,10 @@ def translate_ld(source, table, prefix, locale, page, stats):
                     out[k] = lookup(v, table, stats)
                 elif k in ('url', 'item', 'mainEntityOfPage') and isinstance(v, str) and v.startswith(SITE):
                     out[k] = SITE + localise_path(v[len(SITE):] or '/', prefix)
+                elif k == '@id' and isinstance(v, str) and v.startswith(SITE):
+                    path, _, frag = v[len(SITE):].partition('#')
+                    out[k] = (v if path in ('', '/')
+                              else SITE + localise_path(path, prefix) + ('#' + frag if frag else ''))
                 elif k == 'inLanguage':
                     out[k] = LOCALES[locale]['html']
                 else:

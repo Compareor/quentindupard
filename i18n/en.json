@@ -6,6 +6,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -14,6 +15,12 @@
     "en": "Campaigns",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "026b6776abd3": {
+    "en": "Eyal&rsquo;s commercial claim is that habit is an asset on the balance sheet. Habitual customers cost nothing to re&ndash;acquire, tolerate price increases, refer faster, and are expensive to take away from you because the value they have stored in the product does not transfer. He is right about all four, and the pricing one is the least discussed and the most useful: Buffett&rsquo;s line about judging a business by how much agony it goes through to raise prices is a habit metric wearing a finance costume.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "0334e1f9e6b4": {
@@ -41,6 +48,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -55,6 +63,18 @@
     "en": "<span class=\"stats-live\" aria-hidden=\"true\"></span> Reading now",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "0549a97bfa2d": {
+    "en": "<strong>Branded search is the only free measurement of an internal trigger.</strong> &ldquo;First&ndash;to&ndash;mind wins&rdquo; is the book&rsquo;s central commercial claim and it sounds unmeasurable. It is not. The share of your search traffic that arrives on your name rather than on the category <em>is</em> first&ndash;to&ndash;mind, expressed as a number, sitting in Search Console for nothing. When category queries are flat and branded queries are climbing, an association is forming. When it is the other way round, you are renting attention and calling it growth.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "05a396be05c0": {
+    "en": "<strong>Read it alongside</strong> Gourville&rsquo;s paper on why consumers resist new products, which is where the nine&ndash;times finding comes from and which the book compresses into two pages, and <em>Indistractable</em>, which is the same author arguing the other side.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "05d1ab7cb506": {
@@ -97,6 +117,12 @@
     "en": "Three formats: a 90-minute teardown from €500, a two-week embedded sprint from €6,000, and ongoing fractional work from €8,000 per month with a three-month minimum. Hybrid and on-site delivery cost more than remote.",
     "pages": [
       "index.html"
+    ]
+  },
+  "0ada0f9f45f7": {
+    "en": "<span>Book review</span> <span>9 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "0b0f2ce4e49d": {
@@ -171,6 +197,12 @@
       "index.html"
     ]
   },
+  "10fb510bf7f5": {
+    "en": "Five questions. Run them in order on one specific behaviour &mdash; not on &ldquo;the product&rdquo;. If you cannot answer one, that is the finding.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "10fff2cfdd84": {
     "en": "Tier added",
     "pages": [
@@ -232,6 +264,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -297,8 +330,15 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
+    ]
+  },
+  "1cb10db39eed": {
+    "en": "<strong>Write to the feeling; prove the job.</strong> The internal trigger belongs in the headline. The business case belongs on the pricing page. Most sites do this the wrong way round and then wonder why the copy tests flat.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "1d39b0d0b925": {
@@ -320,6 +360,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -334,6 +375,12 @@
     "en": "The funnel",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "1fd6760b8c8b": {
+    "en": "<strong>Ability before motivation.</strong> Eyal&rsquo;s line &mdash; that increasing motivation is expensive and slow, while removing steps is cheap and fast &mdash; has killed more proposed work in my engagements than any other sentence in any business book. A great deal of what gets described as &ldquo;we need better messaging&rdquo; is a step&ndash;count problem wearing a messaging costume.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "20513f22fd21": {
@@ -408,10 +455,22 @@
       "about/index.html"
     ]
   },
+  "24aec5c6d7cc": {
+    "en": "Where it is wrong, or dated",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "25420bf9ff4c": {
     "en": "<span class=\"demand-n\" id=\"d-adds\">—</span><span class=\"demand-l\">Added to cart</span>",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "28024fc49c46": {
+    "en": "<strong>Search is an external trigger you rent.</strong> In the book&rsquo;s own terms, organic search is an earned trigger: free at the point of use, unbuyable directly, and unpredictable. The habit at work in a search result is Google&rsquo;s, not yours. Ranking gets you into somebody else&rsquo;s loop; it does not start one of your own. Everything you do on the page after they arrive is an attempt to convert a rented trigger into an owned one.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "280b61f3d874": {
@@ -424,6 +483,12 @@
     "en": "A <strong>local grocery business</strong>, bootstrapped — grew revenue with no budget, no brand and no funnel to speak of",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "284f0835b807": {
+    "en": "Which changes how you write, not how much. Passages have to survive being lifted out: one claim per paragraph, definitions that stand alone without the sentence above them, headings shaped like the question somebody would actually ask. That is the whole of generative engine optimisation, and it is mostly just writing clearly with the knowledge that a machine will quote you out of context.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "28f74e5e90c8": {
@@ -456,6 +521,12 @@
       "about/index.html"
     ]
   },
+  "2c160f0455f5": {
+    "en": "<strong>It admits it does not apply to you, once, on page twenty.</strong> Eyal states plainly that plenty of businesses do not need habitual engagement, and then spends two hundred pages on Instagram, Pinterest, Twitter and Facebook. If you sell something bought quarterly by a committee, roughly half the book is inapplicable and it will not tell you which half.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "2c433c036047": {
     "en": "Live stats",
     "pages": [
@@ -463,6 +534,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -486,6 +558,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -506,6 +579,12 @@
     "en": "A <strong>health and wellness course business</strong> — reworked the offer, the tier structure and the path from interested visitor to finished checkout",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "2febc33e723e": {
+    "en": "The Hook Model is a four–phase loop: a trigger cues the behaviour, the person takes the simplest action in anticipation of a reward, the reward arrives with some variability so it keeps producing wanting, and then the person invests something — data, content, followers, reputation or a learned skill — which improves the product for the next pass and loads the next trigger. Repeated cycles move the person from needing external prompts to being cued internally by an emotion.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "3003d1bb98e5": {
@@ -538,6 +617,12 @@
       "privacy/index.html"
     ]
   },
+  "32e12b029851": {
+    "en": "<strong>Treat the free trial as an investment phase, not a demo.</strong> A trial that ends with an empty account has stored nothing and taught nothing. A trial should end with something the person would have to rebuild elsewhere &mdash; their data in, their team invited, one real workflow finished.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "3367ce001319": {
     "en": "Ongoing, part-time",
     "pages": [
@@ -563,6 +648,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -577,6 +663,12 @@
     "en": "Product strategy",
     "pages": [
       "index.html"
+    ]
+  },
+  "37cf90fac3e8": {
+    "en": "What does Hooked say about SEO and AI search?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "37d7e1ed0c83": {
@@ -639,10 +731,22 @@
       "research/index.html"
     ]
   },
+  "3c7521467c13": {
+    "en": "Then test it rather than believing it. Eyal&rsquo;s habit test is the practical part of the book: decide up front how often a committed customer <em>should</em> use the product, find the people who actually hit that bar, and work out what those people did that everyone else did not. He suggests five percent as a first benchmark. If nobody clears it, the problem is not the funnel.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "3d1b67a54ad0": {
     "en": "The two things you type on purpose",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "3d7a13c8084e": {
+    "en": "Hooked: How to Build Habit-Forming Products",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "3e636f3cc78f": {
@@ -697,6 +801,12 @@
     "en": "Quentin Dupard, Fractional Product & Growth",
     "pages": [
       "index.html"
+    ]
+  },
+  "42c5be0591ce": {
+    "en": "<strong>Use the heuristics, but know they are the most dated part.</strong> Scarcity, framing, anchoring, endowed progress: the endowed progress effect still works and the pre&ndash;punched loyalty card is close to free money. &ldquo;Only three left in stock&rdquo; on an infinitely stocked digital product is now read as a lie, and it is priced into how people see you.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "43763e6ad9bd": {
@@ -759,6 +869,12 @@
       "index.html"
     ]
   },
+  "48e789b8f0e5": {
+    "en": "The Hook Model, in one paragraph",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "49010b58a9dc": {
     "en": "Great retention, no expansion revenue",
     "pages": [
@@ -784,6 +900,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -879,6 +996,18 @@
       "research/index.html"
     ]
   },
+  "568862509939": {
+    "en": "The sharpest idea in the book is borrowed and gets two pages. John Gourville&rsquo;s finding that a new product has to be roughly nine times better to displace an established routine &mdash; because people overvalue what they have and builders overvalue what they made &mdash; does more explanatory work than the rest of the book combined. If you only take one thing, take that.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "5754f07fc9b6": {
+    "en": "<strong>Count the steps between the feeling and the payoff.</strong> Literally count them, from the moment the trigger fires to the moment the person gets what they came for. Then remove steps until you cannot remove any more. Do this before anyone rewrites a single line of copy.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "59c63f358b92": {
     "en": "Thirty minutes, no deck, no discovery script. You describe the problem and I tell you whether I am the right person for it, including when I am not.",
     "pages": [
@@ -916,6 +1045,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -957,6 +1087,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -977,6 +1108,12 @@
     "en": "We have never once changed our pricing",
     "pages": [
       "index.html"
+    ]
+  },
+  "5dccb5810bf5": {
+    "en": "<strong>List what the customer would lose by leaving.</strong> Content, data, connections, reputation, a learned skill. If the list is empty, add exactly one thing, and ask for it <em>after</em> the payoff rather than before. Asking for investment before the reward is called a signup form, and it is where most products lose people.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "5dfc68721f3d": {
@@ -1021,6 +1158,18 @@
       "privacy/index.html"
     ]
   },
+  "62db8ce75351": {
+    "en": "<strong>Answer engines take the reward and leave you the citation.</strong> Informational search is the purest case of what Eyal calls a reward of the hunt: the person is chasing information and the chase itself is the pull. That is precisely the reward an AI answer now resolves before anyone reaches your site. The craving is satisfied inside the assistant. What used to be your page&rsquo;s job &mdash; being the reward &mdash; is now the assistant&rsquo;s job, and your page&rsquo;s job is to be the thing it names.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "643245fc8fd4": {
+    "en": "Nothing directly &mdash; it was written in 2014, when Google appeared as an example of a habit rather than as a channel. Translated, organic search is an earned external trigger you rent rather than own, and informational search is a reward of the hunt, which is exactly the reward an AI answer now resolves before anyone reaches the page. The practical consequences are to write passages that survive being quoted out of context, to treat branded search share as the measurable proxy for a formed internal trigger, and to make the investment phase available on the first visit.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "6469ad3b4d21": {
     "en": "<span class=\"demand-n\" id=\"d-rate\">—</span><span class=\"demand-l\">Cart rate</span>",
     "pages": [
@@ -1043,6 +1192,12 @@
     "en": "Completed sessions, by duration.",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "654f322c7003": {
+    "en": "What is the Hook Model in Hooked?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "660fb09f56e2": {
@@ -1073,6 +1228,12 @@
     "en": "Expansion revenue",
     "pages": [
       "index.html"
+    ]
+  },
+  "67a146bbac60": {
+    "en": "Findings for marketing",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "681a79899414": {
@@ -1123,12 +1284,6 @@
       "stats/index.html"
     ]
   },
-  "6a92c8fa8135": {
-    "en": "<strong>Nothing published here yet.</strong>",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "6a94bfc300f8": {
     "en": "quentin.dupard@gmail.com",
     "pages": [
@@ -1136,6 +1291,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1144,6 +1300,12 @@
     "en": "About",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "6b40c7fd8af6": {
+    "en": "Read &rarr;",
+    "pages": [
+      "research/index.html"
     ]
   },
   "6bfc2b053441": {
@@ -1170,10 +1332,23 @@
       "about/index.html"
     ]
   },
+  "6c546039823e": {
+    "en": "A working review of Nir Eyal's Hooked. The Hook Model is real; the examples are all consumer feeds. What survives, split into product and marketing findings.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html",
+      "research/index.html"
+    ]
+  },
   "6ca6699db13c": {
     "en": "03 of 5",
     "pages": [
       "index.html"
+    ]
+  },
+  "6d24f5029669": {
+    "en": "Product test in one line: if you removed every notification you send, how many people would still come back this week?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "6d745b302e3d": {
@@ -1218,6 +1393,12 @@
       "index.html"
     ]
   },
+  "70b0ef0c840c": {
+    "en": "<strong>The practical consequence.</strong> If assistants intercept the hunt, then the small number of people who still click through are more valuable, not less, and the investment phase has to be available to them immediately &mdash; something to take, configure, subscribe to or reply to on the first visit. A page whose only call to action is &ldquo;read more like this&rdquo; converts a rented trigger into nothing at all.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "70d307c9afcd": {
     "en": "Turn it off",
     "pages": [
@@ -1231,8 +1412,15 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
+    ]
+  },
+  "718806d14228": {
+    "en": "The gate on all of it is the Habit Zone: frequency of the behaviour multiplied by perceived utility against the alternative. Below a threshold of frequency, nothing becomes automatic no matter how useful it is. That single graph is worth more than the four&ndash;phase model, because it is the only part of the book that tells you to stop.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "7197fcdf8242": {
@@ -1251,6 +1439,18 @@
     "en": "Want this in your inbox?",
     "pages": [
       "index.html"
+    ]
+  },
+  "7244d660ddef": {
+    "en": "That is the whole book. Everything else is evidence, examples and one very good chapter on why most of it will not work for you.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "735a64feb5ba": {
+    "en": "Marketing test in one line: name the emotion your customer feels in the ten seconds before they open your product. If the room cannot agree, that is the campaign brief.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "73a926113997": {
@@ -1284,6 +1484,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1304,6 +1505,12 @@
     "en": "Every company I work with has one. It seemed only fair.",
     "pages": [
       "index.html"
+    ]
+  },
+  "778a1d7a514f": {
+    "en": "Yes, with two caveats. The framework holds and the chapter on ability versus motivation is still the fastest way to kill unnecessary work. But every example is a consumer social product from before 2014, and the book explains companies that had already won, so it diagnoses what might be missing rather than predicting what will work. Read it as a checklist, not a recipe.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "77dfd2135f4d": {
@@ -1348,6 +1555,12 @@
       "privacy/index.html"
     ]
   },
+  "7aee10123685": {
+    "en": "Findings for product",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "7c582fcd1e1b": {
     "en": "Tracked actions",
     "pages": [
@@ -1367,6 +1580,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1401,6 +1615,12 @@
       "index.html"
     ]
   },
+  "8043a475c28f": {
+    "en": "<strong>Chapter four has aged into a manual.</strong> The variable&ndash;reward chapter is a clear, well&ndash;sourced explanation of the mechanics that the intervening decade turned into infinite scroll, streaks and pull&ndash;to&ndash;refresh. That is not the author&rsquo;s fault and he flags the risk himself. It does mean you should read it knowing what it was used for.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "80da1bbcfb7f": {
     "en": "Your team owns it after",
     "pages": [
@@ -1423,6 +1643,12 @@
     "en": "No",
     "pages": [
       "index.html"
+    ]
+  },
+  "839691351b78": {
+    "en": "What it actually argues",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "83a801fca18b": {
@@ -1459,6 +1685,12 @@
     "en": "Where should it go?",
     "pages": [
       "index.html"
+    ]
+  },
+  "873c2fb3599f": {
+    "en": "Hooked gives you a four&ndash;part loop &mdash; trigger, action, variable reward, investment &mdash; and argues that habits, not features, are what make a product hard to leave. The loop is real and I use it in most engagements. The problem is that nearly every example in the book is a consumer feed, and almost none of the businesses I work with are one. This is what survives the translation.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "87c35eb6a266": {
@@ -1556,6 +1788,12 @@
       "privacy/index.html"
     ]
   },
+  "8d98bd2f92eb": {
+    "en": "<strong>Read it</strong> if you are building something meant to be opened more than once a week; if your competitor is an existing routine rather than another company; or if your team keeps proposing to fix retention with onboarding. Chapters three and five will pay for the book on their own.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "8e01f6bc7795": {
     "en": "Hybrid",
     "pages": [
@@ -1604,10 +1842,22 @@
       "index.html"
     ]
   },
+  "93d42df8ba24": {
+    "en": "<strong>Load the next trigger from inside the product.</strong> Every meaningful action should earn a reason to come back that the customer chose: an alert they configured, a link they shared, a digest they built. Notifications you did not earn are unsubscribes with a delay.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "94563ec383e2": {
     "en": "Me",
     "pages": [
       "index.html"
+    ]
+  },
+  "94a18e60341a": {
+    "en": "Book review",
+    "pages": [
+      "research/index.html"
     ]
   },
   "952f375412e8": {
@@ -1623,6 +1873,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1658,6 +1909,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1692,6 +1944,12 @@
       "index.html"
     ]
   },
+  "988ef3922c16": {
+    "en": "Who should read it",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "999e62a4410b": {
     "en": "First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept. <a href=\"/stats/\">The numbers are public</a> and <a href=\"/privacy/\">so is the detail</a>.",
     "pages": [
@@ -1699,6 +1957,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1728,6 +1987,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1768,6 +2028,19 @@
       "index.html"
     ]
   },
+  "a03ea2a69309": {
+    "en": "Hooked by Nir Eyal: what survives when you are not a social app",
+    "pages": [
+      "research/hooked-nir-eyal/index.html",
+      "research/index.html"
+    ]
+  },
+  "a0a6e5ce7dbb": {
+    "en": "Eyal defines a habit as a behaviour done with little conscious thought that can be positive or neutral, and an addiction as a persistent compulsive dependency that is self&ndash;destructive by definition. He argues it is irresponsible to build products that rely on addiction, and estimates that around one percent of users of even the most habit&ndash;forming products form a damaging dependency. The weakness is that the estimate is offered as reassurance rather than as a reason to go and find those users, which companies at scale have the data to do.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "a16ff39b1a09": {
     "en": "I built the product itself rather than writing a deck about it. This is also where the 150+ provider teardowns came from.",
     "pages": [
@@ -1798,6 +2071,12 @@
       "index.html"
     ]
   },
+  "a45513aee229": {
+    "en": "Nir Eyal",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "a4c8a40a31dc": {
     "en": "Vendor recommendations where I would earn a commission. I do not take any",
     "pages": [
@@ -1810,6 +2089,12 @@
       "index.html"
     ]
   },
+  "a5821801987e": {
+    "en": "The Hook Model is a four&ndash;phase loop: a trigger cues the behaviour, the person takes the simplest action in anticipation of a reward, the reward arrives with some variability so it keeps producing wanting, and then the person invests something &mdash; data, content, followers, reputation or a learned skill &mdash; which improves the product for the next pass and loads the next trigger. Repeated cycles move the person from needing external prompts to being cued internally by an emotion.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "a5ced2d7dd20": {
     "en": "How I work (PDF)",
     "pages": [
@@ -1817,6 +2102,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -1857,6 +2143,12 @@
       "about/index.html"
     ]
   },
+  "a986b6538121": {
+    "en": "Nothing directly — it was written in 2014, when Google appeared as an example of a habit rather than as a channel. Translated, organic search is an earned external trigger you rent rather than own, and informational search is a reward of the hunt, which is exactly the reward an AI answer now resolves before anyone reaches the page. The practical consequences are to write passages that survive being quoted out of context, to treat branded search share as the measurable proxy for a formed internal trigger, and to make the investment phase available on the first visit.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "a9a96ec01949": {
     "en": "Primary",
     "pages": [
@@ -1864,8 +2156,15 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
+    ]
+  },
+  "a9b10e73cde5": {
+    "en": "The three things I took from it",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "a9f3852110f6": {
@@ -1874,10 +2173,22 @@
       "privacy/index.html"
     ]
   },
+  "aa30ab32fee7": {
+    "en": "Habits are not a strategy. They are what you get when frequency and perceived utility are both already present. If either one is missing, no amount of hook design will manufacture the other &mdash; and the book&rsquo;s real service is telling you which situation you are in.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "aaa607effc09": {
     "en": "If you have written to me, that message is in my inbox and in Formspree&rsquo;s records. Ask and I will delete both. No form, no verification hoop: <a href=\"mailto:quentin.dupard@gmail.com\">quentin.dupard@gmail.com</a>.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "ac195e5d5927": {
+    "en": "<strong>Frequency is a qualifying question, not a growth tactic.</strong> The first thing to establish is not how to build a habit but whether one is available to you. If your product is genuinely touched once a month, you are not building a habit, you are building a reminder, and those are different jobs with different budgets. Most B2B products I look at are trying to become a habit when the habit already belongs to somebody&rsquo;s Monday morning and the product&rsquo;s only realistic ambition is to be in it.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "ac804d65f67f": {
@@ -1885,7 +2196,8 @@
     "pages": [
       "about/index.html",
       "index.html",
-      "privacy/index.html"
+      "privacy/index.html",
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "ae5767cf838e": {
@@ -1898,6 +2210,12 @@
     "en": "To",
     "pages": [
       "index.html"
+    ]
+  },
+  "af19a0391047": {
+    "en": "A trigger starts the behaviour: external at first &mdash; an email, a notification, a search result &mdash; and internal later, when boredom, doubt or the fear of missing something starts firing on its own. The action is the smallest thing a person can do in anticipation of a reward, and it happens only when motivation, ability and a trigger arrive at the same moment. The reward has to be variable, because a predictable reward stops producing wanting. Then the person invests: data, content, followers, reputation, a learned skill. That investment makes the product better on the next pass and loads the next trigger. Run the loop enough times and the external trigger stops being necessary.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "af8f8a884096": {
@@ -1948,6 +2266,12 @@
       "index.html"
     ]
   },
+  "b4f164cb31fb": {
+    "en": "<strong>Investment beats every retention tactic I have seen tried.</strong> The question I now ask early is: what has this customer put into the product that they would have to rebuild somewhere else? If the honest answer is nothing, then every renewal is a fresh purchase decision, and the company should stop calling it retention and start pricing it as reacquisition.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "b58b5a8ced9d": {
     "en": "One",
     "pages": [
@@ -1991,6 +2315,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2005,6 +2330,18 @@
     "en": "Fractional product and marketing operator. Positioning, pricing, activation and revenue growth for businesses of any kind, with the deepest experience in B2B SaaS.",
     "pages": [
       "index.html"
+    ]
+  },
+  "ba41e5bd1a82": {
+    "en": "Hooked by Nir Eyal: what survives when you are not a social app | Quentin Dupard",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "ba96cf62f4d4": {
+    "en": "<strong>Hooked: How to Build Habit-Forming Products</strong><br>Nir Eyal, with Ryan Hoover &middot; 2014",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "bbfa773e5a63": {
@@ -2050,6 +2387,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2096,6 +2434,12 @@
       "404.html"
     ]
   },
+  "c2ab7e6dba65": {
+    "en": "<strong>Audit your triggers by who owns them.</strong> Paid, earned, relationship, owned. Nearly all budget goes into the first two and nearly all repeat business comes out of the fourth. Write down every owned trigger you have, whether the customer actually opted into it, and whether it fires anywhere near the moment they would feel the need.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "c323e3735207": {
     "en": "<span class=\"symptom-say\">&ldquo;Nobody churns. Nobody spends more either.&rdquo;</span> <span class=\"symptom-is\">Expansion revenue</span>",
     "pages": [
@@ -2126,6 +2470,12 @@
       "stats/index.html"
     ]
   },
+  "c58b1760d396": {
+    "en": "Cover of Hooked: How to Build Habit-Forming Products by Nir Eyal with Ryan Hoover",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "c648612c9791": {
     "en": "Go to slide 3",
     "pages": [
@@ -2148,6 +2498,12 @@
     "en": "Fractional product and marketing. I find revenue your business is already sitting on: pricing, positioning, activation and retention. Deepest in B2B SaaS, useful anywhere there is a funnel and a price.",
     "pages": [
       "index.html"
+    ]
+  },
+  "c8722561119b": {
+    "en": "<strong>Find one variable reward you are not faking.</strong> Points, badges and progress bars are predictable rewards in costume. In most business products the genuine variability is other people &mdash; a comment, an approval, a client reply &mdash; or new information: something in the data changed since yesterday and you do not know what.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "c8f588ca9667": {
@@ -2180,6 +2536,12 @@
       "stats/index.html"
     ]
   },
+  "cac98b334aab": {
+    "en": "<strong>Replace &ldquo;engagement&rdquo; with two numbers.</strong> What share of customers return without being prompted, and how much faster a returning customer comes back than a new one. Those two move when a habit is forming. Sessions and time&ndash;on&ndash;site do not.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "cb116ce3f6b9": {
     "en": "Talk to me",
     "pages": [
@@ -2187,6 +2549,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2203,10 +2566,10 @@
       "index.html"
     ]
   },
-  "cd526c240381": {
-    "en": "<a class=\"btn btn-primary\" href=\"/#ask\">Ask AI-me instead</a> <a class=\"btn btn-glass\" href=\"/#inbox\">Or ask me directly</a>",
+  "cd4d30522ab1": {
+    "en": "<strong>It explains winners.</strong> Every case study in the book is a company that had already succeeded when the book was written. There is no chapter on the products that ran a technically perfect hook and died anyway, and there are a great many. Read the model as a checklist for what might be missing, not as a recipe for what will work. It diagnoses; it does not predict.",
     "pages": [
-      "research/index.html"
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "ce0d25ec854b": {
@@ -2229,6 +2592,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2261,6 +2625,12 @@
     "en": "When should a business change its pricing?",
     "pages": [
       "index.html"
+    ]
+  },
+  "d104fc8cd7b8": {
+    "en": "<strong>The Manipulation Matrix asks the builder to mark their own homework.</strong> Would I use this, and does it materially improve lives &mdash; two questions with no external check, answered by the person with the strongest incentive to answer yes. Eyal more or less conceded the point five years later by writing <em>Indistractable</em>, a book about resisting the products this one teaches you to build. Read them as a pair. The tension between them is the most honest thing either of them contains.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "d1e2bef06393": {
@@ -2300,6 +2670,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2314,6 +2685,12 @@
     "en": "Both, and the building is not a side line. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, operations automation. If the answer to your revenue problem is a thing that does not exist yet, I would rather build it than write you a specification and hand it to someone else. The same applies to marketing: I will take the whole strategy, not just the part that fits in a slide.",
     "pages": [
       "index.html"
+    ]
+  },
+  "d45ddbdd3d41": {
+    "en": "<strong>Skip it</strong> if you sell infrequently and at high consideration &mdash; one purchase a year, a committee, a procurement process. Read chapter one, take the Habit Zone graph, accept that you are outside it, and go and spend the time on positioning and pricing instead. The book tells you this early and then spends the rest of its length tempting you to ignore it.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "d4b374149bab": {
@@ -2350,6 +2727,12 @@
     "en": "Sent <span class=\"mail-badge\" id=\"mail-sent-count\">0</span>",
     "pages": [
       "index.html"
+    ]
+  },
+  "d90e03e74ada": {
+    "en": "Is Hooked still worth reading in 2026?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "d91ae84ca0b8": {
@@ -2397,7 +2780,14 @@
   "de344a2b920c": {
     "en": "&larr; Research",
     "pages": [
+      "research/hooked-nir-eyal/index.html",
       "research/index.html"
+    ]
+  },
+  "de9beef13840": {
+    "en": "None of this is in the book. Hooked was written in 2014, when Google appeared in it as an example of a habit rather than as a channel. But the taxonomy translates cleanly, and it is the most useful thing I have done with the model.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "decbb4850d43": {
@@ -2410,6 +2800,12 @@
     "en": "Go to slide 1",
     "pages": [
       "index.html"
+    ]
+  },
+  "dfe5fb100ea7": {
+    "en": "What is the difference between a habit and an addiction in Hooked?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "e0e740ec7388": {
@@ -2436,6 +2832,12 @@
       "index.html"
     ]
   },
+  "e357f32f5d80": {
+    "en": "Eyal defines a habit as a behaviour done with little conscious thought that can be positive or neutral, and an addiction as a persistent compulsive dependency that is self–destructive by definition. He argues it is irresponsible to build products that rely on addiction, and estimates that around one percent of users of even the most habit–forming products form a damaging dependency. The weakness is that the estimate is offered as reassurance rather than as a reason to go and find those users, which companies at scale have the data to do.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "e3a4d412528a": {
     "en": "Most downloaded",
     "pages": [
@@ -2449,6 +2851,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2475,6 +2878,12 @@
     "en": "My analytics,<br><span class=\"gradient-text\">in public.</span>",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "e4c0b81d3a40": {
+    "en": "Only above a frequency threshold. Eyal’s Habit Zone requires that a behaviour occur often enough to become automatic, and no amount of perceived utility substitutes for frequency. If a business product is genuinely used once a month, you are not building a habit, you are building a reminder that fits into a routine somebody already has. The investment phase still applies at any cadence, because stored value raises switching costs whether or not the use is habitual.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "e52393c7cb86": {
@@ -2520,6 +2929,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2540,6 +2950,12 @@
     "en": "Delivery chosen",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "ea0dca45174c": {
+    "en": "<strong>Nine times better, or change the comparison.</strong> If you are asking somebody to abandon a routine, marginal improvement will not do it. Either the gain is enormous and obvious, or you reposition against something they have no habit around yet. There is no third option and pretending otherwise is how launches fail politely.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "ea2ff0989ac2": {
@@ -2572,6 +2988,12 @@
       "index.html"
     ]
   },
+  "ebf589a4f47b": {
+    "en": "<strong>And the one percent line does no work.</strong> The reassurance that only around one percent of users form a damaging dependency is offered and then left. One percent of ten million people is a hundred thousand people, and &ldquo;most people can self&ndash;regulate&rdquo; is not a plan. If your product has that scale, you have the data to find those users, which means the choice not to look is a choice.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "ec4f0b342782": {
     "en": "Two weeks embedded with your team moving one revenue lever, usually pricing or activation.",
     "pages": [
@@ -2582,12 +3004,6 @@
     "en": "Written follow-up",
     "pages": [
       "index.html"
-    ]
-  },
-  "eddc45421604": {
-    "en": "Working notes are being rewritten. When a piece goes up it appears here, and it is written to be read in full rather than to rank for something.",
-    "pages": [
-      "research/index.html"
     ]
   },
   "ee00703d89ea": {
@@ -2603,6 +3019,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2623,6 +3040,12 @@
     "en": "Switch between light and dark",
     "pages": [
       "index.html"
+    ]
+  },
+  "f07ac22a9e93": {
+    "en": "Common questions",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "f0d9c9498043": {
@@ -2667,6 +3090,12 @@
       "index.html"
     ]
   },
+  "f54ddc342c58": {
+    "en": "<strong>Name the internal trigger as an emotion, not a job.</strong> &ldquo;They need reporting&rdquo; is a job. &ldquo;The finance lead is afraid of being asked a number she cannot answer&rdquo; is a trigger. Use the five whys and keep going until you reach a feeling. If you never reach one, you are selling a purchase rather than a habit &mdash; which is allowed, but changes how you price and market it.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "f55dcaafeb0a": {
     "en": "Product, end to end",
     "pages": [
@@ -2695,6 +3124,12 @@
     "en": "<span>Index</span> <span>1 min read</span> <span>Quentin Dupard</span>",
     "pages": [
       "research/index.html"
+    ]
+  },
+  "f802d7ae3203": {
+    "en": "<strong>It files Zynga under the wrong lesson.</strong> The book uses FarmVille as a warning about finite variability &mdash; the sequels were the same game reskinned, novelty ran out, the stock collapsed. That is true and it is not the expensive part. Zynga&rsquo;s real problem was that its acquisition trigger belonged to Facebook, and when Facebook changed the feed, the habit did not save it. Habit is not a moat when your distribution is somebody else&rsquo;s platform. That is the most costly lesson of the last fifteen years in technology and Hooked files it under novelty.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "f85cc64cbb56": {
@@ -2770,6 +3205,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "stats/index.html"
     ]
@@ -2792,6 +3228,18 @@
       "index.html"
     ]
   },
+  "fd4c750178e0": {
+    "en": "Only above a frequency threshold. Eyal&rsquo;s Habit Zone requires that a behaviour occur often enough to become automatic, and no amount of perceived utility substitutes for frequency. If a business product is genuinely used once a month, you are not building a habit, you are building a reminder that fits into a routine somebody already has. The investment phase still applies at any cadence, because stored value raises switching costs whether or not the use is habitual.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "ff5ac75580e3": {
+    "en": "Does the Hook Model work for B2B products?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "ffc34e653622": {
     "en": "<span class=\"snake-key\">swipe</span> on touch",
     "pages": [
@@ -2802,6 +3250,12 @@
     "en": "There is no Google Analytics, no advertising pixel, no session recorder, no heatmap tool, and nothing that follows you to another website.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "ffc84d0e413f": {
+    "en": "What this means for SEO and GEO",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   }
 }

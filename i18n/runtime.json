@@ -511,5 +511,17 @@
   "There is no card form here. {what} starts with a conversation, so let us just have it.": {
     "fr": "Il n'y a pas de formulaire de carte ici. {what}, ça commence par une conversation, alors autant l'avoir.",
     "es": "Aquí no hay ningún formulario de tarjeta. {what} empieza con una conversación, así que tengámosla."
+  },
+  "Reading": {
+    "fr": "Lectures",
+    "es": "Lecturas"
+  },
+  "9 min read": {
+    "fr": "9 min de lecture",
+    "es": "9 min de lectura"
+  },
+  "Hooked — Nir Eyal": {
+    "fr": "Hooked — Nir Eyal",
+    "es": "Hooked — Nir Eyal"
   }
 }

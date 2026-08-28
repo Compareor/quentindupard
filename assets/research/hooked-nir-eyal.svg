@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Book review: Hooked by Nir Eyal">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="b1" cx="18%" cy="14%" r="55%">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b2" cx="84%" cy="82%" r="55%">
+      <stop offset="0" stop-color="#35d6ee" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe94a"/>
+      <stop offset="1" stop-color="#f5cf14"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#eef1fb"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#b1)"/>
+  <rect width="1200" height="630" fill="url(#b2)"/>
+
+  <!-- glass pane -->
+  <g>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="#ffffff" fill-opacity="0.30"/>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="url(#sheen)"/>
+    <rect x="80.5" y="90.5" width="1039" height="449" rx="33.5" fill="none" stroke="#0d1424" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- a book, standing on the pane -->
+  <g transform="translate(150 150)">
+    <rect x="10" y="12" width="212" height="330" rx="8" fill="#0d1424" fill-opacity="0.16"/>
+    <rect x="0" y="0" width="212" height="330" rx="8" fill="url(#paper)"/>
+    <rect x="0" y="0" width="16" height="330" rx="8" fill="#0d1424" fill-opacity="0.14"/>
+    <!-- the four phases, as a loop on the cover -->
+    <g fill="none" stroke="#0d1424" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round">
+      <circle cx="114" cy="150" r="58" stroke-dasharray="60 24"/>
+    </g>
+    <g fill="#0d1424" fill-opacity="0.72">
+      <circle cx="114" cy="92"  r="9"/>
+      <circle cx="172" cy="150" r="9"/>
+      <circle cx="114" cy="208" r="9"/>
+      <circle cx="56"  cy="150" r="9"/>
+    </g>
+    <rect x="44" y="252" width="124" height="9" rx="4.5" fill="#0d1424" fill-opacity="0.30"/>
+    <rect x="66" y="274" width="80"  height="9" rx="4.5" fill="#0d1424" fill-opacity="0.18"/>
+  </g>
+
+  <text x="440" y="248"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" font-weight="600" letter-spacing="2.4"
+        fill="#0d1424" fill-opacity="0.42">BOOK REVIEW</text>
+
+  <text x="440" y="326"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif"
+        font-size="76" font-weight="650" letter-spacing="-2.6"
+        fill="#0d1424" fill-opacity="0.88">Hooked</text>
+
+  <text x="440" y="378"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="26" font-weight="500" letter-spacing="-0.4"
+        fill="#0d1424" fill-opacity="0.52">Nir Eyal</text>
+
+  <text x="440" y="440"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="21" letter-spacing="-0.2"
+        fill="#0d1424" fill-opacity="0.44">What survives when you are not a social app</text>
+
+  <text x="440" y="474"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" letter-spacing="0.2"
+        fill="#0d1424" fill-opacity="0.30">quentindupard.com</text>
+</svg>

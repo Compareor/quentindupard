@@ -175,6 +175,12 @@
     pane.appendChild(el('p', 'pane-note',
       'These are the folders on the Mac desktop in “The fort”. Page items open on this site, PDFs download, notes open in a window, links open in a new tab. Files themselves live in the repo under /assets/docs — this controls what points at them.'));
 
+    /* Two sources of truth, so say which one is talking. A folder left empty
+       here shows whatever the deployed site ships for it; put one item in and
+       this list takes over that folder completely. */
+    pane.appendChild(el('p', 'pane-note',
+      'A folder you leave empty here shows whatever the deployed site ships in it. Add a single item and this page takes over that folder entirely — including hiding anything that shipped with it.'));
+
     if (!Array.isArray(model.desktop)) model.desktop = [];
     model.desktop.forEach((_, i) => pane.appendChild(folderCard(model.desktop, i)));
 

@@ -713,6 +713,28 @@
 
   /* ══ Edited content overlay ═══════════════════════════════ */
 
+  /* The store is an overlay on the shipped file, not a replacement for it.
+     Precedence is per folder: one the admin has actually put something into
+     wins, one left empty falls back to whatever shipped in content.js.
+
+     Replacing the whole array is what hid two published articles. The store
+     had been saved while every folder was empty, and from then on it shadowed
+     each later change to the file — the code said Research had two items, the
+     site said Research was empty, and both were reading their own truth. */
+  function mergeDesktop(file, stored) {
+    const byId = new Map(stored.map((f) => [f.id, f]));
+    const merged = file.map((f) => {
+      const s = byId.get(f.id);
+      if (!s) return f;                       // never touched in /admin
+      byId.delete(f.id);
+      const items = Array.isArray(s.items) ? s.items : [];
+      // Keep any rename made in /admin; restore the file's contents.
+      return items.length ? s : Object.assign({}, s, { items: f.items || [] });
+    });
+    // Folders created in /admin that do not exist in the file at all.
+    return merged.concat(Array.from(byId.values()));
+  }
+
   async function loadContent() {
     // The fort and the inbox do not render until this settles, so it must not
     // be able to hang. A slow edge is not a reason for an empty section.
@@ -725,7 +747,9 @@
       });
       if (res.status === 204 || !res.ok) return;          // nothing edited yet
       const store = await res.json();
-      if (Array.isArray(store.desktop) && store.desktop.length) window.QD_DESKTOP = store.desktop;
+      if (Array.isArray(store.desktop) && store.desktop.length) {
+        window.QD_DESKTOP = mergeDesktop(window.QD_DESKTOP || [], store.desktop);
+      }
       if (Array.isArray(store.mailbox) && store.mailbox.length) window.QD_MAILBOX = store.mailbox;
     } catch (_) {
       // Offline, blocked, slow, or the route is not deployed. Defaults stand.

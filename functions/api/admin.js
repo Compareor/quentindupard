@@ -23,6 +23,26 @@ const MAX_TRIES  = 8;              // login attempts per IP per hour
 
 const KINDS = new Set(['page', 'pdf', 'note', 'link']);
 
+/*
+ * What "Clear stats" removes. An allowlist, not an exclusion rule: getting this
+ * wrong the other way would delete the content store or the question log.
+ *
+ * The first entry is the current aggregate documents. The rest are the flat
+ * per-counter keys from the layout that predated them — they are what the
+ * one-time import reads, so leaving them behind means the numbers come back.
+ *
+ * Deliberately NOT here: seen: (tells a returning visitor from a new one),
+ * live: and visit: (self-expiring), qlog: (the questions), content: (the
+ * fort and mailbox edited in this dashboard).
+ */
+const RESETTABLE = [
+  'agg:v1:',
+  'total:', 'event:', 'source:', 'medium:', 'campaign:',
+  'section:', 'file:', 'target:', 'day:', 'meta:'
+];
+
+const MIGRATED_FLAG = 'agg:v1:migrated';
+
 const json = (body, status, extra) => new Response(JSON.stringify(body), {
   status: status || 200,
   headers: Object.assign({
@@ -290,15 +310,29 @@ export async function resetStats({ request, env }) {
   if (!env.STATS) return json({ error: 'Storage is not bound.' }, 503);
 
   let removed = 0;
-  let cursor;
-  do {
-    const page = await env.STATS.list({ prefix: 'agg:v1:', cursor, limit: 1000 });
-    cursor = page.list_complete ? null : page.cursor;
-    for (const k of page.keys) {
-      await env.STATS.delete(k.name);
-      removed++;
-    }
-  } while (cursor);
+  for (const prefix of RESETTABLE) {
+    let cursor;
+    do {
+      const page = await env.STATS.list({ prefix, cursor, limit: 1000 });
+      cursor = page.list_complete ? null : page.cursor;
+      for (const k of page.keys) {
+        await env.STATS.delete(k.name);
+        removed++;
+      }
+    } while (cursor);
+  }
+
+  /*
+   * Re-arm the migration flag straight away.
+   *
+   * It lives under agg:v1: and so was deleted with everything else, which made
+   * the reset undo itself: /api/stats saw no flag, re-ran the one-time import
+   * of the old per-key counters, and rebuilt the very numbers that had just
+   * been cleared. Those keys are now deleted above as well, but the flag still
+   * has to be set or the import would run again over an empty set and waste a
+   * list on every request.
+   */
+  await env.STATS.put(MIGRATED_FLAG, new Date().toISOString());
 
   return json({ ok: true, removed });
 }

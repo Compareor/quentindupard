@@ -1395,6 +1395,23 @@
       "about/index.html"
     ]
   },
+  "5c9a858e1b79": {
+    "en": "Manage subscription",
+    "pages": [
+      "404.html",
+      "about/index.html",
+      "index.html",
+      "privacy/index.html",
+      "research/activation/index.html",
+      "research/expansion-revenue/index.html",
+      "research/index.html",
+      "research/positioning/index.html",
+      "research/pricing-metric/index.html",
+      "research/rising-cac/index.html",
+      "research/what-to-kill/index.html",
+      "stats/index.html"
+    ]
+  },
   "5ce7e1108b4f": {
     "en": "Embedded with your team. We pick one lever, usually pricing or activation, and actually move it rather than writing a document about moving it.",
     "pages": [
@@ -2339,23 +2356,6 @@
     "en": "Yes, send it",
     "pages": [
       "index.html"
-    ]
-  },
-  "935e0374fc62": {
-    "en": "Cancel a subscription",
-    "pages": [
-      "404.html",
-      "about/index.html",
-      "index.html",
-      "privacy/index.html",
-      "research/activation/index.html",
-      "research/expansion-revenue/index.html",
-      "research/index.html",
-      "research/positioning/index.html",
-      "research/pricing-metric/index.html",
-      "research/rising-cac/index.html",
-      "research/what-to-kill/index.html",
-      "stats/index.html"
     ]
   },
   "93ca7b31ca28": {

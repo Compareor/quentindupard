@@ -1350,7 +1350,7 @@
      feature, it is the thing consumer law is specifically about. Until the
      URL is set the link falls back to email, which is slower but is at least
      a route that exists. */
-  const STRIPE_PORTAL = '';
+  const STRIPE_PORTAL = 'https://billing.stripe.com/p/login/6oUcN55Ridk40TwgqZ0oM00';
   const PROMO_KEY = 'qd:promo';
 
   function cancelLink() {

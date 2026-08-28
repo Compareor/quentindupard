@@ -156,12 +156,39 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   padding: 12px 14px;
   margin-bottom: 8px;
 }
-/* A follow-up in the same browser tab, tucked under the question before it. */
-.qrow.is-follow {
-  margin-left: 22px;
-  margin-top: -4px;
-  border-left: 2px solid var(--accent-edge);
+/* ── Day and conversation grouping ──
+   A flat list of everything ever asked is unreadable by the second week. Days
+   collapse, today is open, and questions from one browser tab sit together. */
+.qday { margin-bottom: 14px; }
+.qday > summary {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 11px 14px; cursor: pointer;
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-md);
+  background: var(--tint);
+  list-style: none;
 }
+.qday > summary::-webkit-details-marker { display: none; }
+.qday > summary::before {
+  content: '▸'; font-size: 11px; color: var(--text-faint);
+  transition: transform .18s var(--ease);
+}
+.qday[open] > summary::before { transform: rotate(90deg); }
+.qday-name  { font-size: 14.5px; font-weight: 600; letter-spacing: -0.015em; }
+.qday-count { font-size: 12.5px; color: var(--text-faint); margin-left: auto; }
+
+.qthread {
+  margin: 10px 0 0 18px;
+  padding-left: 14px;
+  border-left: 2px solid var(--glass-stroke);
+}
+.qthread-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.qthread-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; color: var(--text-faint);
+  padding: 2px 6px; border-radius: var(--r-sm); background: var(--tint);
+}
+.qthread-meta { font-size: 12px; color: var(--text-faint); }
 .qrow-head {
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 7px;

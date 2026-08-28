@@ -19,6 +19,14 @@ import Anthropic from '@anthropic-ai/sdk';
 const MODEL = 'claude-opus-5';
 
 const MAX_QUESTION_CHARS = 280;
+
+/* Conversation history arrives from the browser, because the endpoint is
+   stateless and there is no account to key a session to. That makes it
+   untrusted input: a forged transcript could try to put words in the
+   assistant's mouth. It is capped hard on both count and length, and the
+   system prompt stays authoritative over anything in here. */
+const MAX_HISTORY = 6;
+const MAX_HISTORY_CHARS = 1200;
 const WINDOW_SECONDS = 3600;
 const MAX_PER_WINDOW = 12;
 
@@ -43,10 +51,11 @@ export async function onRequestPost(context) {
     return text('The brain is not configured on this deployment.', 503);
   }
 
-  let question, meta = {};
+  let question, history = [], meta = {};
   try {
     const body = await request.json();
     question = String(body.q || '').trim();
+    history = cleanHistory(body.history);
     meta = {
       lang: String(body.lang || 'en').slice(0, 5).replace(/[^a-zA-Z-]/g, ''),
       thread: String(body.thread || '').slice(0, 12).replace(/[^a-z0-9]/gi, ''),
@@ -85,7 +94,7 @@ export async function onRequestPost(context) {
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
       system: systemPrompt(corpus),
-      messages: [{ role: 'user', content: question }]
+      messages: [...history, { role: 'user', content: question }]
     });
   } catch (err) {
     logFailure('stream-create', err);
@@ -178,6 +187,32 @@ function logFailure(stage, err) {
       (err && err.error && err.error.error && err.error.error.type) || (err && err.name) || 'unknown',
       (err && err.message) || String(err));
   } catch (_) { /* logging must never be the thing that breaks the request */ }
+}
+
+/**
+ * Normalise the client-supplied transcript.
+ *
+ * Alternation matters: the API rejects two consecutive turns with the same
+ * role, and a browser that dropped a failed answer could otherwise send two
+ * user turns in a row and get a 400 for its trouble.
+ */
+function cleanHistory(raw) {
+  if (!Array.isArray(raw)) return [];
+  const out = [];
+  for (const turn of raw.slice(-MAX_HISTORY)) {
+    if (!turn || typeof turn !== 'object') continue;
+    const role = turn.role === 'assistant' ? 'assistant' : 'user';
+    const content = String(turn.content || '').trim().slice(0, MAX_HISTORY_CHARS);
+    if (!content) continue;
+    if (out.length && out[out.length - 1].role === role) continue;   // no doubles
+    out.push({ role, content });
+  }
+  // The model requires the first message to be a user turn.
+  while (out.length && out[0].role !== 'user') out.shift();
+  // And the last history turn must be an assistant reply, because the live
+  // question is appended as the next user turn.
+  while (out.length && out[out.length - 1].role !== 'assistant') out.pop();
+  return out;
 }
 
 /**

@@ -1461,6 +1461,16 @@
     track('paywall_shown', { target: String(asked()) });
   }
 
+  /* The running conversation. Held here rather than on the server because the
+     endpoint is stateless and there is no account to key a session to — the
+     browser is the only thing that knows what was already said.
+
+     Only the last few turns travel. The corpus already fills most of the
+     prompt, and a transcript that grows without bound would push it out. */
+  const turns = [];
+  const HISTORY_TURNS = 6;          // three exchanges
+  const HISTORY_CHARS = 1200;       // per message
+
   async function submitQuestion(question) {
     if (ask.classList.contains('is-loading')) return;
 
@@ -1487,6 +1497,12 @@
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           q: question,
+          // Without this every question was answered as if it were the first,
+          // which is why follow-ups came back generic.
+          history: turns.slice(-HISTORY_TURNS).map(m => ({
+            role: m.role,
+            content: m.content.slice(0, HISTORY_CHARS)
+          })),
           // Read by /admin so questions can be grouped into a conversation and
           // shown in the language they were asked in. `quiet` carries the
           // measurement opt-out through, so declining it also declines this.
@@ -1517,6 +1533,14 @@
       renderMarkdown(reply.body, full);
     } catch (err) {
       if (err.message !== 'handled') renderMarkdown(reply.body, offlineAnswer(question));
+    }
+
+    /* Recorded after the exchange, not before: a question that never got an
+       answer would otherwise sit in the history as an unanswered turn and skew
+       everything asked afterwards. Only a real reply earns a place. */
+    if (full.trim()) {
+      turns.push({ role: 'user', content: question });
+      turns.push({ role: 'assistant', content: full.trim() });
     }
 
     reply.msg.classList.remove('streaming');

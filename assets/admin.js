@@ -286,12 +286,56 @@
     render();
   }
 
+  function dayLabel(ms) {
+    const d = new Date(ms);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const day = new Date(ms); day.setHours(0, 0, 0, 0);
+    const diff = Math.round((today - day) / 86400000);
+    if (diff === 0) return 'Today';
+    if (diff === 1) return 'Yesterday';
+    if (diff < 7) return d.toLocaleDateString([], { weekday: 'long' });
+    return d.toLocaleDateString([], { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  const clock = ms => new Date(ms).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+  /* Newest day first, and within a day one block per conversation rather than
+     a flat wall. A thread id is a browser tab, not a person: it is the closest
+     thing to "who asked this" that exists without tracking anyone across
+     visits, which the privacy page promises not to do. */
+  function groupQuestions(rows) {
+    const days = new Map();
+    rows.forEach((row) => {
+      const key = new Date(row.at); key.setHours(0, 0, 0, 0);
+      const stamp = key.getTime();
+      if (!days.has(stamp)) days.set(stamp, new Map());
+      const threads = days.get(stamp);
+      const id = row.thread || ('single:' + row.key);
+      if (!threads.has(id)) threads.set(id, []);
+      threads.get(id).push(row);
+    });
+    return [...days.entries()]
+      .sort((a, b) => b[0] - a[0])
+      .map(([stamp, threads]) => ({
+        stamp,
+        threads: [...threads.entries()]
+          .map(([id, rows]) => ({ id, rows: rows.slice().sort((a, b) => a.at - b.at) }))
+          .sort((a, b) => b.rows[0].at - a.rows[0].at)
+      }));
+  }
+
+  async function removeQuestion(row) {
+    await api('/api/admin/questions', { method: 'POST', body: JSON.stringify({ key: row.key }) });
+    questions = questions.filter(q => q.key !== row.key);
+    render();
+  }
+
   function renderQuestions() {
     const pane = $('#pane-questions');
     pane.textContent = '';
 
     pane.appendChild(el('p', 'pane-note',
-      'Everything asked of AI-me, newest first. Kept 90 days, then it expires on its own. No IP and no visitor id is stored — the thread marker dies with the browser tab, and exists only so a follow-up sits next to the question before it.'));
+      'What people asked AI-me, newest day first and grouped by conversation. Kept 90 days, then it expires on its own. A conversation is one browser tab — no IP and no visitor id is stored, so nothing here follows anyone between visits.'));
 
     if (questions === null) {
       pane.appendChild(el('p', 'hint', 'Loading…'));
@@ -303,31 +347,53 @@
       return;
     }
 
-    const counts = questions.reduce((acc, q) => { acc[q.lang] = (acc[q.lang] || 0) + 1; return acc; }, {});
+    const days = groupQuestions(questions);
+    const counts = questions.reduce((a, q) => { a[q.lang] = (a[q.lang] || 0) + 1; return a; }, {});
     pane.appendChild(el('p', 'hint',
-      questions.length + ' question' + (questions.length === 1 ? '' : 's') + ' · ' +
+      `${questions.length} question${questions.length === 1 ? '' : 's'} · ` +
+      `${days.length} day${days.length === 1 ? '' : 's'} · ` +
       Object.entries(counts).map(([l, n]) => l.toUpperCase() + ' ' + n).join(' · ')));
 
-    let lastThread = null;
-    questions.forEach((row) => {
-      const card = el('div', 'qrow' + (row.thread && row.thread === lastThread ? ' is-follow' : ''));
-      lastThread = row.thread;
+    days.forEach((day, dayIndex) => {
+      const group = document.createElement('details');
+      group.className = 'qday';
+      group.open = dayIndex === 0;            // today expanded, history collapsed
 
-      const head = el('div', 'qrow-head');
-      head.append(
-        el('span', 'qrow-when', when(row.at)),
-        el('span', 'qrow-lang', row.lang.toUpperCase())
+      const total = day.threads.reduce((n, t) => n + t.rows.length, 0);
+      const summary = document.createElement('summary');
+      summary.append(
+        el('span', 'qday-name', dayLabel(day.stamp)),
+        el('span', 'qday-count',
+           `${day.threads.length} conversation${day.threads.length === 1 ? '' : 's'} · ${total} question${total === 1 ? '' : 's'}`)
       );
-      const del = iconBtn('✕', 'Delete this question', async () => {
-        if (!confirm('Delete this question permanently?')) return;
-        await api('/api/admin/questions', { method: 'POST', body: JSON.stringify({ key: row.key }) });
-        questions = questions.filter(q => q.key !== row.key);
-        render();
-      }, true);
-      head.appendChild(del);
+      group.appendChild(summary);
 
-      card.append(head, el('p', 'qrow-q', row.q));
-      pane.appendChild(card);
+      day.threads.forEach((thread) => {
+        const box = el('div', 'qthread');
+        const head = el('div', 'qthread-head');
+        head.append(
+          el('span', 'qthread-id', thread.id.startsWith('single:') ? 'one-off' : thread.id),
+          el('span', 'qthread-meta',
+             `${clock(thread.rows[0].at)} · ${thread.rows.length} question${thread.rows.length === 1 ? '' : 's'}`)
+        );
+        box.appendChild(head);
+
+        thread.rows.forEach((row) => {
+          const line = el('div', 'qrow');
+          const meta = el('div', 'qrow-head');
+          meta.append(el('span', 'qrow-when', clock(row.at)), el('span', 'qrow-lang', row.lang.toUpperCase()));
+          meta.appendChild(iconBtn('✕', 'Delete this question', async () => {
+            if (!confirm('Delete this question permanently?')) return;
+            await removeQuestion(row);
+          }, true));
+          line.append(meta, el('p', 'qrow-q', row.q));
+          box.appendChild(line);
+        });
+
+        group.appendChild(box);
+      });
+
+      pane.appendChild(group);
     });
   }
 

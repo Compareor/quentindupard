@@ -22,9 +22,9 @@ to be deployed before any of this works.
 import argparse
 import json
 import re
+import shutil
+import subprocess
 import sys
-import urllib.request
-import urllib.error
 
 HOST = 'quentindupard.com'
 KEY = 'c269fe0f232f4c0b98944cadd64fdb68'
@@ -37,9 +37,38 @@ WITHDRAWN_SLUGS = ['pricing-metric', 'activation', 'positioning',
 LOCALES = ['', '/fr', '/es']
 
 
+CURL = shutil.which('curl')
+
+
+def http(url, data=None, headers=()):
+    """
+    Fetch or POST through curl.
+
+    Not urllib: the python.org macOS builds ship without a CA bundle unless
+    someone has run Install Certificates.command, and this failing on a machine
+    where every other request works would be a confusing way to lose a
+    submission. curl is present on macOS and Linux and uses the system trust
+    store.
+    """
+    if not CURL:
+        raise RuntimeError('curl not found; install it or run this elsewhere')
+    cmd = [CURL, '-sS', '--max-time', '30', '-w', '\n%{http_code}']
+    for h in headers:
+        cmd += ['-H', h]
+    if data is not None:
+        cmd += ['--data-binary', data]
+    cmd.append(url)
+    out = subprocess.run(cmd, capture_output=True, text=True)
+    if out.returncode != 0:
+        raise RuntimeError(out.stderr.strip() or f'curl exit {out.returncode}')
+    body, _, code = out.stdout.rpartition('\n')
+    return int(code.strip() or 0), body
+
+
 def sitemap_urls():
-    with urllib.request.urlopen(f'https://{HOST}/sitemap.xml', timeout=20) as r:
-        xml = r.read().decode('utf-8')
+    status, xml = http(f'https://{HOST}/sitemap.xml')
+    if status != 200:
+        raise RuntimeError(f'sitemap returned HTTP {status}')
     return re.findall(r'<loc>([^<]+)</loc>', xml)
 
 
@@ -51,15 +80,14 @@ def withdrawn_urls():
 def check_key():
     """The endpoint rejects everything if the key file is not reachable."""
     try:
-        with urllib.request.urlopen(KEY_LOCATION, timeout=15) as r:
-            body = r.read().decode('utf-8').strip()
-        if body != KEY:
-            return f'key file serves {body[:40]!r}, expected the key itself'
-        return None
-    except urllib.error.HTTPError as e:
-        return f'key file returned HTTP {e.code} — deploy it before submitting'
+        status, body = http(KEY_LOCATION)
     except Exception as e:
         return f'key file unreachable: {e}'
+    if status != 200:
+        return f'key file returned HTTP {status} — deploy it before submitting'
+    if body.strip() != KEY:
+        return f'key file serves {body.strip()[:40]!r}, expected the key itself'
+    return None
 
 
 def submit(urls):
@@ -68,16 +96,9 @@ def submit(urls):
         'key': KEY,
         'keyLocation': KEY_LOCATION,
         'urlList': urls,
-    }).encode('utf-8')
-
-    req = urllib.request.Request(
-        ENDPOINT, data=payload,
-        headers={'Content-Type': 'application/json; charset=utf-8'})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status, r.read().decode('utf-8', 'replace')[:400]
-    except urllib.error.HTTPError as e:
-        return e.code, e.read().decode('utf-8', 'replace')[:400]
+    })
+    return http(ENDPOINT, data=payload,
+                headers=['Content-Type: application/json; charset=utf-8'])
 
 
 MEANING = {

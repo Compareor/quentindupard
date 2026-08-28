@@ -308,8 +308,29 @@
       data.eventMap = Object.fromEntries(data.events || []);
       const totals = data.totals || {};
       $('#k-visitors').textContent = number(totals.visitors);
+      const visits = totals.visits || 0;
+      if ($('#k-visits')) $('#k-visits').textContent = number(visits);
       $('#k-views').textContent = number(totals.views);
       $('#k-events').textContent = number(totals.events);
+
+      /* First-time against returning. Both are counted once per visit, so the
+         two add up to the visit total rather than to the event total — which
+         is what made the old source numbers look like traffic they were not. */
+      const first = totals.visitors || 0;
+      const back = totals.returning || 0;
+      const bothKnown = first + back;
+      if ($('#s-new')) {
+        $('#s-new').textContent = number(first);
+        $('#s-returning').textContent = number(back);
+        const pct = (n) => bothKnown ? Math.round(n / bothKnown * 100) : 0;
+        $('#s-new-bar').style.width = pct(first) + '%';
+        $('#s-ret-bar').style.width = pct(back) + '%';
+        const note = $('#split-note');
+        if (note && bothKnown) {
+          note.textContent = `${pct(back)}% of visits are people who had been here before. ` +
+            'Counted once per visit; a visit is a browser tab.';
+        }
+      }
 
       const downloads = (data.events || [])
         .filter(([name]) => /download/.test(name))

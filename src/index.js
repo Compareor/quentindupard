@@ -15,7 +15,7 @@ import { onRequestPost as trackPost }   from '../functions/api/track.js';
 import { onRequestGet  as statsGet }    from '../functions/api/stats.js';
 import { onRequestGet  as visitorGet }  from '../functions/api/visitor.js';
 import { login, logout, read as adminRead, write as adminWrite, publicContent,
-         questions as adminQuestions, deleteQuestion }
+         questions as adminQuestions, deleteQuestion, resetStats }
   from '../functions/api/admin.js';
 
 const API = {
@@ -30,7 +30,8 @@ const API = {
   '/api/admin/login':   { POST: login },
   '/api/admin/logout':  { POST: logout },
   '/api/admin/content': { GET:  adminRead, PUT: adminWrite },
-  '/api/admin/questions': { GET: adminQuestions, POST: deleteQuestion }
+  '/api/admin/questions': { GET: adminQuestions, POST: deleteQuestion },
+  '/api/admin/reset-stats': { POST: resetStats }
 };
 
 // Superseded by the current positioning. 410 rather than 301 so search engines

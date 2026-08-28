@@ -16,6 +16,12 @@
       "stats/index.html"
     ]
   },
+  "0334e1f9e6b4": {
+    "en": "<span class=\"split-l\">Came back</span> <span class=\"split-n\" id=\"s-returning\">&mdash;</span>",
+    "pages": [
+      "stats/index.html"
+    ]
+  },
   "0355718326b8": {
     "en": "Thirty minutes, no deck, no discovery script. You describe the problem and I tell you whether I'm the right person for it. Including when I'm not.",
     "pages": [
@@ -1111,6 +1117,12 @@
       "index.html"
     ]
   },
+  "6a4be2fac27d": {
+    "en": "Visits",
+    "pages": [
+      "stats/index.html"
+    ]
+  },
   "6a92c8fa8135": {
     "en": "<strong>Nothing published here yet.</strong>",
     "pages": [
@@ -1574,6 +1586,12 @@
       "index.html"
     ]
   },
+  "918a67abae25": {
+    "en": "<span class=\"split-l\">First visit</span> <span class=\"split-n\" id=\"s-new\">&mdash;</span>",
+    "pages": [
+      "stats/index.html"
+    ]
+  },
   "924facb738c0": {
     "en": "Previously.",
     "pages": [
@@ -1906,6 +1924,12 @@
       "index.html"
     ]
   },
+  "b37554f695b1": {
+    "en": "People",
+    "pages": [
+      "stats/index.html"
+    ]
+  },
   "b3c475c1afe0": {
     "en": "<strong>Funnel collapsed.</strong> Happens to the best of them.",
     "pages": [
@@ -2094,6 +2118,12 @@
     "en": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most companies asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.",
     "pages": [
       "index.html"
+    ]
+  },
+  "c46b18669157": {
+    "en": "Counted once per visit, not once per click. A visit is a browser tab.",
+    "pages": [
+      "stats/index.html"
     ]
   },
   "c648612c9791": {
@@ -2368,6 +2398,12 @@
     "en": "&larr; Research",
     "pages": [
       "research/index.html"
+    ]
+  },
+  "decbb4850d43": {
+    "en": "First time or back again",
+    "pages": [
+      "stats/index.html"
     ]
   },
   "dfbdc0995ce3": {
@@ -2671,12 +2707,6 @@
     "en": "Add to cart",
     "pages": [
       "index.html"
-    ]
-  },
-  "f8f3b6f931db": {
-    "en": "Visitors",
-    "pages": [
-      "stats/index.html"
     ]
   },
   "f9798f77ea91": {

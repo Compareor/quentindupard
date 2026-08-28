@@ -162,3 +162,24 @@
   .demand-nums { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .demand-splits { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 }
+
+/* ── First visit against returning ──
+   Two bars rather than a pie: the question is which is bigger, and by how
+   much, which a length answers and an angle does not. */
+.split { display: flex; flex-direction: column; gap: 6px; }
+.split-row { display: flex; align-items: baseline; justify-content: space-between; }
+.split-l { font-size: 14.5px; color: var(--text-dim); }
+.split-n { font-size: 18px; font-weight: 620; color: var(--text); font-variant-numeric: tabular-nums; }
+.split-bar {
+  height: 8px; border-radius: var(--r-pill);
+  background: var(--tint-strong); overflow: hidden;
+  margin-bottom: 10px;
+}
+.split-bar i {
+  display: block; height: 100%;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  transition: width .6s var(--ease);
+}
+.split-bar.is-returning i { background: linear-gradient(90deg, var(--accent-b), var(--pink)); }
+.split-note { font-size: 12.5px; line-height: 1.5; color: var(--text-faint); margin-top: 4px; }

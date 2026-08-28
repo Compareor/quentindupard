@@ -493,6 +493,17 @@
     render();
   });
 
+  const resetStats = $('#reset-stats');
+  if (resetStats) {
+    resetStats.addEventListener('click', async () => {
+      if (!confirm('Clear all visit and traffic counters?\n\nThe questions log and the record of who has visited before are kept, so returning visitors are still recognised. This cannot be undone.')) return;
+      resetStats.disabled = true;
+      const { ok, data } = await api('/api/admin/reset-stats', { method: 'POST' });
+      resetStats.disabled = false;
+      setState(ok ? `Statistics cleared (${data.removed} records)` : 'Could not clear statistics', !ok);
+    });
+  }
+
   $('#reset').addEventListener('click', () => {
     if (!confirm('Replace everything with the content that ships with the site? This does not save until you press Save.')) return;
     model = clone(DEFAULTS);

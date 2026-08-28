@@ -107,9 +107,6 @@ export async function onRequestPost({ request, env }) {
 
     bump(delta.totals, 'events');
     bump(delta.events, event);
-    bump(delta.sources, source);
-    if (campaign) bump(delta.campaigns, campaign);
-    if (medium) bump(delta.mediums, medium);
     if (section) bump(delta.sections, section);
     forDay('events');
 
@@ -127,19 +124,48 @@ export async function onRequestPost({ request, env }) {
   if (sawPageView) {
     bump(delta.totals, 'views');
     forDay('views');
+  }
 
-    // Unique-ish visitors: a first-seen marker with a 90-day TTL. Enough for a
-    // headline number, not enough to be a profile.
-    if (visitor) {
-      const seenKey = `seen:${visitor}`;
-      try {
-        if (!(await env.STATS.get(seenKey))) {
-          await env.STATS.put(seenKey, '1', { expirationTtl: 60 * 60 * 24 * 90 });
-          bump(delta.totals, 'visitors');
-          forDay('visitors');
+  /*
+   * Attribution and the visitor split are decided ONCE PER VISIT.
+   *
+   * They used to be counted inside the event loop, which made "where people
+   * come from" a count of scroll ticks rather than of people: roughly 170 per
+   * visit, so ten visits read as 1,704 from "direct".
+   *
+   * A visit is a session, which is a browser tab. The marker expires after
+   * twelve hours so a tab left open overnight starts a new visit rather than
+   * counting forever, and every batch after the first in the same session
+   * finds the marker and adds nothing.
+   */
+  if (session) {
+    try {
+      const visitKey = `visit:${session}`;
+      if (!(await env.STATS.get(visitKey))) {
+        await env.STATS.put(visitKey, '1', { expirationTtl: 60 * 60 * 12 });
+
+        bump(delta.totals, 'visits');
+        forDay('visits');
+        bump(delta.sources, source);
+        if (campaign) bump(delta.campaigns, campaign);
+        if (medium) bump(delta.mediums, medium);
+
+        // First time ever, or back again? The seen marker is the only thing
+        // that distinguishes them, and it holds a random id for 90 days —
+        // enough to tell new from returning, not enough to be a profile.
+        if (visitor) {
+          const seenKey = `seen:${visitor}`;
+          if (await env.STATS.get(seenKey)) {
+            bump(delta.totals, 'returning');
+            forDay('returning');
+          } else {
+            await env.STATS.put(seenKey, '1', { expirationTtl: 60 * 60 * 24 * 90 });
+            bump(delta.totals, 'visitors');
+            forDay('visitors');
+          }
         }
-      } catch (_) { /* ignore */ }
-    }
+      }
+    } catch (_) { /* a counting hiccup must not break the request */ }
   }
 
   // Presence for "reading now". Self-expiring, so there is no cleanup job.

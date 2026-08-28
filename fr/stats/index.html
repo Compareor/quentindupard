@@ -24,7 +24,7 @@
 
 <link rel="stylesheet" href="/assets/glass.css?v=31">
 <link rel="stylesheet" href="/assets/home.css?v=45">
-<link rel="stylesheet" href="/assets/stats.css?v=6">
+<link rel="stylesheet" href="/assets/stats.css?v=7">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -87,7 +87,8 @@
   <div class="shell">
 
     <div class="kpis" id="kpis">
-      <div class="glass kpi"><p class="kpi-n" id="k-visitors">—</p><p class="kpi-l">Visiteurs</p></div>
+      <div class="glass kpi"><p class="kpi-n" id="k-visitors">—</p><p class="kpi-l">Personnes</p></div>
+      <div class="glass kpi"><p class="kpi-n" id="k-visits">—</p><p class="kpi-l">Visites</p></div>
       <div class="glass kpi"><p class="kpi-n" id="k-views">—</p><p class="kpi-l">Pages vues</p></div>
       <div class="glass kpi"><p class="kpi-n" id="k-events">—</p><p class="kpi-l">Actions mesurées</p></div>
       <div class="glass kpi"><p class="kpi-n" id="k-downloads">—</p><p class="kpi-l">Téléchargements</p></div>
@@ -105,6 +106,21 @@
     </div>
 
     <div class="panels">
+      <div class="glass panel">
+        <h2 class="panel-h">Première fois ou retour</h2>
+        <div class="split">
+          <div class="split-row">
+            <span class="split-l">Première visite</span> <span class="split-n" id="s-new">&mdash;</span>
+          </div>
+          <div class="split-bar"><i id="s-new-bar" style="width:0%"></i></div>
+          <div class="split-row">
+            <span class="split-l">Revenus</span> <span class="split-n" id="s-returning">&mdash;</span>
+          </div>
+          <div class="split-bar is-returning"><i id="s-ret-bar" style="width:0%"></i></div>
+          <p class="split-note" id="split-note">Compté une fois par visite, pas une fois par clic. Une visite correspond à un onglet.</p>
+        </div>
+      </div>
+
       <div class="glass panel">
         <h2 class="panel-h">14 derniers jours</h2>
         <div class="chart" id="chart"><p class="panel-empty">Pas encore de données.</p></div>
@@ -287,6 +303,6 @@
 
 <script src="/assets/i18n.js?v=7" defer></script>
 <script src="/assets/track.js?v=8" defer></script>
-<script src="/assets/stats.js?v=5" defer></script>
+<script src="/assets/stats.js?v=6" defer></script>
 </body>
 </html>

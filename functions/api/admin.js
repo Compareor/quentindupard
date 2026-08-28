@@ -273,6 +273,36 @@ export async function deleteQuestion({ request, env }) {
   return json({ ok: true });
 }
 
+/**
+ * POST /api/admin/reset-stats — clear the aggregate counters.
+ *
+ * Needed once, because attribution used to be counted per event rather than
+ * per visit: "direct" read 1,704 from about ten visits. Old and new numbers
+ * cannot be added together meaningfully, so the old ones have to go.
+ *
+ * Only the aggregate documents are deleted. The `seen:` markers survive on
+ * purpose — they are what tells a returning visitor from a new one, and
+ * clearing them would make every existing reader look new for 90 days.
+ * Logged questions are untouched.
+ */
+export async function resetStats({ request, env }) {
+  if (!(await authed(request, env))) return json({ error: 'Not signed in.' }, 401);
+  if (!env.STATS) return json({ error: 'Storage is not bound.' }, 503);
+
+  let removed = 0;
+  let cursor;
+  do {
+    const page = await env.STATS.list({ prefix: 'agg:v1:', cursor, limit: 1000 });
+    cursor = page.list_complete ? null : page.cursor;
+    for (const k of page.keys) {
+      await env.STATS.delete(k.name);
+      removed++;
+    }
+  } while (cursor);
+
+  return json({ ok: true, removed });
+}
+
 /* Public. Returns 204 when nothing has been edited, which is the signal for
    the page to keep the defaults it already shipped with. */
 export async function publicContent({ env }) {

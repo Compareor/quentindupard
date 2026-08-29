@@ -147,7 +147,8 @@
 
   const path = location.pathname;
   if (/\/research\/?$/.test(path)) return;                    // the hub
-  const items = all.filter((a) => !path.includes('/research/' + a.slug + '/')).slice(0, 3);
+  // Two at most: the block is a nudge onward, not a second hub.
+  const items = all.filter((a) => !path.includes('/research/' + a.slug + '/')).slice(0, 2);
   if (!items.length) return;
 
   // Same rule the fort uses: runtime links never went through the

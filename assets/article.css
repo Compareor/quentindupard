@@ -336,10 +336,13 @@
 }
 .book-cover figcaption {
   min-width: 0;
-  display: flex; flex-direction: column; gap: 4px;
+  display: flex; flex-direction: column; gap: 5px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--text-dim);
+  /* The caption block optically centres against the jacket; a straight
+     baseline between its three lines keeps the card looking set, not stacked. */
+  padding: 2px 0;
 }
 .book-cover figcaption strong {
   font-size: 16.5px;

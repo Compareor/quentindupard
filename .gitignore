@@ -32,3 +32,4 @@ build/
 # Local SEO audit reports — the repo root is the deploy root, so these
 # must never reach git or they end up served publicly.
 seo-audit/
+tools/i18n/__pycache__/

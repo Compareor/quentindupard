@@ -11,6 +11,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -31,6 +32,12 @@
     "en": "Expansion revenue is the investment phase with an invoice attached. A customer whose stored value keeps growing &mdash; more data in, more colleagues in, more workflows finished &mdash; is a customer whose next tier is a smaller decision than their first purchase was, which is the whole trick of <a href=\"/#pricing\">pricing that grows with the account</a> instead of refilling a leaking bucket. And the habit itself is pricing power: Eyal&rsquo;s point via Buffett is that routine use is what lets a price move without agony, which is why a pricing teardown starts from usage, not from the price grid.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "022eeae22f20": {
+    "en": "What is the Value Proposition Canvas?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "026b6776abd3": {
@@ -69,6 +76,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -131,6 +139,12 @@
     "en": "One lever, shipped",
     "pages": [
       "index.html"
+    ]
+  },
+  "08db0e3d8bb5": {
+    "en": "It has also aged into new relevance for a reason the authors could not have planned. Execution keeps getting cheaper; <a href=\"/research/services-the-new-software/\">the machines are eating the intelligence work</a>, and what is left over is judgement about what to build and for whom. The canvas is a judgement instrument. It produces nothing a model can verify, automate or generate on your behalf, because its raw material is what your specific customers actually said, ranked by how much it hurt. A tool that old, that cheap, aimed at exactly the work that is not getting cheaper: that is why it stays on the wall.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "09d41f02a0a3": {
@@ -236,6 +250,12 @@
       "research/services-the-new-software/index.html"
     ]
   },
+  "0eff1943bcfd": {
+    "en": "The Value Proposition Canvas is a one-page tool from Value Proposition Design (Osterwalder, Pigneur, Bernarda and Smith, 2014) that zooms into the value proposition box of the Business Model Canvas. It has two halves: a customer profile circle holding the customer's jobs to be done, pains and hoped-for gains, and a value map square holding your products and services, pain relievers and gain creators. The exercise is to fill the circle from customer evidence first, the square second, and then examine how well they match. The authors call a strong match fit.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "0f18f9e71709": {
     "en": "Privacy, and what this site actually stores",
     "pages": [
@@ -246,6 +266,12 @@
     "en": "Largely, it does not. The distinction Cialdini offers is between triggers that are genuine and triggers that have been counterfeited — real popularity against staged testimonials, a real expert against an actor playing one, real scarcity against an invented deadline. But the argument appears in the epilogue and is addressed to the person being persuaded, who is urged to notice the fakery and retaliate. There is no equivalent constraint proposed for the practitioner, which is the book’s largest omission.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "0fc74e683545": {
+    "en": "Is the Value Proposition Canvas still relevant?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "0feae0696638": {
@@ -332,6 +358,12 @@
       "privacy/index.html"
     ]
   },
+  "147e514dbc7c": {
+    "en": "<strong>Kill the claims with no line.</strong> The fastest positioning work available: delete every sentence on the homepage that maps to nothing in the circle. Pages get shorter and convert better, because the remaining claims stop diluting each other. This is <a href=\"/#pricing\">the first hour of most teardowns I run</a>.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "149548d62a9f": {
     "en": "One point in its favour: Cialdini kept working. He has since added a seventh principle, <em>unity</em> &mdash; not merely resembling someone but belonging to the same group as them &mdash; which is not in this edition and which is, if anything, the one that has aged best.",
     "pages": [
@@ -362,6 +394,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -425,6 +458,12 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "1a05dd3ea41f": {
+    "en": "<strong>As the test list.</strong> Every note in the circle is a claim about people who are not in the room, which means every note is either evidence or a guess. Mark which. The guesses in the pain box are your riskiest assumptions, and each one converts directly into a customer conversation or a landing-page test. This is the same repair I apply to <a href=\"/research/business-model-generation/\">the big canvas</a>: the page cannot tell facts from wishes, so the discipline has to come from you.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "1a591fcf7f75": {
     "en": "How long they stay",
     "pages": [
@@ -443,6 +482,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -450,6 +490,12 @@
     "en": "Cialdini spent three years undercover in sales rooms, fundraising offices and advertising agencies working out why people say yes. He came back with six answers. Four of them need a human being in the room and two of them do not, which turns out to be the most useful thing in the book, because the things reading your website now are not human beings.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "1c56c5085a60": {
+    "en": "Use it when the words about the product are about to be written or rewritten: before a homepage rebuild, before a launch, before renaming the tiers, and in the first week of any positioning engagement. Use it after churn interviews, when the pain box can be filled with fresh quotes. Skip it as a standing artefact that gets ceremonially updated; it is a thinking session, not a shrine. And if the team has never met a customer, run the interviews first. The canvas gives an honest team a place to put the truth; it gives an isolated team a beautiful place to put its assumptions, and only one of those is worth the wall space.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "1cb10db39eed": {
@@ -476,6 +522,12 @@
       "index.html"
     ]
   },
+  "1d7676c4c300": {
+    "en": "<strong>Fill the circle from transcripts, not memory.</strong> The customer profile is only worth the evidence under it. Ten recent sales calls, ten support threads, ten churn interviews: quote the customer's own words into the jobs and pains boxes. A circle filled from the team's memory is the square wearing a disguise.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "1e4343649bf5": {
     "en": "Previously",
     "pages": [
@@ -488,6 +540,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -611,6 +664,12 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "23f2e570bfa9": {
+    "en": "Where does it break?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "24ae03d50191": {
     "en": "A deliberately mixed list, because the point is that the levers travel:",
     "pages": [
@@ -726,7 +785,14 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
+    ]
+  },
+  "2df688048fae": {
+    "en": "Product test: read your roadmap's next five items and name, for each, the ranked pain or job it serves. Anything you cannot name in ten seconds is being built for the square, not the circle.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "2e0254c28e2b": {
@@ -753,6 +819,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -784,6 +851,12 @@
     "en": "Exactly what quentindupard.com stores, where it goes, who else sees it, and how to switch the analytics off. Written to be checked, not skimmed.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "3036ccc360bb": {
+    "en": "Frameworks age in two ways. The ones built on tactics rot with the channel they were built for; nobody needs a growth-hacking playbook from 2014. The ones built on questions barely age at all, because the questions were old to begin with. What is the customer trying to do, what hurts, what would delight them, and which of our claims answers any of it: those questions worked in a market stall. The canvas just pins them to a wall in an order a team cannot squirm out of.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "3092c724e85b": {
@@ -822,6 +895,12 @@
       "index.html"
     ]
   },
+  "3394c0334a9b": {
+    "en": "Marketing test: hand a colleague your homepage and the pain box, and ask them to draw the lines. Every claim without a line is a sentence your customer has to read for nothing.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "339b934e179e": {
     "en": "The rest of the book is five sections wrapped around that grid: a patterns catalogue, a set of design techniques borrowed from product design, a strategy chapter, and a five-phase process &mdash; Mobilize, Understand, Design, Implement, Manage &mdash; for running the whole thing inside a company.",
     "pages": [
@@ -853,6 +932,18 @@
       "about/index.html"
     ]
   },
+  "344fc2d7f226": {
+    "en": "Business Model Generation review: a camera, not a compass",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
+  "35076ba651fd": {
+    "en": "<strong>Match the offer to the job's moment, not the demographic.</strong> Campaigns targeted at who people are compete with everything; campaigns targeted at the moment a job recurs compete only with the current way of doing that job. The circle tells you the moment if you filled it honestly.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "35520111cae4": {
     "en": "<strong>Working worldwide</strong><br> Remote by default<br> On-site when it earns it",
     "pages": [
@@ -865,6 +956,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -872,6 +964,12 @@
     "en": "Act 03",
     "pages": [
       "index.html"
+    ]
+  },
+  "35fdff59399e": {
+    "en": "<strong>One canvas per segment, no exceptions.</strong> The moment two customer types share a circle, the jobs list becomes an average that describes nobody. If the profiles genuinely differ, you have two canvases and possibly two products; the five segment tests from the parent framework decide which.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "365bab2e1905": {
@@ -908,6 +1006,12 @@
     "en": "The newsletter sign-up goes through Formspree too. There is no mailing-list provider behind it yet, which means there is no unsubscribe link: to come off the list, email me and I will remove you.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "3978091ae129": {
+    "en": "That is the entire tool. No scoring, no sequence of workshops, no certification. Which is exactly why it survived twelve years of framework fashion: there is nothing in it to go out of date, because it contains no advice. It contains questions in a fixed order, and the order is the point. Customer first, offer second, comparison last. Every failed positioning exercise I have been called into ran that order backwards.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "398a2ad44ba7": {
@@ -1043,6 +1147,12 @@
       "privacy/index.html"
     ]
   },
+  "42641119e5e7": {
+    "en": "The Value Proposition Canvas remains relevant because it is built on questions rather than tactics: what the customer is trying to do, what hurts, and which claims answer any of it. Tactical frameworks rot with their channels; question frameworks barely age. It has also gained relevance as AI makes execution cheap, because the canvas works on exactly the part that is not getting cheaper: judgement about who the product is for and which pain it relieves, grounded in what specific customers actually said.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "42aa199628f4": {
     "en": "Quentin Dupard, Fractional Product & Growth",
     "pages": [
@@ -1133,6 +1243,12 @@
       "index.html"
     ]
   },
+  "478e78ccbbec": {
+    "en": "<strong>Write the pains in the customer's grammar.</strong> The pain box should hold the words prospects actually say, and those words are your messaging, your search terms and the questions an answer engine gets asked. The canvas doubles as a keyword-research artefact if you let the quotes stay verbatim.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "47f6cff2e2ae": {
     "en": "Paste it at checkout under &ldquo;Add promotion code&rdquo;.",
     "pages": [
@@ -1163,6 +1279,12 @@
       "index.html"
     ]
   },
+  "49a9ac2ae450": {
+    "en": "<strong>As a lie detector for the homepage.</strong> Fill the left square from your live website: every claim, feature and adjective goes in as a product, a pain reliever or a gain creator. Fill the right circle from the last ten sales calls or support threads. Then draw the lines. In most audits, half the homepage maps to nothing in the circle, and the two biggest pains in the circle have no line pointing at them. You have just turned a vague copy discussion into a list of sentences to delete and two to write.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "49f2d16167b4": {
     "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with your product and their invoice does not grow, the model caps your revenue. A 10-15% increase applied only to new customers is the lowest-risk experiment available.",
     "pages": [
@@ -1181,6 +1303,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -1353,10 +1476,22 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "56e2566a990c": {
+    "en": "<strong>The names invite hair-splitting.</strong> Teams burn real time debating whether a note is a pain or an ungained gain, a job or a pain. The taxonomy does not matter; the ranking does. Set a two-minute rule on classification arguments and spend the time on order instead.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "5754f07fc9b6": {
     "en": "<strong>Count the steps between the feeling and the payoff.</strong> Literally count them, from the moment the trigger fires to the moment the person gets what they came for. Then remove steps until you cannot remove any more. Do this before anyone rewrites a single line of copy.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "5776fb0bfd87": {
+    "en": "<strong>Revisit the circle quarterly; it drifts.</strong> Customers change faster than the poster on the wall. The jobs stay stable for years, but the pains move with tooling, budgets and whatever your competitors shipped. A canvas from two years ago is a record, not a map.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "577bd1272acc": {
@@ -1381,6 +1516,12 @@
     "en": "The authors half-know this. Buried in the making-of chapter, one of the 470 contributors calls a business model the &ldquo;core content&rdquo; or the &ldquo;short story&rdquo; of the company, and the business plan merely the full text. That one line is a better description of the canvas than the subtitle is.",
     "pages": [
       "research/business-model-generation/index.html"
+    ]
+  },
+  "5975598d3beb": {
+    "en": "Gregory Bernarda",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "59c63f358b92": {
@@ -1425,6 +1566,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -1476,6 +1618,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -1522,6 +1665,12 @@
       "index.html"
     ]
   },
+  "5e658aad79c8": {
+    "en": "<strong>It looks finished long before it is true.</strong> Like its parent, the canvas is a description tool that photographs beautifully when full of guesses. An afternoon workshop produces a wall that feels like progress and contains no evidence. The tool has no defence against this; the fact-or-guess marking above is not in the book, and it is the difference between a research artefact and team wallpaper.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "5ef1838e8f39": {
     "en": "Liquid Glass transparency",
     "pages": [
@@ -1540,10 +1689,23 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "5fe3bd39dbc8": {
+    "en": "<strong>Copy is the line between the halves.</strong> Every headline should be traceable to a specific pain reliever or gain creator, which is itself traceable to a ranked pain or job. When a page underperforms, walk it right to left: usually the claim maps to something the team is proud of rather than something the customer ranked.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "6037226be0c1": {
     "en": "Your team owns everything after",
     "pages": [
       "index.html"
+    ]
+  },
+  "61a7ea48b16d": {
+    "en": "Why Osterwalder's Value Proposition Canvas still earns wall space: what it is, how I use it in real engagements, and where the old tool breaks.",
+    "pages": [
+      "research/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "6207d6680f2c": {
@@ -1600,6 +1762,12 @@
       "index.html"
     ]
   },
+  "64f900555125": {
+    "en": "The Value Proposition Canvas still works | Quentin Dupard",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "65383a4f62e6": {
     "en": "Completed sessions, by duration.",
     "pages": [
@@ -1636,16 +1804,34 @@
       "research/services-the-new-software/index.html"
     ]
   },
+  "66b8cd3369ff": {
+    "en": "How is it different from the Business Model Canvas?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "670d5e470ca8": {
     "en": "The book says the canvas is a tool for inventing new business models. In ten years of using it I have watched it do something humbler and more valuable: it ends the meeting where everyone in the room is describing a different company.",
     "pages": [
       "research/business-model-generation/index.html"
     ]
   },
+  "6732b5153593": {
+    "en": "Yves Pigneur",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "67412db3cf21": {
     "en": "A business model, in the book&rsquo;s definition, is the rationale for how an organisation creates, delivers and captures value. The canvas spreads that across nine blocks: who you serve (Customer Segments), what you promise them (Value Propositions), how it reaches them (Channels), how you keep them (Customer Relationships), what they pay (Revenue Streams), what you must own (Key Resources), do (Key Activities) and buy in (Key Partnerships), and what it all costs (Cost Structure). Customers and money on the right, machinery and cost on the left, the promise in the middle. One page, sticky notes, no appendix.",
     "pages": [
       "research/business-model-generation/index.html"
+    ]
+  },
+  "67472479177a": {
+    "en": "Hooked review: what survives beyond feeds | Quentin Dupard",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "67684cc288ec": {
@@ -1677,7 +1863,8 @@
     "pages": [
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
-      "research/influence-robert-cialdini/index.html"
+      "research/influence-robert-cialdini/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "681a79899414": {
@@ -1758,6 +1945,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -1808,6 +1996,12 @@
     "pages": [
       "research/hooked-nir-eyal/index.html",
       "research/index.html"
+    ]
+  },
+  "6c7727e83fa9": {
+    "en": "<span>Framework</span> <span>7 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "6c7fb6a80063": {
@@ -1918,6 +2112,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -1999,6 +2194,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2092,6 +2288,12 @@
       "about/index.html"
     ]
   },
+  "7aa3624b2384": {
+    "en": "Why does a 2014 tool still earn wall space?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "7addb0f38305": {
     "en": "Short version: this site measures how people move through it, in aggregate, using its own code. It does not sell anything about you, it does not run ad tech, and it does not keep your IP address. If you would rather it counted nothing at all, there is a switch further down that works immediately.",
     "pages": [
@@ -2103,7 +2305,8 @@
     "pages": [
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
-      "research/influence-robert-cialdini/index.html"
+      "research/influence-robert-cialdini/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "7b780901fe2c": {
@@ -2148,6 +2351,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2283,12 +2487,6 @@
       "about/index.html"
     ]
   },
-  "85a5cd07bf25": {
-    "en": "Business Model Generation by Osterwalder and Pigneur: a camera, not a compass | Quentin Dupard",
-    "pages": [
-      "research/business-model-generation/index.html"
-    ]
-  },
   "8619e5414088": {
     "en": "Most clicked",
     "pages": [
@@ -2400,6 +2598,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "8c6ea286ec62": {
+    "en": "<strong>As the ranking argument.</strong> The boxes are the easy part; teams fill them in an hour. The value is in forcing a rank. One job matters most, one pain hurts most, and the room has to commit, in ink, in front of colleagues. The fights this starts are the most useful meetings I get to referee, because a team that cannot rank its customer's pains has been shipping features by internal politics, and now everyone can see it.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "8c8390ff50e5": {
     "en": "Everything here is free to take. If you want it applied to your business rather than read about, that is what the engagements are for.",
     "pages": [
@@ -2458,6 +2662,12 @@
     "en": "Hybrid",
     "pages": [
       "index.html"
+    ]
+  },
+  "8e215e61136d": {
+    "en": "Selling the work: Sequoia's services thesis, applied",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "8e74be0f22d0": {
@@ -2527,6 +2737,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "91de98c50ec2": {
+    "en": "It helps with both, as the starting half of each job. For messaging, every homepage claim should trace to a pain reliever or gain creator that answers a ranked pain or job; claims with no line to the customer circle are candidates for deletion. For pricing, the ranked pains name what the relief is worth talking about, but the canvas says nothing about what that relief is worth in money or how competitors price the same fit. It opens the pricing conversation and cannot finish it.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "924facb738c0": {
     "en": "Previously.",
     "pages": [
@@ -2593,6 +2809,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2620,6 +2837,12 @@
       "index.html"
     ]
   },
+  "981bf10b4cba": {
+    "en": "The three uses that survive contact with clients",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "982bba1060ca": {
     "en": "Ask AI-me",
     "pages": [
@@ -2632,6 +2855,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2709,6 +2933,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2742,6 +2967,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2749,6 +2975,12 @@
     "en": "Cloudflare&rsquo;s own measurement is separate and this switch does not control it. Browser-level tracking protection or an ad blocker will stop that one.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "9c8041f12893": {
+    "en": "Fractional product and marketing operator. I find the revenue your business already earned but isn't collecting: positioning, pricing, activation.",
+    "pages": [
+      "index.html"
     ]
   },
   "9d3d3dd4c6f0": {
@@ -2896,6 +3128,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2965,6 +3198,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3007,7 +3241,8 @@
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html",
-      "research/services-the-new-software/index.html"
+      "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "acdb2223446c": {
@@ -3166,6 +3401,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3175,16 +3411,16 @@
       "index.html"
     ]
   },
+  "b9e5c305181b": {
+    "en": "The Value Proposition Canvas is twelve years old, it fits on one page, and I still hang it on the wall in most engagements. Not because it contains any answers. Because it forces a company to write down, in separate boxes, what the customer is trying to get done and what the company has built, and the distance between those two lists is usually the whole problem.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "ba02bab743b4": {
     "en": "Fractional product and marketing operator. Positioning, pricing, activation and revenue growth for businesses of any kind, with the deepest experience in B2B SaaS.",
     "pages": [
       "index.html"
-    ]
-  },
-  "ba41e5bd1a82": {
-    "en": "Hooked by Nir Eyal: what survives when you are not a social app | Quentin Dupard",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "ba51410fea56": {
@@ -3197,6 +3433,12 @@
     "en": "So the activation audit writes itself from the model&rsquo;s own order. List every step between the trigger that brought someone in and the first genuine reward; move every ask &mdash; the team invite, the data import, the configuration &mdash; to after that reward; then check that the reward itself has some variability left in it, because a demo that plays out identically for everyone is a fridge light, and nobody opens the fridge for the light.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "bb03d06330d6": {
+    "en": "The most common mistake is filling the customer circle from the team's own memory in a single workshop, which produces the company's assumptions wearing the customer's clothes. The second is skipping the ranking: listing eleven pains as equals lets the canvas justify any roadmap. A canvas is only done when the circle is filled from real transcripts or interviews, every note is marked as evidence or guess, and the boxes are ranked and committed to in front of the team.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "bbfa773e5a63": {
@@ -3259,6 +3501,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3278,6 +3521,12 @@
     "en": "Those are creative calls. Frameworks don't produce them. They come from having sat in the product review and then on the sales call two hours later, and noticing the two rooms believe completely different things about the same customer. That gap is where most of my useful ideas come from, and it's what I'm actually selling.",
     "pages": [
       "index.html"
+    ]
+  },
+  "bf9563989d17": {
+    "en": "The Value Proposition Canvas, by <a href=\"https://www.strategyzer.com/library/the-value-proposition-canvas\" target=\"_blank\" rel=\"noopener\">Strategyzer</a>. From Value Proposition Design (Osterwalder, Pigneur, Bernarda, Smith, 2014).",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "bfaa8b687ae9": {
@@ -3364,6 +3613,18 @@
       "index.html"
     ]
   },
+  "c3fcc23de1ed": {
+    "en": "<strong>Weight pains over gains in B2B.</strong> The canvas draws pains and gains the same size, but budgets do not. A relieved pain gets bought this quarter; a promised gain gets a follow-up meeting. If your roadmap is mostly gain creators, expect long sales cycles and ask which pains you decided not to solve.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
+  "c4181199261e": {
+    "en": "Influence review: six principles, two reach machines | QD",
+    "pages": [
+      "research/influence-robert-cialdini/index.html"
+    ]
+  },
   "c4240a355be3": {
     "en": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most companies asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.",
     "pages": [
@@ -3380,6 +3641,18 @@
     "en": "Sequoia Capital",
     "pages": [
       "research/services-the-new-software/index.html"
+    ]
+  },
+  "c4fa5217a407": {
+    "en": "The Value Proposition Canvas: a square value map with products and services, pain relievers and gain creators, facing a circular customer profile with jobs, pains and gains",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
+  "c5731c7b55f2": {
+    "en": "Can the Value Proposition Canvas help with pricing and messaging?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "c58b1760d396": {
@@ -3406,10 +3679,10 @@
       "stats/index.html"
     ]
   },
-  "c862c4f5c46b": {
-    "en": "Fractional product and marketing. I find revenue your business is already sitting on: pricing, positioning, activation and retention. Deepest in B2B SaaS, useful anywhere there is a funnel and a price.",
+  "c82664c38c33": {
+    "en": "The Business Model Canvas describes a whole business in nine blocks: segments, value propositions, channels, relationships, revenues, resources, activities, partnerships and costs. The Value Proposition Canvas takes just two of those blocks, the customer segment and the value proposition, and expands them into a full page so the match between them can be examined in detail. In practice the big canvas shows a team whether they agree on what the business is, and the value proposition canvas shows whether the offer answers anything the customer ranked as painful.",
     "pages": [
-      "index.html"
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "c86d2c245bd4": {
@@ -3448,6 +3721,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "c979c6120d95": {
+    "en": "<strong>Ranking is where it lives, and most teams skip it.</strong> The printed canvas does not demand an order, so groups happily list eleven pains and treat them as equal. Unranked, the canvas justifies any roadmap, which is precisely why some teams love it. If you take one rule from this page: no canvas is done until the boxes are ranked and initialled.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "c9fcf5afae98": {
     "en": "<span class=\"demand-n\" id=\"d-buys\">—</span><span class=\"demand-l\">Clicked buy</span>",
     "pages": [
@@ -3478,6 +3757,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3530,6 +3810,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3617,6 +3898,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3624,6 +3906,12 @@
     "en": "The organising idea is what he calls <em>click, whirr</em>: we run pre-loaded response patterns triggered by a single feature of a situation, because we cannot possibly think about all of it. The cleanest demonstration is Ellen Langer&rsquo;s photocopier study. &ldquo;May I use the machine because I&rsquo;m in a rush&rdquo; got 94 per cent compliance. &ldquo;May I use the machine&rdquo; got 60 per cent. And &ldquo;May I use the machine because I have to make some copies&rdquo; &mdash; which is not a reason, it is a restatement of the request &mdash; got 93 per cent.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "d31163e7a6cd": {
+    "en": "<strong>Use the jobs box to find your triggers.</strong> A job is what someone hires the product for; the moment the job shows up in their week is where habit gets built. The jobs list feeds directly into <a href=\"/research/hooked-nir-eyal/\">trigger design</a>: for each functional job, name the moment it recurs and what fires it.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "d31cf15fa4be": {
@@ -3759,6 +4047,12 @@
       "index.html"
     ]
   },
+  "da3c7907e483": {
+    "en": "Alexander Osterwalder",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "daca87e0de0a": {
     "en": "Marketing test: which one of the eleven value types does your homepage claim, in its actual words? If you find three, the reader found none.",
     "pages": [
@@ -3781,6 +4075,12 @@
     "en": "My mailbox, open. Read what people say about the work, take the attachments, and write me one yourself. It lands in my actual inbox, and you keep a copy in Sent.",
     "pages": [
       "index.html"
+    ]
+  },
+  "dc61b1d274f8": {
+    "en": "<strong>It is silent on competition and price.</strong> Fit between your square and their circle says nothing about the three competitors achieving the same fit, and nothing about what the relief is worth in money. The canvas starts the pricing conversation by naming what is valuable; it cannot finish it. That second half is <a href=\"/about/\">a different discipline</a>, and mistaking the canvas for it is how teams end up with perfect fit and terrible margins.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "dd3b86d1ef21": {
@@ -3820,13 +4120,20 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
-      "research/services-the-new-software/index.html"
+      "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "decbb4850d43": {
     "en": "First time or back again",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "dee75a083faf": {
+    "en": "<strong>Let the gains write the upsell, not the headline.</strong> Gains are real, but they belong in expansion conversations with customers whose pains you already relieved. Leading with aspiration before relief reads as marketing; leading with relief earns the right to promise more.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "dfbdc0995ce3": {
@@ -3839,6 +4146,12 @@
     "en": "What is the difference between a habit and an addiction in Hooked?",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "dffd127d15c0": {
+    "en": "The canvas is old the way a checklist is old. Nothing in it will surprise anyone, and teams that use it still ship different products than teams that do not, because writing the customer down in their own words, ranked, is rarer than any new framework.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "e09324e75e9f": {
@@ -3907,6 +4220,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -3988,6 +4302,12 @@
       "index.html"
     ]
   },
+  "e5a491b6f3aa": {
+    "en": "Alan Smith",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "e622ce2e6934": {
     "en": "One address, used for one thing. Unsubscribe in a click.",
     "pages": [
@@ -4012,6 +4332,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -4069,12 +4390,6 @@
       "index.html"
     ]
   },
-  "eb8e56d96aca": {
-    "en": "Selling the work: Sequoia's services thesis, applied to your business | Quentin Dupard",
-    "pages": [
-      "research/services-the-new-software/index.html"
-    ]
-  },
   "ebc2f2354d0d": {
     "en": "Every signup you convert makes the funnel longer",
     "pages": [
@@ -4117,6 +4432,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -4124,12 +4440,6 @@
     "en": "Nine boxes on one page, and the claim that any business can be described by filling them in. The claim holds. What the book oversells is what happens next: a canvas shows you the model you have, with great clarity, and says nothing about whether it is true. It is a camera, not a compass &mdash; and a camera is worth owning.",
     "pages": [
       "research/business-model-generation/index.html"
-    ]
-  },
-  "eea9d054da2e": {
-    "en": "Influence by Robert Cialdini: which of the six still work on a machine | Quentin Dupard",
-    "pages": [
-      "research/influence-robert-cialdini/index.html"
     ]
   },
   "efe3ec78b219": {
@@ -4156,7 +4466,8 @@
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html",
-      "research/services-the-new-software/index.html"
+      "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "f0d9c9498043": {
@@ -4175,6 +4486,19 @@
     "en": "Which leaves a narrow surface, and it happens to be the honest half of the book. Be named by other people who are themselves worth naming. Be legible about who is speaking and why they would know &mdash; a byline, a real credential, a date, first-hand experience stated as first-hand, an identity that resolves to the same entity on every page and in every language you publish. There is no third move, and the absence of a third move is good news.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "f24e7b045e1c": {
+    "en": "The Value Proposition Canvas still works",
+    "pages": [
+      "research/index.html",
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
+  "f2a655bac140": {
+    "en": "Who should use it, and when",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "f2b16fa5bd82": {
@@ -4229,6 +4553,12 @@
     "en": "Product, end to end",
     "pages": [
       "index.html"
+    ]
+  },
+  "f64d66221629": {
+    "en": "Value Proposition Design",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "f684d92d131a": {
@@ -4327,6 +4657,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "fa6e66caeb12": {
+    "en": "It is the zoom lens for the middle box of the Business Model Canvas. Where the big canvas gives Value Propositions one square, this one gives it a whole page split into two halves. On the right, a circle for the customer: the jobs they are trying to get done, the pains that make those jobs miserable, and the gains they hope for. On the left, a square for you: your products and services, the pain relievers among them, and the gain creators. The exercise is to fill the circle first, from evidence, then fill the square, then look at how badly they match. The authors call a good match fit. Most companies discover they have been designing the square in a room the circle has never entered.",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
+    ]
+  },
   "faa4ba5e0251": {
     "en": "<strong>A description tool sold as an invention tool.</strong> The subtitle promises game changers. The grid cannot tell a validated model from a wished-for one &mdash; nine boxes of confident guesses photograph beautifully. The book itself never claims the canvas tests anything, but it lets you forget that for two hundred pages, and the workshops it spawned forgot it permanently. Every canvas needs a second question the page does not ask: <em>how do you know?</em>",
     "pages": [
@@ -4339,10 +4675,22 @@
       "stats/index.html"
     ]
   },
+  "fb001b2c292a": {
+    "en": "Framework",
+    "pages": [
+      "research/index.html"
+    ]
+  },
   "fb0fc1ef35fd": {
     "en": "Every action on this site is instrumented and every campaign is tagged. Rather than claim I measure things, here are the numbers, cumulative across everyone who has ever visited. Aggregates only — no individual is identifiable here, and no IP is stored.",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "fb1566abf6bd": {
+    "en": "What is the most common mistake teams make with it?",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "fb3dba1c690c": {
@@ -4375,6 +4723,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },

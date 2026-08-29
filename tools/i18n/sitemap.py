@@ -19,42 +19,47 @@ sys.path.insert(0, os.path.dirname(__file__))
 from build import LOCALES, SITE, page_url
 from extract import PAGES, ROOT
 
-# lastmod / changefreq / priority carried over from the hand-written sitemap.
-# Anything not listed keeps the default row.
-DEFAULTS = ('2026-08-27', 'monthly', '0.6')
-PAGE_META = {
-    'index.html':                            ('2026-08-27', 'monthly', '1.0'),
-    'about/index.html':                      ('2026-08-27', 'monthly', '0.8'),
-    'research/index.html':                   ('2026-08-27', 'weekly',  '0.8'),
-    'privacy/index.html':                    ('2026-08-27', 'yearly',  '0.3'),
-    'stats/index.html':                      ('2026-08-27', 'daily',   '0.4'),
-}
-ARTICLE_META = ('2026-08-27', 'monthly', '0.7')
+# lastmod comes from git, so it tracks real edits instead of a hand-bumped
+# constant that was already stale within hours (audit finding). changefreq and
+# priority are gone: Google ignores both, and emitting them only added noise.
+import subprocess
 
-# Standalone files that have no translated twin.
+def git_lastmod(path):
+    """Last commit date for a file, YYYY-MM-DD. Falls back to today for a
+       file that exists but is not yet committed."""
+    try:
+        out = subprocess.run(
+            ['git', 'log', '-1', '--format=%cs', '--', path],
+            cwd=ROOT, capture_output=True, text=True, timeout=10)
+        d = out.stdout.strip()
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', d):
+            return d
+    except Exception:
+        pass
+    import datetime
+    return datetime.date.today().isoformat()
+
+
+# Standalone files that have no translated twin. The two "-sample" demo PDFs
+# were removed: nothing links to them, they are placeholders, and a sitemap
+# should not invite the index to disconnected demo files (audit finding).
 EXTRA = [
-    ('https://quentindupard.com/assets/docs/pricing-teardown-sample.pdf', '2026-08-25', 'yearly', '0.4'),
-    ('https://quentindupard.com/assets/docs/activation-audit-sample.pdf', '2026-08-25', 'yearly', '0.4'),
-    ('https://quentindupard.com/assets/docs/engagement-one-pager.pdf',    '2026-08-25', 'yearly', '0.4'),
+    'https://quentindupard.com/assets/docs/engagement-one-pager.pdf',
 ]
 
 SKIP = {'404.html'}          # never in a sitemap
 
-
-def meta_for(page):
-    if page in PAGE_META:
-        return PAGE_META[page]
-    if page.startswith('research/') and page != 'research/index.html':
-        return ARTICLE_META
-    return DEFAULTS
+# Noindexed pages contradict the sitemap by definition (Search Console flags
+# "Submitted URL marked noindex"). /stats/ is deliberately noindexed.
+NOINDEX = {'stats/index.html'}
 
 
 def main():
     rows = []
     for page in PAGES:
-        if page in SKIP or not os.path.exists(os.path.join(ROOT, page)):
+        if page in SKIP or page in NOINDEX or not os.path.exists(os.path.join(ROOT, page)):
             continue
-        lastmod, freq, priority = meta_for(page)
+        lastmod = git_lastmod(page)
 
         alternates = [
             f'    <xhtml:link rel="alternate" hreflang="{LOCALES[c]["html"]}" href="{page_url(c, page)}"/>'
@@ -70,18 +75,16 @@ def main():
                 f'    <loc>{page_url(code, page)}</loc>',
                 *alternates,
                 f'    <lastmod>{lastmod}</lastmod>',
-                f'    <changefreq>{freq}</changefreq>',
-                f'    <priority>{priority}</priority>',
                 '  </url>',
             ]))
 
-    for loc, lastmod, freq, priority in EXTRA:
+    for loc in EXTRA:
+        rel = loc.replace(SITE + '/', '')
+        lastmod = git_lastmod(rel)
         rows.append('\n'.join([
             '  <url>',
             f'    <loc>{loc}</loc>',
             f'    <lastmod>{lastmod}</lastmod>',
-            f'    <changefreq>{freq}</changefreq>',
-            f'    <priority>{priority}</priority>',
             '  </url>',
         ]))
 
@@ -96,7 +99,7 @@ def main():
     with open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8') as fh:
         fh.write(xml)
 
-    pages = len([p for p in PAGES if p not in SKIP])
+    pages = len([p for p in PAGES if p not in SKIP and p not in NOINDEX])
     print(f'  sitemap.xml: {pages} pages x {len(LOCALES)} languages = '
           f'{pages * len(LOCALES)} URLs, plus {len(EXTRA)} files')
 

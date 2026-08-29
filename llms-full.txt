@@ -217,6 +217,29 @@ is flat despite happy customers.
 
 ## Reading notes
 
+### On the Value Proposition Canvas (Osterwalder, Pigneur, Bernarda, Smith, 2014)
+
+Full note: https://quentindupard.com/research/value-proposition-canvas/
+
+A twelve-year-old one-page tool I still hang on the wall in most
+engagements. Two halves: a customer profile circle (jobs, pains, hoped-for
+gains) filled from evidence first, and a value map square (products, pain
+relievers, gain creators) filled second; the match is called fit. It
+survives because it is built on questions, not tactics, and question
+frameworks barely age.
+
+The three uses that survive contact with clients: a lie detector for the
+homepage (map every live claim to the circle, delete the claims with no
+line); the ranking argument (boxes are easy, committing to one top pain in
+ink is the real work); and a test list (mark every note as evidence or
+guess, and each guess becomes a customer conversation or landing test).
+
+Where it breaks: it looks finished long before it is true, it is silent on
+competition and price (it opens the pricing conversation and cannot finish
+it), one circle per segment or the jobs list averages into nobody, and the
+circle drifts quarterly. Rules I add: fill the circle from transcripts, not
+memory; no canvas is done until the boxes are ranked and initialled.
+
 ### On Sequoia's "Services: The New Software" (Julien Bek, March 2026)
 
 Full commentary: https://quentindupard.com/research/services-the-new-software/

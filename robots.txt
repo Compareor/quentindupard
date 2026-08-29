@@ -9,34 +9,70 @@ Disallow: /api/
 # is switched on, prepends a Disallow for several of these above this group.
 User-agent: GPTBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
 # Sitemap
 # The site is published in three languages at /, /fr/ and /es/. The sitemap
 # carries the hreflang annotations that tie them together.
+
+# These three currently inherit the wildcard Allow. Named so a future
+# Cloudflare managed block cannot silently change the policy for them.
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
 Sitemap: https://quentindupard.com/sitemap.xml
 
 # IndexNow key lives at /c269fe0f232f4c0b98944cadd64fdb68.txt

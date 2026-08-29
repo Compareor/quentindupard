@@ -595,5 +595,21 @@
   "Selling the work — on Sequoia’s services thesis": {
     "fr": "Vendre le travail — sur la thèse services de Sequoia",
     "es": "Vender el trabajo — sobre la tesis de servicios de Sequoia"
+  },
+  "Framework": {
+    "fr": "Framework",
+    "es": "Framework"
+  },
+  "7 min read": {
+    "fr": "7 min de lecture",
+    "es": "7 min de lectura"
+  },
+  "The Value Proposition Canvas": {
+    "fr": "Le Value Proposition Canvas",
+    "es": "El Value Proposition Canvas"
+  },
+  "The Value Proposition Canvas still works": {
+    "fr": "Le Value Proposition Canvas fonctionne toujours",
+    "es": "El Value Proposition Canvas sigue funcionando"
   }
 }

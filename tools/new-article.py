@@ -266,10 +266,33 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
     register(slug)
     add_hub_card(slug, title, kind, summary)
     add_to_registry(slug, title, kind, minutes)
+    sync_item_list()
     print('\n  next: write the prose, replace every TODO, then')
     print('    python3 tools/i18n/extract.py && python3 tools/i18n/build.py')
     print('    python3 tools/i18n/sitemap.py && python3 tools/i18n/verify.py')
     return 0
+
+
+def sync_item_list():
+    """Regenerate the hub's ItemList JSON-LD from the registry, so the schema
+       can never again claim numberOfItems: 0 above a page full of articles
+       (the audit finding that prompted this)."""
+    import json as _json
+    reg = open(os.path.join(ROOT, 'assets', 'articles.js'), encoding='utf-8').read()
+    entries = re.findall(r"slug: '([a-z0-9-]+)',\s*title: ['\"](.+?)['\"],", reg)
+    p = os.path.join(ROOT, 'research', 'index.html')
+    s = open(p, encoding='utf-8').read()
+    start = s.index('"@type": "ItemList"')
+    st = s.rindex('<script type="application/ld+json">', 0, start)
+    en = s.index('</script>', start) + len('</script>')
+    items = [{"@type": "ListItem", "position": i + 1, "name": t.replace("\\'", "'"),
+              "url": f"{SITE}/research/{slug}/"} for i, (slug, t) in enumerate(entries)]
+    ld = {"@context": "https://schema.org", "@type": "ItemList",
+          "@id": f"{SITE}/research/#list",
+          "itemListElement": items, "numberOfItems": len(items)}
+    s = s[:st] + '<script type="application/ld+json">\n' + _json.dumps(ld, indent=2, ensure_ascii=False) + '\n</script>' + s[en:]
+    open(p, 'w', encoding='utf-8').write(s)
+    print(f'  hub ItemList synced ({len(items)} items)')
 
 
 def add_to_registry(slug, title, kind, minutes):
@@ -282,7 +305,7 @@ def add_to_registry(slug, title, kind, minutes):
     anchor = 'window.QD_ARTICLES = [\n'
     entry = (f"  {{\n    slug: '{slug}',\n    title: {title!r},\n"
              f"    kind: '{kind}',\n    minutes: {minutes},\n"
-             f"    img: '/assets/research/{slug}.svg'\n  }},\n")
+             f"    img: '/assets/research/{slug}-thumb-480.jpg'\n  }},\n")
     if f"slug: '{slug}'" in s:
         return
     s = s.replace(anchor, anchor + entry, 1)
@@ -307,7 +330,7 @@ def add_hub_card(slug, title, kind, summary):
     p = os.path.join(ROOT, 'research', 'index.html')
     s = open(p, encoding='utf-8').read()
     card = f'''        <a class="glass hub-card reveal" data-reveal="scale" href="/research/{slug}/">
-          <span class="hub-thumb"><img src="/assets/research/{slug}.svg" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
+          <span class="hub-thumb"><img src="/assets/research/{slug}-thumb-480.jpg" srcset="/assets/research/{slug}-thumb-480.jpg 480w, /assets/research/{slug}-thumb-720.jpg 720w" sizes="(max-width: 700px) 100vw, 373px" alt="" loading="lazy" decoding="async" width="1200" height="630"></span>
           <span class="hub-kind">{kind}</span>
           <h2>{title}</h2>
           <p>{summary}</p>

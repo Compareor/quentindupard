@@ -26,6 +26,7 @@ PAGES = [
     'privacy/index.html',
     'stats/index.html',
     'research/index.html',
+    'research/value-proposition-canvas/index.html',
     'research/services-the-new-software/index.html',
     'research/business-model-generation/index.html',
     'research/influence-robert-cialdini/index.html',

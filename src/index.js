@@ -190,9 +190,13 @@ export default {
       }
     }
 
-    // ── Canonical trailing slash for /research ──
-    if (url.pathname === '/research') {
-      return Response.redirect(new URL('/research/', url).toString(), 301);
+    // ── Canonical trailing slash, permanently ──
+    // The assets layer answers slash-less directory paths with a 307, which
+    // tells search engines the canonical URL is temporary. Every canonical
+    // tag and the sitemap say otherwise, so say it with a 301 ourselves.
+    // Scoped to known page paths so junk URLs still fall through to the 404.
+    if (/^(?:\/(?:fr|es))?\/(?:about|privacy|stats|research(?:\/[a-z0-9-]+)?)$/.test(url.pathname)) {
+      return Response.redirect(new URL(url.pathname + '/', url).toString(), 301);
     }
 
     // ── Static assets ──

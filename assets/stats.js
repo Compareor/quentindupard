@@ -15,6 +15,16 @@
 
   const $ = s => document.querySelector(s);
 
+  /* Telemetry that ticks many times per visit (scroll and time
+     milestones, sections, lifecycle pings) is not something a person
+     "did". The actions panel shows deliberate acts only; the milestones
+     keep their own distribution panels below. */
+  const TELEMETRY = new Set(['page_view', 'session_end', 'section_view',
+    'scroll_depth', 'dwell', 'tab_hidden', 'tab_visible', 'js_error',
+    'key_escape']);
+  const actionsOnly = (rows) => (rows || []).filter((r) => !TELEMETRY.has(r[0]));
+  const realSources = (rows) => (rows || []).filter((r) => r[0] !== 'probe');
+
   const EVENT_LABELS = {
     page_view: 'Page views',
     session_end: 'Sessions ended',
@@ -273,7 +283,7 @@
     );
     const live = $('#k-live'); if (live) live.textContent = '1';
 
-    renderBars($('#events'), Object.entries(counts.byName).sort((a, b) => b[1] - a[1]), EVENT_LABELS);
+    renderBars($('#events'), actionsOnly(Object.entries(counts.byName).sort((a, b) => b[1] - a[1])), EVENT_LABELS);
 
     // Render the funnel and distributions from this session so the page shows
     // its real shape rather than a column of "no data yet".
@@ -338,8 +348,8 @@
       $('#k-downloads').textContent = number(downloads);
 
       renderChart($('#chart'), data.days);
-      renderBars($('#sources'), data.sources);
-      renderBars($('#events'), data.events, EVENT_LABELS);
+      renderBars($('#sources'), realSources(data.sources));
+      renderBars($('#events'), actionsOnly(data.events), EVENT_LABELS);
       renderBars($('#files'), data.files);
       renderBars($('#clicks'), data.clicks);
       renderBars($('#sections'), data.sections, SECTION_LABELS);

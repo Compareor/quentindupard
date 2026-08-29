@@ -248,11 +248,14 @@
   display: flex;
   gap: 18px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 6px 2px 22px;
   scrollbar-width: none;
 }
+/* Snap arms after load (html.anim-ready). Mandatory snap at load time
+   performs a snap-scroll during layout, and any scroll ends LCP
+   observation: the page never reported an LCP entry because of it. */
+.anim-ready .carousel-track { scroll-snap-type: x mandatory; }
 
 .carousel-track::-webkit-scrollbar { display: none; }
 

@@ -381,3 +381,16 @@
   if (document.readyState === 'complete') arm();
   else window.addEventListener('load', arm, { once: true });
 })();
+
+/* Google preferred-sources button: theme it to the current site theme,
+   then load Google's renderer. Language is auto-detected from the page. */
+(function () {
+  var slot = document.querySelector('[google-add-preferred-source-btn]');
+  if (!slot) return;
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  slot.setAttribute('data-theme', dark ? 'dark' : 'light');
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://news.google.com/swg/js/v1/publisher.js';
+  document.head.appendChild(s);
+})();

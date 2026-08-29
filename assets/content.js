@@ -149,6 +149,7 @@ window.QD_DESKTOP = [
     ] },
   { id: 'downloads',   name: 'Downloads',   kind: 'folder', items: [] },
   { id: 'inspiration', name: 'Inspiration', kind: 'folder', items: [
+      { name: 'In Common With \u2014 a shop with a light switch', kind: 'link', tag: 'Design', href: 'https://www.incommonwith.com/collections/all-lighting', meta: 'UX/UI reference \u00b7 e-commerce' },
       { name: 'Why the Lean Start-Up Changes Everything', kind: 'link', tag: 'Article', href: 'https://hbr.org/2013/05/why-the-lean-start-up-changes-everything', meta: 'Steve Blank \u00b7 HBR, May 2013' }
     ] },
   { id: 'about',       name: 'About me',    kind: 'folder', items: [] }

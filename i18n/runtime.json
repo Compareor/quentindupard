@@ -139,6 +139,10 @@
     "es": "Mensaje de demostración: escrito para mostrar el formato, no es un cliente real.",
     "fr": "Message de démonstration : écrit pour montrer le format, pas un vrai client."
   },
+  "Design": {
+    "es": "Diseño",
+    "fr": "Design"
+  },
   "Downloads": {
     "es": "Descargas",
     "fr": "Téléchargements"
@@ -262,6 +266,10 @@
   "If your homepage could describe three other businesses, positioning is your problem and nothing downstream will fix it.": {
     "es": "Si tu página de inicio podría describir a otros tres negocios, tu problema es el posicionamiento y nada aguas abajo lo arreglará.",
     "fr": "Si votre page d'accueil pourrait décrire trois autres entreprises, votre problème est le positionnement et rien en aval ne le corrigera."
+  },
+  "In Common With — a shop with a light switch": {
+    "es": "In Common With — una tienda con un interruptor",
+    "fr": "In Common With — une boutique avec un interrupteur"
   },
   "In cart ✓": {
     "es": "En el carrito ✓",
@@ -502,6 +510,10 @@
   "Two and a half minutes.": {
     "es": "Dos minutos y medio.",
     "fr": "Deux minutes et demie."
+  },
+  "UX/UI reference · e-commerce": {
+    "es": "Referencia UX/UI · e-commerce",
+    "fr": "Référence UX/UI · e-commerce"
   },
   "Unlock for $10/month": {
     "es": "Desbloquear por 10 $/mes",

@@ -301,3 +301,7 @@
 }
 
 @keyframes breathe { 50% { opacity: 0.25; } }
+
+.pref-source { margin-top: 14px; min-height: 40px; width: 100%; max-width: 240px; }
+.pref-source [google-add-preferred-source-btn] { display: block; width: 100%; }
+.pref-source noscript a { color: var(--text-dim); font-size: 13.5px; }

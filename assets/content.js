@@ -147,7 +147,8 @@ window.QD_DESKTOP = [
       { name: 'Hooked \u2014 Nir Eyal',           kind: 'page', tag: 'Book', href: '/research/hooked-nir-eyal/',           meta: '9 min read' }
     ] },
   { id: 'downloads',   name: 'Downloads',   kind: 'folder', items: [] },
-  { id: 'frameworks',  name: 'Frameworks',  kind: 'folder', items: [] },
-  { id: 'inspiration', name: 'Inspiration', kind: 'folder', items: [] },
+  { id: 'inspiration', name: 'Inspiration', kind: 'folder', items: [
+      { name: 'Why the Lean Start-Up Changes Everything', kind: 'link', tag: 'Article', href: 'https://hbr.org/2013/05/why-the-lean-start-up-changes-everything', meta: 'Steve Blank \u00b7 HBR, May 2013' }
+    ] },
   { id: 'about',       name: 'About me',    kind: 'folder', items: [] }
 ];

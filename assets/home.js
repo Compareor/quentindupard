@@ -748,7 +748,10 @@
       return items.length ? s : Object.assign({}, s, { items: f.items || [] });
     });
     // Folders created in /admin that do not exist in the file at all.
-    return merged.concat(Array.from(byId.values()));
+    // Only with items: an empty stored folder is either unfinished or a
+    // leftover of one deleted from the file, and neither should render.
+    return merged.concat(Array.from(byId.values())
+      .filter((f) => Array.isArray(f.items) && f.items.length));
   }
 
   async function loadContent() {

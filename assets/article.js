@@ -204,3 +204,24 @@
     if (prose) prose.appendChild(section); else return;
   }
 })();
+
+/* ── Byline avatar ────────────────────────────────────────────
+   A face next to the name, on every page with a byline. Injected
+   at runtime for the same reason the contents rail is: the meta
+   line is translated markup, and the name is the one part of it
+   identical in every language — so matching on it costs no
+   catalogue churn and covers future articles automatically. */
+(function () {
+  'use strict';
+  document.querySelectorAll('.article-meta span').forEach((span) => {
+    if (span.textContent.trim() !== 'Quentin Dupard') return;
+    const img = document.createElement('img');
+    img.src = '/assets/portrait/quentin-avatar-96.jpg';
+    img.alt = '';
+    img.width = 96; img.height = 96;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.className = 'byline-avatar';
+    span.insertBefore(img, span.firstChild);
+  });
+})();

@@ -468,3 +468,15 @@
 }
 .more-card .hub-kind { margin: 18px 22px 10px; }
 .more-card .hub-go { margin: auto 22px 20px; font-size: 13px; }
+
+/* ── Byline avatar ───────────────────────────────────────────
+   The spans in .article-meta are already inline-flex with a 7px
+   gap, so the bubble only needs its own shape. Sized at 22px and
+   shipped at 96 so it stays sharp on dense screens. */
+.byline-avatar {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--glass-stroke-strong);
+  box-shadow: 0 1px 4px rgba(13, 20, 36, 0.18);
+}

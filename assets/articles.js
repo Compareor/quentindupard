@@ -47,3 +47,47 @@ window.QD_ARTICLES = [
     img: '/assets/research/hooked-nir-eyal-thumb-480.jpg'
   }
 ];
+
+/* ── Hub filter + pagination ─────────────────────────────────
+   The chips and the cards carry the same translated kind label
+   (one source string, one translation), so matching on visible
+   text works in every language without a catalogue. Cards stay
+   in the HTML for crawlers; the page only ever HIDES extras. */
+(function () {
+  'use strict';
+  var grid = document.querySelector('.hub-grid');
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.hub-filter-btn'));
+  if (!grid || !btns.length) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.hub-card'));
+  var more = document.getElementById('hub-more');
+  var PAGE = 9;
+  var shown = PAGE;
+
+  function kindOf(card) {
+    var k = card.querySelector('.hub-kind');
+    return k ? k.textContent.trim() : '';
+  }
+  function activeTag() {
+    var on = btns.filter(function (b) { return b.classList.contains('is-on'); })[0];
+    return (on && !on.hasAttribute('data-all')) ? on.textContent.trim() : '';
+  }
+  function apply() {
+    var tag = activeTag();
+    var match = cards.filter(function (c) { return !tag || kindOf(c) === tag; });
+    cards.forEach(function (c) { c.hidden = true; });
+    match.slice(0, shown).forEach(function (c) { c.hidden = false; });
+    if (more) more.hidden = match.length <= shown;
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) {
+        x.classList.toggle('is-on', x === b);
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+      });
+      shown = PAGE;
+      apply();
+    });
+  });
+  if (more) more.addEventListener('click', function () { shown += PAGE; apply(); });
+  apply();
+})();

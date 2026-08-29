@@ -496,3 +496,27 @@
   text-decoration: none;
 }
 .byline-link:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── Hub filter chips + pagination ── */
+.hub-filter {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 26px 0 6px;
+}
+.hub-filter-btn {
+  font: inherit; font-size: 13px; font-weight: 560;
+  color: var(--text-dim);
+  padding: 7px 14px;
+  background: var(--tint);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: color .2s, background .2s, border-color .2s;
+}
+.hub-filter-btn:hover { color: var(--text); background: var(--tint-strong); }
+.hub-filter-btn.is-on {
+  color: var(--text);
+  background: var(--accent-fill);
+  border-color: transparent;
+}
+.hub-card[hidden] { display: none; }
+.hub-more { display: flex; justify-content: center; margin-top: 28px; }

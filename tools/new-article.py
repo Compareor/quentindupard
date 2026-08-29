@@ -270,10 +270,32 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
     add_hub_card(slug, title, kind, summary)
     add_to_registry(slug, title, kind, minutes)
     sync_item_list()
+    sync_filter_chips(kind)
     print('\n  next: write the prose, replace every TODO, then')
     print('    python3 tools/i18n/extract.py && python3 tools/i18n/build.py')
     print('    python3 tools/i18n/sitemap.py && python3 tools/i18n/verify.py')
     return 0
+
+
+def sync_filter_chips(kind):
+    """Make sure the hub's filter row has a chip for this article's kind.
+       Chips are static HTML so the i18n build translates them; a new kind
+       needs a new chip (and its translation) or it can never be selected."""
+    p = os.path.join(ROOT, 'research', 'index.html')
+    s = open(p, encoding='utf-8').read()
+    if '<div class="hub-filter"' not in s:
+        return
+    row = re.search(r'<div class="hub-filter".*?</div>', s, re.S).group(0)
+    labels = [re.sub(r'<[^>]+>', '', b).strip()
+              for b in re.findall(r'<button[^>]*>(.*?)</button>', row, re.S)]
+    if kind in labels:
+        return
+    slug_label = re.sub(r'[^a-z0-9]+', '-', kind.lower()).strip('-')
+    chip = (f'        <button class="hub-filter-btn" type="button" aria-pressed="false" '
+            f'data-track="hub_filter" data-track-label="{slug_label}">{kind}</button>\n      </div>')
+    s = s.replace(row, row[:-len('</div>')] + chip, 1)
+    open(p, 'w', encoding='utf-8').write(s)
+    print(f'  hub filter chip added: {kind} (needs FR/ES translation)')
 
 
 def sync_item_list():

@@ -36,7 +36,7 @@
 
 <link rel="stylesheet" href="/assets/glass.css?v=31">
 <link rel="stylesheet" href="/assets/site.css?v=1">
-<link rel="stylesheet" href="/assets/article.css?v=24">
+<link rel="stylesheet" href="/assets/article.css?v=25">
 
 <script>document.documentElement.classList.remove('no-js');</script>
 
@@ -144,13 +144,8 @@
 <article>
 <header class="article-hero">
   <div class="shell">
-    <a class="crumb" href="/research/">&larr; Research</a>
+    <a class="crumb" href="/">&larr; Home</a>
     <h1>Research</h1>
-    <div class="article-meta">
-      <span>Index</span>
-      <span>1 min read</span>
-      <span><a class="byline-link" href="/about/" data-track="byline_about"><img src="/assets/portrait/quentin-avatar-96.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" class="byline-avatar">Quentin Dupard</a></span>
-    </div>
   </div>
 </header>
 
@@ -159,6 +154,13 @@
     <div class="prose">
 
       <p class="stand-first">Working notes on the things I get asked about most: the frameworks I actually use, written out properly rather than summarised into uselessness.</p>
+      </div>
+
+      <div class="hub-filter" role="group" aria-label="Filter by type">
+        <button class="hub-filter-btn is-on" type="button" data-all="1" aria-pressed="true" data-track="hub_filter" data-track-label="all">All</button>
+        <button class="hub-filter-btn" type="button" aria-pressed="false" data-track="hub_filter" data-track-label="framework">Framework</button>
+        <button class="hub-filter-btn" type="button" aria-pressed="false" data-track="hub_filter" data-track-label="commentary">Commentary</button>
+        <button class="hub-filter-btn" type="button" aria-pressed="false" data-track="hub_filter" data-track-label="book-review">Book review</button>
       </div>
 
       <div class="hub-grid">
@@ -197,6 +199,10 @@
           <p>A working review of Nir Eyal's Hooked. The Hook Model is real; the examples are all consumer feeds. What survives, split into product and marketing findings.</p>
           <span class="hub-go">Read &rarr;</span>
         </a>
+      </div>
+
+      <div class="hub-more">
+        <button class="btn btn-glass" type="button" id="hub-more" hidden data-track="hub_more">Load more</button>
       </div>
       <div class="prose" style="margin-top:40px;">
       <p>Everything here is free to take. If you want it applied to your business rather than read about, that is what the engagements are for.</p>
@@ -303,7 +309,7 @@
 
 <script src="/assets/i18n.js?v=14" defer></script>
 <script src="/assets/track.js?v=8" defer></script>
-<script src="/assets/articles.js?v=4" defer></script>
+<script src="/assets/articles.js?v=5" defer></script>
 <script src="/assets/article.js?v=8" defer></script>
 </body>
 </html>

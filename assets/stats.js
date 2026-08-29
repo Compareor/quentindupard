@@ -402,8 +402,15 @@
   // Auto-detect follows the browser locale, not the page: pin it to the
   // page language so the EN page never shows a French button.
   slot.setAttribute('data-lang', document.documentElement.lang || 'en');
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://news.google.com/swg/js/v1/publisher.js';
-  document.head.appendChild(s);
+  // The button lives in the footer: fetching Google's renderer can wait
+  // for an idle moment well past load instead of competing with it.
+  var inject = function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://news.google.com/swg/js/v1/publisher.js';
+    document.head.appendChild(s);
+  };
+  var idle = window.requestIdleCallback || function (fn) { setTimeout(fn, 2500); };
+  if (document.readyState === 'complete') idle(inject);
+  else window.addEventListener('load', function () { idle(inject); }, { once: true });
 })();

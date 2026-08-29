@@ -15,6 +15,13 @@
 }
 
 .hero-eyebrow {
+  /* One line, always: the personalized greeting is longer than the
+     default text, and letting it wrap shifted the whole hero (the
+     page's one real CLS source). Ellipsis instead of a second line. */
+  max-width: min(92vw, 620px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 7px 16px;
   border-radius: var(--r-pill);
   background: var(--glass-thin);

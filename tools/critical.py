@@ -41,42 +41,47 @@ def read(name):
 
 def process(path):
     s = open(path, encoding='utf-8').read()
-    # Restore any previous run: drop the inline block, put plain links back.
+    rel = os.path.relpath(path, ROOT)
+
+    # Which sheets this page type uses. Derived from the path, not from the
+    # <link> tags: the first run removes those, and a re-run that depended
+    # on them silently refreshed nothing (the bug this rewrite fixes).
+    if rel == 'index.html':
+        inline, home_async = ['glass', 'site'], True
+    elif rel == 'stats/index.html':
+        inline, home_async = ['glass', 'site', 'stats'], False
+    else:
+        inline, home_async = ['glass', 'site', 'article'], False
+
+    # Read the home.css version BEFORE stripping: the async link that
+    # carries it lives inside the generated block.
+    home_v = None
+    m = re.search(r'href="/assets/home\.css\?v=(\d+)"', s)
+    if m: home_v = m.group(1)
+
+    # Drop any previous inline block and any leftover plain links.
     s = re.sub(re.escape(START) + r'.*?' + re.escape(END) + r'\n?', '', s, flags=re.S)
-    s = re.sub(r'<link rel="stylesheet" href="(/assets/[a-z]+\.css\?v=\d+)" media="print"[^>]*>\n?'
-               r'(?:<noscript><link rel="stylesheet" href="\1"></noscript>\n?)?',
-               lambda m: f'<link rel="stylesheet" href="{m.group(1)}">\n', s)
+    s = re.sub(r'<link rel="stylesheet" href="/assets/(?:glass|site|article|stats|home)\.css\?v=\d+"[^>]*>\n?'
+               r'(?:<noscript><link rel="stylesheet" href="/assets/home\.css\?v=\d+"></noscript>\n?)?', '', s)
 
-    links = re.findall(r'<link rel="stylesheet" href="/assets/([a-z]+)\.css\?v=(\d+)">\n?', s)
-    sheets = {name: v for name, v in links}
-    if 'glass' not in sheets:
-        return None
+    parts = [minify(read(f'{name}.css')) for name in inline]
+    links = ''
+    if home_async:
+        assert home_v, f'{rel}: no home.css version found'
+        parts.append(minify(marked(read('home.css'))))
+        href = f'/assets/home.css?v={home_v}'
+        links = (f'<link rel="stylesheet" href="{href}" media="print" onload="this.media=\'all\'">\n'
+                 f'<noscript><link rel="stylesheet" href="{href}"></noscript>\n')
 
-    parts = [minify(read('glass.css')), minify(read('site.css'))]
-    keep_async = None
-    for name in ('article', 'stats', 'home'):
-        if name not in sheets:
-            continue
-        if name == 'home':
-            parts.append(minify(marked(read('home.css'))))
-            keep_async = f'/assets/home.css?v={sheets["home"]}'
-        else:
-            parts.append(minify(read(f'{name}.css')))
+    block = (START + '\n<style>' + '\n'.join(p for p in parts if p) + '</style>\n'
+             + links + END + '\n')
 
-    inline = START + '\n<style>' + '\n'.join(p for p in parts if p) + '</style>\n' + END + '\n'
-
-    # Replace the first stylesheet link with the inline block; delete the rest.
-    def repl(m):
-        name = m.group(1)
-        if keep_async and name == 'home':
-            return (f'<link rel="stylesheet" href="{keep_async}" media="print" onload="this.media=\'all\'">\n'
-                    f'<noscript><link rel="stylesheet" href="{keep_async}"></noscript>\n')
-        return ''
-    first = re.search(r'<link rel="stylesheet" href="/assets/[a-z]+\.css\?v=\d+">\n?', s)
-    s = s[:first.start()] + inline + s[first.start():]
-    s = re.sub(r'<link rel="stylesheet" href="/assets/([a-z]+)\.css\?v=\d+">\n?', repl, s)
+    anchor = "<script>document.documentElement.classList.remove('no-js');</script>"
+    assert anchor in s, f'{rel}: no-js anchor missing'
+    s = s.replace(anchor, block + anchor, 1)
     open(path, 'w', encoding='utf-8').write(s)
-    return sorted(sheets)
+    return inline + (['home-critical'] if home_async else [])
+
 
 def main():
     pages = (['index.html', '404.html', 'about/index.html', 'privacy/index.html',

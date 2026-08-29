@@ -306,12 +306,6 @@
       "privacy/index.html"
     ]
   },
-  "148f276de5f5": {
-    "en": "Nothing directly — but its flagship case study is Google’s multi-sided platform: advertisers pay, while web surfers and content owners are subsidised sides of the model. Read from 2026, that page describes the contract every publisher depends on, and the change in it: content still feeds the platform’s free side, but the compensation that used to flow back as traffic is increasingly retained inside AI answers. The practical translation is to know which side of someone else’s model each acquisition channel puts you on, what it pays — money, traffic or citations — and to keep building the owned channels no other company’s canvas can repaint.",
-    "pages": [
-      "research/business-model-generation/index.html"
-    ]
-  },
   "149548d62a9f": {
     "en": "One point in its favour: Cialdini kept working. He has since added a seventh principle, <em>unity</em> &mdash; not merely resembling someone but belonging to the same group as them &mdash; which is not in this edition and which is, if anything, the one that has aged best.",
     "pages": [
@@ -648,6 +642,12 @@
       "index.html"
     ]
   },
+  "2be17cb0a941": {
+    "en": "How does the Hook Model apply to activation and expansion revenue?",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "2bf2fbb3a283": {
     "en": "<strong>Read it</strong> if you run, advise or own a company where the leadership would describe the business differently in private &mdash; which is most companies. Read the segments chapter, the platforms pattern and the kill/thrill page even if you skip everything else. And put the canvas on the wall before your next planning cycle: one page of visible disagreement beats forty slides of apparent alignment.",
     "pages": [
@@ -826,12 +826,6 @@
     "en": "Product strategy",
     "pages": [
       "index.html"
-    ]
-  },
-  "37cf90fac3e8": {
-    "en": "What does Hooked say about SEO and AI search?",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "37d7e1ed0c83": {
@@ -1155,12 +1149,6 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
-  "4dba1bc3d4f2": {
-    "en": "Nothing directly &mdash; but its flagship case study is Google&rsquo;s multi-sided platform: advertisers pay, while web surfers and content owners are subsidised sides of the model. Read from 2026, that page describes the contract every publisher depends on, and the change in it: content still feeds the platform&rsquo;s free side, but the compensation that used to flow back as traffic is increasingly retained inside AI answers. The practical translation is to know which side of someone else&rsquo;s model each acquisition channel puts you on, what it pays &mdash; money, traffic or citations &mdash; and to keep building the owned channels no other company&rsquo;s canvas can repaint.",
-    "pages": [
-      "research/business-model-generation/index.html"
-    ]
-  },
   "4eabb64cc9a7": {
     "en": "On-site",
     "pages": [
@@ -1471,12 +1459,6 @@
     "en": "Making disagreement visible. Different leaders in the same company routinely carry different models of it in their heads &mdash; different segments, different value propositions, different ideas of what is being paid for. The canvas puts all of it on one page in twenty minutes, which turns a vague strategy unease into a specific argument. Its main limit is symmetrical: it describes with equal confidence whether the boxes contain facts or wishes, so it needs an evidence discipline bolted on.",
     "pages": [
       "research/business-model-generation/index.html"
-    ]
-  },
-  "643245fc8fd4": {
-    "en": "Nothing directly &mdash; it was written in 2014, when Google appeared as an example of a habit rather than as a channel. Translated, organic search is an earned external trigger you rent rather than own, and informational search is a reward of the hunt, which is exactly the reward an AI answer now resolves before anyone reaches the page. The practical consequences are to write passages that survive being quoted out of context, to treat branded search share as the measurable proxy for a formed internal trigger, and to make the investment phase available on the first visit.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "6444f3fd0069": {
@@ -2062,12 +2044,6 @@
       "research/business-model-generation/index.html"
     ]
   },
-  "80b18c50b502": {
-    "en": "What does Business Model Generation say about SEO and AI search?",
-    "pages": [
-      "research/business-model-generation/index.html"
-    ]
-  },
   "80da1bbcfb7f": {
     "en": "Your team owns it after",
     "pages": [
@@ -2242,6 +2218,12 @@
     "en": "Run these against one specific behaviour. Not against &ldquo;the product&rdquo;.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "8bea80fe9e6e": {
+    "en": "By generating a kill list. Draw the model you actually run, then walk the roadmap against it: anything that feeds no segment’s value proposition and no revenue stream has no box to live in, and a feature without a box is a cost. The five segment tests double as a pricing-tier audit — a plan serving no distinct segment is packaging debt to merge. One caution before cutting: usage data alone lies about what is killable, because a feature nobody opens can still hold a customer’s stored value, and killing it cuts the switching cost. And since the book assumes every model has a shelf life, someone should own the question of what replaces it while it still works.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "8c8390ff50e5": {
@@ -2616,6 +2598,12 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "a0ee8e8006e9": {
+    "en": "By generating a kill list. Draw the model you actually run, then walk the roadmap against it: anything that feeds no segment&rsquo;s value proposition and no revenue stream has no box to live in, and a feature without a box is a cost. The five segment tests double as a pricing-tier audit &mdash; a plan serving no distinct segment is packaging debt to merge. One caution before cutting: usage data alone lies about what is killable, because a feature nobody opens can still hold a customer&rsquo;s stored value, and killing it cuts the switching cost. And since the book assumes every model has a shelf life, someone should own the question of what replaces it while it still works.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "a16ff39b1a09": {
     "en": "I built the product itself rather than writing a deck about it. This is also where the 150+ provider teardowns came from.",
     "pages": [
@@ -2736,12 +2724,6 @@
     "en": "About Quentin Dupard | Fractional Product &amp; Marketing Operator",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "a986b6538121": {
-    "en": "Nothing directly — it was written in 2014, when Google appeared as an example of a habit rather than as a channel. Translated, organic search is an earned external trigger you rent rather than own, and informational search is a reward of the hunt, which is exactly the reward an AI answer now resolves before anyone reaches the page. The practical consequences are to write passages that survive being quoted out of context, to treat branded search share as the measurable proxy for a formed internal trigger, and to make the investment phase available on the first visit.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "a9a96ec01949": {
@@ -3079,6 +3061,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "c21ee7892a41": {
+    "en": "Directly. The gap between signup and the product working is the first pass through the hook, and the model explains where it breaks: every onboarding field is an investment request, and any that arrives before the first reward repeats the signup-form problem one screen later. The audit is to list every step from trigger to first genuine reward, move every ask after that reward, and keep some variability in the reward itself. Expansion revenue is the investment phase with an invoice attached &mdash; a customer whose stored value keeps growing finds the next tier a smaller decision than their first purchase &mdash; and habitual use is what lets a price move without churn.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "c23cbcb9f4cb": {
     "en": "That page does not exist.",
     "pages": [
@@ -3405,6 +3393,12 @@
       "stats/index.html"
     ]
   },
+  "d4feb67dd715": {
+    "en": "Directly. The gap between signup and the product working is the first pass through the hook, and the model explains where it breaks: every onboarding field is an investment request, and any that arrives before the first reward repeats the signup-form problem one screen later. The audit is to list every step from trigger to first genuine reward, move every ask after that reward, and keep some variability in the reward itself. Expansion revenue is the investment phase with an invoice attached — a customer whose stored value keeps growing finds the next tier a smaller decision than their first purchase — and habitual use is what lets a price move without churn.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "d5d5868582fa": {
     "en": "Want this done to your business?",
     "pages": [
@@ -3517,6 +3511,12 @@
     "en": "<strong>Every mechanism assumes somebody is in the room.</strong> It was written in 1984 and the examples are doorsteps, dinner parties, showrooms and phone calls. The three principles that need presence &mdash; liking, reciprocity, and most of commitment &mdash; have thinned considerably now that most buying happens with nobody there. The three that travel through a screen &mdash; social proof, authority, scarcity &mdash; have been industrialised into review farms, bought credentials and template urgency. The book weights all six equally. The market stopped doing that a long time ago.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "de02450cd4ad": {
+    "en": "How does the Business Model Canvas help decide what to build and what to kill?",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "de135aa1bf24": {

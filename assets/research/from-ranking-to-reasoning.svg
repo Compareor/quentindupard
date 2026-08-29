@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Working paper: From ranking to reasoning">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="b1" cx="18%" cy="14%" r="55%">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b2" cx="84%" cy="82%" r="55%">
+      <stop offset="0" stop-color="#35d6ee" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#eef1fb"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#b1)"/>
+  <rect width="1200" height="630" fill="url(#b2)"/>
+
+  <g>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="#ffffff" fill-opacity="0.30"/>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="url(#sheen)"/>
+    <rect x="80.5" y="90.5" width="1039" height="449" rx="33.5" fill="none" stroke="#0d1424" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- two toggles: the tool (off) and the work (on) -->
+  <g transform="translate(150 168)">
+    <!-- the ranked list -->
+    <rect x="0" y="0" width="250" height="132" rx="18" fill="#ffffff" fill-opacity="0.42"/>
+    <rect x="0.5" y="0.5" width="249" height="131" rx="17.5" fill="none" stroke="#0d1424" stroke-opacity="0.14"/>
+    <rect x="20" y="22" width="150" height="12" rx="6" fill="#0d1424" fill-opacity="0.34"/>
+    <rect x="20" y="44" width="200" height="8" rx="4" fill="#0d1424" fill-opacity="0.14"/>
+    <rect x="20" y="66" width="130" height="12" rx="6" fill="#0d1424" fill-opacity="0.26"/>
+    <rect x="20" y="88" width="185" height="8" rx="4" fill="#0d1424" fill-opacity="0.12"/>
+    <rect x="20" y="108" width="105" height="12" rx="6" fill="#0d1424" fill-opacity="0.18"/>
+
+    <!-- the arrow of history -->
+    <path d="M125 150 L125 178" stroke="#0d1424" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round"/>
+    <path d="M112 168 L125 182 L138 168" fill="none" stroke="#0d1424" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- the answer that buys -->
+    <rect x="0" y="196" width="250" height="106" rx="24" fill="#0d1424" fill-opacity="0.78"/>
+    <rect x="22" y="220" width="176" height="10" rx="5" fill="#ffffff" fill-opacity="0.55"/>
+    <rect x="22" y="240" width="140" height="10" rx="5" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="22" y="264" width="118" height="22" rx="11" fill="#35d6ee" fill-opacity="0.85"/>
+    <path d="M34 275 l6 6 l11 -12" fill="none" stroke="#0d1424" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="60" y="281" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+          font-size="14" font-weight="650" letter-spacing="0.8" fill="#0d1424" fill-opacity="0.9">BOUGHT</text>
+  </g>
+
+  <text x="470" y="226" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" font-weight="600" letter-spacing="2.4" fill="#0d1424" fill-opacity="0.42">WORKING PAPER</text>
+  <text x="470" y="296" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif"
+        font-size="58" font-weight="650" letter-spacing="-1.8" fill="#0d1424" fill-opacity="0.88">From ranking</text>
+  <text x="470" y="356" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif"
+        font-size="58" font-weight="650" letter-spacing="-1.8" fill="#0d1424" fill-opacity="0.88">to reasoning</text>
+  <text x="470" y="410" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="25" font-weight="500" letter-spacing="-0.3" fill="#0d1424" fill-opacity="0.52">When the answer starts buying.</text>
+  <text x="470" y="466" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" letter-spacing="0.2" fill="#0d1424" fill-opacity="0.30">quentindupard.com</text>
+</svg>

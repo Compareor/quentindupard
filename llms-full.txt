@@ -217,6 +217,36 @@ is flat despite happy customers.
 
 ## Reading notes
 
+### From ranking to reasoning (working paper, August 2026)
+
+Full text: https://quentindupard.com/research/from-ranking-to-reasoning/
+
+Thesis: LLMs are replacing the interface of search. Answers absorb the
+click, answer engines reprice referral, and purchasing agents will absorb
+the transaction itself. Each stage moves a different asset: attention,
+then attribution, then the merchant's customer relationship.
+
+Grounding: Metzler et al. (2021) on answering instead of ranking; Lewis
+et al. (2020) on retrieval-augmented generation; Aggarwal et al. (KDD
+2024) showing content changes shift visibility in generated answers by
+up to 40%; Stigler (1961) and Pirolli & Card (1999) on search costs;
+Dietvorst (aversion) vs Logg (appreciation) on algorithmic advice;
+Edelman/Varian on position auctions; Rochet & Tirole on platform rents.
+
+Four proposed tests, with predictions stated before any data: click
+substitution is intent-dependent and branded queries rise (verification
+clicks); answer citations are concentrated and partially controllable by
+content structure; conversation shrinks consideration sets and inflates
+confidence beyond accuracy, with disclosure labels working less well in
+dialogue; agent-mediated orders carry a toll and move the customer
+record to the agent operator.
+
+What businesses should do now: treat machine legibility as a
+distribution channel (GEO alongside SEO); rebuild brand as the retrieval
+prior, since pre-named demand cannot be intercepted by a shortlist;
+price as if every comparison is made perfectly; track answer share the
+way consumer brands track share of shelf.
+
 ### On the Value Proposition Canvas (Osterwalder, Pigneur, Bernarda, Smith, 2014)
 
 Full note: https://quentindupard.com/research/value-proposition-canvas/

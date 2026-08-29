@@ -7,6 +7,10 @@
     "es": "10 min de lectura",
     "fr": "10 min de lecture"
   },
+  "12 min read": {
+    "es": "12 min de lectura",
+    "fr": "12 min de lecture"
+  },
   "5 min read": {
     "es": "5 min de lectura",
     "fr": "5 min de lecture"
@@ -178,6 +182,14 @@
   "Fri": {
     "es": "Vie",
     "fr": "Ven"
+  },
+  "From ranking to reasoning": {
+    "es": "Del ranking al razonamiento",
+    "fr": "Du classement au raisonnement"
+  },
+  "From ranking to reasoning: when the answer starts buying": {
+    "es": "Del ranking al razonamiento: cuando la respuesta empieza a comprar",
+    "fr": "Du classement au raisonnement : quand la réponse se met à acheter"
   },
   "Genuinely — whatever you are stuck on, just send it to me. It will be faster than reading this.": {
     "es": "En serio: sea lo que sea que te tiene atascado, mándamelo. Será más rápido que leer todo esto.",
@@ -570,6 +582,10 @@
   "Without urgency built into the product or the market, a rational buyer defers. Discounting a deferred decision just makes it a cheaper deferred decision.": {
     "es": "Sin urgencia incorporada al producto o al mercado, un comprador racional lo aplaza. Descontar una decisión aplazada solo la convierte en una decisión aplazada más barata.",
     "fr": "Sans urgence inscrite dans le produit ou dans le marché, un acheteur rationnel reporte. Remiser une décision reportée n'en fait qu'une décision reportée moins chère."
+  },
+  "Working paper": {
+    "es": "Documento de trabajo",
+    "fr": "Document de travail"
   },
   "Yesterday": {
     "es": "Ayer",

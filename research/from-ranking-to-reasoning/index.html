@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>From ranking to reasoning: when the answer buys | QD</title>
+<meta name="description" content="Search is collapsing into answers, and answers are learning to buy. A working paper on what that moves, how to test it, and what it means for any business with a funnel.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/research/from-ranking-to-reasoning/">
+<link rel="canonical" href="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+<link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full notes">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="From ranking to reasoning: when the answer starts buying">
+<meta property="og:description" content="Search is collapsing into answers, and answers are learning to buy. A working paper on what that moves, how to test it, and what it means for any business with a funnel.">
+<meta property="og:url" content="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<meta property="og:image" content="https://quentindupard.com/assets/research/from-ranking-to-reasoning-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From ranking to reasoning: when the answer starts buying">
+<meta name="twitter:description" content="Search is collapsing into answers, and answers are learning to buy. A working paper on what that moves, how to test it, and what it means for any business with a funnel.">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=31">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<link rel="stylesheet" href="/assets/article.css?v=25">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "From ranking to reasoning: when the answer starts buying",
+  "description": "Search is collapsing into answers, and answers are learning to buy. A working paper on what that moves, how to test it, and what it means for any business with a funnel.",
+  "url": "https://quentindupard.com/research/from-ranking-to-reasoning/",
+  "mainEntityOfPage": "https://quentindupard.com/research/from-ranking-to-reasoning/",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
+  "publisher": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
+  "image": "https://quentindupard.com/assets/research/from-ranking-to-reasoning-og.jpg",
+  "inLanguage": "en",
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "GEO: Generative Engine Optimization",
+      "url": "https://doi.org/10.1145/3637528.3671900"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Difference-in-Differences with Multiple Time Periods",
+      "url": "https://doi.org/10.1016/j.jeconom.2020.12.001"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Algorithm Aversion: People Erroneously Avoid Algorithms After Seeing Them Err",
+      "url": "https://doi.org/10.1037/xge0000033"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Internet Advertising and the Generalized Second-Price Auction",
+      "url": "https://doi.org/10.1257/aer.97.1.242"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Algorithm Appreciation: People Prefer Algorithmic to Human Judgment",
+      "url": "https://doi.org/10.1016/j.obhdp.2018.12.005"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Rethinking Search: Making Domain Experts out of Dilettantes",
+      "url": "https://doi.org/10.1145/3476415.3476428"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Information Foraging",
+      "url": "https://doi.org/10.1037/0033-295X.106.4.643"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Platform Competition in Two-Sided Markets",
+      "url": "https://doi.org/10.1162/154247603322493212"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "The Economics of Information",
+      "url": "https://doi.org/10.1086/258464"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Position Auctions",
+      "url": "https://doi.org/10.1016/j.ijindorg.2006.10.002"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://quentindupard.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://quentindupard.com/research/" },
+    { "@type": "ListItem", "position": 3, "name": "From ranking to reasoning: when the answer starts buying", "item": "https://quentindupard.com/research/from-ranking-to-reasoning/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://quentindupard.com/research/from-ranking-to-reasoning/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will LLMs replace search engines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LLMs are replacing the interface of search rather than the plumbing: crawling and retrieval still happen underneath, but the ranked list of links is being replaced by a synthesized answer, and answers absorb most of the clicks a list used to send out. Expect substitution to be strongest on informational and comparison queries and weakest on navigational ones, where people already know where they are going."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is generative engine optimization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generative engine optimization, or GEO, is the practice of making content more likely to be included and cited in AI-generated answers. Peer-reviewed work has shown that quotable single-sentence claims, cited statistics, clear structure and question-shaped headings measurably raise a page's visibility in generated answers. It runs parallel to classical SEO and optimizes for being quoted rather than merely ranked."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is agentic commerce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agentic commerce is purchasing executed by an AI agent under delegated authority: the agent finds the product, compares merchants, fills the checkout and completes the order. It moves the transaction, and usually the customer record, from the merchant's storefront to the agent's operator, which is why it changes pricing power and not just interfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a business prepare for AI-driven search?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four moves: invest in machine legibility so answer engines can quote you, structured data and citable claims included; build brand, because demand that arrives pre-named is the one channel a machine's shortlist cannot intercept; price as if every comparison will be made perfectly, since agents read every pricing page without fatigue; and start measuring answer share, how often you appear in generated answers for your category's questions, alongside classical rankings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AI-mediated buying make consumers better off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on a gap you can measure: if conversational recommendations shrink the options considered while keeping choice quality high, that is efficient advice; if they shrink options while confidence outruns accuracy, that is a persuasion channel bypassing defenses people learned on ads. Early evidence on trust in dialogue suggests the risk is real, which is why disclosure rules built for labeled ad slots need rethinking for answers."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Primary">
+  <a href="/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/#work">What I do</a>
+    <a href="/#work-done">Previously</a>
+    <a href="/research/">Research</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/about/">About</a>
+  </div><div class="nav-end"><div class="lang-switch" role="group" aria-label="Language"><span class="lang-opt is-on" aria-current="true">EN</span><a class="lang-opt" href="/fr/research/from-ranking-to-reasoning/" hreflang="fr" lang="fr" data-track="lang_switch" data-track-label="fr">FR</a><a class="lang-opt" href="/es/research/from-ranking-to-reasoning/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div><a href="/#talk" class="btn btn-primary nav-cta">Talk to me</a></div>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/research/">&larr; Research</a>
+    <h1>From ranking to reasoning: when the answer starts buying</h1>
+    <div class="article-meta">
+      <span>Working paper</span>
+      <span>12 min read</span>
+      <span><a class="byline-link" href="/about/" data-track="byline_about"><img src="/assets/portrait/quentin-avatar-96.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" class="byline-avatar">Quentin Dupard</a></span>
+      <span>Updated August 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+    <div class="prose">
+
+      <p class="stand-first">For thirty years, being found online meant one thing: a query, a ranked list, and a click. Large language models are dissolving that sequence. They answer instead of ranking, and the next generation of agents will buy instead of referring. This is a working paper: the argument, the four tests that would settle it, and what I would already be doing about it if I ran your funnel.</p>
+
+      <p>The click is the atom of the digital economy. It is what advertisers buy, what publishers sell, and what every analytics dashboard counts. Search advertising became the largest advertising market in the world by pricing one thing: position in a ranked list at the moment someone expressed intent. Organic search became the default acquisition channel for the same reason. Both institutions assume a user who reads the list, chooses, and clicks.</p>
+
+      <p>A generative engine removes the list. It reads the same web a crawler always did, but instead of returning ranked pointers it returns a synthesized answer: a paragraph that compares the options, weighs the trade-offs, and cites two or three sources where a results page exposed thousands. The interface change looks small. The economic change is not, because the answer absorbs the click. Someone who is told which tool to buy, in fluent prose with the comparison already done, has little reason to visit the eleven review sites whose work the answer summarizes.</p>
+
+      <h2>What is actually changing?</h2>
+
+      <p>The shift is arriving in three stages, and it helps to name them, because each stage moves a different asset and threatens a different business.</p>
+
+      <p><strong>Stage one: answers inside search.</strong> A generated summary sits above the ranked list and intercepts a share of its clicks. The marginal loser is the publisher whose referral is absorbed. This stage is already here.</p>
+
+      <p><strong>Stage two: answer engines.</strong> Conversation is the whole interface and the ranked list never appears. The marginal loser is the referral channel itself, and with it the attribution regime that made digital marketing accountable. If nobody clicks, nothing is tracked, and the influence a page had on a purchase becomes invisible to the tools that measure influence by clicks.</p>
+
+      <p><strong>Stage three: agents that buy.</strong> The system does not recommend the standing desk. It locates it, compares merchants, fills the checkout, and completes the order under delegated authority. The marginal loser is the merchant's direct relationship with the customer, which is the asset that retention, expansion and pricing power all sit on. At stage one the model competes with the results page for attention. At stage three it competes with your storefront for the transaction.</p>
+
+      <p>This is the same direction of travel I wrote about in <a href="/research/services-the-new-software/">my read of Sequoia's services thesis</a>: the machines are moving up the stack, from executing tasks to owning outcomes. Here the outcome they are learning to own is the purchase.</p>
+
+      <h2>Why the click mattered more than it looked</h2>
+
+      <p>Economics has always treated search as costly, and priced markets accordingly. Stigler showed in 1961 that price dispersion survives because comparing options costs effort. The information-foraging school modeled people as cost-tuned foragers who follow scent and abandon patches that stop yielding. Both traditions make the same prediction about the present: an interface that cuts search costs to almost nothing gets adopted fast, because the saving is immediate and personal while the damage is deferred and diffuse.</p>
+
+      <p>Here is the part that matters for business. When the cost of finding options approaches zero, the scarce thing stops being information. It becomes trust in the selector. A market where a conversational agent holds the shortlist is a market with a new gatekeeper, and the history of gatekeepers, from travel agents to app stores, is consistent: the rents move to the gate. Platform economics has formalized this since Rochet and Tirole. A search engine was a restrained gatekeeper, because the ranked list left the choice, and the customer relationship, with you. An answer engine holds the shortlist. A purchasing agent holds the transaction. That is the strongest gatekeeper position the consumer internet has produced.</p>
+
+      <h2>What the research already says</h2>
+
+      <p>The academic groundwork exists, in three separate rooms that rarely talk to each other. Full citations are at the bottom of the page.</p>
+
+      <p><strong>The capability is real.</strong> Google's own researchers argued in 2021 that retrieval systems should behave like domain experts answering directly rather than librarians pointing at shelves. Retrieval-augmented generation made the proposal practical by grounding a model's answers in a live corpus. Conversational search then changed what a query is: a dialogue can host the whole funnel, from vague problem to comparison to choice, where a ranked list served one lookup at a time.</p>
+
+      <p><strong>Visibility in answers is measurable and partly controllable.</strong> The GEO paper at KDD 2024 showed that deliberate content changes, quotable claims, cited statistics, clear structure, shift a source's inclusion in generated answers by meaningful margins, up to forty percent on their visibility metrics. Two things follow. Inclusion is a controllable variable, which makes it a strategic investment rather than a lottery. And wherever inclusion is controllable, an optimization industry forms. It already has a name, and I <a href="/research/hooked-nir-eyal/">use its methods on this site</a>: every article here is written to be quotable by an answer engine as much as readable by you.</p>
+
+      <p><strong>Trust behaves strangely in dialogue.</strong> The advice literature holds an apparent contradiction. People abandon algorithms after seeing them err, which Dietvorst and colleagues named algorithm aversion. People also weight algorithmic advice above human advice in many judgement tasks, which Logg and colleagues named algorithm appreciation. The resolution is in the conditions, and conversational interfaces manipulate exactly those conditions: dialogue personalizes, fluent prose conceals uncertainty, and the answer arrives without the visible disagreement between sources that a results page shows by default. Every one of those mechanisms plausibly pushes confidence above accuracy. And there is a second, quieter problem: consumers have spent decades learning to recognize ads and discount them. A synthesized recommendation carries none of the markers that trigger that defense. If paid influence enters the answer layer, it may inherit the credibility of advice rather than the skepticism reserved for advertising.</p>
+
+      <p><strong>The pricing theory no longer fits.</strong> Position auctions, the mechanism that made search the most efficient advertising market ever built, presume discrete slots, observable clicks, and an advertiser bidding for a user who still makes the final choice. An answer has no slots, absorbs the click, and at the agentic stage makes the choice itself. Influence over a shortlist assembled inside a model will still be priced. Without a transparent auction, it will be priced opaquely.</p>
+
+      <h2>Four tests that would settle it</h2>
+
+      <p>I have not run these studies. I am writing the predictions down before the evidence, because a prediction dated after the data is just a story. If someone with the data wants to run any of these with me, my inbox is open.</p>
+
+      <p><strong>Test one: substitution, by intent.</strong> Take a panel of sites with server-side analytics and exploit the fact that generative answers rolled out market by market and query type by query type. Compare click-through per impression before and after, against untouched query classes as the control. My prediction: real click losses, concentrated on informational and comparison queries, smallest on navigational and transactional ones. And a second signature: the share of branded queries rises, because the click that survives the answer is a verification click. People check what the machine told them by searching for the name it gave.</p>
+
+      <p><strong>Test two: who gets cited, and can you move it.</strong> Run a fixed battery of commercial questions against the major answer engines every week and log which domains get cited. Then randomize legitimate content improvements, structured data, question-shaped headings, quotable one-line claims, across matched pages and watch inclusion. My prediction: citation is far more concentrated than the results pages ever were, a handful of domains carrying most answers, and inclusion responds to structure, meaningfully but less than domain authority does. The week-to-week churn of the cited set is the number I would watch most, because it tells you whether answer visibility is an asset you accumulate or a treadmill you rent.</p>
+
+      <p><strong>Test three: what conversation does to buyers.</strong> Give three groups the same purchase task with real money: one searches a ranked catalog, one asks a grounded assistant, one can delegate the checkout to it. Measure how many options people consider, the quality of what they choose, what they pay, and how confident they are versus how right they are. My prediction: conversation shrinks the shortlist and widens the gap between confidence and accuracy. Sponsorship labels that work on a results page will work less well inside a dialogue. And people who delegate will pay more than people who choose by hand from the same recommendations.</p>
+
+      <p><strong>Test four: follow the margin.</strong> Sit with merchants who have plugged into agent-mediated checkout and read the actual fee structures. My prediction: agent orders carry a toll that direct orders do not, the customer record accrues to the agent's operator rather than the merchant, and liability for errors lands on the merchant while influence over discovery stays with the operator. The exceptions, merchants who kept the customer relationship, will be the most instructive cases in the whole program.</p>
+
+      <div class="callout">
+        <p>Search is becoming an answer. The answer is becoming an agent. Each step moves attention, then trust, then the transaction itself inside the machine's mediation, and each step reprices a different asset on your balance sheet.</p>
+      </div>
+
+      <h2>What this means for your business</h2>
+
+      <p>You do not need to wait for the studies to act on the direction. Four moves follow, and they happen to be the four I sell, which is either a conflict of interest or the reason I noticed. You can judge.</p>
+
+      <p><strong>Treat machine legibility as a distribution channel.</strong> Content written to be cited, not just ranked: quotable single-sentence claims, statistics with named sources, questions as headings, structured data underneath, and a crawler policy decided as channel strategy rather than left as a server default. This runs parallel to classical SEO and will outgrow it. It is also cheap right now, the way SEO was cheap in 2003, and it will not stay cheap.</p>
+
+      <p><strong>Rebuild brand as the retrieval prior.</strong> When the interface hides the shelf, the name the customer asks for is the last channel no shortlist can intercept. Demand that arrives pre-named cannot be disintermediated by a consideration set. If my substitution prediction is right, branded search share is about to become the honest KPI of marketing, because it measures the only demand the answer layer cannot take from you. This is <a href="/about/">positioning work</a>, and it just became more valuable, not less.</p>
+
+      <p><strong>Price as if every comparison will be made perfectly.</strong> An agent reads every pricing page in your category without fatigue and re-compares on every purchase. Packaging built on obscurity, decoy tiers, hidden fees, comparison friction, is a dated liability. Packaging built on genuine differentiation, and on relationships an agent cannot arbitrate, keeps its power. If your margin depends on the customer not looking too closely, <a href="/#pricing">fix that before the agents arrive</a>, on your schedule rather than theirs.</p>
+
+      <p><strong>Measure answer share, not just rankings.</strong> Referral attribution undercounts your influence in exact proportion to the substitution. The successor metric is answer share: how often, and how favorably, you appear in the generated answers to your category's questions, tracked the way consumer brands track share of shelf. The weekly prompt battery from test two is not just a research instrument. It is the prototype of a dashboard your marketing team should already have.</p>
+
+      <h2>Where this argument breaks</h2>
+
+      <p>Three honest weaknesses. First, engines drift: model versions change without notice, so anything you measure about answer behavior is a dated observation of a moving system, and any visibility you win can be rearranged in a release you were not consulted on. Second, the middle of my argument leans on adoption continuing, and adoption is a bet, not a law. If answer quality stalls, or a hallucinated recommendation produces a lawsuit ugly enough to slow delegation, the agentic stage arrives late or arrives regulated. Third, the answer economy has an unpriced dependency: it feeds on content that referral revenue currently funds. If stage two collapses that revenue, the corpus that grounds the answers degrades. Nobody, including the engine operators, has a good story for that yet.</p>
+
+      <p>None of these change the direction. They change the timetable, and timetables are what operators plan against.</p>
+
+      <h2>Sources</h2>
+
+      <p class="refs-intro">The research this paper stands on, verified against the published record.</p>
+
+      <ul class="refs-list">
+        <li>Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K. and Deshpande, A. (2024). GEO: Generative engine optimization. <em>Proceedings of the 30th ACM SIGKDD Conference</em>. <a href="https://doi.org/10.1145/3637528.3671900" target="_blank" rel="noopener">doi:10.1145/3637528.3671900</a></li>
+        <li>Callaway, B. and Sant'Anna, P. H. C. (2021). Difference-in-differences with multiple time periods. <em>Journal of Econometrics</em>, 225(2), 200&ndash;230. <a href="https://doi.org/10.1016/j.jeconom.2020.12.001" target="_blank" rel="noopener">doi:10.1016/j.jeconom.2020.12.001</a></li>
+        <li>Dietvorst, B. J., Simmons, J. P. and Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. <em>Journal of Experimental Psychology: General</em>, 144(1), 114&ndash;126. <a href="https://doi.org/10.1037/xge0000033" target="_blank" rel="noopener">doi:10.1037/xge0000033</a></li>
+        <li>Edelman, B., Ostrovsky, M. and Schwarz, M. (2007). Internet advertising and the generalized second-price auction. <em>American Economic Review</em>, 97(1), 242&ndash;259. <a href="https://doi.org/10.1257/aer.97.1.242" target="_blank" rel="noopener">doi:10.1257/aer.97.1.242</a></li>
+        <li>Lewis, P., Perez, E., Piktus, A. et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. <em>Advances in Neural Information Processing Systems</em>, 33, 9459&ndash;9474. <a href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" target="_blank" rel="noopener">proceedings.neurips.cc</a></li>
+        <li>Logg, J. M., Minson, J. A. and Moore, D. A. (2019). Algorithm appreciation: People prefer algorithmic to human judgment. <em>Organizational Behavior and Human Decision Processes</em>, 151, 90&ndash;103. <a href="https://doi.org/10.1016/j.obhdp.2018.12.005" target="_blank" rel="noopener">doi:10.1016/j.obhdp.2018.12.005</a></li>
+        <li>Metzler, D., Tay, Y., Bahri, D. and Najork, M. (2021). Rethinking search: Making domain experts out of dilettantes. <em>ACM SIGIR Forum</em>, 55(1), 1&ndash;27. <a href="https://doi.org/10.1145/3476415.3476428" target="_blank" rel="noopener">doi:10.1145/3476415.3476428</a></li>
+        <li>Pirolli, P. and Card, S. (1999). Information foraging. <em>Psychological Review</em>, 106(4), 643&ndash;675. <a href="https://doi.org/10.1037/0033-295X.106.4.643" target="_blank" rel="noopener">doi:10.1037/0033-295X.106.4.643</a></li>
+        <li>Rochet, J.-C. and Tirole, J. (2003). Platform competition in two-sided markets. <em>Journal of the European Economic Association</em>, 1(4), 990&ndash;1029. <a href="https://doi.org/10.1162/154247603322493212" target="_blank" rel="noopener">doi:10.1162/154247603322493212</a></li>
+        <li>Stigler, G. J. (1961). The economics of information. <em>Journal of Political Economy</em>, 69(3), 213&ndash;225. <a href="https://doi.org/10.1086/258464" target="_blank" rel="noopener">doi:10.1086/258464</a></li>
+        <li>Varian, H. R. (2007). Position auctions. <em>International Journal of Industrial Organization</em>, 25(6), 1163&ndash;1178. <a href="https://doi.org/10.1016/j.ijindorg.2006.10.002" target="_blank" rel="noopener">doi:10.1016/j.ijindorg.2006.10.002</a></li>
+      </ul>
+
+      <h2>Common questions</h2>
+
+      <div class="faq-inline">
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Will LLMs replace search engines?</summary>
+          <p>LLMs are replacing the interface of search rather than the plumbing: crawling and retrieval still happen underneath, but the ranked list of links is being replaced by a synthesized answer, and answers absorb most of the clicks a list used to send out. Expect substitution to be strongest on informational and comparison queries and weakest on navigational ones, where people already know where they are going.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>What is generative engine optimization?</summary>
+          <p>Generative engine optimization, or GEO, is the practice of making content more likely to be included and cited in AI-generated answers. Peer-reviewed work has shown that quotable single-sentence claims, cited statistics, clear structure and question-shaped headings measurably raise a page's visibility in generated answers. It runs parallel to classical SEO and optimizes for being quoted rather than merely ranked.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>What is agentic commerce?</summary>
+          <p>Agentic commerce is purchasing executed by an AI agent under delegated authority: the agent finds the product, compares merchants, fills the checkout and completes the order. It moves the transaction, and usually the customer record, from the merchant's storefront to the agent's operator, which is why it changes pricing power and not just interfaces.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>How should a business prepare for AI-driven search?</summary>
+          <p>Four moves: invest in machine legibility so answer engines can quote you, structured data and citable claims included; build brand, because demand that arrives pre-named is the one channel a machine's shortlist cannot intercept; price as if every comparison will be made perfectly, since agents read every pricing page without fatigue; and start measuring answer share, how often you appear in generated answers for your category's questions, alongside classical rankings.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Does AI-mediated buying make consumers better off?</summary>
+          <p>It depends on a gap you can measure: if conversational recommendations shrink the options considered while keeping choice quality high, that is efficient advice; if they shrink options while confidence outruns accuracy, that is a persuasion channel bypassing defenses people learned on ads. Early evidence on trust in dialogue suggests the risk is real, which is why disclosure rules built for labeled ad slots need rethinking for answers.</p>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Fractional product &amp; marketing</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>Working worldwide</strong><br>
+          Remote by default<br>
+          On-site when it earns it
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Book 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="What I do">
+        <h2>What I do</h2>
+        <a href="/research/">All research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Engagements">
+        <h2>Engagements</h2>
+        <a href="/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/#pricing">Sprint &mdash; two weeks</a>
+        <a href="/#pricing">Operator &mdash; ongoing</a>
+        <a href="/#pricing">Compare all three</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>How I work (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/">Home</a>
+        <a href="/about/">About me</a>
+        <a href="/#work-done">Previously</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/research/">Research</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="More">
+        <h2>More</h2>
+        <a href="/#ask">Ask AI-me</a>
+        <a href="/#inbox">Write to me</a>
+        <a href="/stats/">Live stats</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="https://billing.stripe.com/p/login/6oUcN55Ridk40TwgqZ0oM00"
+           target="_blank" rel="noopener"
+           data-track="manage_subscription">Manage subscription</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept.
+        <a href="/stats/">The numbers are public</a> and <a href="/privacy/">so is the detail</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/i18n.js?v=16" defer></script>
+<script src="/assets/track.js?v=8" defer></script>
+<script src="/assets/articles.js?v=6" defer></script>
+<script src="/assets/article.js?v=8" defer></script>
+</body>
+</html>

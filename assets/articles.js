@@ -12,6 +12,13 @@
    ========================================================== */
 window.QD_ARTICLES = [
   {
+    slug: 'from-ranking-to-reasoning',
+    title: 'From ranking to reasoning: when the answer starts buying',
+    kind: 'Working paper',
+    minutes: 12,
+    img: '/assets/research/from-ranking-to-reasoning-thumb-480.jpg'
+  },
+  {
     slug: 'value-proposition-canvas',
     title: 'The Value Proposition Canvas still works',
     kind: 'Framework',

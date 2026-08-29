@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Du classement au raisonnement : quand la réponse achète | QD</title>
+<meta name="description" content="La recherche s'effondre en réponses, et les réponses apprennent à acheter. Un document de travail sur ce que cela déplace, comment le tester, et ce que cela signifie pour tout business avec un tunnel.">
+<meta name="author" content="Quentin Dupard">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="alternate" hreflang="x-default" href="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="en" href="https://quentindupard.com/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="fr" href="https://quentindupard.com/fr/research/from-ranking-to-reasoning/">
+<link rel="alternate" hreflang="es" href="https://quentindupard.com/es/research/from-ranking-to-reasoning/">
+<link rel="canonical" href="https://quentindupard.com/fr/research/from-ranking-to-reasoning/">
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Résumé du site lisible par les IA">
+<link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Notes complètes pour LLM">
+
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quentin Dupard">
+<meta property="og:title" content="Du classement au raisonnement : quand la réponse se met à acheter">
+<meta property="og:description" content="La recherche s'effondre en réponses, et les réponses apprennent à acheter. Un document de travail sur ce que cela déplace, comment le tester, et ce que cela signifie pour tout business avec un tunnel.">
+<meta property="og:url" content="https://quentindupard.com/fr/research/from-ranking-to-reasoning/">
+<meta property="og:image" content="https://quentindupard.com/assets/research/from-ranking-to-reasoning-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Du classement au raisonnement : quand la réponse se met à acheter">
+<meta name="twitter:description" content="La recherche s'effondre en réponses, et les réponses apprennent à acheter. Un document de travail sur ce que cela déplace, comment le tester, et ce que cela signifie pour tout business avec un tunnel.">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#05060f">
+
+<link rel="stylesheet" href="/assets/glass.css?v=31">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<link rel="stylesheet" href="/assets/article.css?v=25">
+
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<script>
+/* Theme before first paint. A toggle applied after render would flash the
+   wrong theme on every page load. */
+(function(){try{
+  var saved = localStorage.getItem('qd:theme');
+  var dark = saved ? saved === 'dark'
+                   : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (dark) document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Du classement au raisonnement : quand la réponse se met à acheter",
+  "description": "La recherche s'effondre en réponses, et les réponses apprennent à acheter. Un document de travail sur ce que cela déplace, comment le tester, et ce que cela signifie pour tout business avec un tunnel.",
+  "url": "https://quentindupard.com/fr/research/from-ranking-to-reasoning/",
+  "mainEntityOfPage": "https://quentindupard.com/fr/research/from-ranking-to-reasoning/",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
+  "publisher": {
+    "@id": "https://quentindupard.com/#quentin"
+  },
+  "image": "https://quentindupard.com/assets/research/from-ranking-to-reasoning-og.jpg",
+  "inLanguage": "fr",
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "name": "GEO: Generative Engine Optimization",
+      "url": "https://doi.org/10.1145/3637528.3671900"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Difference-in-Differences with Multiple Time Periods",
+      "url": "https://doi.org/10.1016/j.jeconom.2020.12.001"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Algorithm Aversion: People Erroneously Avoid Algorithms After Seeing Them Err",
+      "url": "https://doi.org/10.1037/xge0000033"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Internet Advertising and the Generalized Second-Price Auction",
+      "url": "https://doi.org/10.1257/aer.97.1.242"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Algorithm Appreciation: People Prefer Algorithmic to Human Judgment",
+      "url": "https://doi.org/10.1016/j.obhdp.2018.12.005"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Rethinking Search: Making Domain Experts out of Dilettantes",
+      "url": "https://doi.org/10.1145/3476415.3476428"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Information Foraging",
+      "url": "https://doi.org/10.1037/0033-295X.106.4.643"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Platform Competition in Two-Sided Markets",
+      "url": "https://doi.org/10.1162/154247603322493212"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "The Economics of Information",
+      "url": "https://doi.org/10.1086/258464"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Position Auctions",
+      "url": "https://doi.org/10.1016/j.ijindorg.2006.10.002"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://quentindupard.com/fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Recherche",
+      "item": "https://quentindupard.com/fr/research/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Du classement au raisonnement : quand la réponse se met à acheter",
+      "item": "https://quentindupard.com/fr/research/from-ranking-to-reasoning/"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://quentindupard.com/fr/research/from-ranking-to-reasoning/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Les LLM vont-ils remplacer les moteurs de recherche ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les LLM remplacent l'interface de la recherche plutôt que sa tuyauterie : l'exploration et la récupération continuent en dessous, mais la liste classée de liens est remplacée par une réponse synthétisée, et les réponses absorbent la plupart des clics qu'une liste envoyait vers l'extérieur. Attendez-vous à une substitution maximale sur les requêtes d'information et de comparaison, et minimale sur les requêtes de navigation, où les gens savent déjà où ils vont."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que l'optimisation pour moteurs génératifs ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'optimisation pour moteurs génératifs, ou GEO, est la pratique qui rend un contenu plus susceptible d'être inclus et cité dans les réponses générées par IA. Des travaux évalués par les pairs ont montré que des affirmations citables d'une phrase, des statistiques sourcées, une structure claire et des titres en forme de question augmentent de façon mesurable la visibilité d'une page dans les réponses générées. Elle fonctionne en parallèle du SEO classique et optimise pour être cité plutôt que simplement classé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le commerce agentique ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le commerce agentique est l'achat exécuté par un agent IA sous autorité déléguée : l'agent trouve le produit, compare les marchands, remplit le paiement et finalise la commande. Il déplace la transaction, et généralement le dossier client, de la boutique du marchand vers l'opérateur de l'agent, et c'est pourquoi il change le pouvoir de prix et pas seulement les interfaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment une entreprise doit-elle se préparer à la recherche pilotée par l'IA ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quatre gestes : investissez dans la lisibilité machine pour que les moteurs de réponses puissent vous citer, données structurées et affirmations citables comprises ; construisez la marque, parce que la demande qui arrive déjà nommée est le seul canal que la liste courte d'une machine ne peut pas intercepter ; tarifez comme si chaque comparaison allait être faite parfaitement, puisque les agents lisent chaque page de prix sans fatigue ; et commencez à mesurer la part de réponse, la fréquence à laquelle vous apparaissez dans les réponses générées aux questions de votre catégorie, à côté des classements classiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'achat médié par IA rend-il les consommateurs mieux lotis ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cela dépend d'un écart que l'on peut mesurer : si les recommandations conversationnelles réduisent les options considérées tout en gardant une bonne qualité de choix, c'est du conseil efficace ; si elles réduisent les options pendant que la confiance dépasse l'exactitude, c'est un canal de persuasion qui contourne des défenses apprises sur la publicité. Les premiers travaux sur la confiance en dialogue suggèrent que le risque est réel, et c'est pourquoi les règles de transparence conçues pour des emplacements publicitaires étiquetés doivent être repensées pour les réponses."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qd-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent-a)"/>
+      <stop offset="1" stop-color="var(--accent-b)"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="mesh" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="nav glass glass-thin" aria-label="Principal">
+  <a href="/fr/" class="nav-brand">
+    <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+    Quentin Dupard
+  </a>
+  <div class="nav-links">
+    <a href="/fr/#work">Ce que je fais</a> <a href="/fr/#work-done">Réalisations</a> <a href="/fr/research/">Recherche</a> <a href="/fr/#pricing">Tarifs</a> <a href="/fr/about/">À propos</a>
+  </div><div class="nav-end"><div class="lang-switch" role="group" aria-label="Language"><a class="lang-opt" href="/research/from-ranking-to-reasoning/" hreflang="en" lang="en" data-track="lang_switch" data-track-label="en">EN</a><span class="lang-opt is-on" aria-current="true">FR</span><a class="lang-opt" href="/es/research/from-ranking-to-reasoning/" hreflang="es" lang="es" data-track="lang_switch" data-track-label="es">ES</a></div><a href="/fr/#talk" class="btn btn-primary nav-cta">Parlons-en</a></div>
+</nav>
+
+<main>
+<article>
+<header class="article-hero">
+  <div class="shell">
+    <a class="crumb" href="/fr/research/">&larr; Recherche</a>
+    <h1>Du classement au raisonnement : quand la réponse se met à acheter</h1>
+    <div class="article-meta">
+      <span>Document de travail</span> <span>12 min de lecture</span> <span><a class="byline-link" href="/fr/about/" data-track="byline_about"><img src="/assets/portrait/quentin-avatar-96.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" class="byline-avatar">Quentin Dupard</a></span> <span>Mis à jour en août 2026</span>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:24px;">
+  <div class="shell">
+    <div class="prose">
+
+      <p class="stand-first">Pendant trente ans, être trouvé en ligne a voulu dire une chose : une requête, une liste classée, un clic. Les grands modèles de langage dissolvent cette séquence. Ils répondent au lieu de classer, et la prochaine génération d'agents achètera au lieu de rediriger. Ceci est un document de travail : l'argument, les quatre tests qui trancheraient, et ce que je ferais déjà si je pilotais votre tunnel.</p>
+
+      <p>Le clic est l'atome de l'économie numérique. C'est ce que les annonceurs achètent, ce que les éditeurs vendent, et ce que chaque tableau de bord analytique compte. La publicité de recherche est devenue le plus grand marché publicitaire du monde en tarifant une seule chose : la position dans une liste classée au moment où quelqu'un exprime une intention. La recherche organique est devenue le canal d'acquisition par défaut pour la même raison. Les deux institutions supposent un utilisateur qui lit la liste, choisit, et clique.</p>
+
+      <p>Un moteur génératif supprime la liste. Il lit le même web qu'un crawler a toujours lu, mais au lieu de renvoyer des pointeurs classés il renvoie une réponse synthétisée : un paragraphe qui compare les options, pèse les arbitrages, et cite deux ou trois sources là où une page de résultats en exposait des milliers. Le changement d'interface a l'air petit. Le changement économique ne l'est pas, parce que la réponse absorbe le clic. Quelqu'un à qui on dit quel outil acheter, en prose fluide avec la comparaison déjà faite, a peu de raisons de visiter les onze sites de tests dont la réponse résume le travail.</p>
+
+      <h2>Qu'est-ce qui change vraiment ?</h2>
+
+      <p>Le basculement arrive en trois étapes, et il vaut la peine de les nommer, parce que chaque étape déplace un actif différent et menace un business différent.</p>
+
+      <p><strong>Étape un : des réponses dans la recherche.</strong> Un résumé généré s'installe au-dessus de la liste classée et intercepte une part de ses clics. Le perdant marginal est l'éditeur dont le referral est absorbé. Cette étape est déjà là.</p>
+
+      <p><strong>Étape deux : les moteurs de réponses.</strong> La conversation est toute l'interface et la liste classée n'apparaît jamais. Le perdant marginal est le canal de referral lui-même, et avec lui le régime d'attribution qui rendait le marketing digital mesurable. Si personne ne clique, rien n'est suivi, et l'influence qu'une page a eue sur un achat devient invisible pour les outils qui mesurent l'influence par les clics.</p>
+
+      <p><strong>Étape trois : des agents qui achètent.</strong> Le système ne recommande pas le bureau assis-debout. Il le localise, compare les marchands, remplit le paiement et finalise la commande sous autorité déléguée. Le perdant marginal est la relation directe du marchand avec son client, c'est-à-dire l'actif sur lequel reposent la rétention, l'expansion et le pouvoir de prix. À l'étape un, le modèle concurrence la page de résultats pour l'attention. À l'étape trois, il concurrence votre boutique pour la transaction.</p>
+
+      <p>C'est la même direction de voyage que celle dont j'ai parlé dans <a href="/fr/research/services-the-new-software/">ma lecture de la thèse services de Sequoia</a> : les machines montent dans la pile, de l'exécution des tâches à la propriété des résultats. Ici, le résultat qu'elles apprennent à posséder est l'achat.</p>
+
+      <h2>Pourquoi le clic comptait plus qu'il n'en avait l'air</h2>
+
+      <p>L'économie a toujours traité la recherche comme coûteuse, et tarifé les marchés en conséquence. Stigler a montré en 1961 que la dispersion des prix survit parce que comparer des options coûte un effort. L'école du fourragement informationnel a modélisé les gens comme des fourrageurs réglés sur les coûts, qui suivent une piste et abandonnent les zones qui cessent de rapporter. Les deux traditions font la même prédiction sur le présent : une interface qui réduit les coûts de recherche à presque rien est adoptée vite, parce que l'économie est immédiate et personnelle pendant que les dégâts sont différés et diffus.</p>
+
+      <p>Voici la partie qui compte pour le business. Quand le coût de trouver des options approche de zéro, la chose rare cesse d'être l'information. Elle devient la confiance dans le sélectionneur. Un marché où un agent conversationnel tient la liste courte est un marché avec un nouveau portier, et l'histoire des portiers, des agences de voyage aux app stores, est constante : les rentes vont à la porte. L'économie des plateformes l'a formalisé depuis Rochet et Tirole. Un moteur de recherche était un portier retenu, parce que la liste classée vous laissait le choix, et la relation client. Un moteur de réponses tient la liste courte. Un agent d'achat tient la transaction. C'est la position de portier la plus forte que l'internet grand public ait produite.</p>
+
+      <h2>Ce que la recherche dit déjà</h2>
+
+      <p>Le socle académique existe, dans trois pièces séparées qui se parlent rarement. Les citations complètes sont en bas de page.</p>
+
+      <p><strong>La capacité est réelle.</strong> Les chercheurs de Google eux-mêmes défendaient en 2021 l'idée que les systèmes de recherche devraient se comporter comme des experts qui répondent directement plutôt que comme des bibliothécaires qui pointent vers des rayonnages. La génération augmentée par récupération a rendu la proposition praticable en ancrant les réponses d'un modèle dans un corpus vivant. La recherche conversationnelle a ensuite changé ce qu'est une requête : un dialogue peut héberger tout le tunnel, du problème vague à la comparaison puis au choix, là où une liste classée servait une consultation à la fois.</p>
+
+      <p><strong>La visibilité dans les réponses est mesurable et en partie pilotable.</strong> Le papier GEO présenté à KDD 2024 a montré que des changements de contenu délibérés, affirmations citables, statistiques sourcées, structure claire, déplacent l'inclusion d'une source dans les réponses générées par des marges significatives, jusqu'à quarante pour cent sur leurs métriques de visibilité. Deux choses en découlent. L'inclusion est une variable pilotable, ce qui en fait un investissement stratégique plutôt qu'une loterie. Et partout où l'inclusion est pilotable, une industrie de l'optimisation se forme. Elle a déjà un nom, et j'<a href="/fr/research/hooked-nir-eyal/">utilise ses méthodes sur ce site</a> : chaque article ici est écrit pour être citable par un moteur de réponses autant que lisible par vous.</p>
+
+      <p><strong>La confiance se comporte étrangement en dialogue.</strong> La littérature sur le conseil contient une contradiction apparente. Les gens abandonnent les algorithmes après les avoir vus se tromper, ce que Dietvorst et ses collègues ont nommé l'aversion à l'algorithme. Les gens accordent aussi plus de poids au conseil algorithmique qu'au conseil humain dans beaucoup de tâches de jugement, ce que Logg et ses collègues ont nommé l'appréciation de l'algorithme. La résolution tient aux conditions, et les interfaces conversationnelles manipulent exactement ces conditions : le dialogue personnalise, la prose fluide masque l'incertitude, et la réponse arrive sans le désaccord visible entre sources qu'une page de résultats affiche par défaut. Chacun de ces mécanismes pousse vraisemblablement la confiance au-dessus de l'exactitude. Et il y a un second problème, plus discret : les consommateurs ont passé des décennies à apprendre à reconnaître les publicités et à s'en méfier. Une recommandation synthétisée ne porte aucun des marqueurs qui déclenchent cette défense. Si l'influence payée entre dans la couche des réponses, elle peut hériter de la crédibilité du conseil plutôt que du scepticisme réservé à la publicité.</p>
+
+      <p><strong>La théorie des prix ne colle plus.</strong> Les enchères de position, le mécanisme qui a fait de la recherche le marché publicitaire le plus efficace jamais construit, présupposent des emplacements discrets, des clics observables, et un annonceur qui enchérit pour un utilisateur qui fait encore le choix final. Une réponse n'a pas d'emplacements, absorbe le clic, et à l'étape agentique fait le choix elle-même. L'influence sur une liste courte assemblée dans un modèle sera quand même tarifée. Sans enchère transparente, elle sera tarifée de façon opaque.</p>
+
+      <h2>Quatre tests qui trancheraient</h2>
+
+      <p>Je n'ai pas mené ces études. J'écris les prédictions avant les preuves, parce qu'une prédiction datée d'après les données n'est qu'une histoire. Si quelqu'un qui a les données veut mener l'un de ces tests avec moi, ma boîte mail est ouverte.</p>
+
+      <p><strong>Test un : la substitution, par intention.</strong> Prenez un panel de sites avec de l'analytics côté serveur et exploitez le fait que les réponses génératives ont été déployées marché par marché et type de requête par type de requête. Comparez le taux de clic par impression avant et après, contre des classes de requêtes non touchées comme contrôle. Ma prédiction : des pertes de clics réelles, concentrées sur les requêtes d'information et de comparaison, minimales sur la navigation et la transaction. Et une seconde signature : la part des requêtes de marque monte, parce que le clic qui survit à la réponse est un clic de vérification. Les gens vérifient ce que la machine leur a dit en cherchant le nom qu'elle a donné.</p>
+
+      <p><strong>Test deux : qui est cité, et pouvez-vous le déplacer.</strong> Lancez une batterie fixe de questions commerciales contre les grands moteurs de réponses chaque semaine et notez quels domaines sont cités. Puis randomisez des améliorations de contenu légitimes, données structurées, titres en forme de question, affirmations citables d'une ligne, sur des pages appariées et regardez l'inclusion. Ma prédiction : la citation est bien plus concentrée que les pages de résultats ne l'ont jamais été, une poignée de domaines portant la plupart des réponses, et l'inclusion répond à la structure, de façon significative mais moins que l'autorité du domaine. Le churn de semaine en semaine de l'ensemble cité est le chiffre que je regarderais le plus, parce qu'il vous dit si la visibilité dans les réponses est un actif qui s'accumule ou un tapis roulant que vous louez.</p>
+
+      <p><strong>Test trois : ce que la conversation fait aux acheteurs.</strong> Donnez à trois groupes la même tâche d'achat avec de l'argent réel : l'un cherche dans un catalogue classé, l'autre interroge un assistant relié au même catalogue, le troisième peut lui déléguer le paiement. Mesurez combien d'options les gens considèrent, la qualité de ce qu'ils choisissent, ce qu'ils paient, et leur confiance comparée à leur justesse. Ma prédiction : la conversation rétrécit la liste et creuse l'écart entre confiance et exactitude. Les mentions de sponsoring qui fonctionnent sur une page de résultats fonctionneront moins bien dans un dialogue. Et ceux qui délèguent paieront plus que ceux qui choisissent à la main parmi les mêmes recommandations.</p>
+
+      <p><strong>Test quatre : suivre la marge.</strong> Asseyez-vous avec des marchands branchés sur le paiement médié par agent et lisez les vraies structures de frais. Ma prédiction : les commandes d'agent portent un péage que les commandes directes n'ont pas, le dossier client revient à l'opérateur de l'agent plutôt qu'au marchand, et la responsabilité des erreurs atterrit chez le marchand pendant que l'influence sur la découverte reste chez l'opérateur. Les exceptions, les marchands qui ont gardé la relation client, seront les cas les plus instructifs de tout le programme.</p>
+
+      <div class="callout">
+        <p>La recherche devient une réponse. La réponse devient un agent. Chaque pas déplace l'attention, puis la confiance, puis la transaction elle-même à l'intérieur de la médiation de la machine, et chaque pas retarife un actif différent de votre bilan.</p>
+      </div>
+
+      <h2>Ce que cela signifie pour votre business</h2>
+
+      <p>Vous n'avez pas besoin d'attendre les études pour agir sur la direction. Quatre gestes en découlent, et il se trouve que ce sont les quatre que je vends, ce qui est soit un conflit d'intérêts, soit la raison pour laquelle je l'ai remarqué. À vous de juger.</p>
+
+      <p><strong>Traitez la lisibilité machine comme un canal de distribution.</strong> Du contenu écrit pour être cité, pas seulement classé : des affirmations citables d'une phrase, des statistiques avec sources nommées, des questions en titres, des données structurées en dessous, et une politique de crawl décidée comme une stratégie de canal plutôt que laissée en réglage serveur par défaut. Cela fonctionne en parallèle du SEO classique et le dépassera. C'est aussi bon marché en ce moment, comme le SEO était bon marché en 2003, et cela ne le restera pas.</p>
+
+      <p><strong>Reconstruisez la marque comme prior de récupération.</strong> Quand l'interface cache le rayon, le nom que le client demande est le dernier canal qu'aucune liste courte ne peut intercepter. La demande qui arrive déjà nommée ne peut pas être désintermédiée par un ensemble de considération. Si ma prédiction de substitution est juste, la part de recherche de marque est en train de devenir le KPI honnête du marketing, parce qu'elle mesure la seule demande que la couche de réponses ne peut pas vous prendre. C'est du <a href="/fr/about/">travail de positionnement</a>, et il vient de prendre de la valeur, pas d'en perdre.</p>
+
+      <p><strong>Tarifez comme si chaque comparaison allait être faite parfaitement.</strong> Un agent lit chaque page de prix de votre catégorie sans fatigue et re-compare à chaque achat. Le packaging bâti sur l'obscurité, tiers leurres, frais cachés, friction de comparaison, est un passif daté. Le packaging bâti sur une différenciation réelle, et sur des relations qu'un agent ne peut pas arbitrer, garde son pouvoir. Si votre marge dépend du fait que le client ne regarde pas de trop près, <a href="/fr/#pricing">réparez cela avant l'arrivée des agents</a>, à votre calendrier plutôt qu'au leur.</p>
+
+      <p><strong>Mesurez la part de réponse, pas seulement les classements.</strong> L'attribution par referral sous-compte votre influence dans la proportion exacte de la substitution. La métrique qui succède est la part de réponse : la fréquence, et la faveur, avec lesquelles vous apparaissez dans les réponses générées aux questions de votre catégorie, suivies comme les marques de grande consommation suivent leur part de linéaire. La batterie de questions hebdomadaire du test deux n'est pas qu'un instrument de recherche. C'est le prototype d'un tableau de bord que votre équipe marketing devrait déjà avoir.</p>
+
+      <h2>Où cet argument casse</h2>
+
+      <p>Trois faiblesses honnêtes. Un, les moteurs dérivent : les versions de modèles changent sans préavis, donc tout ce que vous mesurez du comportement des réponses est une observation datée d'un système mouvant, et toute visibilité gagnée peut être réarrangée dans une mise à jour dont personne ne vous a parlé. Deux, le milieu de mon argument repose sur la poursuite de l'adoption, et l'adoption est un pari, pas une loi. Si la qualité des réponses stagne, ou si une recommandation hallucinée produit un procès assez laid pour ralentir la délégation, l'étape agentique arrive en retard ou arrive régulée. Trois, l'économie de la réponse a une dépendance non tarifée : elle se nourrit de contenus que le revenu de referral finance aujourd'hui. Si l'étape deux effondre ce revenu, le corpus qui ancre les réponses se dégrade. Personne, y compris les opérateurs de moteurs, n'a encore une bonne histoire pour ça.</p>
+
+      <p>Rien de tout cela ne change la direction. Cela change le calendrier, et les calendriers sont ce sur quoi les opérateurs planifient.</p>
+
+      <h2>Sources</h2>
+
+      <p class="refs-intro">La recherche sur laquelle ce papier s'appuie, vérifiée contre les publications.</p>
+
+      <ul class="refs-list">
+        <li>Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K. and Deshpande, A. (2024). GEO: Generative engine optimization. <em>Proceedings of the 30th ACM SIGKDD Conference</em>. <a href="https://doi.org/10.1145/3637528.3671900" target="_blank" rel="noopener">doi:10.1145/3637528.3671900</a></li>
+        <li>Callaway, B. and Sant'Anna, P. H. C. (2021). Difference-in-differences with multiple time periods. <em>Journal of Econometrics</em>, 225(2), 200&ndash;230. <a href="https://doi.org/10.1016/j.jeconom.2020.12.001" target="_blank" rel="noopener">doi:10.1016/j.jeconom.2020.12.001</a></li>
+        <li>Dietvorst, B. J., Simmons, J. P. and Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. <em>Journal of Experimental Psychology: General</em>, 144(1), 114&ndash;126. <a href="https://doi.org/10.1037/xge0000033" target="_blank" rel="noopener">doi:10.1037/xge0000033</a></li>
+        <li>Edelman, B., Ostrovsky, M. and Schwarz, M. (2007). Internet advertising and the generalized second-price auction. <em>American Economic Review</em>, 97(1), 242&ndash;259. <a href="https://doi.org/10.1257/aer.97.1.242" target="_blank" rel="noopener">doi:10.1257/aer.97.1.242</a></li>
+        <li>Lewis, P., Perez, E., Piktus, A. et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. <em>Advances in Neural Information Processing Systems</em>, 33, 9459&ndash;9474. <a href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" target="_blank" rel="noopener">proceedings.neurips.cc</a></li>
+        <li>Logg, J. M., Minson, J. A. and Moore, D. A. (2019). Algorithm appreciation: People prefer algorithmic to human judgment. <em>Organizational Behavior and Human Decision Processes</em>, 151, 90&ndash;103. <a href="https://doi.org/10.1016/j.obhdp.2018.12.005" target="_blank" rel="noopener">doi:10.1016/j.obhdp.2018.12.005</a></li>
+        <li>Metzler, D., Tay, Y., Bahri, D. and Najork, M. (2021). Rethinking search: Making domain experts out of dilettantes. <em>ACM SIGIR Forum</em>, 55(1), 1&ndash;27. <a href="https://doi.org/10.1145/3476415.3476428" target="_blank" rel="noopener">doi:10.1145/3476415.3476428</a></li>
+        <li>Pirolli, P. and Card, S. (1999). Information foraging. <em>Psychological Review</em>, 106(4), 643&ndash;675. <a href="https://doi.org/10.1037/0033-295X.106.4.643" target="_blank" rel="noopener">doi:10.1037/0033-295X.106.4.643</a></li>
+        <li>Rochet, J.-C. and Tirole, J. (2003). Platform competition in two-sided markets. <em>Journal of the European Economic Association</em>, 1(4), 990&ndash;1029. <a href="https://doi.org/10.1162/154247603322493212" target="_blank" rel="noopener">doi:10.1162/154247603322493212</a></li>
+        <li>Stigler, G. J. (1961). The economics of information. <em>Journal of Political Economy</em>, 69(3), 213&ndash;225. <a href="https://doi.org/10.1086/258464" target="_blank" rel="noopener">doi:10.1086/258464</a></li>
+        <li>Varian, H. R. (2007). Position auctions. <em>International Journal of Industrial Organization</em>, 25(6), 1163&ndash;1178. <a href="https://doi.org/10.1016/j.ijindorg.2006.10.002" target="_blank" rel="noopener">doi:10.1016/j.ijindorg.2006.10.002</a></li>
+      </ul>
+
+      <h2>Questions fréquentes</h2>
+
+      <div class="faq-inline">
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Les LLM vont-ils remplacer les moteurs de recherche ?</summary>
+          <p>Les LLM remplacent l'interface de la recherche plutôt que sa tuyauterie : l'exploration et la récupération continuent en dessous, mais la liste classée de liens est remplacée par une réponse synthétisée, et les réponses absorbent la plupart des clics qu'une liste envoyait vers l'extérieur. Attendez-vous à une substitution maximale sur les requêtes d'information et de comparaison, et minimale sur les requêtes de navigation, où les gens savent déjà où ils vont.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Qu'est-ce que l'optimisation pour moteurs génératifs ?</summary>
+          <p>L'optimisation pour moteurs génératifs, ou GEO, est la pratique qui rend un contenu plus susceptible d'être inclus et cité dans les réponses générées par IA. Des travaux évalués par les pairs ont montré que des affirmations citables d'une phrase, des statistiques sourcées, une structure claire et des titres en forme de question augmentent de façon mesurable la visibilité d'une page dans les réponses générées. Elle fonctionne en parallèle du SEO classique et optimise pour être cité plutôt que simplement classé.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Qu'est-ce que le commerce agentique ?</summary>
+          <p>Le commerce agentique est l'achat exécuté par un agent IA sous autorité déléguée : l'agent trouve le produit, compare les marchands, remplit le paiement et finalise la commande. Il déplace la transaction, et généralement le dossier client, de la boutique du marchand vers l'opérateur de l'agent, et c'est pourquoi il change le pouvoir de prix et pas seulement les interfaces.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>Comment une entreprise doit-elle se préparer à la recherche pilotée par l'IA ?</summary>
+          <p>Quatre gestes : investissez dans la lisibilité machine pour que les moteurs de réponses puissent vous citer, données structurées et affirmations citables comprises ; construisez la marque, parce que la demande qui arrive déjà nommée est le seul canal que la liste courte d'une machine ne peut pas intercepter ; tarifez comme si chaque comparaison allait être faite parfaitement, puisque les agents lisent chaque page de prix sans fatigue ; et commencez à mesurer la part de réponse, la fréquence à laquelle vous apparaissez dans les réponses générées aux questions de votre catégorie, à côté des classements classiques.</p>
+        </details>
+        <details class="glass faq-item" data-track="faq_open">
+          <summary>L'achat médié par IA rend-il les consommateurs mieux lotis ?</summary>
+          <p>Cela dépend d'un écart que l'on peut mesurer : si les recommandations conversationnelles réduisent les options considérées tout en gardant une bonne qualité de choix, c'est du conseil efficace ; si elles réduisent les options pendant que la confiance dépasse l'exactitude, c'est un canal de persuasion qui contourne des défenses apprises sur la publicité. Les premiers travaux sur la confiance en dialogue suggèrent que le risque est réel, et c'est pourquoi les règles de transparence conçues pour des emplacements publicitaires étiquetés doivent être repensées pour les réponses.</p>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/fr/" class="footer-mark">
+          <svg class="brand-logo" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false">
+      <rect width="1024" height="1024" rx="232" fill="url(#qd-grad)"/>
+      <path fill-rule="evenodd" fill="var(--on-accent)"
+            d="M512,168a320,320 0 1,0 0,640a320,320 0 1,0 0,-640Z
+               M360,340h180c81.74,0,148,66.26,148,148s-66.26,148-148,148h-180v-296Z"/>
+      <path fill="var(--on-accent)" d="M640,660l180,180h-100l-140-140,60-40Z"/>
+    </svg>
+          Quentin Dupard
+        </a>
+        <p class="footer-role">Produit &amp; marketing à temps partagé</p>
+
+        <a class="footer-mail" href="mailto:quentin.dupard@gmail.com">quentin.dupard@gmail.com</a>
+
+        <p class="footer-where">
+          <strong>J'interviens partout</strong><br> À distance par défaut<br> Sur place quand ça le mérite
+        </p>
+
+        <a class="btn btn-glass footer-call" href="https://calendly.com/quentin-dupard-call/30min" target="_blank" rel="noopener">
+          Réserver 30 minutes
+        </a>
+
+        <a class="footer-social" href="https://www.linkedin.com/in/quentindupard/" target="_blank" rel="noopener">
+          <span class="footer-social-icon" aria-hidden="true">in</span> Me suivre sur LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Ce que je fais">
+        <h2>Ce que je fais</h2>
+        <a href="/fr/research/">Toute la recherche</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Missions">
+        <h2>Missions</h2>
+        <a href="/fr/#pricing">Espresso &mdash; 90 minutes</a>
+        <a href="/fr/#pricing">Sprint &mdash; deux semaines</a>
+        <a href="/fr/#pricing">Operator &mdash; au long cours</a>
+        <a href="/fr/#pricing">Comparer les trois</a>
+        <a href="/assets/docs/engagement-one-pager.pdf" download>Comment je travaille (PDF)</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Site">
+        <h2>Site</h2>
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/about/">À propos de moi</a>
+        <a href="/fr/#work-done">Ce que j'ai fait</a>
+        <a href="/fr/#faq">FAQ</a>
+        <a href="/fr/research/">Recherche</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Plus">
+        <h2>Plus</h2>
+        <a href="/fr/#ask">Interroger l'IA-moi</a>
+        <a href="/fr/#inbox">Écrivez-moi</a>
+        <a href="/fr/stats/">Statistiques en direct</a>
+        <a href="/fr/privacy/">Confidentialité</a>
+        <a href="https://billing.stripe.com/p/login/6oUcN55Ridk40TwgqZ0oM00"
+           target="_blank" rel="noopener"
+           data-track="manage_subscription">Gérer mon abonnement</a>
+        </nav>
+
+    </div>
+
+    <div class="footer-legal">
+      <p class="footer-privacy">
+        Mesure d'audience maison, agrégée. Pas de publicité, pas de profils, aucune IP conservée. <a href="/fr/stats/">Les chiffres sont publics</a> et <a href="/fr/privacy/">le détail aussi</a>.
+      </p>
+      <p class="footer-copy">&copy; 2026 Quentin Dupard. Tous droits réservés.</p>
+    </div>
+  </div>
+
+  <!-- Oversized wordmark, clipped at the baseline. Decorative: the real
+       name is in the brand link above, so this is hidden from screen readers. -->
+  <div class="footer-wordmark" aria-hidden="true"><span>Quentin Dupard</span></div>
+</footer>
+
+<script src="/assets/i18n.js?v=16" defer></script>
+<script src="/assets/track.js?v=8" defer></script>
+<script src="/assets/articles.js?v=6" defer></script>
+<script src="/assets/article.js?v=8" defer></script>
+</body>
+</html>

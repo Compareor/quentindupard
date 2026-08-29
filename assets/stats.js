@@ -374,3 +374,10 @@
     boot();
   }
 })();
+
+/* Gradient drift starts after load; see glass.css .anim-ready. */
+(function () {
+  var arm = function () { document.documentElement.classList.add('anim-ready'); };
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();

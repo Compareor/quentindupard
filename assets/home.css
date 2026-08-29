@@ -951,14 +951,20 @@
 
 .mail-item {
   display: block; width: 100%;
-  padding: 13px 15px;
   border-bottom: 1px solid var(--tint);
-  cursor: pointer;
   border-left: 2px solid transparent;
   transition: background .18s;
 }
 
 .mail-item:hover { background: var(--tint); }
+.mail-item-btn {
+  display: block; width: 100%;
+  padding: 13px 15px;
+  font: inherit; color: inherit; text-align: inherit;
+  background: none; border: 0; margin: 0;
+  cursor: pointer;
+}
+.mail-item-btn:focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 6px; }
 
 .mail-item.is-open { background: var(--tint-strong); border-left-color: var(--cyan); }
 

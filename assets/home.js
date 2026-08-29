@@ -77,12 +77,20 @@
   }
 
   function initReveal() {
-    measureIcons();
+    // getTotalLength() forces layout on every icon path; none of them are
+    // above the fold, so measuring can wait for an idle moment.
+    (window.requestIdleCallback || ((fn) => setTimeout(fn, 300)))(measureIcons);
 
-    // The hero h1 is above the fold and never enters the observer, so its
-    // glint has to be triggered on load rather than on intersection.
-    const heroTitle = $('.hero-title.glint');
-    if (heroTitle) setTimeout(() => heroTitle.classList.add('in'), 240);
+    // Decorative motion on the hero (gradient drift, glint) starts after
+    // load: the first paint stays still, so the LCP entry can settle
+    // instead of being repainted from time zero.
+    const arm = () => {
+      document.documentElement.classList.add('anim-ready');
+      const heroTitle = $('.hero-title.glint');
+      if (heroTitle) setTimeout(() => heroTitle.classList.add('in'), 240);
+    };
+    if (document.readyState === 'complete') arm();
+    else window.addEventListener('load', arm, { once: true });
 
     $$('.line-reveal').forEach(splitWords);
 
@@ -817,8 +825,12 @@
       items.forEach((m) => {
         const li = document.createElement('li');
         li.className = 'mail-item' + (readIds.has(m.id) ? ' read' : '') + (m.id === openId ? ' is-open' : '');
-        li.tabIndex = 0;
-        li.setAttribute('role', 'button');
+        // A native button inside a plain <li>: the list keeps its semantics
+        // for screen readers, the button brings focus and Enter/Space for free.
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'mail-item-btn';
+        li.appendChild(btn);
 
         const top = document.createElement('div');
         top.className = 'mail-item-top';
@@ -840,7 +852,7 @@
         subject.className = 'mail-item-subject';
         subject.textContent = t(m.subject);
 
-        li.append(top, subject);
+        btn.append(top, subject);
 
         if (m.attach && m.attach.length) {
           const clip = document.createElement('div');
@@ -849,14 +861,10 @@
           // pluralise by suffixing the English word.
           const n = m.attach.length;
           clip.textContent = '📎 ' + t(n > 1 ? '{n} attachments' : '{n} attachment').replace('{n}', n);
-          li.appendChild(clip);
+          btn.appendChild(clip);
         }
 
-        const open = () => openMessage(m);
-        li.addEventListener('click', open);
-        li.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-        });
+        btn.addEventListener('click', () => openMessage(m));
 
         list.appendChild(li);
       });

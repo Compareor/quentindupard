@@ -230,8 +230,10 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
   background-position: 0% 0;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
-  animation: shade-drift 5s var(--ease) infinite alternate;
 }
+/* The drift starts once the page has loaded (html.anim-ready), so the
+   hero paints once and holds still through the metrics window. */
+.anim-ready .gradient-text { animation: shade-drift 5s var(--ease) infinite alternate; }
 @keyframes shade-drift {
   from { background-position: 0% 0; }
   to   { background-position: 100% 0; }
@@ -658,11 +660,13 @@ h3 { font-size: 20px; letter-spacing: -0.02em; }
 }
 .reveal.in .glint::after,
 .glint.in::after { animation: glint-sweep 1.15s var(--ease) .35s 1 forwards; }
+/* Animates transform, not left: the sweep runs on the compositor and
+   never invalidates paint on the heading underneath (the LCP element). */
 @keyframes glint-sweep {
-  0%   { left: -60%; opacity: 0; }
+  0%   { transform: translateX(0) skewX(-18deg); opacity: 0; }
   12%  { opacity: 1; }
   88%  { opacity: 1; }
-  100% { left: 115%; opacity: 0; }
+  100% { transform: translateX(390%) skewX(-18deg); opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -33,11 +33,59 @@ def minify(css):
     css = re.sub(r'\s*([{}:;,>])\s*', r'\1', css)
     return css.replace(';}', '}').strip()
 
-def marked(css):
-    return '\n'.join(re.findall(r'/\* critical:start[^*]*\*/(.*?)/\* critical:end \*/', css, re.S))
-
 def read(name):
     return open(os.path.join(ROOT, 'assets', name), encoding='utf-8').read()
+
+
+def css_chunks(css):
+    """Top-level chunks: comments, at-rules with bodies, plain rules."""
+    out, i, n = [], 0, len(css)
+    while i < n:
+        if css.startswith('/*', i):
+            j = css.find('*/', i) + 2; i = j; continue
+        if css[i] in ' \t\n\r': i += 1; continue
+        j = css.find('{', i)
+        if j == -1: break
+        depth, k = 1, j + 1
+        while k < n and depth:
+            if css[k] == '{': depth += 1
+            elif css[k] == '}': depth -= 1
+            k += 1
+        out.append((css[i:j].strip(), css[j+1:k-1], css[i:k]))
+        i = k
+    return out
+
+
+def home_critical():
+    """Every home.css rule whose selector touches a class that appears
+       above the fold (nav + hero + the first act), media blocks included.
+       Derived from the markup on every run, so new above-fold elements
+       pull their styles in automatically."""
+    page = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+    cut = page.find('<!-- ══ ACT 02')
+    fold = page[:cut if cut > 0 else len(page)]
+    toks = set()
+    for m in re.findall(r'class="([^"]+)"', fold):
+        toks.update(m.split())
+    css = read('home.css')
+    sel_cls = re.compile(r'\.([\w-]+)')
+
+    def wanted(selector):
+        cls = set(sel_cls.findall(selector))
+        return bool(cls & toks) if cls else True
+
+    keep = []
+    for head, body, full in css_chunks(css):
+        if head.startswith('@keyframes') or head.startswith('@-webkit-keyframes'):
+            keep.append(full)      # tiny, and animations must not restyle late
+        elif head.startswith('@'):
+            inner = [f for h, b, f in css_chunks(body) if wanted(h)]
+            if inner:
+                keep.append(head + '{' + ''.join(inner) + '}')
+        elif any(wanted(x) for x in head.split(',')):
+            keep.append(full)
+    return '\n'.join(keep)
+
 
 def process(path):
     s = open(path, encoding='utf-8').read()
@@ -68,7 +116,7 @@ def process(path):
     links = ''
     if home_async:
         assert home_v, f'{rel}: no home.css version found'
-        parts.append(minify(marked(read('home.css'))))
+        parts.append(minify(home_critical()))
         href = f'/assets/home.css?v={home_v}'
         links = (f'<link rel="stylesheet" href="{href}" media="print" onload="this.media=\'all\'">\n'
                  f'<noscript><link rel="stylesheet" href="{href}"></noscript>\n')

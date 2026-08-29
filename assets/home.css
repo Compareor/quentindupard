@@ -1,4 +1,3 @@
-/* critical:start — inlined into <head> by tools/critical.py */
 /* ==========================================================
    home.css — homepage-only sections (carousel, pricing, fort,
    mailbox, chat, toasts...). Shared chrome lives in site.css,
@@ -19,8 +18,6 @@
   margin-top: 46px;
   font-size: 13px; color: var(--text-faint);
 }
-
-/* critical:end */
 
 /* ── Acts ────────────────────────────────────────────────── */
 
@@ -54,7 +51,6 @@
 
 .aside a { color: var(--cyan); text-decoration: underline; text-underline-offset: 2px; }
 
-/* critical:start */
 /* ── Ask surface ─────────────────────────────────────────── */
 
 .ask { width: 100%; max-width: 760px; padding: 18px; border-radius: var(--r-xl); }
@@ -155,8 +151,6 @@
   border-top: 1px solid var(--hair);
   font-size: 12px; line-height: 1.5; color: var(--text-faint);
 }
-
-/* critical:end */
 
 /* ── Work list ───────────────────────────────────────────── */
 

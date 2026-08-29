@@ -53,7 +53,24 @@ def head_and_chrome():
 
 
 def article_schema(slug, title, summary, url):
-    return f"""{main_schema}"""
+    """Regular pieces are Articles. (This body was lost at some point — the
+       function returned an undefined variable and crashed every non-book
+       scaffold. None had been run since the reset, which is why it hid.)"""
+    return f"""<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{title}",
+  "description": "{summary}",
+  "url": "{url}",
+  "mainEntityOfPage": "{url}",
+  "datePublished": "TODO-YYYY-MM-DD",
+  "author": {{ "@id": "{SITE}/#quentin" }},
+  "publisher": {{ "@id": "{SITE}/#quentin" }},
+  "image": "{SITE}/assets/research/{slug}.svg",
+  "inLanguage": "en"
+}}
+</script>"""
 
 
 def book_schema(title, summary, url, book_title, author, isbn):

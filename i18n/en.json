@@ -10,6 +10,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -67,6 +68,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -204,6 +206,12 @@
       "index.html"
     ]
   },
+  "0d7bbc64b39b": {
+    "en": "<strong>You advise, consult, or coach.</strong> The essay ends by admitting consulting is mostly judgement and leaving the automation candidates open. Do not relax. The disaggregation it sketches, machines taking the research and benchmarking while humans keep the recommendation, describes your deliverable exactly. If half your fee is for gathering and half for concluding, the gathering half is already repriced. Make sure your invoice knows which half is which.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "0dc3510a03e2": {
     "en": "<strong>Use it with</strong> a testing discipline &mdash; the fact-or-guess marking above is the minimum &mdash; because the canvas without evidence is a mood board. The authors evidently agreed: their next book was about testing the middle box.",
     "pages": [
@@ -220,6 +228,12 @@
     "en": "The real one",
     "pages": [
       "index.html"
+    ]
+  },
+  "0eba2e551585": {
+    "en": "Two distinctions carry the essay. The first splits all work into <strong>intelligence</strong> and <strong>judgement</strong>. Intelligence work is complex but rule-governed: translating a spec into code, filling a claim against a damage schedule. Judgement is knowing what to build next, when to ship, which risk to eat. AI has crossed the line where it does most of the intelligence work autonomously. Software engineering crossed first, and Bek&rsquo;s claim is that every profession follows, in order of how rule-governed its work is.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "0f18f9e71709": {
@@ -264,6 +278,12 @@
       "index.html"
     ]
   },
+  "1150b771148f": {
+    "en": "Autopilots price against labour, not software. A service that replaces a six-figure cost can charge a fraction of it and still keep software margins. But that anchor decays: as more autopilots enter a category, buyers stop comparing the price to a salary and start comparing quotes, and prices fall toward cost. Sellers should treat the labour anchor as a launch window, not a business model. Buyers should treat early autopilot quotes as the worst price they will ever be offered, and negotiate accordingly.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "119d0da04f93": {
     "en": "Pricing or packaging rebuild",
     "pages": [
@@ -298,6 +318,12 @@
     "en": "Act",
     "pages": [
       "index.html"
+    ]
+  },
+  "13f4c056f5ad": {
+    "en": "<strong>The judgement line moves, and the essay says so quietly.</strong> The comfort in the intelligence/judgement split is that your judgement is safe. But the convergence section concedes that today&rsquo;s judgement becomes tomorrow&rsquo;s intelligence, as systems accumulate data about what good decisions look like. So the split is not a wall. It is a waterline, and it is rising. The honest version of the thesis is not that machines do intelligence and humans keep judgement. It is that humans keep whatever judgement has not yet been recorded often enough to become rules. Plan on the waterline, not the wall.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "145fd3f065f2": {
@@ -335,6 +361,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -415,6 +442,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -459,6 +487,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -558,6 +587,12 @@
       "index.html"
     ]
   },
+  "22e9fadd586a": {
+    "en": "A copilot sells a tool to a professional, who stays in the loop and takes responsibility for the output; legal AI sold to law firms is the classic case. An autopilot sells the finished outcome to whoever needed the work done, cutting the professional out of the transaction: the NDA drafted, the insurance placed, the books closed. The commercial difference is the budget. Copilots compete for the software budget, autopilots for the much larger labour budget. The strategic difference is accountability: the copilot’s user answers for the work, while the autopilot must answer for it itself.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "2301db88a007": {
     "en": "SaaS platform",
     "pages": [
@@ -592,6 +627,12 @@
     "en": "<span class=\"demand-n\" id=\"d-adds\">—</span><span class=\"demand-l\">Added to cart</span>",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "26d433cf568f": {
+    "en": "Intelligence work is complex but rule-governed: translating a specification into code, coding a claim against a schedule, filling a filing. Judgement is deciding under uncertainty, built on experience and taste: what to build next, when to ship, which risk to accept. The essay’s claim is that AI has crossed the threshold on intelligence work while judgement stays human, with one important caveat conceded in its own convergence section: recorded judgement gradually becomes tomorrow’s rules. The line is a waterline, not a wall.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "280b61f3d874": {
@@ -636,6 +677,13 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "2aa9977d340c": {
+    "en": "Selling the work: Sequoia's services thesis, applied to your business",
+    "pages": [
+      "research/index.html",
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "2b67c7698b9a": {
     "en": "Act 01",
     "pages": [
@@ -677,6 +725,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -703,6 +752,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -790,6 +840,13 @@
       "index.html"
     ]
   },
+  "342e36d06552": {
+    "en": "A working read of Sequoia's 'Services: The New Software' — the copilot-to-autopilot shift, where the argument holds, and one takeaway for every kind of business it touches.",
+    "pages": [
+      "research/index.html",
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "3447d49c1047": {
     "en": "Think I can help?",
     "pages": [
@@ -807,6 +864,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -967,6 +1025,12 @@
       "index.html"
     ]
   },
+  "3ff458dfc37e": {
+    "en": "<strong>You are building an AI product right now.</strong> The wedge logic is the most useful page for you: pick the task that is already outsourced, already budgeted, already bought as an outcome, and land as a vendor swap instead of a reorg. But run <a href=\"/research/business-model-generation/\">the canvas</a> on it first. Whose budget line, which segment, what the revenue stream anchors to. The essay&rsquo;s map is drawn by market size, and you will live or die by segment.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "40ba6d832782": {
     "en": "Nothing above is a paywall on the thinking: the <a href=\"#work-done\">research</a>, the <a href=\"/assets/docs/engagement-one-pager.pdf\" download data-track=\"click_pdf\" data-track-label=\"one-pager\">sample deliverables</a> and five questions to <a href=\"#ask\">AI-me</a> cost nothing and want no email. Unlimited questions are $10 a month.",
     "pages": [
@@ -1013,6 +1077,12 @@
     "en": "Good choice.",
     "pages": [
       "index.html"
+    ]
+  },
+  "44464d1195fc": {
+    "en": "What does the autopilot shift mean for pricing?",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "45a2bb657dba": {
@@ -1081,6 +1151,12 @@
       "index.html"
     ]
   },
+  "49214ebc6100": {
+    "en": "Commentary",
+    "pages": [
+      "research/index.html"
+    ]
+  },
   "4927d0b4df24": {
     "en": "Course business",
     "pages": [
@@ -1104,6 +1180,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -1141,6 +1218,12 @@
     "en": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most businesses asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.",
     "pages": [
       "index.html"
+    ]
+  },
+  "4d3a9d4cc7e6": {
+    "en": "What does Sequoia&rsquo;s &ldquo;Services: The New Software&rdquo; argue?",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "4d3f5c36cc98": {
@@ -1203,6 +1286,12 @@
       "about/index.html"
     ]
   },
+  "52b24fe2d963": {
+    "en": "What the essay argues",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "52bc8531f357": {
     "en": "<span id=\"compose-submit-label\">Send</span>",
     "pages": [
@@ -1213,6 +1302,12 @@
     "en": "Yes",
     "pages": [
       "index.html"
+    ]
+  },
+  "53e26a344d24": {
+    "en": "What is the intelligence versus judgement distinction?",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "5425025d8dae": {
@@ -1244,6 +1339,12 @@
     "en": "The sharpest idea in the book is borrowed and gets two pages. John Gourville&rsquo;s finding that a new product has to be roughly nine times better to displace an established routine &mdash; because people overvalue what they have and builders overvalue what they made &mdash; does more explanatory work than the rest of the book combined. If you only take one thing, take that.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "56bf698e29e2": {
+    "en": "One takeaway each. They compound if several describe you.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "56dbdc277965": {
@@ -1323,7 +1424,14 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
+    ]
+  },
+  "5b6a23b7727d": {
+    "en": "<strong>You run an ecommerce shop, a local business, anything offline.</strong> You are not the disruptee here. You are the buyer. Your bookkeeping, your IT contract, your insurance brokerage and your long-tail supplier negotiations are all on the essay&rsquo;s target list. Re-tender the outsourced intelligence work over the next two years, insist on outcome pricing with liability attached, and redeploy what you save into the work nobody sells you: <a href=\"/#work\">positioning, pricing, deciding what to build</a>. The savings are temporary. What you do with them is not.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "5b6f732dbbbb": {
@@ -1367,6 +1475,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -1455,6 +1564,12 @@
       "privacy/index.html"
     ]
   },
+  "633026583961": {
+    "en": "Sequoia published an essay arguing that the next great software company will look like a services firm. It will not sell you the accounting tool; it will close the books. I sell judgement while machines eat execution, so I read it twice. Once nodding, once looking for what it costs you. Both readings are below, with one takeaway for whichever business you run.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "642d0b611d4c": {
     "en": "Making disagreement visible. Different leaders in the same company routinely carry different models of it in their heads &mdash; different segments, different value propositions, different ideas of what is being paid for. The canvas puts all of it on one page in twenty minutes, which turns a vague strategy unease into a specific argument. Its main limit is symmetrical: it describes with equal confidence whether the boxes contain facts or wishes, so it needs an evidence discipline bolted on.",
     "pages": [
@@ -1515,6 +1630,12 @@
       "privacy/index.html"
     ]
   },
+  "66762064715e": {
+    "en": "The setup is the anxiety every AI founder carries: whatever tool you build, the next model release may ship it as a feature. Bek&rsquo;s answer is to stop selling the tool and sell the work, because if you sell the work, every model improvement makes your service faster and cheaper instead of making you redundant. His example gives the size of the prize. A company pays five figures a year for accounting software and six figures for the accountant. The software budget was never the market. The labour budget is.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "670d5e470ca8": {
     "en": "The book says the canvas is a tool for inventing new business models. In ten years of using it I have watched it do something humbler and more valuable: it ends the meeting where everyone in the room is describing a different company.",
     "pages": [
@@ -1537,6 +1658,12 @@
     "en": "How far people scroll",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "677d2120e237": {
+    "en": "That AI companies should sell completed work rather than tools, because tools race against the next model release while services get cheaper and faster with every one. It splits work into intelligence, which is complex but rule-governed, and judgement, which is not. It argues AI now does most intelligence work autonomously, and maps the service industries where “autopilots” can sell outcomes directly: insurance brokerage, accounting, healthcare billing, claims, tax, transactional legal, IT, procurement, recruitment. Its go-to-market advice is to start where work is already outsourced, because replacing a vendor is easier than replacing headcount.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "67822e705ab3": {
@@ -1589,6 +1716,12 @@
       "index.html"
     ]
   },
+  "68f5d039099a": {
+    "en": "Should you read it",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "69390e166570": {
     "en": "Campaign",
     "pages": [
@@ -1624,6 +1757,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -1754,6 +1888,12 @@
       "index.html"
     ]
   },
+  "6fee1064b77f": {
+    "en": "<strong>You are a licensed professional: accountant, lawyer, broker.</strong> The shortage in your profession is a window, not a moat. The licence protects the signature, not the work behind it. Move your practice up to the accountability layer: own the client relationship, the judgement calls and the liability, and become the buyer of the machine layer rather than its competitor. The practices that fail will be the ones still billing hours for what the machine does in minutes.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "70a264dd6b79": {
     "en": "3-month minimum",
     "pages": [
@@ -1777,6 +1917,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -1834,6 +1975,12 @@
       "index.html"
     ]
   },
+  "745144d3840c": {
+    "en": "The essay&rsquo;s quiet superpower is a pricing observation: autopilots price against the services line, not the software line, and the services line is six times bigger. That is a once-a-generation pricing umbrella. Charge a third of the human cost, keep software margins. It will not last, because umbrellas invite rain. As autopilots multiply in a category, the anchor decays from &ldquo;fraction of a salary&rdquo; to &ldquo;compare three quotes&rdquo;, and sellers who priced on the labour anchor without building a moat under it will reprice all the way down to cost.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "745b5a481804": {
     "en": "Glass",
     "pages": [
@@ -1851,6 +1998,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -1864,6 +2012,12 @@
     "en": "Alexander Osterwalder and Yves Pigneur",
     "pages": [
       "research/business-model-generation/index.html"
+    ]
+  },
+  "758f73dae350": {
+    "en": "Julien Bek",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "75db7dcc0399": {
@@ -1964,6 +2118,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "7bae7f9ddc17": {
+    "en": "<strong>The savings get competed away.</strong> An investor reads &ldquo;the work budget dwarfs the tool budget&rdquo; and sees market size. An operator should see a cost line about to collapse for them <em>and for every competitor at once</em>. When everyone&rsquo;s books close for a tenth of the price, nobody wins on cheaper books. The durable advantage moves to whatever the machine is not doing, which is, for now, the judgement layer. Execution getting cheap makes deciding-what-to-do the expensive part. <a href=\"/about/\">That is the entire premise of what I sell</a>, so discount my agreement accordingly.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "7c582fcd1e1b": {
     "en": "Tracked actions",
     "pages": [
@@ -1987,6 +2147,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2060,6 +2221,12 @@
     "en": "Apps, end to end",
     "pages": [
       "index.html"
+    ]
+  },
+  "80ffefc8da23": {
+    "en": "What it means for you, by the business you run",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "81598c461870": {
@@ -2168,6 +2335,12 @@
     "en": "Anonymous id",
     "pages": [
       "stats/index.html"
+    ]
+  },
+  "8989189d3a06": {
+    "en": "<strong>You run an agency or a services firm.</strong> You are holding two assets: an execution layer about to be repriced, and years of recorded judgement about what good looks like in your niche. Productise the execution layer yourself before a startup does it to you. And start charging for judgement as its own line, strategy, review, sign-off, so that when clients unbundle the execution, the part they keep buying has your margin in it.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "898cf9b6fa95": {
@@ -2293,6 +2466,12 @@
       "research/index.html"
     ]
   },
+  "8e7532c2dfd1": {
+    "en": "What is the difference between an AI copilot and an autopilot?",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "8e9cf4fcea88": {
     "en": "<strong>A first-seen marker</strong> against the random <code>qd:vid</code>, kept 90 days, so the visitor count means something.",
     "pages": [
@@ -2311,6 +2490,12 @@
       "index.html"
     ]
   },
+  "9043664429ba": {
+    "en": "That AI companies should sell completed work rather than tools, because tools race against the next model release while services get cheaper and faster with every one. It splits work into intelligence, which is complex but rule-governed, and judgement, which is not. It argues AI now does most intelligence work autonomously, and maps the service industries where &ldquo;autopilots&rdquo; can sell outcomes directly: insurance brokerage, accounting, healthcare billing, claims, tax, transactional legal, IT, procurement, recruitment. Its go-to-market advice is to start where work is already outsourced, because replacing a vendor is easier than replacing headcount.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "9069e702c323": {
     "en": "Working notes on pricing, activation and positioning. The frameworks I actually use, written out in full.",
     "pages": [
@@ -2321,6 +2506,12 @@
     "en": "04 of 5",
     "pages": [
       "index.html"
+    ]
+  },
+  "91768422f0b5": {
+    "en": "Intelligence work is complex but rule-governed: translating a specification into code, coding a claim against a schedule, filling a filing. Judgement is deciding under uncertainty, built on experience and taste: what to build next, when to ship, which risk to accept. The essay&rsquo;s claim is that AI has crossed the threshold on intelligence work while judgement stays human, with one important caveat conceded in its own convergence section: recorded judgement gradually becomes tomorrow&rsquo;s rules. The line is a waterline, not a wall.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "918a67abae25": {
@@ -2400,6 +2591,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2438,6 +2630,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2463,6 +2656,12 @@
     "en": "Research | Quentin Dupard",
     "pages": [
       "research/index.html"
+    ]
+  },
+  "9869e7d9c959": {
+    "en": "The second is the business-model consequence. &ldquo;A copilot sells the tool. An autopilot sells the work.&rdquo; Copilots make a professional faster and leave them responsible. Autopilots sell the finished outcome to the person who needed it, and cut the professional out of the transaction. His go-to-market observation is the best operator thinking in the piece: start where the work is <em>already outsourced</em>. There, the buyer has already accepted external delivery, already has a budget line, and already buys outcomes. Replacing a vendor is a purchase order. Replacing an employee is a reorg.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "988c460cc7ae": {
@@ -2491,6 +2690,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "999bf524011a": {
+    "en": "<strong><a href=\"https://sequoiacap.com/article/services-the-new-software\" target=\"_blank\" rel=\"noopener\">Services: The New Software</a></strong> <span class=\"book-author\">Julien Bek, Sequoia Capital</span> <span class=\"book-pub\">Published March 5, 2026 &middot; sequoiacap.com &middot; a 10 minute read</span>",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "999e62a4410b": {
     "en": "First-party analytics, counted in aggregate. No ad tech, no profiles, no IP kept. <a href=\"/stats/\">The numbers are public</a> and <a href=\"/privacy/\">so is the detail</a>.",
     "pages": [
@@ -2502,6 +2707,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2534,6 +2740,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2553,6 +2760,12 @@
     "en": "<strong>Segments before channels, always.</strong> The canvas is ordered: who, then what, then how it reaches them. Most marketing plans I read are ordered backwards &mdash; they start with the channel list and back into an audience. If you cannot fill the Segments and Value Proposition boxes first, the channel plan is a budget allocation, not a strategy.",
     "pages": [
       "research/business-model-generation/index.html"
+    ]
+  },
+  "9e966573d1a9": {
+    "en": "<strong>You run a SaaS with a services line, or a marketplace of professionals.</strong> You are the copilot facing the innovator&rsquo;s dilemma by name. The essay is right that your product knowledge and distribution are an advantage, and right that you will hesitate to cut your customers out. Decide now which side of the transaction you serve, the professional or the outcome buyer, because straddling prices you into the middle of a collapsing spread.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "9eea1d93fd8c": {
@@ -2596,6 +2809,12 @@
     "en": "Eyal defines a habit as a behaviour done with little conscious thought that can be positive or neutral, and an addiction as a persistent compulsive dependency that is self&ndash;destructive by definition. He argues it is irresponsible to build products that rely on addiction, and estimates that around one percent of users of even the most habit&ndash;forming products form a damaging dependency. The weakness is that the estimate is offered as reassurance rather than as a reason to go and find those users, which companies at scale have the data to do.",
     "pages": [
       "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "a0dc5c5960a7": {
+    "en": "A copilot sells a tool to a professional, who stays in the loop and takes responsibility for the output; legal AI sold to law firms is the classic case. An autopilot sells the finished outcome to whoever needed the work done, cutting the professional out of the transaction: the NDA drafted, the insurance placed, the books closed. The commercial difference is the budget. Copilots compete for the software budget, autopilots for the much larger labour budget. The strategic difference is accountability: the copilot&rsquo;s user answers for the work, while the autopilot must answer for it itself.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "a0ee8e8006e9": {
@@ -2675,6 +2894,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2700,6 +2920,12 @@
     "en": "Theme",
     "pages": [
       "index.html"
+    ]
+  },
+  "a7d0c6d2af79": {
+    "en": "<strong>Accountability is doing more work than intelligence.</strong> What a company actually buys from an accountant is not book-closing. It is someone whose name is on the filing when the tax office calls. The essay treats trust as a product-quality problem, but it is a liability problem: insurance, recourse, a throat to choke. That is why licensed professions will bend rather than break. The autopilots that win will answer &ldquo;who pays when you are wrong?&rdquo; on their pricing page, not in their FAQ. <a href=\"/research/influence-robert-cialdini/\">Cialdini&rsquo;s authority chapter</a> is about exactly this: the credential is a shortcut for accountability, and machines do not yet have one.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "a85fe6c3e351": {
@@ -2737,6 +2963,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -2778,7 +3005,14 @@
       "privacy/index.html",
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
-      "research/influence-robert-cialdini/index.html"
+      "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html"
+    ]
+  },
+  "acdb2223446c": {
+    "en": "<span>Commentary</span> <span>8 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "ad6a25af48b5": {
@@ -2877,6 +3111,12 @@
       "index.html"
     ]
   },
+  "b5d95a7e9a75": {
+    "en": "Split what you sell into its execution layer and its judgement layer, and act on each separately. The execution layer, the rule-governed production work, is about to be repriced across your whole market, so productise it with AI yourself before a startup does it to you. The judgement layer is what clients will keep paying for: knowing what good looks like in your niche, making the call, carrying the accountability. Put it on the invoice as its own line now. Firms that keep billing blended hours will have their cheapest half unbundled first.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "b609bd736768": {
     "en": "Quentin Dupard, operating independently. Contact for anything on this page, including a request to delete something: <a href=\"mailto:quentin.dupard@gmail.com\">quentin.dupard@gmail.com</a>. I answer these personally, usually within a day.",
     "pages": [
@@ -2924,6 +3164,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3016,6 +3257,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3049,10 +3291,22 @@
       "privacy/index.html"
     ]
   },
+  "c0045f9469e0": {
+    "en": "Yes. <a href=\"https://sequoiacap.com/article/services-the-new-software\" target=\"_blank\" rel=\"noopener\">It is free, short, and written to be quoted</a>. Read it as a map of where cost lines collapse next, not as a promise about whose job is safe. And remember who is talking: a venture firm describing the companies it wants to fund. The analysis is genuinely good. The frame, in which the interesting position is always the disruptor&rsquo;s, is theirs rather than yours. Most readers of this page are not building an autopilot. They are about to buy from one, compete with one, or sell judgement above one. Those three positions get no airtime in the essay. They got this page instead.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "c15bc1f0bb12": {
     "en": "What quentindupard.com stores in your browser and on its server, which third parties are involved, and how to opt out of the analytics.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "c15d185be92d": {
+    "en": "If you are buying, the same clock runs in your favour. Early autopilot pricing is anchored to what you used to pay a human, which means the first quote you get is the worst one you will ever get. Negotiate like the anchor is fake, because it is. This is <a href=\"/research/hooked-nir-eyal/\">the habit trap</a> seen from the buyer&rsquo;s side, and the contrast principle seen from the seller&rsquo;s. It is also the argument for <a href=\"/#pricing\">repricing before your market does it for you</a>.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "c1822e5313b2": {
@@ -3121,6 +3375,12 @@
       "stats/index.html"
     ]
   },
+  "c48644f57bec": {
+    "en": "Sequoia Capital",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "c58b1760d396": {
     "en": "Cover of Hooked: How to Build Habit-Forming Products by Nir Eyal with Ryan Hoover",
     "pages": [
@@ -3149,6 +3409,12 @@
     "en": "Fractional product and marketing. I find revenue your business is already sitting on: pricing, positioning, activation and retention. Deepest in B2B SaaS, useful anywhere there is a funnel and a price.",
     "pages": [
       "index.html"
+    ]
+  },
+  "c86d2c245bd4": {
+    "en": "The pricing angle nobody will enjoy",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "c8722561119b": {
@@ -3210,6 +3476,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3261,6 +3528,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3347,6 +3615,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3372,6 +3641,12 @@
     "en": "Both, and the building is not a side line. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, operations automation. If the answer to your revenue problem is a thing that does not exist yet, I would rather build it than write you a specification and hand it to someone else. The same applies to marketing: I will take the whole strategy, not just the part that fits in a slide.",
     "pages": [
       "index.html"
+    ]
+  },
+  "d4288816096e": {
+    "en": "How should a services business or agency respond to AI autopilots?",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "d433c612c785": {
@@ -3415,6 +3690,12 @@
     "en": "That is not a coincidence, and it is the part worth sitting with. Corroboration by independent others, weighted by who those others are, is not a persuasion tactic that happens to survive machine reading. It is a description of how ranking has worked since PageRank. Google&rsquo;s E-E-A-T is Cialdini&rsquo;s two machine-readable principles with a spreadsheet attached, and answer engines pick citations on the same basis: something enough sources agree on, said by an identifiable someone with a plausible reason to know it.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "d7a230926de3": {
+    "en": "The one-line test, any industry: write down what your customers would still pay you for if the execution were free. That list is your business in five years, and it is priced wrong today.",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "d7ad40ae7e58": {
@@ -3525,13 +3806,20 @@
       "index.html"
     ]
   },
+  "de258e863e70": {
+    "en": "<strong>You sell software.</strong> Your buyer never wanted your tool. They wanted the work it shortens. List your product&rsquo;s top three jobs and ask, for each, what it would mean to sell the <em>completed</em> job at a price anchored to the labour it replaces. Then notice that your best user today may be the person an autopilot cuts out of the deal tomorrow. That conflict is the essay&rsquo;s closing point, and pretending you can serve both sides indefinitely is how incumbents lose to pure-plays.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "de344a2b920c": {
     "en": "&larr; Research",
     "pages": [
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
-      "research/influence-robert-cialdini/index.html"
+      "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html"
     ]
   },
   "decbb4850d43": {
@@ -3582,6 +3870,12 @@
       "research/business-model-generation/index.html"
     ]
   },
+  "e2db3d6bfe0f": {
+    "en": "Services: The New Software",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "e3577c1de70c": {
     "en": "Commitment",
     "pages": [
@@ -3611,6 +3905,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3680,6 +3975,12 @@
       "index.html"
     ]
   },
+  "e54620214be2": {
+    "en": "Three places, all of them load-bearing.",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "e54f85078ffb": {
     "en": "Previous work",
     "pages": [
@@ -3709,7 +4010,14 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
+    ]
+  },
+  "e7ea40fbfd3d": {
+    "en": "Where I push back",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "e891a4992157": {
@@ -3760,6 +4068,12 @@
       "index.html"
     ]
   },
+  "eb8e56d96aca": {
+    "en": "Selling the work: Sequoia's services thesis, applied to your business | Quentin Dupard",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "ebc2f2354d0d": {
     "en": "Every signup you convert makes the funnel longer",
     "pages": [
@@ -3801,6 +4115,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },
@@ -3839,7 +4154,8 @@
     "pages": [
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
-      "research/influence-robert-cialdini/index.html"
+      "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html"
     ]
   },
   "f0d9c9498043": {
@@ -3998,6 +4314,12 @@
       "about/index.html"
     ]
   },
+  "fa31393cc7f7": {
+    "en": "What does Sequoia’s “Services: The New Software” argue?",
+    "pages": [
+      "research/services-the-new-software/index.html"
+    ]
+  },
   "fa3e3b7fce64": {
     "en": "<strong>The five tests for splitting a segment.</strong> The book says customer groups are separate segments only if they need a distinct offer, reach you through different channels, need different relationships, have substantially different profitability, or pay for different aspects of the offer. That list is a scalpel. Most of the personas I am shown fail all five tests &mdash; they are demographics wearing a name badge. Segmentation is an economics decision, not a creative-team deliverable, and this is the cleanest statement of it I know.",
     "pages": [
@@ -4051,6 +4373,7 @@
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
       "stats/index.html"
     ]
   },

@@ -45,6 +45,7 @@ market, not his general offering.
 Long-form working notes. Free to read, no gate.
 
 - [All research](https://quentindupard.com/research/)
+- [Selling the work: Sequoia's services thesis, applied to your business](https://quentindupard.com/research/services-the-new-software/): commentary on Sequoia's 'Services: The New Software' — the copilot-to-autopilot shift, where the argument holds, and one takeaway each for software vendors, agencies, licensed professionals, marketplaces, offline businesses, AI builders and consultants
 - [Business Model Generation by Osterwalder and Pigneur: a camera, not a compass](https://quentindupard.com/research/business-model-generation/): book review of the Business Model Canvas — the nine blocks, the five segment tests, the platform patterns, why the canvas describes a model without testing it, and how it generates a kill list for roadmaps and pricing tiers
 - [Influence by Robert Cialdini: which of the six still work on a machine](https://quentindupard.com/research/influence-robert-cialdini/): book review of the six principles of persuasion, with product and marketing findings, and why only social proof and authority reach a search or answer engine
 - [Hooked by Nir Eyal: what survives when you are not a social app](https://quentindupard.com/research/hooked-nir-eyal/): book review of the Hook Model (trigger, action, variable reward, investment), with the product and marketing findings separated, and the model applied to activation and expansion revenue

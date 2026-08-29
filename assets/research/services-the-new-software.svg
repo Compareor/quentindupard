@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Commentary: Selling the work, on Sequoia's services thesis">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="b1" cx="18%" cy="14%" r="55%">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b2" cx="84%" cy="82%" r="55%">
+      <stop offset="0" stop-color="#35d6ee" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#35d6ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#eef1fb"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#b1)"/>
+  <rect width="1200" height="630" fill="url(#b2)"/>
+
+  <g>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="#ffffff" fill-opacity="0.30"/>
+    <rect x="80" y="90" width="1040" height="450" rx="34" fill="url(#sheen)"/>
+    <rect x="80.5" y="90.5" width="1039" height="449" rx="33.5" fill="none" stroke="#0d1424" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- two toggles: the tool (off) and the work (on) -->
+  <g transform="translate(150 190)">
+    <rect x="0" y="0" width="240" height="110" rx="26" fill="#ffffff" fill-opacity="0.42"/>
+    <rect x="0.5" y="0.5" width="239" height="109" rx="25.5" fill="none" stroke="#0d1424" stroke-opacity="0.14"/>
+    <rect x="14" y="27" width="110" height="56" rx="28" fill="#0d1424" fill-opacity="0.14"/>
+    <circle cx="42" cy="55" r="22" fill="#ffffff"/>
+    <text x="140" y="63" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+          font-size="19" font-weight="600" letter-spacing="0.4" fill="#0d1424" fill-opacity="0.44">TOOL</text>
+
+    <rect x="0" y="140" width="240" height="110" rx="26" fill="#0d1424" fill-opacity="0.78"/>
+    <rect x="14" y="167" width="110" height="56" rx="28" fill="#35d6ee" fill-opacity="0.85"/>
+    <circle cx="96" cy="195" r="22" fill="#ffffff"/>
+    <text x="140" y="203" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+          font-size="19" font-weight="600" letter-spacing="0.4" fill="#ffffff" fill-opacity="0.92">WORK</text>
+  </g>
+
+  <text x="470" y="248" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" font-weight="600" letter-spacing="2.4" fill="#0d1424" fill-opacity="0.42">COMMENTARY</text>
+  <text x="470" y="318" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif"
+        font-size="58" font-weight="650" letter-spacing="-1.8" fill="#0d1424" fill-opacity="0.88">Selling the work</text>
+  <text x="470" y="370" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="25" font-weight="500" letter-spacing="-0.3" fill="#0d1424" fill-opacity="0.52">On Sequoia&#8217;s &#8220;Services: The New Software&#8221;</text>
+  <text x="470" y="432" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="21" letter-spacing="-0.2" fill="#0d1424" fill-opacity="0.44">One takeaway for every business it touches.</text>
+  <text x="470" y="466" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif"
+        font-size="17" letter-spacing="0.2" fill="#0d1424" fill-opacity="0.30">quentindupard.com</text>
+</svg>

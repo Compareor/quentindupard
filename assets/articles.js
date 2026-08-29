@@ -12,6 +12,13 @@
    ========================================================== */
 window.QD_ARTICLES = [
   {
+    slug: 'services-the-new-software',
+    title: "Selling the work: Sequoia's services thesis, applied to your business",
+    kind: 'Commentary',
+    minutes: 8,
+    img: '/assets/research/services-the-new-software.svg'
+  },
+  {
     slug: 'business-model-generation',
     title: 'Business Model Generation by Osterwalder and Pigneur: a camera, not a compass',
     kind: 'Book review',

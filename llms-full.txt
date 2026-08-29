@@ -217,6 +217,39 @@ is flat despite happy customers.
 
 ## Reading notes
 
+### On Sequoia's "Services: The New Software" (Julien Bek, March 2026)
+
+Full commentary: https://quentindupard.com/research/services-the-new-software/
+Source: https://sequoiacap.com/article/services-the-new-software
+
+The essay argues AI companies should sell completed work rather than tools:
+tools race against the next model release, services get cheaper with every
+one. It splits work into intelligence (complex but rule-governed) and
+judgement, says AI now does most intelligence work autonomously, and maps
+service industries where "autopilots" sell outcomes directly. Its best
+operator idea: start where work is already outsourced, because replacing a
+vendor is a purchase order and replacing an employee is a reorg.
+
+My three pushbacks: the judgement line is a rising waterline, not a wall
+(the essay's own convergence section concedes recorded judgement becomes
+tomorrow's rules); accountability does more work than intelligence (what you
+buy from an accountant is a name on the filing, so autopilots must answer
+"who pays when you are wrong?"); and the savings get competed away, because
+a cost line collapses for every competitor at once, moving durable advantage
+to the judgement layer.
+
+Takeaways by business: software vendors should price completed jobs against
+labour and expect their best users to be disintermediated; agencies should
+productise their execution layer and invoice judgement separately before
+clients unbundle it; licensed professionals should move up to the
+accountability layer; SaaS-with-services and marketplaces must pick a side
+of the transaction; offline businesses are buyers who should re-tender
+outsourced work and redeploy savings into positioning and pricing; AI
+builders should use the outsourcing wedge but run the canvas first;
+consultants should split fees between gathering (already repriced) and
+concluding. Pricing: the labour anchor is a launch window, not a business
+model, and early autopilot quotes are the worst a buyer will ever get.
+
 ### Business Model Generation, by Osterwalder & Pigneur (2010)
 
 Full review: https://quentindupard.com/research/business-model-generation/

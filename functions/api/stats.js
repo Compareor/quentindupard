@@ -23,7 +23,6 @@ export async function onRequestGet({ env }) {
   }
 
   try {
-    await resetOnce(env.STATS);
     await migrateOnce(env.STATS);
 
     const docs = await Promise.all(
@@ -165,36 +164,3 @@ function json(body, status) {
   });
 }
 
-
-/*
- * One-time reset, 2026-08-28, requested by Quentin: the aggregates still
- * carried per-event attribution from before sources were counted per visit
- * ("direct" at 809 from a handful of people), and old and new numbers can't
- * be added together meaningfully. Same allowlist as the admin endpoint:
- * seen:, live:, visit:, qlog: and content: survive on purpose.
- *
- * Guarded by a flag so it runs exactly once; the code can be deleted after
- * it has (the flag stays behind and keeps it inert either way).
- */
-const RESET_FLAG = 'agg:v1:reset-2026-08-28';
-const RESET_PREFIXES = [
-  'agg:v1:',
-  'total:', 'event:', 'source:', 'medium:', 'campaign:',
-  'section:', 'file:', 'target:', 'day:', 'meta:'
-];
-
-async function resetOnce(store) {
-  if (await store.get(RESET_FLAG)) return;
-  for (const prefix of RESET_PREFIXES) {
-    let cursor;
-    do {
-      const page = await store.list({ prefix, cursor, limit: 1000 });
-      cursor = page.list_complete ? null : page.cursor;
-      for (const k of page.keys) await store.delete(k.name);
-    } while (cursor);
-  }
-  // Deleting agg:v1:* also removed the migration flag; re-arm it so the
-  // one-time import of the (now deleted) flat keys does not run again.
-  await store.put(MIGRATED_FLAG, new Date().toISOString());
-  await store.put(RESET_FLAG, new Date().toISOString());
-}

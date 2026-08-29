@@ -284,6 +284,11 @@ def main():
         lib.save(os.path.join(ROOT, 'i18n', 'missing.json'),
                  {'count': len(missing), 'keys': missing})
         print(f'  {len(missing)} untranslated keys listed in i18n/missing.json')
+    else:
+        stale = os.path.join(ROOT, 'i18n', 'missing.json')
+        if os.path.exists(stale):
+            os.remove(stale)
+            print('  removed stale i18n/missing.json (nothing missing)')
 
 
 if __name__ == '__main__':

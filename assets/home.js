@@ -826,6 +826,12 @@
         time.className = 'mail-item-time';
         time.textContent = t(m.time);
         top.append(from, time);
+        if (m.folder !== 'sent' && !m.real) {
+          const demo = document.createElement('span');
+          demo.className = 'mail-item-demo';
+          demo.textContent = t('Demo');
+          from.appendChild(demo);
+        }
 
         const subject = document.createElement('div');
         subject.className = 'mail-item-subject';
@@ -893,6 +899,12 @@
       meta.textContent = [m.role && t(m.role), m.email].filter(Boolean).join(' · ');
 
       head.append(subj, fromLine, meta);
+      if (folder !== 'sent' && !m.real) {
+        const note = document.createElement('p');
+        note.className = 'mail-read-demo';
+        note.textContent = t('Demo message: written to show the format, not a real client.');
+        head.appendChild(note);
+      }
       read.appendChild(head);
 
       const body = document.createElement('div');

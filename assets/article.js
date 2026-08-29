@@ -230,6 +230,7 @@
   const about = (lang === 'fr' || lang === 'es') ? '/' + lang + '/about/' : '/about/';
   document.querySelectorAll('.article-meta span').forEach((span) => {
     if (span.textContent.trim() !== 'Quentin Dupard') return;
+    if (span.querySelector('a')) return;   // already baked into the HTML
     const img = document.createElement('img');
     img.src = '/assets/portrait/quentin-avatar-96.jpg';
     img.alt = '';

@@ -65,6 +65,7 @@ def article_schema(slug, title, summary, url):
   "url": "{url}",
   "mainEntityOfPage": "{url}",
   "datePublished": "TODO-YYYY-MM-DD",
+  "dateModified": "TODO-YYYY-MM-DD",
   "author": {{ "@id": "{SITE}/#quentin" }},
   "publisher": {{ "@id": "{SITE}/#quentin" }},
   "image": "{SITE}/assets/research/{slug}.svg",
@@ -91,6 +92,7 @@ def book_schema(title, summary, url, book_title, author, isbn):
   "description": "{summary}",
   "url": "{url}",
   "datePublished": "TODO-YYYY-MM-DD",
+  "dateModified": "TODO-YYYY-MM-DD",
   "author": {{ "@id": "{SITE}/#quentin" }},
   "publisher": {{ "@id": "{SITE}/#quentin" }},
   "inLanguage": "en",
@@ -147,6 +149,7 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="{url}">
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+<link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full notes">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Quentin Dupard">
@@ -213,7 +216,7 @@ def build(slug, title, kind, minutes, summary, book=None, author=None, isbn=None
     <div class="article-meta">
       <span>{kind}</span>
       <span>{minutes} min read</span>
-      <span>Quentin Dupard</span>
+      <span><a class="byline-link" href="/about/" data-track="byline_about"><img src="/assets/portrait/quentin-avatar-96.jpg" alt="" width="96" height="96" loading="lazy" decoding="async" class="byline-avatar">Quentin Dupard</a></span>
       <span>Updated TODO Month YYYY</span>
     </div>
   </div>

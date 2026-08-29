@@ -7,12 +7,16 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
 
 # Fingerprinted by ?v= query strings, so these can be cached hard.
 /assets/*
   Cache-Control: public, max-age=604800, must-revalidate
 
+# "!" first: Pages concatenates headers from every matching rule, so without
+# it this rule would APPEND to /assets/*'s Cache-Control instead of replacing.
 /assets/docs/*
+  ! Cache-Control
   Cache-Control: public, max-age=2592000
 
 # Per-visitor and never shared.

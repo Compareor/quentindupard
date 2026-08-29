@@ -22,6 +22,13 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "016c786e2f87": {
+    "en": "<span>Book review</span> <span>9 min read</span> <span><a class=\"byline-link\" href=\"/about/\" data-track=\"byline_about\"><img src=\"/assets/portrait/quentin-avatar-96.jpg\" alt=\"\" width=\"96\" height=\"96\" loading=\"lazy\" decoding=\"async\" class=\"byline-avatar\">Quentin Dupard</a></span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/business-model-generation/index.html",
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "01a23a288f60": {
     "en": "Campaigns",
     "pages": [
@@ -163,19 +170,6 @@
     "en": "What you sell, who buys it, and what is not working…",
     "pages": [
       "index.html"
-    ]
-  },
-  "0aab34ab3217": {
-    "en": "Three formats: a 90-minute teardown from €500, a two-week embedded sprint from €6,000, and ongoing fractional work from €8,000 per month with a three-month minimum. Hybrid and on-site delivery cost more than remote.",
-    "pages": [
-      "index.html"
-    ]
-  },
-  "0ada0f9f45f7": {
-    "en": "<span>Book review</span> <span>9 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/business-model-generation/index.html",
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "0b0f2ce4e49d": {
@@ -366,6 +360,12 @@
   },
   "149548d62a9f": {
     "en": "One point in its favour: Cialdini kept working. He has since added a seventh principle, <em>unity</em> &mdash; not merely resembling someone but belonging to the same group as them &mdash; which is not in this edition and which is, if anything, the one that has aged best.",
+    "pages": [
+      "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "15f482eb5c09": {
+    "en": "<span>Book review</span> <span>10 min read</span> <span><a class=\"byline-link\" href=\"/about/\" data-track=\"byline_about\"><img src=\"/assets/portrait/quentin-avatar-96.jpg\" alt=\"\" width=\"96\" height=\"96\" loading=\"lazy\" decoding=\"async\" class=\"byline-avatar\">Quentin Dupard</a></span> <span>Updated August 2026</span>",
     "pages": [
       "research/influence-robert-cialdini/index.html"
     ]
@@ -634,12 +634,6 @@
       "index.html"
     ]
   },
-  "22a67e03658c": {
-    "en": "Product & Marketing Operator",
-    "pages": [
-      "index.html"
-    ]
-  },
   "22e9fadd586a": {
     "en": "A copilot sells a tool to a professional, who stays in the loop and takes responsibility for the output; legal AI sold to law firms is the classic case. An autopilot sells the finished outcome to whoever needed the work done, cutting the professional out of the transaction: the NDA drafted, the insurance placed, the books closed. The commercial difference is the budget. Copilots compete for the software budget, autopilots for the much larger labour budget. The strategic difference is accountability: the copilot’s user answers for the work, while the autopilot must answer for it itself.",
     "pages": [
@@ -658,16 +652,16 @@
       "privacy/index.html"
     ]
   },
-  "23ea54f0a681": {
-    "en": "<span>Book review</span> <span>10 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/influence-robert-cialdini/index.html"
-    ]
-  },
   "23f2e570bfa9": {
     "en": "Where does it break?",
     "pages": [
       "research/value-proposition-canvas/index.html"
+    ]
+  },
+  "243c1f7a327a": {
+    "en": "<span>Index</span> <span>1 min read</span> <span><a class=\"byline-link\" href=\"/about/\" data-track=\"byline_about\"><img src=\"/assets/portrait/quentin-avatar-96.jpg\" alt=\"\" width=\"96\" height=\"96\" loading=\"lazy\" decoding=\"async\" class=\"byline-avatar\">Quentin Dupard</a></span>",
+    "pages": [
+      "research/index.html"
     ]
   },
   "24ae03d50191": {
@@ -704,6 +698,12 @@
     "en": "A <strong>local grocery business</strong>, bootstrapped — grew revenue with no budget, no brand and no funnel to speak of",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "28bca1d2339c": {
+    "en": "<span>Framework</span> <span>7 min read</span> <span><a class=\"byline-link\" href=\"/about/\" data-track=\"byline_about\"><img src=\"/assets/portrait/quentin-avatar-96.jpg\" alt=\"\" width=\"96\" height=\"96\" loading=\"lazy\" decoding=\"async\" class=\"byline-avatar\">Quentin Dupard</a></span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "28f74e5e90c8": {
@@ -1195,6 +1195,12 @@
       "research/services-the-new-software/index.html"
     ]
   },
+  "458ee9580cd4": {
+    "en": "Three formats: a 90-minute teardown from €500, a two-week embedded sprint from €6,000, and ongoing fractional work from €8,000 per month with a three-month minimum. Hybrid and on-site delivery cost more than remote. Full pricing is above.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "45a2bb657dba": {
     "en": "This is the better of the two persuasion books people quote at me. It is also the one they misuse most.",
     "pages": [
@@ -1285,12 +1291,6 @@
       "research/value-proposition-canvas/index.html"
     ]
   },
-  "49f2d16167b4": {
-    "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with your product and their invoice does not grow, the model caps your revenue. A 10-15% increase applied only to new customers is the lowest-risk experiment available.",
-    "pages": [
-      "index.html"
-    ]
-  },
   "4bab2d8fe13f": {
     "en": "More",
     "pages": [
@@ -1377,12 +1377,6 @@
     "en": "What this means for what to build and what to kill",
     "pages": [
       "research/business-model-generation/index.html"
-    ]
-  },
-  "500bbdb26cbe": {
-    "en": "When should a B2B SaaS company change its pricing?",
-    "pages": [
-      "index.html"
     ]
   },
   "50f94286ba30": {
@@ -1657,12 +1651,6 @@
     "en": "Demand",
     "pages": [
       "stats/index.html"
-    ]
-  },
-  "5e498c69a296": {
-    "en": "Part-time senior product and marketing work for businesses that need the judgement but not a full-time hire: pricing and packaging, positioning and messaging, conversion and activation, and deciding what to build versus what to kill. Where the answer is something that does not exist yet, he builds it — whole products, ecommerce, newsletters, operations automation, and the marketing strategy around them. Most common in B2B SaaS, but the same levers apply to any business with a funnel and a price.",
-    "pages": [
-      "index.html"
     ]
   },
   "5e658aad79c8": {
@@ -1996,12 +1984,6 @@
     "pages": [
       "research/hooked-nir-eyal/index.html",
       "research/index.html"
-    ]
-  },
-  "6c7727e83fa9": {
-    "en": "<span>Framework</span> <span>7 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/value-proposition-canvas/index.html"
     ]
   },
   "6c7fb6a80063": {
@@ -2358,7 +2340,7 @@
   "7ce01c804e54": {
     "en": "Fractional Product & Marketing Operator",
     "pages": [
-      "about/index.html"
+      "index.html"
     ]
   },
   "7cf81eb37c9a": {
@@ -2559,6 +2541,7 @@
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
       "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html",
       "stats/index.html"
     ]
   },
@@ -2813,12 +2796,6 @@
       "stats/index.html"
     ]
   },
-  "96f2349373c4": {
-    "en": "How do you improve SaaS activation?",
-    "pages": [
-      "index.html"
-    ]
-  },
   "970379f59a9e": {
     "en": "What reaches the server",
     "pages": [
@@ -2901,6 +2878,16 @@
       "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "98cd83220e4c": {
+    "en": "LLM-friendly full notes",
+    "pages": [
+      "research/business-model-generation/index.html",
+      "research/hooked-nir-eyal/index.html",
+      "research/influence-robert-cialdini/index.html",
+      "research/services-the-new-software/index.html",
+      "research/value-proposition-canvas/index.html"
     ]
   },
   "9911364092b3": {
@@ -3245,22 +3232,10 @@
       "research/value-proposition-canvas/index.html"
     ]
   },
-  "acdb2223446c": {
-    "en": "<span>Commentary</span> <span>8 min read</span> <span>Quentin Dupard</span> <span>Updated August 2026</span>",
-    "pages": [
-      "research/services-the-new-software/index.html"
-    ]
-  },
   "ad6a25af48b5": {
     "en": "Yes, with two adjustments. The mechanisms have held up better than the individual studies, many of which come from a period of social psychology that has since been reconsidered on statistical grounds, so treat the percentages as illustrations to test rather than facts to quote. And the book assumes a person is present for the persuasion, which is now often untrue &mdash; the principles that need presence have weakened and the ones that scale through a screen have been industrialised.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
-    ]
-  },
-  "ae5767cf838e": {
-    "en": "Identify the single action that delivers first value, measure what share of signups reach it within a week, then remove everything between signup and that moment. Pre-populating new accounts with realistic sample data is the most reliable single change.",
-    "pages": [
-      "index.html"
     ]
   },
   "ae79ea1e9c63": {
@@ -3625,12 +3600,6 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
-  "c4240a355be3": {
-    "en": "Usually the constraint is not lead volume but conversion and clarity. Before spending more on acquisition, check three things: whether your positioning is specific enough to exclude the wrong buyers, whether the people who do sign up reach first value in week one, and whether your best segment is identifiable from your closed-won data. Most companies asking for more leads already have enough traffic and are losing it between the landing page and the first successful use of the product.",
-    "pages": [
-      "index.html"
-    ]
-  },
   "c46b18669157": {
     "en": "Counted once per visit, not once per click. A visit is a browser tab.",
     "pages": [
@@ -3665,6 +3634,12 @@
     "en": "Go to slide 3",
     "pages": [
       "index.html"
+    ]
+  },
+  "c67de1996f24": {
+    "en": "<span>Commentary</span> <span>8 min read</span> <span><a class=\"byline-link\" href=\"/about/\" data-track=\"byline_about\"><img src=\"/assets/portrait/quentin-avatar-96.jpg\" alt=\"\" width=\"96\" height=\"96\" loading=\"lazy\" decoding=\"async\" class=\"byline-avatar\">Quentin Dupard</a></span> <span>Updated August 2026</span>",
+    "pages": [
+      "research/services-the-new-software/index.html"
     ]
   },
   "c69a16d897f2": {
@@ -4166,12 +4141,6 @@
       "index.html"
     ]
   },
-  "e0f5f28ceedb": {
-    "en": "Both. I have shipped whole products end to end: ecommerce, newsletters and content engines, internal tooling, and operations automation. Where the answer to a revenue problem is something that does not exist yet, I build it rather than writing a specification for someone else. The same applies to marketing strategy, taken whole rather than in pieces.",
-    "pages": [
-      "index.html"
-    ]
-  },
   "e11497665633": {
     "en": "About Quentin Dupard",
     "pages": [
@@ -4591,12 +4560,6 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
-  "f7c7fe74a322": {
-    "en": "<span>Index</span> <span>1 min read</span> <span>Quentin Dupard</span>",
-    "pages": [
-      "research/index.html"
-    ]
-  },
   "f802d7ae3203": {
     "en": "<strong>It files Zynga under the wrong lesson.</strong> The book uses FarmVille as a warning about finite variability &mdash; the sequels were the same game reskinned, novelty ran out, the stock collapsed. That is true and it is not the expensive part. Zynga&rsquo;s real problem was that its acquisition trigger belonged to Facebook, and when Facebook changed the feed, the habit did not save it. Habit is not a moat when your distribution is somebody else&rsquo;s platform. That is the most costly lesson of the last fifteen years in technology and Hooked files it under novelty.",
     "pages": [
@@ -4615,6 +4578,12 @@
       "index.html"
     ]
   },
+  "f890acb9122d": {
+    "en": "If pricing has never been revisited since launch, it is almost certainly wrong. Start with the billing metric rather than the number: if a customer succeeds wildly with what you sell and their invoice does not grow, the model caps your revenue. A 10–15% increase applied only to new customers is the lowest-risk experiment available. The long version is here.",
+    "pages": [
+      "index.html"
+    ]
+  },
   "f94145c45b08": {
     "en": "Four of the six need somebody capable of feeling something. Reciprocity needs a person who can feel indebted. Liking needs one who can be charmed, flattered, or reminded that you grew up in the same town. Commitment needs a self-image worth protecting. Scarcity, in Cialdini&rsquo;s account, runs on reactance &mdash; the objection to having a freedom taken away &mdash; and reactance requires a self for the freedom to be taken from.",
     "pages": [
@@ -4625,12 +4594,6 @@
     "en": "Bootstrapped, with no budget, no brand and no funnel to speak of. Grew revenue out of what was already there.",
     "pages": [
       "index.html"
-    ]
-  },
-  "f97f0fe035b5": {
-    "en": "Independent product and marketing operator. Works on positioning, pricing, activation and revenue growth for businesses with a funnel and a price.",
-    "pages": [
-      "about/index.html"
     ]
   },
   "fa1066eb3f69": {

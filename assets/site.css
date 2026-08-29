@@ -1,0 +1,303 @@
+/* ==========================================================
+   site.css — shared chrome split out of home.css: footer, FAQ,
+   hero shell, reveal animations, everything a non-home page
+   actually renders. home.css keeps the home-only sections and
+   is loaded ONLY by the homepage, after this file.
+   ========================================================== */
+
+/* ── Hero ────────────────────────────────────────────────── */
+
+.hero { padding: 152px 0 96px; }
+
+.hero-inner {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+}
+
+.hero-eyebrow {
+  padding: 7px 16px;
+  border-radius: var(--r-pill);
+  background: var(--glass-thin);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-stroke);
+  box-shadow: var(--specular);
+  margin-bottom: 26px;
+  transition: opacity .45s var(--ease);
+}
+
+.hero-eyebrow.swapping { opacity: 0; }
+
+.hero-title { margin-bottom: 22px; }
+
+.hero-lede { max-width: 660px; margin-bottom: 40px; }
+
+.act-body > .lede { max-width: 660px; margin-bottom: 16px; }
+
+.ask-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+.chip {
+  padding: 8px 14px;
+  font-family: inherit; font-size: 13px; font-weight: 450;
+  color: var(--text-dim);
+  background: var(--tint);
+  border: 1px solid var(--glass-stroke);
+  border-radius: var(--r-pill);
+  cursor: pointer; text-align: left;
+  transition: transform .3s var(--spring), background .2s, color .2s, border-color .2s;
+}
+
+.chip:hover {
+  color: var(--text); background: var(--tint-strong);
+  border-color: var(--glass-stroke-strong); transform: translateY(-1px);
+}
+
+.chip:active { transform: scale(0.97); }
+
+.reveal.in .ico .dw { stroke-dashoffset: 0; }
+
+.reveal.in .ico .grow { transform: scaleY(1); }
+
+.reveal.in .ico .pop { transform: scale(1); }
+
+.choice .btn { margin-top: auto; align-self: flex-start; }
+
+.stats-live {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--cyan);
+  animation: breathe 2.6s ease-in-out infinite;
+}
+
+.toast-actions .btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 9px 14px;
+  font-size: 13px;
+  line-height: 1.25;
+  /* A label longer than the whole card has to be allowed to break. */
+  white-space: normal;
+  text-align: center;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.site-footer {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 64px;
+  border-top: 1px solid var(--hair);
+  overflow: hidden;               /* the wordmark bleeds; keep it in */
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.4fr) repeat(4, minmax(0, 1fr));
+  gap: 40px 28px;
+  padding-bottom: 52px;
+}
+
+/* ── Brand column ── */
+
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+
+.footer-mark {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 17px; font-weight: 620; letter-spacing: -0.02em;
+  color: var(--text); text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.footer-role {
+  font-size: 13px; color: var(--text-faint);
+  margin-bottom: 22px;
+}
+
+.footer-mail {
+  font-size: 14.5px; color: var(--text-dim);
+  text-decoration: none; margin-bottom: 20px;
+  transition: color .2s;
+}
+
+.footer-mail:hover { color: var(--cyan); }
+
+.footer-where {
+  font-size: 13.5px; line-height: 1.65;
+  color: var(--text-faint); margin-bottom: 22px;
+}
+
+.footer-where strong { color: var(--text); font-weight: 550; }
+
+.footer-call { margin-bottom: 20px; padding: 10px 20px; font-size: 14px; }
+
+.footer-social {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--text-dim);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer-social:hover { color: var(--text); }
+
+.footer-social-icon {
+  display: grid; place-items: center;
+  width: 22px; height: 22px; border-radius: 6px;
+  background: var(--tint-strong);
+  border: 1px solid var(--glass-stroke);
+  font-size: 10px; font-weight: 700; letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+/* ── Link columns ── */
+
+.footer-col { display: flex; flex-direction: column; }
+
+.footer-col h2 {
+  font-size: 13px; font-weight: 620; letter-spacing: -0.01em;
+  color: var(--text); margin-bottom: 18px;
+}
+
+.footer-col a {
+  font-size: 14px; line-height: 1.4;
+  color: var(--text-dim); text-decoration: none;
+  padding: 7px 0;
+  transition: color .2s, transform .25s var(--ease);
+}
+
+.footer-col a:hover { color: var(--cyan); transform: translateX(3px); }
+
+/* ── Legal row ── */
+
+.footer-legal {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+  padding: 22px 0 30px;
+  border-top: 1px solid var(--hair);
+}
+
+.footer-privacy, .footer-copy { font-size: 12.5px; color: var(--text-faint); }
+
+.footer-privacy a {
+  color: var(--text-faint); text-decoration: underline;
+  text-underline-offset: 2px; transition: color .2s;
+}
+
+.footer-privacy a:hover { color: var(--cyan); }
+
+/* ── Oversized wordmark ──────────────────────────────────────
+   Sized in vw so it always spans the viewport, and clipped below
+   the baseline so the descenders run off the bottom of the page
+   rather than sitting in a box.
+   ────────────────────────────────────────────────────────── */
+
+.footer-wordmark {
+  height: clamp(46px, 10vw, 190px);
+  overflow: hidden;
+  display: flex; justify-content: center; align-items: flex-start;
+  pointer-events: none;
+  user-select: none;
+}
+
+.footer-wordmark span {
+  display: block;
+  /* Deliberately wider than the viewport so it bleeds off both edges
+     rather than sitting inside a margin. */
+  font-size: clamp(56px, 15.6vw, 300px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.82;
+  white-space: nowrap;
+  background: linear-gradient(180deg, var(--text) 0%, transparent 190%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  opacity: .16;
+}
+
+[data-theme="dark"] .footer-wordmark span { opacity: .20; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 820px) {
+  .hero { padding: 116px 0 72px; }
+  .nav-cta { padding: 10px 16px; font-size: 14px; }
+  /* Full-width stacked buttons, at the 44px minimum touch target. */
+  .toast-actions .btn { flex: 1 1 100%; min-height: 44px; }
+}
+
+.faq-item { padding: 0; overflow: hidden; }
+
+.faq-item summary {
+  padding: 18px 22px;
+  font-size: 16px; font-weight: 550; color: var(--text);
+  letter-spacing: -0.014em;
+  cursor: pointer; list-style: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  transition: color .2s;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 20px; font-weight: 400; color: var(--text-faint);
+  transition: transform .35s var(--spring), color .2s;
+}
+
+.faq-item[open] summary::after { transform: rotate(45deg); color: var(--cyan); }
+
+.faq-item summary:hover { color: var(--cyan); }
+
+.faq-item p {
+  padding: 0 22px 20px;
+  font-size: 15px; line-height: 1.68; color: var(--text-dim);
+}
+
+.faq-item p a { color: var(--cyan); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── Footer responsive ───────────────────────────────────── */
+
+@media (max-width: 1000px) {
+  .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 560px) {
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .footer-legal { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .site-footer { padding-top: 48px; }
+}
+
+.handoff-actions .btn { padding: 10px 18px; font-size: 14px; }
+
+@media (max-width: 560px) {
+  .news-row .btn { width: 100%; }
+}
+
+@media (pointer: coarse) {
+  /* 44px is the documented minimum comfortable target. */
+  .chip,
+  .mode,
+  .footer-col a,
+  .nav-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn { min-height: 44px; }
+  .mail-folder,
+  .footer-mail,
+  .footer-mark,
+  .footer-social,
+  .crumb,
+  .faq-item summary { min-height: 44px; display: flex; align-items: center; }
+  .footer-col h2 { min-height: 0; }
+}
+
+.cart-dock .btn-primary { flex-shrink: 0; }
+
+@media (max-width: 620px) {
+  /* Buy takes the full second row: it is the reason the bar exists. */
+  .cart-dock .btn-primary { flex: 1 1 100%; order: 3; min-height: 44px; }
+}
+
+@keyframes breathe { 50% { opacity: 0.25; } }

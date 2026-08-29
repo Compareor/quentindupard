@@ -242,11 +242,13 @@ running in time and the canvas is a snapshot; competition lives off the page;
 and pricing — the block that decides whether the page makes money — gets
 sticky-note depth.
 
-For search: the book's flagship case is Google's multi-sided platform, where
-content owners are a subsidised side compensated in money (AdSense) or traffic
-(search). Answer engines keep that model's structure and retain the
-compensation, which makes the owned channels — list, direct relationships —
-the only blocks on your canvas nobody else can repaint.
+Applied: the canvas generates a kill list — features that feed no segment's
+value proposition and no revenue stream have no box to live in. The five
+segment tests double as a pricing-tier audit: a plan serving no distinct
+segment is packaging debt. Caution: usage data lies about what is killable,
+because idle-looking features can hold customers' stored value. And the Dell
+warning is a calendar entry: someone should own the question of what replaces
+the model while it still works.
 
 ### Influence: The Psychology of Persuasion, by Robert Cialdini (1984)
 
@@ -308,10 +310,12 @@ lesson was that its acquisition trigger belonged to Facebook — habit is not a
 moat when your distribution is somebody else's platform. And the Manipulation
 Matrix asks the builder to mark their own homework.
 
-For search: organic ranking is an earned external trigger you rent, not own.
-Informational search is a reward of the hunt, which is exactly the reward an AI
-answer now resolves before anyone reaches the page. Branded search share is the
-only free measurement of a formed internal trigger.
+Applied: Hooked is an activation book — the signup-to-value gap is the first
+hook cycle, and every onboarding field is an investment request that should
+come after the first reward, not before. Expansion revenue is the investment
+phase with an invoice attached: growing stored value makes the next tier a
+smaller decision than the first purchase. Habit is pricing power (Buffett's
+agony test), so pricing teardowns start from usage, not the price grid.
 
 ## Contact
 

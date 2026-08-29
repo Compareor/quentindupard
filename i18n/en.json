@@ -26,6 +26,12 @@
       "stats/index.html"
     ]
   },
+  "01b8cac6edc7": {
+    "en": "Expansion revenue is the investment phase with an invoice attached. A customer whose stored value keeps growing &mdash; more data in, more colleagues in, more workflows finished &mdash; is a customer whose next tier is a smaller decision than their first purchase was, which is the whole trick of <a href=\"/#pricing\">pricing that grows with the account</a> instead of refilling a leaking bucket. And the habit itself is pricing power: Eyal&rsquo;s point via Buffett is that routine use is what lets a price move without agony, which is why a pricing teardown starts from usage, not from the price grid.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "026b6776abd3": {
     "en": "Eyal&rsquo;s commercial claim is that habit is an asset on the balance sheet. Habitual customers cost nothing to re&ndash;acquire, tolerate price increases, refer faster, and are expensive to take away from you because the value they have stored in the product does not transfer. He is right about all four, and the pricing one is the least discussed and the most useful: Buffett&rsquo;s line about judging a business by how much agony it goes through to raise prices is a habit metric wearing a finance costume.",
     "pages": [
@@ -95,12 +101,6 @@
       "research/business-model-generation/index.html"
     ]
   },
-  "0549a97bfa2d": {
-    "en": "<strong>Branded search is the only free measurement of an internal trigger.</strong> &ldquo;First&ndash;to&ndash;mind wins&rdquo; is the book&rsquo;s central commercial claim and it sounds unmeasurable. It is not. The share of your search traffic that arrives on your name rather than on the category <em>is</em> first&ndash;to&ndash;mind, expressed as a number, sitting in Search Console for nothing. When category queries are flat and branded queries are climbing, an association is forming. When it is the other way round, you are renting attention and calling it growth.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
-    ]
-  },
   "05a396be05c0": {
     "en": "<strong>Read it alongside</strong> Gourville&rsquo;s paper on why consumers resist new products, which is where the nine&ndash;times finding comes from and which the book compresses into two pages, and <em>Indistractable</em>, which is the same author arguing the other side.",
     "pages": [
@@ -129,12 +129,6 @@
     "en": "One lever, shipped",
     "pages": [
       "index.html"
-    ]
-  },
-  "093cfe970eb1": {
-    "en": "Read it as a content owner, because if you publish anything, that is your box on their canvas. Your pages were always a subsidised side of someone else&rsquo;s model: you fed the platform content, and the platform compensated you &mdash; AdSense paid money, search paid traffic. An answer engine keeps every block of that model except the compensation. Your content still feeds the free side; the visit that used to be your payment is increasingly settled inside the answer.",
-    "pages": [
-      "research/business-model-generation/index.html"
     ]
   },
   "09d41f02a0a3": {
@@ -606,12 +600,6 @@
       "stats/index.html"
     ]
   },
-  "28024fc49c46": {
-    "en": "<strong>Search is an external trigger you rent.</strong> In the book&rsquo;s own terms, organic search is an earned trigger: free at the point of use, unbuyable directly, and unpredictable. The habit at work in a search result is Google&rsquo;s, not yours. Ranking gets you into somebody else&rsquo;s loop; it does not start one of your own. Everything you do on the page after they arrive is an attempt to convert a rented trigger into an owned one.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
-    ]
-  },
   "280b61f3d874": {
     "en": "Pick the one that stings. It goes straight into the box above.",
     "pages": [
@@ -622,12 +610,6 @@
     "en": "A <strong>local grocery business</strong>, bootstrapped — grew revenue with no budget, no brand and no funnel to speak of",
     "pages": [
       "about/index.html"
-    ]
-  },
-  "284f0835b807": {
-    "en": "Which changes how you write, not how much. Passages have to survive being lifted out: one claim per paragraph, definitions that stand alone without the sentence above them, headings shaped like the question somebody would actually ask. That is the whole of generative engine optimisation, and it is mostly just writing clearly with the knowledge that a machine will quote you out of context.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "28f74e5e90c8": {
@@ -652,6 +634,12 @@
     "en": "<strong>Name your pattern and you find your real competitor.</strong> The book&rsquo;s patterns &mdash; unbundling, long tail, multi-sided platform, free, open &mdash; are competitive lenses. Lulu did not beat publishers with better marketing; it made selection irrelevant by profiting from books publishers rejected, because print-on-demand means a title that never sells costs nothing. If your rival runs a different pattern, you are not competing on features, and feature comparisons are wasted copy.",
     "pages": [
       "research/business-model-generation/index.html"
+    ]
+  },
+  "2a0e929727fc": {
+    "en": "And the service translation, since this is the trade I sell: social proof and authority are <a href=\"/about/\">positioning work</a> &mdash; deciding who says what about you, in what order, with what evidence &mdash; and the contrast principle is the opening move of <a href=\"/#pricing\">any pricing teardown</a>. The commitment chapter is the mechanism underneath <a href=\"/research/hooked-nir-eyal/\">Hooked&rsquo;s investment phase</a>, and which claims deserve proof at all is <a href=\"/research/business-model-generation/\">a business-model question</a> before it is a copy question.",
+    "pages": [
+      "research/influence-robert-cialdini/index.html"
     ]
   },
   "2b67c7698b9a": {
@@ -1191,6 +1179,12 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
+  "4fb1945d79ba": {
+    "en": "What this means for what to build and what to kill",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "500bbdb26cbe": {
     "en": "When should a B2B SaaS company change its pricing?",
     "pages": [
@@ -1471,12 +1465,6 @@
     "en": "<code>qd:sent</code> &mdash; a note that you already sent a message, so the form does not nag you.",
     "pages": [
       "privacy/index.html"
-    ]
-  },
-  "62db8ce75351": {
-    "en": "<strong>Answer engines take the reward and leave you the citation.</strong> Informational search is the purest case of what Eyal calls a reward of the hunt: the person is chasing information and the chase itself is the pull. That is precisely the reward an AI answer now resolves before anyone reaches your site. The craving is satisfied inside the assistant. What used to be your page&rsquo;s job &mdash; being the reward &mdash; is now the assistant&rsquo;s job, and your page&rsquo;s job is to be the thing it names.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "642d0b611d4c": {
@@ -1766,6 +1754,12 @@
       "index.html"
     ]
   },
+  "6f31bc176d0f": {
+    "en": "One caution before the knife comes out: usage data alone will lie to you about what is killable. A feature nobody opens can still be holding a customer&rsquo;s stored value &mdash; their archive, their configuration, the thing they would have to rebuild elsewhere &mdash; and killing it cuts the switching cost you spent years building. <a href=\"/research/hooked-nir-eyal/\">Hooked&rsquo;s investment chapter</a> is the checklist for what looks idle but is actually load-bearing.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "6fc4b6b5afee": {
     "en": "Act 06",
     "pages": [
@@ -1782,12 +1776,6 @@
     "en": "3-month minimum",
     "pages": [
       "index.html"
-    ]
-  },
-  "70b0ef0c840c": {
-    "en": "<strong>The practical consequence.</strong> If assistants intercept the hunt, then the small number of people who still click through are more valuable, not less, and the investment phase has to be available to them immediately &mdash; something to take, configure, subscribe to or reply to on the first visit. A page whose only call to action is &ldquo;read more like this&rdquo; converts a rented trigger into nothing at all.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
     ]
   },
   "70d307c9afcd": {
@@ -1956,6 +1944,12 @@
       "privacy/index.html"
     ]
   },
+  "79093c7922d6": {
+    "en": "Run the same sweep on the pricing grid. The five segment tests are a tier audit: a plan that serves no distinct segment &mdash; same offer, same channel, same willingness to pay as its neighbour &mdash; is packaging debt, and merging it is <a href=\"/#pricing\">the fastest pricing work there is</a>, because nothing new has to be built. Most three-tier pages are two real segments and one tier that exists for the contrast.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "791406ebbe8c": {
     "en": "What I actually believe",
     "pages": [
@@ -2110,12 +2104,6 @@
       "research/business-model-generation/index.html"
     ]
   },
-  "82aa2ed29e79": {
-    "en": "The book&rsquo;s flagship case study is Google. Three customer segments &mdash; advertisers, web surfers, content owners &mdash; one of whom pays, two of whom are subsidised, the whole thing held together because more ads need more users need more content. In 2010 that page was a neat illustration of the multi-sided platform pattern. In 2026 it reads as a contract, and the terms have changed.",
-    "pages": [
-      "research/business-model-generation/index.html"
-    ]
-  },
   "839691351b78": {
     "en": "What it actually argues",
     "pages": [
@@ -2219,6 +2207,7 @@
       "about/index.html",
       "index.html",
       "privacy/index.html",
+      "research/business-model-generation/index.html",
       "research/hooked-nir-eyal/index.html",
       "research/index.html",
       "research/influence-robert-cialdini/index.html",
@@ -2247,12 +2236,6 @@
     "en": "Clicks",
     "pages": [
       "index.html"
-    ]
-  },
-  "8bb2207e028e": {
-    "en": "The canvas gives you the discipline for thinking about this without panic: for every acquisition channel you depend on, write down whose model it belongs to, which side of it you sit on, and what it currently pays you &mdash; money, traffic, or citations. That last currency is the new line in the ledger. It is worth less than a visit and more than nothing, and the pages on this site are built to earn it. But a channel whose payment terms just changed unilaterally is telling you something the book says plainly about every position on someone else&rsquo;s platform: you are not the customer of that model, you are a block in it. The owned channels &mdash; the list, the direct relationship &mdash; are the only boxes on your canvas nobody else can repaint.",
-    "pages": [
-      "research/business-model-generation/index.html"
     ]
   },
   "8bd8bd360b36": {
@@ -2681,6 +2664,12 @@
       "index.html"
     ]
   },
+  "a57ef540cacb": {
+    "en": "Strip away the consumer examples and Hooked is an activation book wearing a growth jacket. The gap between someone signing up and the product actually working for them &mdash; <a href=\"/about/\">the gap I get hired to close</a> &mdash; is the first pass through the hook, and most products lose people there for a reason the model makes precise: they ask for the investment before they have paid the reward. Every field in your onboarding is an investment request. Every one that arrives before the customer has felt the product work is the signup form problem again, one screen later.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
   "a5821801987e": {
     "en": "The Hook Model is a four&ndash;phase loop: a trigger cues the behaviour, the person takes the simplest action in anticipation of a reward, the reward arrives with some variability so it keeps producing wanting, and then the person invests something &mdash; data, content, followers, reputation or a learned skill &mdash; which improves the product for the next pass and loads the next trigger. Repeated cycles move the person from needing external prompts to being cued internally by an emotion.",
     "pages": [
@@ -2894,6 +2883,12 @@
       "research/hooked-nir-eyal/index.html"
     ]
   },
+  "b5367e277ac5": {
+    "en": "The canvas&rsquo;s most commercial use is the one the book never names: it generates a kill list. Draw the model you actually run, then walk the roadmap against it &mdash; anything in the product that feeds no segment&rsquo;s value proposition and no revenue stream has no box to live in, and a feature without a box is a cost wearing a feature&rsquo;s clothes. Most roadmaps I audit carry three or four of these, defended by the person who built them and by nobody else. Deciding what to build is a workshop; <a href=\"/about/\">deciding what to kill is the part people bring me in for</a>, because it needs someone with no sunk feelings in the room.",
+    "pages": [
+      "research/business-model-generation/index.html"
+    ]
+  },
   "b58b5a8ced9d": {
     "en": "One",
     "pages": [
@@ -2972,6 +2967,12 @@
     "en": "<strong>Ask people to predict what they will do.</strong> Steven Sherman phoned residents of Bloomington, Indiana, and asked them to say whether they <em>would</em> volunteer three hours for the American Cancer Society, if asked. Nobody enjoys saying no to that. When the real request arrived days later, volunteering was up 700 per cent. The marketing equivalents are close to free &mdash; the survey question, the &ldquo;would you be interested in&rdquo;, the waitlist. The commitment is the point. The data is a by-product.",
     "pages": [
       "research/influence-robert-cialdini/index.html"
+    ]
+  },
+  "baa8716b2f91": {
+    "en": "So the activation audit writes itself from the model&rsquo;s own order. List every step between the trigger that brought someone in and the first genuine reward; move every ask &mdash; the team invite, the data import, the configuration &mdash; to after that reward; then check that the reward itself has some variability left in it, because a demo that plays out identically for everyone is a fridge light, and nobody opens the fridge for the light.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "bbfa773e5a63": {
@@ -3070,6 +3071,12 @@
     "en": "What quentindupard.com stores in your browser and on its server, which third parties are involved, and how to opt out of the analytics.",
     "pages": [
       "privacy/index.html"
+    ]
+  },
+  "c1822e5313b2": {
+    "en": "And the Dell warning is a calendar entry, not a moral. A model so successful nobody may question it is the book&rsquo;s definition of the next casualty, so somebody should own the question of what replaces the machine while it still runs &mdash; quarterly, with the canvas on the wall. In a company too small for a strategy team, that is precisely <a href=\"/#work\">what a fractional operator is for</a>.",
+    "pages": [
+      "research/business-model-generation/index.html"
     ]
   },
   "c23cbcb9f4cb": {
@@ -3279,6 +3286,12 @@
     "en": "Reading",
     "pages": [
       "about/index.html"
+    ]
+  },
+  "d022763d585a": {
+    "en": "The psychology underneath all of this &mdash; commitment, consistency, effort justifying itself &mdash; is Cialdini&rsquo;s third chapter with a product roadmap stapled to it. <a href=\"/research/influence-robert-cialdini/\">The two books read as one argument</a>, and whether the loop is worth building at all is a business-model question before it is a feature question &mdash; <a href=\"/research/business-model-generation/\">the canvas settles that one</a>.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
     ]
   },
   "d04a7a21ca28": {
@@ -3521,12 +3534,6 @@
       "research/influence-robert-cialdini/index.html"
     ]
   },
-  "de9beef13840": {
-    "en": "None of this is in the book. Hooked was written in 2014, when Google appeared in it as an example of a habit rather than as a channel. But the taxonomy translates cleanly, and it is the most useful thing I have done with the model.",
-    "pages": [
-      "research/hooked-nir-eyal/index.html"
-    ]
-  },
   "decbb4850d43": {
     "en": "First time or back again",
     "pages": [
@@ -3639,6 +3646,12 @@
   },
   "e4c0b81d3a40": {
     "en": "Only above a frequency threshold. Eyal’s Habit Zone requires that a behaviour occur often enough to become automatic, and no amount of perceived utility substitutes for frequency. If a business product is genuinely used once a month, you are not building a habit, you are building a reminder that fits into a routine somebody already has. The investment phase still applies at any cadence, because stored value raises switching costs whether or not the use is habitual.",
+    "pages": [
+      "research/hooked-nir-eyal/index.html"
+    ]
+  },
+  "e514d3bee7c7": {
+    "en": "What this means for activation and expansion revenue",
     "pages": [
       "research/hooked-nir-eyal/index.html"
     ]
@@ -4092,8 +4105,6 @@
   "ffc84d0e413f": {
     "en": "What this means for SEO and GEO",
     "pages": [
-      "research/business-model-generation/index.html",
-      "research/hooked-nir-eyal/index.html",
       "research/influence-robert-cialdini/index.html"
     ]
   },

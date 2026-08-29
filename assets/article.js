@@ -213,6 +213,8 @@
    catalogue churn and covers future articles automatically. */
 (function () {
   'use strict';
+  const lang = document.documentElement.lang;
+  const about = (lang === 'fr' || lang === 'es') ? '/' + lang + '/about/' : '/about/';
   document.querySelectorAll('.article-meta span').forEach((span) => {
     if (span.textContent.trim() !== 'Quentin Dupard') return;
     const img = document.createElement('img');
@@ -222,6 +224,13 @@
     img.loading = 'lazy';
     img.decoding = 'async';
     img.className = 'byline-avatar';
-    span.insertBefore(img, span.firstChild);
+    // The whole byline — face and name — is one link to the about page.
+    const a = document.createElement('a');
+    a.className = 'byline-link';
+    a.href = about;
+    a.dataset.track = 'byline_about';
+    a.append(img, document.createTextNode(span.textContent.trim()));
+    span.textContent = '';
+    span.appendChild(a);
   });
 })();

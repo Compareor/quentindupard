@@ -480,3 +480,11 @@
   border: 1px solid var(--glass-stroke-strong);
   box-shadow: 0 1px 4px rgba(13, 20, 36, 0.18);
 }
+
+/* The byline link stays quiet until asked. */
+.byline-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: inherit;
+  text-decoration: none;
+}
+.byline-link:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }

@@ -444,7 +444,10 @@
     max-height: calc(100vh - 220px);
     overflow-y: auto;
     overscroll-behavior: contain;
+    transition: opacity .3s var(--ease), visibility .3s;
   }
+  /* Set by script when the end of the article scrolls past the panel. */
+  .toc.retired { opacity: 0; visibility: hidden; }
   /* Held open by script; the toggle is not an affordance here. */
   .toc summary { pointer-events: none; }
   .toc summary::after { display: none; }

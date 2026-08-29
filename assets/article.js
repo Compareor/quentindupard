@@ -120,13 +120,25 @@
     if (active) links.get(active).classList.add('active');
     current = active;
   };
+  /* The fixed panel is a companion to the text, so it leaves when the text
+     does: once the end of the prose scrolls up past the panel's own bottom
+     edge, it fades out rather than hanging over the read-more block and the
+     footer. Coming back up restores it. */
+  const retire = () => {
+    if (!wide.matches) { nav.classList.remove('retired'); return; }
+    const proseBottom = prose.getBoundingClientRect().bottom;
+    const navBottom = nav.getBoundingClientRect().bottom;
+    nav.classList.toggle('retired', proseBottom < navBottom + 24);
+  };
   let last = 0;
   window.addEventListener('scroll', () => {
     const now = Date.now();
     if (now - last < 120) return;
     last = now;
     mark();
+    retire();
   }, { passive: true });
+  retire();
   // A click should not wait for the scroll to arrive to say where it is going.
   list.addEventListener('click', (e) => {
     const a = e.target.closest('a');

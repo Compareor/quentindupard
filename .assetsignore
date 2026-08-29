@@ -14,3 +14,7 @@ DEPLOY.md
 # wrangler build temp output (a source map was being served publicly)
 .wrangler/
 CNAME
+
+# Local SEO audit reports — internal, never published.
+seo-audit/
+.gitignore

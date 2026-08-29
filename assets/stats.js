@@ -389,6 +389,9 @@
   if (!slot) return;
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   slot.setAttribute('data-theme', dark ? 'dark' : 'light');
+  // Auto-detect follows the browser locale, not the page: pin it to the
+  // page language so the EN page never shows a French button.
+  slot.setAttribute('data-lang', document.documentElement.lang || 'en');
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://news.google.com/swg/js/v1/publisher.js';

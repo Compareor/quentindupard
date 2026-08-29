@@ -51,6 +51,10 @@
     "es": "¿Ya llevas un minuto?",
     "fr": "Déjà une minute ?"
   },
+  "AnswerThePublic — what people ask search engines": {
+    "es": "AnswerThePublic — lo que la gente pregunta a los buscadores",
+    "fr": "AnswerThePublic — ce que les gens demandent aux moteurs"
+  },
   "Article": {
     "es": "Artículo",
     "fr": "Article"
@@ -315,6 +319,10 @@
     "es": "Gestionar o cancelar tu suscripción",
     "fr": "Gérer ou résilier votre abonnement"
   },
+  "Market insights": {
+    "es": "Insights de mercado",
+    "fr": "Études de marché"
+  },
   "Mon": {
     "es": "Lun",
     "fr": "Lun"
@@ -506,6 +514,10 @@
   "Thu": {
     "es": "Jue",
     "fr": "Jeu"
+  },
+  "Tool": {
+    "es": "Herramienta",
+    "fr": "Outil"
   },
   "Two and a half minutes.": {
     "es": "Dos minutos y medio.",
